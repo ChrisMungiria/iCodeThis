@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Reminder App</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-gradient-to-tr from-orange-500 to-orange-200 flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-md h-fit bg-white flex flex-row">
+      <div class="w-2/5 h-full bg-slate-600 pt-3 pb-12">
+        <div class="bg-slate-400 w-fit rounded-3xl mx-3">
+          <input
+            type="text"
+            placeholder="Search"
+            class="bg-transparent w-full h-10 px-5 pr-10 text-sm text-gray-700 placeholder:text-gray-500 focus:outline-none"
+          />
+        </div>
+        <ul class="mt-4">
+          <li
+            onclick="showSection('reminders')"
+            class="flex items-center justify-between text-white px-2 py-1 cursor-pointer uppercase text-xs hover:bg-white hover:text-gray-700 transition-all duration-300 ease-in-out group"
+          >
+            Reminders
+            <span
+              class="w-5 h-5 flex items-center justify-center rounded-full bg-gray-700 group-hover:bg-gray-200 group-hover:text-gray-700 transition-all duration-300 ease-in-out"
+              >2</span
+            >
+          </li>
+          <li
+            onclick="showSection('todos')"
+            class="flex items-center justify-between text-white px-2 py-1 cursor-pointer uppercase text-xs hover:bg-white hover:text-gray-700 transition-all duration-300 ease-in-out group"
+          >
+            To Do List
+            <span
+              class="w-5 h-5 flex items-center justify-center rounded-full bg-gray-700 group-hover:bg-gray-200 group-hover:text-gray-700 transition-all duration-300 ease-in-out"
+              >9</span
+            >
+          </li>
+          <li
+            onclick="showSection('shopping_list')"
+            class="flex items-center justify-between text-white px-2 py-1 cursor-pointer uppercase text-xs hover:bg-white hover:text-gray-700 transition-all duration-300 ease-in-out group"
+          >
+            Shopping List
+            <span
+              class="w-5 h-5 flex items-center justify-center rounded-full bg-gray-700 group-hover:bg-gray-200 group-hover:text-gray-700 transition-all duration-300 ease-in-out"
+              >4</span
+            >
+          </li>
+          <li
+            onclick="showSection('others')"
+            class="flex items-center justify-between text-white px-2 py-1 cursor-pointer uppercase text-xs hover:bg-white hover:text-gray-700 transition-all duration-300 ease-in-out group"
+          >
+            Other
+            <span
+              class="w-5 h-5 flex items-center justify-center rounded-full bg-gray-700 group-hover:bg-gray-200 group-hover:text-gray-700 transition-all duration-300 ease-in-out"
+              >3</span
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="w-3/5 h-full p-3 text-gray-700">
+        <div id="shopping_list">
+          <h2 class="flex flex-row justify-between items-center uppercase">
+            Shopping List
+            <span class="material-symbols-outlined"> more_vert </span>
+          </h2>
+          <ul class="text-xs mt-5 space-y-2">
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Butter
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Orange Juice
+            </li>
+
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Cheese
+            </li>
+
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Chocolate
+            </li>
+
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Corn flakes
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Potatoes
+            </li>
+
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Avocado
+            </li>
+          </ul>
+        </div>
+        <div id="reminders" class="hidden">
+          <h2 class="flex flex-row justify-between items-center uppercase">
+            Reminders
+            <span class="material-symbols-outlined"> more_vert </span>
+          </h2>
+          <ul class="text-xs mt-5">
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Reminder 1
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Reminder 2
+            </li>
+          </ul>
+        </div>
+        <div id="todos" class="hidden">
+          <h2 class="flex flex-row justify-between items-center uppercase">
+            To Do List
+            <span class="material-symbols-outlined"> more_vert </span>
+          </h2>
+          <ul class="text-xs mt-5">
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 1
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 2
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 3
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 4
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 5
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 6
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 7
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 8
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Todo 9
+            </li>
+          </ul>
+        </div>
+        <div id="others" class="hidden">
+          <h2 class="flex flex-row justify-between items-center uppercase">
+            Others
+            <span class="material-symbols-outlined"> more_vert </span>
+          </h2>
+          <ul class="text-xs mt-5">
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Others 1
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Others 2
+            </li>
+            <li class="cursor-pointer" onclick="strikeThrough(event)">
+              Others 3
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script>
+      function strikeThrough(event) {
+        event.target.classList.toggle("line-through");
+        event.target.classList.toggle("text-gray-400");
+      }
+
+      function showSection(section) {
+        const sections = ["reminders", "shopping_list", "todos", "others"];
+        sections.forEach((section) => {
+          document.getElementById(section).classList.add("hidden");
+        });
+        document.getElementById(section).classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

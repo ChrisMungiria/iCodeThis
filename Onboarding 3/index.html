@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      #next,
+      #last {
+        box-shadow: 7px 7px 5px rgba(219, 129, 26, 0.25);
+      }
+      #last:hover,
+      #next:hover {
+        box-shadow: none;
+      }
+    </style>
+    <title>Onboarding 3</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-100 flex items-center justify-center">
+    <div class="w-11/12 max-w-xs h-fit bg-white px-4 py-6 rounded-md shadow-lg">
+      <div class="w-full h-full" id="screen_1">
+        <img
+          src="https://sentimentr.com/wp-content/uploads/2020/06/undraw_add_content_d1tf.png"
+          alt=""
+          class="w-full h-auto"
+        />
+        <h2 class="text-sm font-bold w-1/2 text-center mx-auto">
+          Connect multiple accounts
+        </h2>
+        <p class="text-xs w-8/12 mx-auto text-center my-4">
+          Stay connected to any platform you are used to. Starting from Twitter,
+          Instagram, Slack or whatever.
+        </p>
+        <div class="flex justify-between w-4/5 mx-auto items-center">
+          <a href="#" class="text-gray-500" id="skip">Skip</a>
+          <button
+            id="next"
+            class="flex items-center justify-center bg-orange-400 p-2 rounded-br-xl shadow-lg hover:shadow-none hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            <span class="material-symbols-outlined text-white">
+              arrow_forward
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="w-full h-full hidden" id="screen_2">
+        <img
+          src="https://hired.berlin/wp-content/uploads/2019/10/get-in-contact-to-learn-more-about-how-to-work-in-Germany.png"
+          alt=""
+          class="w-full h-auto"
+        />
+        <h2 class="text-sm font-bold w-1/2 text-center mx-auto">
+          Smart message system
+        </h2>
+        <p class="text-xs w-8/12 mx-auto text-center my-4">
+          View your messages without leaving the video you currently watched
+        </p>
+        <div class="flex justify-between w-4/5 mx-auto items-center">
+          <a href="#" class="text-gray-500" id="skip">Skip</a>
+          <button
+            id="next"
+            class="flex items-center justify-center bg-orange-400 p-2 rounded-br-xl shadow-lg hover:shadow-none hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            <span class="material-symbols-outlined text-white">
+              arrow_forward
+            </span>
+          </button>
+        </div>
+      </div>
+      <div class="w-full h-full hidden" id="screen_3">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*4A-mvExSJsZs1tyQ.png"
+          alt=""
+          class="w-full h-auto"
+        />
+        <h2 class="text-sm font-bold w-1/2 text-center mx-auto">
+          Instant data analysis
+        </h2>
+        <p class="text-xs w-8/12 mx-auto text-center my-4">
+          View and analyse all your activities grouped systematically for you to
+          get conclusions
+        </p>
+        <div class="flex justify-between w-4/5 mx-auto items-center">
+          <button
+            id="last"
+            class="flex w-1/2 mx-auto items-center text-xs justify-center text-white capitalize bg-orange-400 p-2 rounded-br-xl shadow-lg hover:shadow-none hover:scale-105 transition-all duration-300 ease-in-out"
+          >
+            Get started
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const next = document.querySelectorAll("#next");
+      const skip = document.querySelectorAll("#skip");
+      const screens = document.querySelectorAll("[id^=screen_]");
+      let currentScreen = 0;
+
+      skip.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          screens[currentScreen].classList.add("hidden");
+          currentScreen = screens.length - 1;
+          screens[currentScreen].classList.remove("hidden");
+        });
+      });
+      next.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          screens[currentScreen].classList.add("hidden");
+          currentScreen++;
+          screens[currentScreen].classList.remove("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

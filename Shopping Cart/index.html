@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen bg-gradient-to-tr from-pink-800 to-purple-800 flex justify-center items-center"
+    >
+      <div
+        class="w-fit h-3/4 bg-white rounded-md relative overflow-hidden max-w-sm"
+      >
+        <div
+          class="bg-gradient-to-r from-purple-500 to-orange-500 h-fit text-white flex flex-row items-center justify-between p-4"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+          <p>My Cart</p>
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div
+          class="flex flex-row justify-between h-1/6 border-b border-gray-300 p-3"
+        >
+          <img
+            src="
+            data:image/jpeg;base64,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"
+            alt="iPhone SE"
+          />
+          <div class="flex flex-col justify-evenly font-extralight">
+            <p class="text-xs">Apple iPhone SE 16GB Silver</p>
+            <div class="w-2/3 flex flex-row justify-between items-center">
+              <select class="border border-gray-400 rounded">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <i class="fa-solid fa-pencil"></i>
+              <i class="fa-solid fa-x font-extralight"></i>
+            </div>
+          </div>
+          <div class="h-full flex items-center justify-center font-extralight">
+            <p class="text-xs">$429.95</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-row justify-between h-1/6 border-b border-gray-300 p-3"
+        >
+          <img
+            src="https://target.scene7.com/is/image/Target/GUEST_f7b1e32e-e52e-4543-a276-8cedbb8c610d"
+            alt="iPhone SE"
+          />
+          <div class="flex flex-col justify-evenly font-extralight">
+            <p class="text-xs">Apple iPhone SE Case</p>
+            <div class="w-2/3 flex flex-row justify-between items-center">
+              <select class="border border-gray-400 rounded">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <i class="fa-solid fa-pencil"></i>
+              <i class="fa-solid fa-x font-extralight"></i>
+            </div>
+          </div>
+          <div class="h-full flex items-center justify-center font-extralight">
+            <p class="text-xs">$7.95</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-row justify-between h-1/6 border-b border-gray-300 p-3"
+        >
+          <img
+            src="https://www.sbsmobile.com/eir/198192-thickbox_default/full-cover-glass-screen-protector-for-iphone-se-2020-2022-8-7-6s-6.jpg"
+            alt="iPhone SE"
+          />
+          <div class="flex flex-col justify-evenly font-extralight">
+            <p class="text-xs">Apple iPhone SE Screen Protector</p>
+            <div class="w-2/3 flex flex-row justify-between items-center">
+              <select class="border border-gray-400 rounded">
+                <option value="1" selected>1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+              <i class="fa-solid fa-pencil"></i>
+              <i class="fa-solid fa-x font-extralight"></i>
+            </div>
+          </div>
+          <div class="h-full flex items-center justify-center font-extralight">
+            <p class="text-xs">$4.95</p>
+          </div>
+        </div>
+        <div
+          class="absolute -bottom-1/2 bg-gradient-to-r from-purple-500/60 to-pink-500/60 rounded-full h-96 w-full"
+        >
+          <p class="w-full text-center underline uppercase mt-5 text-white">
+            Checkout Now
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

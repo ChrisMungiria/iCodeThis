@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes fadeOut {
+        0% {
+          width: 100%;
+          opacity: 1;
+        }
+        100% {
+          width: 0%;
+          opacity: 0;
+        }
+      }
+    </style>
+    <title>Cookie Notification</title>
+  </head>
+  <body
+    class="w-screen h-screen flex bg-[#ecedf6] flex-col gap-10 items-center justify-center"
+  >
+    <header
+      class="w-10/12 bg-[#6f88dd] flex items-center justify-between rounded-full shadow-xl relative"
+    >
+      <p class="text-white m-6 text-xs sm:text-base" id="text">
+        We are now part of Salesforce.
+        <a href="" class="underline">Learn why we're even better together</a>
+      </p>
+      <div
+        class="w-10 h-10 m-6 p-2 bg-[#5e78d7] flex items-center justify-center cursor-pointer rounded-full"
+        id="close"
+      >
+        <span class="material-symbols-outlined text-white"> close </span>
+      </div>
+      <div
+        id="line"
+        class="absolute h-1 w-11/12 mx-auto bg-blue-500/50 -bottom-1 left-1/2 -translate-x-1/2"
+      ></div>
+    </header>
+    <div class="w-10/12 max-w-xs h-fit bg-white p-4 rounded-lg">
+      <div class="flex items-center justify-end">
+        <span
+          class="material-symbols-outlined w-8 h-8 flex items-center justify-center rounded-full border"
+        >
+          close
+        </span>
+      </div>
+      <img
+        src="https://as1.ftcdn.net/v2/jpg/01/84/35/92/1000_F_184359252_LcAAFgZmJpvmA7zqoALCFJtsZQqRMPkY.jpg"
+        alt=""
+        class="mx-auto h-20 w-auto"
+      />
+      <p class="w-3/4 text-center mx-auto text-xs">
+        By clicking "Accept All Cookies", you agree to the storing of cookies on
+        your device to enhance site navigation, analyze site usage, and assist
+        in out marketing efforts <a href="" class="underline">More info</a>
+      </p>
+      <div class="flex items-center justify-between">
+        <button class="border-2 rounded-3xl text-blue-800 text-xs px-4 py-2">
+          Accept cookies
+        </button>
+        <button class="border-2 rounded-3xl text-blue-800 text-xs px-4 py-2">
+          Decline cookies
+        </button>
+      </div>
+      <a href="" class="w-fit mx-auto underline font-bold text-xs flex my-2"
+        >Cookie settings</a
+      >
+    </div>
+
+    <script>
+      const closeButton = document.getElementById("close");
+      const line = document.getElementById("line");
+
+      closeButton.addEventListener("click", () => {
+        line.style.animation = "fadeOut 3s ease-in-out forwards";
+        // After 3 seconds hide the header
+        setTimeout(() => {
+          document.querySelector("header").style.display = "none";
+        }, 3000);
+      });
+    </script>
+  </body>
+</html>

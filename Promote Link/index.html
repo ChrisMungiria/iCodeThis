@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Promote Link</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-[#f2f8ff] flex items-center justify-center relative"
+  >
+    <div
+      class="w-96 h-96 sm:w-[600px] sm:h-[600px] rounded-full bg-[#e3e7f8] p-1 absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    >
+      <div class="w-full h-full rounded-full bg-[#f2f8ff] p-8">
+        <div class="w-full h-full rounded-full bg-[#e3e7f8] p-3">
+          <div class="w-full h-full rounded-full bg-[#f2f8ff] p-4">
+            <div class="w-full h-full rounded-full bg-[#e3e7f8]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-11/12 p-4 bg-white rounded-md max-w-xs absolute z-20 shadow-xl"
+      id="create"
+    >
+      <h1 class="text-xl text-[#5847bc]">Create Link</h1>
+      <p class="text-[#5847bc] text-sm my-2">
+        Promote any brand with a simple link
+      </p>
+      <div class="w-full border rounded-md">
+        <div class="flex items-center justify-between p-2">
+          <p class="text-[#5847bc]" id="selected">Premium themes</p>
+          <i
+            class="fa-solid fa-chevron-down cursor-pointer"
+            id="show_options"
+          ></i>
+        </div>
+        <div
+          id="options"
+          class="absolute bg-white w-11/12 flex flex-col gap-2 hidden"
+        >
+          <p id="standard" class="p-2 border cursor-pointer">Standard themes</p>
+          <p id="free" class="p-2 border cursor-pointer">Free theme</p>
+        </div>
+      </div>
+      <input
+        type="text"
+        placeholder="Enter website URL"
+        class="border w-full mt-2 p-2 rounded-md focus:outline-none"
+      />
+      <div class="flex items-center justify-between gap-3 mt-2">
+        <button
+          class="bg-[#5847bc] text-white flex-1 p-2 text-xs rounded-md"
+          id="hide_create"
+        >
+          Create
+        </button>
+        <button class="text-[#5847bc] flex-1 p-2 text-xs rounded-md">
+          Advanced
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 p-4 hidden rounded-md bg-white z-20 absolute max-w-xs shadow-xl"
+      id="promote"
+    >
+      <h1 class="text-[#5847bc] text-xl">Promote</h1>
+      <p class="text-[#5847bc] text-sm my-2">Use this link to promote</p>
+      <p class="text-[#5847bc] text-sm my-2">
+        Link updates my take up to 5 minutes to propagate
+      </p>
+      <div class="flex items-center gap-2">
+        <div class="flex-1 h-full border rounded-lg relative">
+          <div class="p-2 flex w-full items-center justify-between">
+            <p class="text-xs text-[#5847bc]" id="selected_link">https://</p>
+            <i
+              class="fa-solid fa-chevron-down cursor-pointer"
+              id="show_link_options"
+            ></i>
+          </div>
+          <div class="w-full bg-white absolute top-10 hidden" id="link_options">
+            <p class="border p-2" id="http">http://</p>
+            <p class="border p-2" id="www">www.</p>
+          </div>
+        </div>
+        <div class="flex-[2] w-full p-2 text-sm text-[#5847bc]">
+          <p id="selected_option"></p>
+        </div>
+      </div>
+      <p class="text-slate-700 text-xs my-2">Share</p>
+      <div class="flex gap-2">
+        <i
+          class="fa-brands fa-twitter cursor-pointer bg-[#28a5f1] p-2 text-white rounded"
+        ></i>
+        <i
+          class="fa-brands fa-facebook cursor-pointer bg-[#3f5a96] p-2 text-white rounded"
+        ></i>
+      </div>
+    </div>
+    <script>
+      const options = document.getElementById("options");
+      const show_options = document.getElementById("show_options");
+      const selected = document.getElementById("selected");
+      const standard = document.getElementById("standard");
+      const free = document.getElementById("free");
+
+      show_options.addEventListener("click", () => {
+        options.classList.toggle("hidden");
+      });
+
+      standard.addEventListener("click", () => {
+        selected.textContent = "Standard themes";
+        options.classList.toggle("hidden");
+      });
+
+      free.addEventListener("click", () => {
+        selected.textContent = "Free themes";
+        options.classList.toggle("hidden");
+      });
+
+      //   Show the next screen
+      const hide_create = document.getElementById("hide_create");
+      const create = document.getElementById("create");
+      //   Promote screen
+      const promote = document.getElementById("promote");
+
+      hide_create.addEventListener("click", () => {
+        create.style.display = "none";
+        promote.classList.toggle("hidden");
+        console.log(selected.textContent);
+        const selected_option = document.getElementById("selected_option");
+        selected_option.textContent = selected.textContent;
+      });
+
+      //   Hide and show link options
+      const show_link_options = document.getElementById("show_link_options");
+      const link_options = document.getElementById("link_options");
+      show_link_options.addEventListener("click", () => {
+        link_options.classList.toggle("hidden");
+      });
+
+      //   Set the selected link
+      const link_options_array = ["http", "www"];
+
+      link_options_array.forEach((option) => {
+        const option_element = document.getElementById(option);
+        option_element.addEventListener("click", () => {
+          selected_link.textContent = option_element.textContent;
+          link_options.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

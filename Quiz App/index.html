@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      .disabled:hover {
+        cursor: not-allowed;
+      }
+    </style>
+    <title>Quiz App</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-slate-200 flex items-center justify-center"
+    onload="setTimeout(countdown, 1000)"
+  >
+    <div class="w-11/12 max-w-md bg-white h-96 shadow-xl">
+      <nav
+        class="w-full bg-gradient-to-r from-blue-500 to-teal-500 p-4 flex flex-row items-center justify-between text-gray-100"
+      >
+        <div class="flex flex-row items-center space-x-3">
+          <div class="flex flex-row items-center">
+            <p class="flex flex-row items-center space-x-2">
+              <span class="material-symbols-outlined text-green-500">
+                done
+              </span>
+              <span id="correct" class="pr-2">2</span> correct
+            </p>
+          </div>
+          <div>
+            <p class="flex flex-row items-center space-x-2">
+              <span class="material-symbols-outlined text-red-500">
+                dangerous
+              </span>
+              <span id="wrong" class="pr-2">1</span> wrong
+            </p>
+          </div>
+        </div>
+        <div>
+          <p class="flex flex-row items-center space-x-2">
+            <span class="material-symbols-outlined"> timer </span
+            ><span id="time">24:02</span>
+          </p>
+        </div>
+      </nav>
+
+      <div
+        class="bg-white h-fit w-10/12 mx-auto -mt-3 shadow-lg p-4"
+        id="question"
+      >
+        <p class="text-gray-300">Question 3 (23 remaning)</p>
+        <p class="text-gray-500">
+          Varius venenatis quis libero. Tortor fuegiat, urna erat blandit, wisi
+          mi, non eget arci fermentum?
+        </p>
+        <p class="text-gray-300 my-3">Answer options</p>
+        <div class="w-full h-fit disabled:">
+          <div
+            onclick="checkAnswer('A')"
+            id="A"
+            class="p-2 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-500 hover:text-gray-100 hover:shadow-md cursor-pointer w-full rounded-md"
+          >
+            <p>A Feugiat viverra in in vivamus quis</p>
+          </div>
+          <div
+            onclick="checkAnswer('B')"
+            id="B"
+            class="p-2 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-500 hover:text-gray-100 hover:shadow-md cursor-pointer w-full rounded-md"
+          >
+            <p>B Molestie nulla tristique nulla</p>
+          </div>
+          <div
+            onclick="checkAnswer('C')"
+            id="C"
+            class="p-2 hover:bg-gradient-to-r hover:from-blue-500 hover:to-teal-500 hover:text-gray-100 hover:shadow-md cursor-pointer w-full rounded-md"
+          >
+            <p>C Sapien sed lectus in posuere eros ad nam non duis</p>
+          </div>
+        </div>
+      </div>
+      <div
+        id="result"
+        class="w-8/12 hidden mx-auto mt-10 h-40 bg-green-500/30 text-gray-800 rounded-lg flex-col items-center justify-center"
+      >
+        <h1 class="text-xl">Your answer was:</h1>
+        <p id="status" class="text-2xl">Correct!</p>
+      </div>
+    </div>
+    <script>
+      function checkAnswer(answer) {
+        if (answer === "A") {
+          const question = document.getElementById("question");
+          question.classList.add("hidden");
+          const correctElement = document.getElementById("correct");
+          const correct = parseInt(correctElement.innerText);
+          correctElement.innerText = correct + 1;
+          const status = document.getElementById("status");
+          status.innerText = "Correct!";
+          const result = document.getElementById("result");
+          result.classList.remove("hidden");
+          result.classList.add("bg-green-500/30");
+          result.classList.add("flex");
+        } else {
+          const question = document.getElementById("question");
+          question.classList.add("hidden");
+          const wrongElement = document.getElementById("wrong");
+          const wrong = parseInt(wrongElement.innerText);
+          wrongElement.innerText = wrong + 1;
+          const status = document.getElementById("status");
+          status.innerText = "Wrong!";
+          const result = document.getElementById("result");
+          result.classList.remove("hidden");
+          result.classList.add("bg-red-500/30");
+          result.classList.add("flex");
+        }
+      }
+
+      function countdown() {
+        var i = document.getElementById("time");
+        var s = i.innerHTML.split(":");
+        var m = parseInt(s[0]);
+        var s = parseInt(s[1]);
+        if (s == 0) {
+          if (m == 0) {
+            alert("Time is up!");
+            return;
+          }
+          m--;
+          s = 60;
+        }
+        s--;
+        i.innerHTML = m + ":" + (s < 10 ? "0" + s : s);
+        setTimeout(countdown, 1000);
+      }
+    </script>
+  </body>
+</html>

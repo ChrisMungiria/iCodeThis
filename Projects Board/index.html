@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Projects Board</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-[#252531] flex items-center justify-center overflow-scroll"
+  >
+    <div class="w-10/12 max-w-3xl bg-white rounded-md h-fit mt-20">
+      <header
+        class="p-2 flex flex-col sm:flex-row items-center justify-between"
+      >
+        <div class="flex items-center gap-5">
+          <a href="" class="font-light">Home</a>
+          <a href="" class="font-bold">Projects</a>
+          <div class="relative">
+            <a href="" class="font-light">Inbox</a>
+            <div
+              class="w-2 h-2 bg-red-500 rounded-full absolute top-1/2 -translate-y-1/2 -right-3"
+            ></div>
+          </div>
+          <a href="" class="font-light">Teams</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="text-xs border border-slate-800 rounded-3xl px-4 py-2">
+            Upgrade
+          </button>
+          <div
+            class="w-8 h-8 bg-[#ea5382] flex items-center justify-center rounded-full"
+          >
+            <p class="text-xs text-white">JG</p>
+          </div>
+        </div>
+      </header>
+      <div class="flex flex-col sm:flex-row p-2 gap-5">
+        <div
+          class="bg-[#252531] flex-1 flex flex-col justify-between rounded-md p-3"
+        >
+          <div>
+            <h1 class="text-[#7c7d88] uppercase">Projects</h1>
+            <ul class="mt-2 flex flex-col gap-2">
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#fcbb61] rounded-full"></div>
+                boardme development
+              </li>
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#ff8264] rounded-full"></div>
+                Feature lists
+              </li>
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#56abfa] rounded-full"></div>
+                Marketing
+              </li>
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#b259fe] rounded-full"></div>
+                UIDD development
+              </li>
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#95d441] rounded-full"></div>
+                Topics
+              </li>
+              <li
+                class="flex gap-2 items-center text-xs text-nowrap text-[#d6d7dc]"
+              >
+                <div class="w-2 h-2 bg-[#ff589d] rounded-full"></div>
+                Bugs and fixes
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h1 class="text-[#7c7d88] uppercase">teams</h1>
+            <div class="w-full p-3 bg-[#3a3c52] rounded-md">
+              <p class="text-xs text-white">Need to form a team?</p>
+              <p class="text-[8px] text-white my-2">
+                Try our 30 days trial and see what you can achieve together
+              </p>
+              <button class="w-full py-2 rounded-md bg-white text-slate-800">
+                Try it free
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="flex-[3] p-2">
+          <div>
+            <h1 class="text-[#464448]">Projects</h1>
+            <div
+              class="grid sm:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-10 mt-2 place-items-center"
+            >
+              <div
+                class="sm:h-20 sm:w-20 w-14 h-14 bg-[#57aefe] flex items-center justify-center relative rounded-2xl shadow-lg shadow-[#57aefe]"
+              >
+                <p class="text-2xl font-bold text-white">M</p>
+                <p class="absolute -bottom-5 text-xs">Marketing</p>
+              </div>
+              <div
+                class="sm:h-20 sm:w-20 w-14 h-14 bg-[#fe8157] flex items-center justify-center relative rounded-2xl shadow-lg shadow-[#fe8157]"
+              >
+                <p class="text-2xl font-bold text-white">Fl</p>
+                <p class="absolute -bottom-1/2 text-xs text-center">
+                  Feature lists
+                </p>
+              </div>
+              <div
+                class="sm:h-20 sm:w-20 w-14 h-14 bg-[#ffb657] flex items-center justify-center relative rounded-2xl shadow-lg shadow-[#ffb657]"
+              >
+                <p class="text-2xl font-bold text-white">bd</p>
+                <p
+                  class="absolute -bottom-1/2 translate-y-1/2 text-xs text-center"
+                >
+                  boardme development
+                </p>
+              </div>
+              <div
+                class="sm:h-20 sm:w-20 w-14 h-14 bg-[#b258ff] flex items-center justify-center relative rounded-2xl shadow-lg shadow-[#b258ff]"
+              >
+                <p class="text-2xl font-bold text-white">Ud</p>
+                <p
+                  class="absolute -bottom-1/2 translate-y-1/2 text-xs text-center"
+                >
+                  UIDD development
+                </p>
+              </div>
+              <div
+                class="sm:h-20 sm:w-20 w-14 h-14 border flex items-center justify-center relative rounded-2xl"
+              >
+                <p class="text-2xl text-slate-800">+</p>
+                <p
+                  class="absolute -bottom-1/2 translate-y-1/2 text-xs text-center"
+                >
+                  Add a project
+                </p>
+              </div>
+            </div>
+          </div>
+          <footer class="mt-20 w-full flex gap-3 p-2 items-center justify-end">
+            <span class="material-symbols-outlined text-xs text-slate-800">
+              more_horiz
+            </span>
+            <p class="text-xs text-slate-800">Privacy</p>
+            <span class="material-symbols-outlined text-xs text-slate-800">
+              help
+            </span>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

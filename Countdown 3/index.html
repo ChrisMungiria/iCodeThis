@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Countdown 3</title>
+  </head>
+  <body class="w-screen h-screen bg-[#425152] flex items-center justify-center">
+    <div class="w-11/12 max-w-xl p-4">
+      <h1 class="text-3xl font-bold uppercase text-center text-[#2c3636]">
+        Just a little more...
+      </h1>
+      <div
+        class="grid sm:grid-cols-3 grid-cols-1 place-items-center gap-4 mt-5"
+      >
+        <div
+          class="flex items-center justify-center relative w-32 h-32 bg-gradient-to-br from-[#31383e] to-[#2c3636]"
+        >
+          <p id="days" class="font-bold text-4xl p-4 text-[#c93155]">12</p>
+          <span
+            class="uppercase text-2xl text-[#667678] absolute bottom-10 left-0 -rotate-90 transform origin-bottom"
+            >Days</span
+          >
+        </div>
+        <div
+          class="flex items-center justify-center relative w-32 h-32 bg-gradient-to-br from-[#31383e] to-[#2c3636]"
+        >
+          <p id="hours" class="font-bold text-4xl p-4 text-[#c93155]">23</p>
+          <span
+            class="uppercase text-2xl text-[#667678] absolute bottom-12 left-0 -rotate-90 transform origin-bottom"
+            >Hours</span
+          >
+        </div>
+        <div
+          class="flex items-center justify-center relative w-32 h-32 bg-gradient-to-br from-[#31383e] to-[#2c3636]"
+        >
+          <p id="minutes" class="font-bold text-4xl p-4 text-[#c93155]">45</p>
+          <span
+            class="uppercase text-2xl text-[#667678] absolute bottom-14 -left-5 -rotate-90 transform origin-bottom"
+            >Minutes</span
+          >
+        </div>
+      </div>
+    </div>
+    <script>
+      const days = document.getElementById("days");
+      const hours = document.getElementById("hours");
+      const minutes = document.getElementById("minutes");
+
+      const endMonth = "29 Feb 2024";
+
+      function countdown() {
+        const endDate = new Date(endMonth);
+        const currentDate = new Date();
+
+        const totalSeconds = (endDate - currentDate) / 1000;
+
+        const daysLeft = Math.floor(totalSeconds / 3600 / 24);
+        const hoursLeft = Math.floor(totalSeconds / 3600) % 24;
+        const minutesLeft = Math.floor(totalSeconds / 60) % 60;
+
+        days.innerText = daysLeft;
+        hours.innerText = hoursLeft;
+        minutes.innerText = minutesLeft;
+      }
+
+      countdown();
+
+      setInterval(countdown, 1000);
+    </script>
+  </body>
+</html>

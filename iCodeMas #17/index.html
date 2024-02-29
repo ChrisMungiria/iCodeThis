@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>iCodeMas #17</title>
+  </head>
+  <body class="w-screen h-screen bg-[#197592] flex items-center justify-center">
+    <header
+      class="w-10/12 max-w-2xl h-96 bg-white flex justify-between px-5 py-2"
+    >
+      <!-- Function for when text changes in the input -->
+      <h1>iCodeMas</h1>
+      <div class="flex flex-1 text-gray-700 mx-10">
+        <div
+          class="w-full relative h-10 bg-[#eff3f6] p-1 rounded-3xl flex items-center gap-2"
+        >
+          <span class="material-symbols-outlined text-gray-700"> search </span>
+          <input
+            type="text"
+            class="focus:outline-none bg-transparent"
+            placeholder="Search"
+            oninput="searchFunction(event)"
+            id="search"
+          />
+          <div class="absolute top-12 w-full h-fit" id="products">
+            <div class="w-full flex mb-4 items-center justify-between text-xs">
+              <p class="font-bold">Products</p>
+              <p>(24)</p>
+            </div>
+            <div
+              class="w-full text-xs text-slate-800 p-2 my-1 hover:bg-[#eff3f6] transition-all transform duration-150 ease-in-out cursor-pointer flex items-center justify-between"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://icodethis.com/images/iCodeMas/gingerbread_cookie.png"
+                  class="h-12 w-12"
+                />
+                <p>Gingerbread Man Cookie</p>
+              </div>
+              <p class="font-bold">$12.99</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="material-symbols-outlined"> close </span>
+    </header>
+
+    <script>
+      const products = [
+        {
+          name: "Gingerbread Man Cookie",
+          price: 12.99,
+          image: "https://icodethis.com/images/iCodeMas/gingerbread_cookie.png",
+        },
+        {
+          name: "Star shaped cookie",
+          price: 12.99,
+          image: "https://icodethis.com/images/iCodeMas/star_cookie.png",
+        },
+        {
+          name: "Candy cane",
+          price: 10.99,
+          image: "https://icodethis.com/images/iCodeMas/candy_cane.png",
+        },
+        {
+          name: "Christmas tree cookie",
+          price: 13.99,
+          image: "https://icodethis.com/images/iCodeMas/tree_cookie.png",
+        },
+        {
+          name: "Christmas sock",
+          price: 9.99,
+          image: "https://icodethis.com/images/iCodeMas/christmas_sock.png",
+        },
+        {
+          name: "Red Ribbon",
+          price: 5.99,
+          image: "https://icodethis.com/images/iCodeMas/red_ribbon.png",
+        },
+      ];
+
+      function searchFunction(event) {
+        const search = event.target.value;
+        const filteredProducts = products.filter((product) =>
+          product.name.toLowerCase().includes(search.toLowerCase())
+        );
+        const productsContainer = document.getElementById("products");
+        productsContainer.innerHTML = "";
+
+        if (search === "") {
+          filteredProducts = products;
+        }
+        filteredProducts.forEach((product) => {
+          productsContainer.innerHTML += `
+            <div
+              class="w-full text-xs text-slate-800 p-2 my-1 hover:bg-[#eff3f6] transition-all transform duration-150 ease-in-out cursor-pointer flex items-center justify-between"
+            >
+              <div class="flex items-center gap-2">
+                <img
+                  src="${product.image}"
+                  class="h-12 w-12"
+                />
+                <p>${product.name}</p>
+              </div>
+              <p class="font-bold">$${product.price}</p>
+            </div>
+          `;
+        });
+      }
+    </script>
+  </body>
+</html>

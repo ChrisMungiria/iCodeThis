@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      .selected {
+        background-color: #1c255b;
+        color: #ffffff;
+        border: 1px solid #1c255b;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Subscription Plan</title>
+  </head>
+  <body class="w-screen h-screen bg-[#f2f4ff] flex items-center justify-center">
+    <div class="w-11/12 max-w-xs bg-white rounded-xl p-4 shadow-xl">
+      <div
+        class="w-20 h-20 border rounded-full mx-auto flex flex-col items-center justify-center"
+      >
+        <span class="material-symbols-outlined font-bold"> image </span>
+        <p class="text-sm font-bold uppercase">Basic</p>
+      </div>
+      <p class="text-xs text-center my-2">
+        KR <span class="text-xl font-bold">199</span>
+      </p>
+      <p class="uppercase text-xs text-center">NOK/Month</p>
+      <div class="grid grid-cols-4 gap-3 place-items-center my-2 w-5/6 mx-auto">
+        <div
+          class="p-2 rounded-md border flex items-center justify-center cursor-pointer"
+          id="10"
+        >
+          10
+        </div>
+        <div
+          class="p-2 rounded-md border flex items-center justify-center cursor-pointer selected"
+          id="25"
+        >
+          25
+        </div>
+        <div
+          class="p-2 rounded-md border flex items-center justify-center cursor-pointer"
+          id="50"
+        >
+          50
+        </div>
+        <div
+          class="p-2 rounded-md border flex items-center justify-center cursor-pointer"
+          id="100"
+        >
+          100
+        </div>
+      </div>
+      <p class="text-center text-xs">Downloads per month</p>
+      <button
+        class="bg-[#1b245a] text-white w-5/6 mx-auto flex items-center py-3 justify-center rounded-lg text-xs my-2 shadow-xl"
+      >
+        Subscribe
+      </button>
+    </div>
+    <script>
+      const buttons = ["10", "25", "50", "100"];
+      buttons.forEach((button) => {
+        document.getElementById(button).addEventListener("click", () => {
+          buttons.forEach((btn) => {
+            document.getElementById(btn).classList.remove("selected");
+          });
+          document.getElementById(button).classList.add("selected");
+        });
+      });
+    </script>
+  </body>
+</html>

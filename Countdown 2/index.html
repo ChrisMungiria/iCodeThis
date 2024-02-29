@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Old+Uyghur&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Noto Serif Old Uyghur", serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Countdown 2</title>
+  </head>
+  <body
+    onload="setInterval(countdown, 1000)"
+    class="w-screen h-screen flex items-center justify-center bg-[url('https://img.freepik.com/premium-photo/mountains-are-beautiful-place-be_896782-243.jpg')] bg-no-repeat bg-cover bg-center"
+  >
+    <div class="w-11/12 max-w-lg h-96 text-white">
+      <h2 class="text-4xl">Trip to Serbia</h2>
+      <p class="my-4">Friday, 28 Nov 2023</p>
+      <div class="flex flex-row w-full justify-around my-4">
+        <div class="flex items-center justify-center flex-col">
+          <p class="text-5xl bg-white/30 p-4 rounded-l-2xl" id="days">21</p>
+          <span> Days </span>
+        </div>
+        <div class="flex items-center justify-center flex-col">
+          <p class="text-5xl bg-white/30 p-4" id="hours">5</p>
+          <span> Hours </span>
+        </div>
+        <div class="flex items-center justify-center flex-col">
+          <p class="text-5xl bg-white/30 p-4" id="minutes">50</p>
+          <span> Minutes </span>
+        </div>
+        <div class="flex items-center justify-center flex-col">
+          <p class="text-5xl bg-white/30 p-4 rounded-r-2xl" id="seconds">28</p>
+          <span> Seconds </span>
+        </div>
+      </div>
+      <p>
+        Amet aliquam eros faucibus bibendum sapien, neque tempor sed, egestas ad
+        diam euismod suscipit facilisi, a nec urna, lobortis sed. Feugiat
+        fermentum mauris vel ultricies, lorem morbi mauris. Taciti hendrerit
+        lacus, duis sit ultrices, vel sem eget blandit ac, risus sociosqu ut
+        fusce wisi per, iaculis nec fermentum lectus et et.
+      </p>
+    </div>
+    <script>
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      const newYears = "28 Nov 2023";
+
+      date = new Date(newYears);
+
+      setInterval(countdown, 1000);
+
+      function countdown() {
+        const currentDate = new Date();
+
+        const totalSeconds = (date - currentDate) / 1000;
+
+        const days = Math.floor(totalSeconds / 3600 / 24);
+        const hours = Math.floor(totalSeconds / 3600) % 24;
+        const minutes = Math.floor(totalSeconds / 60) % 60;
+        const seconds = Math.floor(totalSeconds) % 60;
+
+        daysEl.innerHTML = days;
+        hoursEl.innerHTML = hours;
+        minutesEl.innerHTML = minutes;
+        secondsEl.innerHTML = seconds;
+      }
+    </script>
+  </body>
+</html>

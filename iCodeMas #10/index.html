@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>iCodeMas #10</title>
+  </head>
+  <body class="w-screen h-screen bg-[#197592] flex items-center justify-center">
+    <div class="w-10/12 mx-auto max-w-md h-fit bg-white rounded-xl relative">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/9019/9019318.png"
+        alt=""
+        class="absolute top-0 left-0 w-24 h-24 transform -translate-x-1/2 -translate-y-1/2"
+      />
+      <div class="w-full flex justify-end p-4">
+        <i class="fa-solid fa-xmark text-gray-600"></i>
+      </div>
+      <h1 class="sm:text-2xl text-xl font-semibold text-center mt-2">
+        We value your freedback!
+      </h1>
+      <h4
+        class="text-xs text-gray-600 w-10/12 mx-auto sm:w-3/4 text-center mt-2"
+      >
+        Your feedback is invaluable in shaping a better shopping journey for you
+        and others. Thank you for being part of our committment to excellence
+      </h4>
+      <div
+        class="grid grid-cols-3 place-items-center sm:grid-cols-5 gap-4 mt-5 w-10/12 mx-auto basis-12"
+      >
+        <div class="border p-2" onclick="select('terrible')" id="terrible">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1791/1791353.png"
+            alt=""
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-xs text-gray-500 text-center mt-2">Terrible</p>
+        </div>
+        <div class="border p-2" onclick="select('bad')" id="bad">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3688/3688051.png"
+            alt=""
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-xs text-gray-500 text-center mt-2">Bad</p>
+        </div>
+        <div class="border p-2" onclick="select('okay')" id="okay">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3688/3688054.png"
+            alt=""
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-xs text-gray-500 text-center mt-2">Okay</p>
+        </div>
+        <div class="border p-2" onclick="select('good')" id="good">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/4714/4714730.png"
+            alt=""
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-xs text-gray-500 text-center mt-2">Good</p>
+        </div>
+        <div class="border p-2" onclick="select('amazing')" id="amazing">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/2584/2584606.png"
+            alt=""
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-xs text-gray-500 text-center mt-2">Amazing</p>
+        </div>
+      </div>
+      <p class="w-10/12 mx-auto text-slate-800 font-semibold mt-2">
+        Share your feedback
+      </p>
+      <textarea
+        name=""
+        id=""
+        cols="10"
+        rows="3"
+        class="w-10/12 mx-auto h-32 border border-gray-300 rounded mt-2 flex p-2"
+        placeholder="Message"
+      ></textarea>
+      <button
+        class="bg-[#197592] px-4 py-2 rounded-3xl flex mx-auto text-white text-xs m-4"
+      >
+        Send feedback
+      </button>
+    </div>
+    <script>
+      const moods = ["terrible", "bad", "okay", "good", "amazing"];
+      function select(id) {
+        moods.forEach((mood) => {
+          document.getElementById(mood).classList.remove("border-[#197592]");
+        });
+        document.getElementById(id).classList.add("border-[#197592]");
+      }
+    </script>
+  </body>
+</html>

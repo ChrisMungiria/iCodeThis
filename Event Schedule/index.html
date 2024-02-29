@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Event Schedule</title>
+  </head>
+  <body class="bg-blue-500 w-screen h-screen flex items-center justify-center">
+    <div class="w-11/12 max-w-xs h-fit bg-white">
+      <div class="w-full bg-slate-700 px-4 pt-4">
+        <div class="flex items-center justify-between text-white">
+          <span class="material-symbols-outlined"> arrow_back </span>
+          <span class="material-symbols-outlined"> notifications </span>
+        </div>
+        <div class="mt-4 flex flex-row">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt=""
+            class="w-12 h-12 rounded-full shadow-md"
+          />
+          <div class="ml-5 text-white">
+            <h2 class="text-lg font-bold">Katy Perry</h2>
+            <p class="text-xs font-light">Event Schedule</p>
+          </div>
+        </div>
+        <div class="flex flex-row space-x-4 text-white uppercase mt-5">
+          <div class="cursor-pointer group">
+            <p>November</p>
+            <div
+              class="w-0 group-hover:w-full transition-all transform duration-200 h-[2px] bg-red-500"
+            ></div>
+          </div>
+          <div class="cursor-pointer group">
+            <p>December</p>
+            <div
+              class="w-0 group-hover:w-full transition-all transform duration-200 h-[2px] bg-red-500"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-fit bg-white p-4">
+        <div class="flex flex-row">
+          <div class="flex flex-col space-y-2 items-center">
+            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div class="w-[1px] h-full bg-gray-400"></div>
+          </div>
+          <div class="ml-4 w-full space-y-2">
+            <div class="flex flex-row justify-between w-full">
+              <div class="">
+                <p class="uppercase font-semibold">Nov 26</p>
+                <p class="font-light text-xs">Denver, CO, US</p>
+              </div>
+              <button
+                class="flex items-center justify-center text-xs space-x-2 bg-gradient-to-r from-slate-500 to-slate-700 hover:shadow-xl transition-all transform duration-200 text-white h-8 px-4 shadow-md rounded-3xl"
+              >
+                <span class="material-symbols-outlined text-xs">
+                  book_online </span
+                >Buy ticket
+              </button>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs">
+                  location_on </span
+                >Pepsi Center
+              </p>
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs"> schedule </span
+                >20:00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row mt-4">
+          <div class="flex flex-col space-y-2 items-center">
+            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div class="w-[1px] h-full bg-gray-400"></div>
+          </div>
+          <div class="ml-4 w-full space-y-2">
+            <div class="flex flex-row justify-between w-full">
+              <div class="">
+                <p class="uppercase font-semibold">Nov 28</p>
+                <p class="font-light text-xs">Omaha, NE, US</p>
+              </div>
+              <button
+                class="flex items-center justify-center text-xs space-x-2 bg-gray-200 text-gray-700 h-8 px-4 rounded-3xl"
+              >
+                <span class="material-symbols-outlined text-xs">
+                  book_online </span
+                >Sold Out
+              </button>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs">
+                  location_on </span
+                >BOK Center
+              </p>
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs"> schedule </span
+                >20:00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row mt-4">
+          <div class="flex flex-col space-y-2 items-center">
+            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div class="w-[1px] h-full bg-gray-400"></div>
+          </div>
+          <div class="ml-4 w-full space-y-2">
+            <div class="flex flex-row justify-between w-full">
+              <div class="">
+                <p class="uppercase font-semibold">Nov 29</p>
+                <p class="font-light text-xs">Tusla, OK, US</p>
+              </div>
+              <button
+                class="flex items-center justify-center text-xs space-x-2 bg-gradient-to-r from-slate-500 to-slate-700 hover:shadow-xl transition-all transform duration-200 text-white h-8 px-4 shadow-md rounded-3xl"
+              >
+                <span class="material-symbols-outlined text-xs">
+                  book_online </span
+                >Buy ticket
+              </button>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs">
+                  location_on </span
+                >Century Center
+              </p>
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs"> schedule </span
+                >20:00
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-row mt-4">
+          <div class="flex flex-col space-y-2 items-center">
+            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+            <div class="w-[1px] h-full bg-gray-400"></div>
+          </div>
+          <div class="ml-4 w-full space-y-2">
+            <div class="flex flex-row justify-between w-full">
+              <div class="">
+                <p class="uppercase font-semibold">Nov 29</p>
+                <p class="font-light text-xs">St. Paul, MN, US</p>
+              </div>
+              <button
+                class="flex items-center justify-center text-xs space-x-2 bg-gradient-to-r from-slate-500 to-slate-700 hover:shadow-xl transition-all transform duration-200 text-white h-8 px-4 shadow-md rounded-3xl"
+              >
+                <span class="material-symbols-outlined text-xs">
+                  book_online </span
+                >Buy ticket
+              </button>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs">
+                  location_on </span
+                >Xcel Center
+              </p>
+              <p class="text-gray-600 text-xs flex items-center">
+                <span class="material-symbols-outlined text-xs"> schedule </span
+                >20:00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

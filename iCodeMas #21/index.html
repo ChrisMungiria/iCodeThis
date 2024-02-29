@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>iCodeMas #21</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center">
+    <div class="w-10/12 max-w-md">
+      <h1 class="text-4xl font-bold text-center">Frequently asked questions</h1>
+      <p class="text-sm text-center">
+        Have questions? Explore our Frequently Asked Questions section for quick
+        answers. If your questino isn't answered, feel free to reach out to our
+        helpful support team
+      </p>
+      <div class="w-full flex flex-col gap-2 mt-10">
+        <div class="border p-2">
+          <div
+            class="flex items-center justify-between"
+            onclick="toggleAccordion(this)"
+          >
+            <p class="text-lg font-medium">When will my order ship?</p>
+            <span class="material-symbols-outlined text-lg cursor-pointer">
+              close
+            </span>
+          </div>
+          <p class="text-xs mt-3">
+            Orders typically ship within 1-2 business days. During peak holiday
+            season, please allow up to 3 business days for processing and
+            shipping. You will receive an email notification with tracking
+            information once your order has been shipped.
+          </p>
+        </div>
+        <div class="bg-[#f9fbfc] p-2">
+          <div
+            class="flex items-center justify-between"
+            onclick="toggleAccordion(this)"
+          >
+            <p class="text-lg font-medium">What are your shipping rates?</p>
+            <span class="material-symbols-outlined cursor-pointer text-lg">
+              add
+            </span>
+          </div>
+          <p class="text-xs mt-3 hidden">
+            Orders typically ship within 1-2 business days. During peak holiday
+            season, please allow up to 3 business days for processing and
+            shipping. You will receive an email notification with tracking
+            information once your order has been shipped.
+          </p>
+        </div>
+        <div class="bg-[#f9fbfc] p-2">
+          <div
+            class="flex items-center justify-between"
+            onclick="toggleAccordion(this)"
+          >
+            <p class="text-lg font-medium">Do you offer gift wrapping?</p>
+            <span class="material-symbols-outlined cursor-pointer text-lg">
+              add
+            </span>
+          </div>
+          <p class="text-xs mt-3 hidden">
+            Orders typically ship within 1-2 business days. During peak holiday
+            season, please allow up to 3 business days for processing and
+            shipping. You will receive an email notification with tracking
+            information once your order has been shipped.
+          </p>
+        </div>
+        <div class="bg-[#f9fbfc] p-2">
+          <div
+            class="flex items-center justify-between"
+            onclick="toggleAccordion(this)"
+          >
+            <p class="text-lg font-medium">What is your return policy?</p>
+            <span class="material-symbols-outlined cursor-pointer text-lg">
+              add
+            </span>
+          </div>
+          <p class="text-xs mt-3 hidden">
+            Orders typically ship within 1-2 business days. During peak holiday
+            season, please allow up to 3 business days for processing and
+            shipping. You will receive an email notification with tracking
+            information once your order has been shipped.
+          </p>
+        </div>
+        <div class="bg-[#f9fbfc] p-2">
+          <div
+            class="flex items-center justify-between"
+            onclick="toggleAccordion(this)"
+          >
+            <p class="text-lg font-medium">Do you have a store location?</p>
+            <span class="material-symbols-outlined cursor-pointer text-lg">
+              add
+            </span>
+          </div>
+          <p class="text-xs mt-3 hidden">
+            Orders typically ship within 1-2 business days. During peak holiday
+            season, please allow up to 3 business days for processing and
+            shipping. You will receive an email notification with tracking
+            information once your order has been shipped.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Pass the element to the function
+      function toggleAccordion(el) {
+        // The element's next sibling is the content we want to toggle, the <p> tag
+        const content = el.nextElementSibling;
+        content.classList.toggle("hidden");
+
+        // The element's parent is the <div> tag, which we want to add a border to
+        // and change the background color depending on whether it's open or closed
+        const parent = el.parentElement;
+
+        // Open with a border and a light background
+        parent.classList.toggle("border");
+
+        // Closed with a dark background and no border
+        parent.classList.toggle("bg-[#f9fbfc]");
+
+        // Change the icon depending on whether it's open or closed
+        const span = el.querySelector("span");
+
+        // If the parent has a border, it's open, so change the icon to close
+        if (parent.classList.contains("border")) {
+          span.innerText = "close";
+        } else {
+          // If the parent doesn't have a border, it's closed, so change the icon to add
+          span.innerText = "add";
+        }
+      }
+    </script>
+  </body>
+</html>

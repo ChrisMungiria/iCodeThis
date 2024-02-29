@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Traffic Chart</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#d2def7]">
+    <div class="relative max-w-sm w-11/12 h-48 rounded-lg">
+      <div
+        class="absolute top-2 left-2 w-full h-full bg-[#f6fafe]/50 rounded-lg"
+      ></div>
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[#f6fafe] rounded-lg p-5"
+      >
+        <h1
+          class="text-xl"
+          style="font-family: 'Noto Serif Balinese', serif; font-weight: bold"
+        >
+          Traffic Source Types
+        </h1>
+        <p class="text-xs">Views . last 28 days</p>
+        <div class="flex">
+          <div class="overflow-hidden w-5/12">
+            <canvas class="p-1" id="chartPie"></canvas>
+          </div>
+          <div class="flex flex-col items-end w-full text-xs pt-4">
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-start">Channel Pages</p>
+              <div class="flex items-center gap-4">
+                <div class="h-1 w-20 bg-[rgb(101,145,255)] rounded-3xl"></div>
+                <p class="font-bold">37.5%</p>
+              </div>
+            </div>
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-start">Direct or unkown</p>
+              <div class="flex items-center gap-4">
+                <div class="h-1 w-16 bg-[rgb(68,118,240)] rounded-3xl"></div>
+                <p class="font-bold">33.6%</p>
+              </div>
+            </div>
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-start">Search</p>
+              <div class="flex items-center gap-7">
+                <div class="h-1 w-11 bg-[rgb(22,84,227)] rounded-3xl"></div>
+                <p class="font-bold">11%</p>
+              </div>
+            </div>
+            <div class="flex flex-row items-center justify-between w-full">
+              <p class="text-start">External</p>
+              <div class="flex items-center gap-8">
+                <div class="h-1 w-6 bg-[rgb(152,178,252)] rounded-3xl"></div>
+                <p class="font-bold">6%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const dataPie = {
+        // labels: ["JavaScript", "Python", "Ruby"],
+        datasets: [
+          {
+            label: "Traffic Sources",
+            data: [37.5, 33.6, 11, 6],
+            backgroundColor: [
+              "rgb(101,145,255)",
+              "rgb(68,118,240)",
+              "rgb(22,84,227)",
+              "rgb(152,178,252)",
+            ],
+            // hoverOffset: 4,
+          },
+        ],
+      };
+
+      const configPie = {
+        type: "pie",
+        data: dataPie,
+        options: {},
+      };
+
+      var chartBar = new Chart(document.getElementById("chartPie"), configPie);
+    </script>
+  </body>
+</html>

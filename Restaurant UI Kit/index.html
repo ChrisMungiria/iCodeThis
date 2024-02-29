@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .active {
+        background-color: #ffb207;
+      }
+    </style>
+
+    <title>Restaurant UI Kit</title>
+  </head>
+  <body class="w-screen h-screen bg-[#f6f6f6] flex items-center justify-center">
+    <div
+      id="restaurants"
+      class="w-10/12 bg-[#1f2125] rounded-lg shadow max-w-xs p-4"
+    >
+      <h2 class="text-xl text-white font-bold">Restaurants</h2>
+      <div
+        class="w-full bg-white rounded-lg p-2 my-2 flex gap-2"
+        id="clarchens"
+      >
+        <img
+          src="https://www.landbased.com.au/wp-content/uploads/2023/11/long-table.jpg"
+          alt=""
+          class="h-20 w-auto rounded-lg my-auto shadow-xl"
+        />
+        <div class="w-full h-full p-2">
+          <div class="flex flex-row items-center justify-between mb-3">
+            <p class="text-xs font-bold">Clarchens Ballhaus</p>
+            <div class="flex items-center">
+              <i class="fa-solid fa-star text-xs text-blue-300"></i>
+              <p class="text-xs">4.5</p>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <i class="fa-solid fa-location-dot text-xs text-yellow-500"></i>
+            <p class="text-[10px]">
+              Clarchens Ballhaus AugustraBe 24 10117 Berline
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <i class="fa-solid fa-location-dot text-xs text-yellow-500"></i>
+            <p class="text-[10px]">
+              <span class="font-bold">Open now</span> - Closes at 2:00 am
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      id="step-2"
+      class="w-10/12 p-4 hidden bg-[#1f2125] max-w-xs rounded-lg"
+    >
+      <div class="w-full p-2 flex items-center justify-between">
+        <div class="flex gap-2 text-white items-center">
+          <i class="fa-solid fa-users text-white"></i>
+          <p class="text-xs"><span id="people">4</span> people</p>
+        </div>
+        <i class="fa-solid fa-chevron-up text-yellow-500"></i>
+      </div>
+      <hr
+        class="h-px my-2 bg-slate-500 mx-auto w-10/12 border-0 dark:bg-gray-700"
+      />
+      <div
+        class="flex w-10/12 gap-4 flex-wrap items-start justify-start mx-auto my-2"
+      >
+        <div
+          class="w-8 h-8 flex active items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="2"
+        >
+          2
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="3"
+        >
+          3
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="4"
+        >
+          4
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="5"
+        >
+          5
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="6"
+        >
+          6
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="7"
+        >
+          7
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="8"
+        >
+          8
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="9"
+        >
+          9
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="10"
+        >
+          10
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="11"
+        >
+          11
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="12"
+        >
+          12
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="13"
+        >
+          13
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="14"
+        >
+          14
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="15"
+        >
+          15
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="16"
+        >
+          16
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="17"
+        >
+          17
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="18"
+        >
+          18
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="19"
+        >
+          19
+        </div>
+        <div
+          class="w-8 h-8 flex items-center justify-center rounded-full active:bg-yellow-500 hover:bg-yellow-300 transition-all transform duration-150 ease-in-out cursor-pointer text-white hover:text-slate-800"
+          id="20"
+        >
+          20
+        </div>
+      </div>
+      <a href="" class="text-yellow-500 text-xs m-4">More than 20 people</a>
+      <div class="w-full p-2 text-xs flex text-white items-center gap-3">
+        <i class="fa-solid fa-clock text-yellow-500"></i>
+        <p>Choose a time:</p>
+      </div>
+      <hr
+        class="h-px my-2 bg-slate-500 mx-auto w-10/12 border-0 dark:bg-gray-700"
+      />
+      <div class="flex gap-5 flex-wrap w-10/12 mx-auto justify-between">
+        <div
+          id="time-8"
+          class="w-1/3 cursor-pointer hover:bg-yellow-300 active py-2 rounded-3xl"
+        >
+          <p class="text-xs text-white text-center">8:00 pm</p>
+        </div>
+        <div
+          id="time-8-thirty"
+          class="w-1/3 cursor-pointer hover:bg-yellow-300 py-2 rounded-3xl"
+        >
+          <p class="text-xs text-white text-center">8:30 pm</p>
+        </div>
+        <div
+          id="time-9"
+          class="w-1/3 cursor-pointer hover:bg-yellow-300 py-2 rounded-3xl"
+        >
+          <p class="text-xs text-white text-center">9:00 pm</p>
+        </div>
+        <div
+          id="time-9-thirty"
+          class="w-1/3 cursor-pointer hover:bg-yellow-300 py-2 rounded-3xl"
+        >
+          <p class="text-xs text-white text-center">9:30 pm</p>
+        </div>
+      </div>
+      <button
+        class="text-white bg-yellow-500 flex mx-auto items-center justify-center py-2 w-1/2 my-2 text-xs rounded-3xl"
+      >
+        Reserve a Table
+      </button>
+    </div>
+    <script>
+      const clarchens = document.getElementById("clarchens");
+      const restaurants = document.getElementById("restaurants");
+      const step_2 = document.getElementById("step-2");
+      clarchens.addEventListener("click", () => {
+        console.log("clicked");
+        restaurants.style.display = "none";
+        step_2.classList.remove("hidden");
+        step_2.style.display = "block";
+      });
+      const people = [
+        2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+      ];
+
+      people.forEach((person) => {
+        const personElement = document.getElementById(person);
+        personElement.addEventListener("click", () => {
+          // Remove the active class from all elements
+          people.forEach((person) => {
+            const personElement = document.getElementById(person);
+            personElement.classList.remove("active");
+          });
+          // Add the active class to the clicked element
+          personElement.classList.add("active");
+          console.log(person);
+          document.getElementById("people").innerHTML = person;
+        });
+      });
+      const times = ["time-8", "time-8-thirty", "time-9", "time-9-thirty"];
+
+      times.forEach((time) => {
+        const timeElement = document.getElementById(time);
+        timeElement.addEventListener("click", () => {
+          // Remove the active class from all elements
+          times.forEach((time) => {
+            const timeElement = document.getElementById(time);
+            timeElement.classList.remove("active");
+          });
+          // Add the active class to the clicked element
+          timeElement.classList.add("active");
+          console.log(time);
+        });
+      });
+    </script>
+  </body>
+</html>

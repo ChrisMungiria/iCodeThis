@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap");
+      h1 {
+        font-family: "Merriweather", serif;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Testimonials 4</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-10/12 max-w-md bg-white rounded-md p-8">
+      <h1 class="font-bold text-center text-lg">A word from our customers</h1>
+      <p class="text-xs w-3/4 mx-auto text-center">
+        We've been helping businesses do their best since 2018
+      </p>
+      <div class="flex items-center justify-between mx-auto my-5">
+        <span
+          class="material-symbols-outlined w-8 h-8 rounded-full border flex items-center justify-center text-xs cursor-pointer"
+          id="prev"
+        >
+          arrow_back_ios
+        </span>
+        <div class="bg-slate-900 shadow-md p-2 rounded-md w-2/3 relative">
+          <p
+            class="text-xs text-slate-100 text-center w-3/4 mx-auto"
+            id="testimonial"
+          >
+            Both attractive and higly adaptable. Buy this now. Thank you for
+            making it painless, pleasant and most of all hassle free!
+          </p>
+          <div class="absolute w-fit h-fit left-1/2 -translate-x-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8"
+              alt="profile image"
+              class="w-14 h-14 rounded-full mx-auto"
+              id="image"
+            />
+            <p class="text-xs font-bold text-center my-2" id="name">
+              John V. Bellamy
+            </p>
+            <p class="text-xs text-center text-slate-800" id="title">
+              Founder & CEO, The Company
+            </p>
+          </div>
+        </div>
+        <span
+          class="material-symbols-outlined w-8 h-8 rounded-full border flex items-center justify-center text-xs cursor-pointer"
+          id="next"
+        >
+          arrow_forward_ios
+        </span>
+      </div>
+    </div>
+    <script>
+      const prev = document.getElementById("prev");
+      const next = document.getElementById("next");
+      const testimonials = [
+        {
+          text: "Both attractive and higly adaptable. Buy this now. Thank you for making it painless, pleasant and most of all hassle free!",
+          name: "John V. Bellamy",
+          title: "Founder & CEO, The Company",
+          image:
+            "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8",
+        },
+        {
+          text: "Exceptionally versatile and stylish. This product exceeded my expectations. A must-have for anyone looking for quality and sophistication. Thank you for crafting such an amazing product!",
+          name: "David P. Mitchell",
+          title: "ech Enthusiast",
+          image:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsfT8A57x4zPFUNtYNIv0Z58cE2ZbAirFHwDJLf6vkJw&s",
+        },
+        {
+          text: "Incredibly attractive and seamlessly functional. I can't imagine my life without this product now. Kudos to the makers for delivering such an outstanding experience. 10/10!",
+          name: "John Doe",
+          title: "Marketing Strategist",
+          image:
+            "data:image/jpeg;base64,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",
+        },
+      ];
+      let index = 0;
+      prev.addEventListener("click", () => {
+        console.log("index", index);
+        index--;
+        if (index < 0) {
+          index = testimonials.length - 1;
+        }
+        document.getElementById("testimonial").innerText =
+          testimonials[index].text;
+        document.getElementById("name").innerText = testimonials[index].name;
+        document.getElementById("title").innerText = testimonials[index].title;
+        document.getElementById("image").src = testimonials[index].image;
+      });
+      next.addEventListener("click", () => {
+        console.log("index", index);
+        index++;
+        if (index > testimonials.length - 1) {
+          index = 0;
+        }
+        document.getElementById("testimonial").innerText =
+          testimonials[index].text;
+        document.getElementById("name").innerText = testimonials[index].name;
+        document.getElementById("title").innerText = testimonials[index].title;
+        document.getElementById("image").src = testimonials[index].image;
+      });
+    </script>
+  </body>
+</html>

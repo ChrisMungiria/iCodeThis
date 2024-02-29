@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Drag And Drop</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-900 flex items-center justify-center">
+    <div class="w-11/12 max-w-2xl h-fit bg-gray-100">
+      <nav class="flex items-center justify-between">
+        <p
+          class="bg-gray-100 text-gray-300 font-bold uppercase m-2 p-2 rounded"
+        >
+          Logo
+        </p>
+        <div class="flex gap-4">
+          <div
+            class="bg-slate-900 rounded-b-full py-2 px-4 cursor-pointer text-white -mt-4"
+          >
+            +
+          </div>
+          <span
+            class="material-symbols-outlined bg-gray-300 text-white rounded-lg p-2 cursor-pointer"
+          >
+            person
+          </span>
+          <p class="flex items-center gap-1 text-gray-600 text-xs">
+            Anthony Webb
+            <span class="material-symbols-outlined"> expand_more </span>
+          </p>
+        </div>
+      </nav>
+      <div class="px-4 flex justify-between">
+        <h1 class="font-bold text-xl capitalize">My boards</h1>
+        <div class="flex gap-2">
+          <span
+            class="material-symbols-outlined cursor-pointer text-gray-300 hover:text-gray-900 transition-all transform duration-150"
+          >
+            search
+          </span>
+          <span
+            class="material-symbols-outlined cursor-pointer text-gray-300 hover:text-gray-900 transition-all transform duration-150"
+            onclick="showGrid()"
+          >
+            grid_view
+          </span>
+          <span
+            class="material-symbols-outlined cursor-pointer text-gray-300 hover:text-gray-900 transition-all transform duration-150"
+            onclick="showList()"
+          >
+            view_list
+          </span>
+        </div>
+      </div>
+      <p class="text-gray-300 text-xs ml-4">6 boards, 56 tasks</p>
+      <div class="w-full h-fit p-4 flex flex-col gap-4" id="list_grid">
+        <div
+          class="w-full h-16 bg-white flex items-center justify-between rounded"
+        >
+          <div class="h-full flex items-center gap-3">
+            <img
+              src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?cs=srgb&dl=pexels-johannes-plenio-1423600.jpg&fm=jpg"
+              class="h-4/5 my-auto rounded-r-xl"
+              alt=""
+            />
+            <p class="capitalize text-[8px] sm:text-xs font-bold">
+              Benjamin Franklin's method of habit formation
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-[6px] pr-5">
+            <p class="text-orange-500">24802 tasks are overdue</p>
+            <p class="bg-gray-200 text-gray-600 p-1 rounded-md">
+              12 of 25 tasks done
+            </p>
+            <span
+              class="material-symbols-outlined p-[2px] bg-gray-200 rounded-md text-xs"
+            >
+              more_horiz
+            </span>
+          </div>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-between rounded"
+        >
+          <div class="h-full flex items-center gap-3">
+            <img
+              src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?cs=srgb&dl=pexels-johannes-plenio-1423600.jpg&fm=jpg"
+              class="h-4/5 my-auto rounded-r-xl"
+              alt=""
+            />
+            <p class="capitalize text-[8px] sm:text-xs font-bold">
+              Benjamin Franklin's method of habit formation
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-[6px] pr-5">
+            <p class="text-orange-500">24802 tasks are overdue</p>
+            <p class="bg-gray-200 text-gray-600 p-1 rounded-md">
+              12 of 25 tasks done
+            </p>
+            <span
+              class="material-symbols-outlined p-[2px] bg-gray-200 rounded-md text-xs"
+            >
+              more_horiz
+            </span>
+          </div>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-between rounded"
+        >
+          <div class="h-full flex items-center gap-3">
+            <img
+              src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?cs=srgb&dl=pexels-johannes-plenio-1423600.jpg&fm=jpg"
+              class="h-4/5 my-auto rounded-r-xl"
+              alt=""
+            />
+            <p class="capitalize text-[8px] sm:text-xs font-bold">
+              Benjamin Franklin's method of habit formation
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-[6px] pr-5">
+            <p class="text-orange-500">24802 tasks are overdue</p>
+            <p class="bg-gray-200 text-gray-600 p-1 rounded-md">
+              12 of 25 tasks done
+            </p>
+            <span
+              class="material-symbols-outlined p-[2px] bg-gray-200 rounded-md text-xs"
+            >
+              more_horiz
+            </span>
+          </div>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-between rounded"
+        >
+          <div class="h-full flex items-center gap-3">
+            <img
+              src="https://images.pexels.com/photos/1423600/pexels-photo-1423600.jpeg?cs=srgb&dl=pexels-johannes-plenio-1423600.jpg&fm=jpg"
+              class="h-4/5 my-auto rounded-r-xl"
+              alt=""
+            />
+            <p class="capitalize text-[8px] sm:text-xs font-bold">
+              Benjamin Franklin's method of habit formation
+            </p>
+          </div>
+          <div class="flex items-center gap-4 text-[6px] pr-5">
+            <p class="text-orange-500">24802 tasks are overdue</p>
+            <p class="bg-gray-200 text-gray-600 p-1 rounded-md">
+              12 of 25 tasks done
+            </p>
+            <span
+              class="material-symbols-outlined p-[2px] bg-gray-200 rounded-md text-xs"
+            >
+              more_horiz
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function showGrid() {
+        document.getElementById("list_grid").classList.remove("flex-col");
+        document.getElementById("list_grid").classList.add("grid");
+        document.getElementById("list_grid").classList.add("grid-cols-2");
+      }
+      function showList() {
+        document.getElementById("list_grid").classList.add("flex-col");
+        document.getElementById("list_grid").classList.remove("grid");
+        document.getElementById("list_grid").classList.remove("grid-cols-2");
+      }
+    </script>
+  </body>
+</html>

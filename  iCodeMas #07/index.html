@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      input[type="checkbox"]:before {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input[type="checkbox"]:checked:before {
+        background-color: gray;
+        content: "✓";
+      }
+    </style>
+    <title>iCodeMas #07</title>
+  </head>
+
+  <body class="w-screen h-screen bg-gray-100 flex flex-col sm:flex-row">
+    <div class="h-full p-5 flex flex-row sm:flex-col gap-5">
+      <h1 class="text-xl">Filters</h1>
+      <div class="flex flex-col text-xs">
+        <h2 class="text-lg font-medium">Category</h2>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="cookies" id="cookies" />
+          <label for="cookies">Cookies</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="candies" id="candies" />
+          <label for="candies">Candies</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="ornaments" id="ornaments" />
+          <label for="ornaments">Ornaments</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="accessories" id="accessories" />
+          <label for="accessories">Accessories</label>
+        </div>
+      </div>
+      <div class="flex flex-col text-xs">
+        <h2 class="text-lg font-medium">Colors</h2>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="red" id="red" />
+          <label for="red">Red</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="white" id="white" />
+          <label for="white">White</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="green" id="green" />
+          <label for="green">Green</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="brown" id="brown" />
+          <label for="brown">Brown</label>
+        </div>
+      </div>
+      <div class="flex flex-col text-xs">
+        <h2 class="text-lg font-medium">Size</h2>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="small" id="small" />
+          <label for="small">Small</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="medium" id="medium" />
+          <label for="medium">Medium</label>
+        </div>
+        <div class="flex flex-row gap-2">
+          <input type="checkbox" name="large" id="large" />
+          <label for="large">Large</label>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-11/12 place-items-center max-w-2xl mx-auto grid grid-cols-1 mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+    >
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute bg-[#237393] text-xs text-white uppercase top-0 left-0 p-1"
+          >New</span
+        >
+        <img
+          src="https://img.freepik.com/premium-photo/green-christmas-tree-made-plastic_81048-23800.jpg?w=900"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="christmas-tree-add"
+          onclick="addToCart('christmas-tree-added', 'christmas-tree-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="christmas-tree-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Christmas Tree decoration</p>
+        <p class="text-base font-bold">$19.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://st.depositphotos.com/1050267/2328/i/950/depositphotos_23287566-stock-photo-opened-gift-box.jpg"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="gift-box-add"
+          onclick="addToCart('gift-box-added', 'gift-box-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="gift-box-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Gift Box</p>
+        <p class="text-base font-bold">
+          $9.99
+          <span class="line-through text-gray-500 text-xs font-normal"
+            >$12.99</span
+          >
+        </p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/026/915/463/non_2x/smiling-cookie-gingerbread-man-on-white-background-ai-generated-photo.jpg"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="gingerbread-man-add"
+          onclick="addToCart('gingerbread-man-added', 'gingerbread-man-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="gingerbread-man-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Gingerbread Man Cookie</p>
+        <p class="text-base font-bold">$12.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/009/400/652/non_2x/snowflakes-clipart-design-illustration-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="snowflake-add"
+          onclick="addToCart('snowflake-added', 'snowflake-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="snowflake-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Snowflake decoration</p>
+        <p class="text-base font-bold">$4.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/015/118/006/large_2x/gingerbread-watercolor-clipart-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="star-shaped-cookie-add"
+          onclick="addToCart('star-shaped-cookie-added', 'star-shaped-cookie-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="star-shaped-cookie-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Star Shaped Cookie</p>
+        <p class="text-base font-bold">$12.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/012/909/174/large_2x/3d-santa-hat-isolated-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="santas-hat-add"
+          onclick="addToCart('santas-hat-added', 'santas-hat-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="santas-hat-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Santa's Hat</p>
+        <p class="text-base font-bold">$39.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/013/720/923/large_2x/christmas-candy-cane-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="candy-cane-add"
+          onclick="addToCart('candy-cane-added', 'candy-cane-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="candy-cane-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Candy Cane</p>
+        <p class="text-base font-bold">$8.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/024/526/141/large_2x/cute-christmas-snowman-generative-ai-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="snowman-decoration-add"
+          onclick="addToCart('snowman-decoration-added', 'snowman-decoration-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="snowman-decoration-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Snowman Decoration</p>
+        <p class="text-base font-bold">$39.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/027/119/127/large_2x/christmas-ball-hanging-decoration-isolated-on-transparent-background-ornament-ball-generative-ai-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="christmas-ball-add"
+          onclick="addToCart('christmas-ball-added', 'christmas-ball-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="christmas-ball-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Christmas Ball</p>
+        <p class="text-base font-bold">$4.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/015/165/910/large_2x/winter-3d-render-illustration-object-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="christmas-red-socks-add"
+          onclick="addToCart('christmas-red-socks-added', 'christmas-red-socks-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="christmas-red-socks-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Christmas Red Socks</p>
+        <p class="text-base font-bold">$29.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/011/222/484/large_2x/red-bow-ribbon-beautiful-ribbon-3d-realistic-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="red-ribbon-add"
+          onclick="addToCart('red-ribbon-added', 'red-ribbon-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="red-ribbon-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Red Ribbon</p>
+        <p class="text-base font-bold">$29.99</p>
+      </div>
+      <div class="w-40 h-fit relative group">
+        <span
+          class="absolute hidden bg-[#e65e56] text-xs text-white uppercase top-0 left-0 p-1"
+          >-23%</span
+        >
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/013/995/661/large_2x/3d-christmas-gingerbread-free-png.png"
+          alt=""
+          class="w-auto h-40 object-cover bg-white"
+        />
+        <div
+          class="w-full flex p-2 bg-[#237393]/60 hover:bg-[#237393] transition-all transform duration-200 ease-in-out opacity-0 group-hover:opacity-100 cursor-pointer gap-2 items-center justify-center"
+          id="christmas-tree-cookie-add"
+          onclick="addToCart('christmas-tree-cookie-added', 'christmas-tree-cookie-add')"
+        >
+          <p class="text-xs text-white">
+            Add to cart <i class="fa-solid fa-cart-shopping"></i>
+          </p>
+        </div>
+        <div
+          class="w-full p-2 bg-[#d0e7fc] hidden items-center justify-center"
+          id="christmas-tree-cookie-added"
+        >
+          <p class="text-xs text-gray-700 text-center">Added to cart</p>
+        </div>
+        <p class="text-xs text-gray-900 mt-2">Christmas Tree Cookie</p>
+        <p class="text-base font-bold">$13.99</p>
+      </div>
+    </div>
+    <script>
+      function addToCart(child, parent) {
+        document.getElementById(parent).classList.add("hidden");
+        document.getElementById(child).classList.remove("hidden");
+        document.getElementById(child).classList.add("flex");
+      }
+    </script>
+  </body>
+</html>

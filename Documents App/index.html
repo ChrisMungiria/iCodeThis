@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Documents App</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-gradient-to-bl from-[#edf6ff] to-white flex flex-col items-center justify-center gap-2"
+  >
+    <div
+      class="w-10/12 max-w-xs h-fit bg-gradient-to-r from-[#3e8ccf] to-[#8fe1ec] flex items-center justify-between p-2"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5877/5877001.png"
+        alt="mouse"
+        class="w-auto h-10 ml-2"
+      />
+      <p class="text-xs text-white w-1/2">
+        Our new <span class="font-bold capitalize">terms of service</span> and
+        <span class="font-bold capitalize">privacy statement</span> are in
+        effect
+      </p>
+      <div class="h-full flex items-start p-1">
+        <span class="material-symbols-outlined text-white"> cancel </span>
+      </div>
+    </div>
+    <div class="w-10/12 max-w-xs h-fit bg-white shadow-xl p-2">
+      <div class="flex items-center justify-between">
+        <p>Documents</p>
+        <button
+          class="flex items-center gap-2 border border-blue-500 rounded-3xl px-2 text-xs text-blue-500"
+        >
+          <span class="material-symbols-outlined"> add </span> Add new
+        </button>
+      </div>
+      <div class="w-full p-2 border my-2 flex items-center rounded-md">
+        <span class="material-symbols-outlined text-gray-500"> search </span>
+        <input
+          type="text"
+          class="w-full focus:outline-none"
+          placeholder="Search documents"
+        />
+      </div>
+      <div class="p-2 flex items-center gap-4">
+        <div
+          class="w-10 h-10 p-2 rounded-full border border-blue-500 bg-blue-400/10"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/888/888883.png"
+            alt="word"
+            class="w-full h-full"
+          />
+        </div>
+        <p>Scrumbs / Landing Page copy</p>
+      </div>
+      <div class="p-2 flex items-center gap-4">
+        <div
+          class="w-10 h-10 p-2 rounded-full border border-orange-500 bg-orange-400/10"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/888/888867.png"
+            alt="word"
+            class="w-full h-full"
+          />
+        </div>
+        <p>Scrumbs / Landing Page copy</p>
+      </div>
+      <div class="p-2 flex items-center gap-4">
+        <div
+          class="w-10 h-10 p-2 rounded-full border border-yellow-500 bg-yellow-400/10"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/143/143670.png"
+            alt="word"
+            class="w-full h-full"
+          />
+        </div>
+        <p>Scrumbs / Logo</p>
+      </div>
+    </div>
+  </body>
+</html>

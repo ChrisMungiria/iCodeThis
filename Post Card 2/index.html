@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Post Card 2</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-gray-400 flex flex-col items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xs h-fit bg-gray-700 p-4">
+      <img
+        src="https://performancewellnessproducts.com/wp-content/uploads/2023/10/PWP_0004_Layer-2.jpg"
+        alt=""
+        class="w-full object-contain"
+      />
+      <h3 class="uppercase font-bold w-10/12 my-4 text-gray-100 text-xs">
+        3 myths eveyrone gets wrong about yoga
+      </h3>
+      <div class="w-full flex justify-between items-center">
+        <p class="text-xs text-gray-500">By Adrienne Brien</p>
+        <p class="text-xs text-gray-500 bg-gray-800 p-2 rounded-3xl">
+          16 April 2017
+        </p>
+      </div>
+      <p class="text-xs text-gray-100">
+        As an avid yoga lover and teacher, I get really bummed out when people
+        say they don't like yoga or that they don't want to try it. Of course
+        everyone is entitled to their own opinion, but usually they feel this
+        way because of what they've heard or because they had a bad experience.
+      </p>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-fit bg-slate-500 flex flex-row justify-around py-10 px-5 text-gray-100"
+    >
+      <div
+        class="flex items-center justify-center flex-col cursor-pointer"
+        onclick="toggleLike()"
+      >
+        <span class="material-symbols-outlined text-red-500"> favorite </span>
+        <p class="text-center" id="like_count">75 likes</p>
+      </div>
+      <div class="flex items-center justify-center flex-col">
+        <span class="material-symbols-outlined"> chat_bubble </span>
+        <p class="text-center">31 comments</p>
+      </div>
+      <div class="flex items-center justify-center flex-col">
+        <span class="material-symbols-outlined"> share </span>
+        <p class="text-center">75 likes</p>
+      </div>
+    </div>
+    <script>
+      function toggleLike() {
+        const like = document.querySelector(".material-symbols-outlined");
+        const likeCount = document.getElementById("like_count");
+        if (like.classList.contains("text-red-500")) {
+          like.classList.remove("text-red-500");
+          likeCount.innerHTML = "74 likes";
+        } else {
+          like.classList.add("text-red-500");
+          likeCount.innerHTML = "75 likes";
+        }
+      }
+    </script>
+  </body>
+</html>

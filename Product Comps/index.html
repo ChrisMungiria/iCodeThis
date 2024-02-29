@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Product Comps</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-[#023c52] flex flex-col gap-5 items-center justify-center"
+  >
+    <div class="w-10/12 max-w-xs rounded-md bg-white p-4" id="font_page">
+      <h1 class="text-xl font-bold my-3">Collint Font</h1>
+      <p class="text-xs my-4 cursor-pointer" onclick="hideFontPage()">
+        Created by <span class="underline font-bold">Etta Lamb</span>
+      </p>
+      <div class="border flex flex-col p-2 text-xs">
+        <p class="font-bold mb-3 text-base">License type</p>
+        <label class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <input type="radio" class="accent-[#023c52]" name="license_type" />
+            Desktop
+          </div>
+          <span class="text-sm font-bold">$12</span>
+        </label>
+        <label class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <input type="radio" class="accent-[#023c52]" name="license_type" />
+            E-pub
+          </div>
+          <span class="text-sm font-bold">$24</span>
+        </label>
+        <label class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <input type="radio" class="accent-[#023c52]" name="license_type" />
+            App
+          </div>
+          <span class="text-sm">$110</span>
+        </label>
+        <label class="flex justify-between">
+          <div class="flex items-center gap-2">
+            <input type="radio" class="accent-[#023c52]" name="license_type" />
+            Webfont
+          </div>
+          <span class="text-sm text-gray-300">Starting at $8</span>
+        </label>
+        <p class="underline my-4">Learn more about licenses</p>
+      </div>
+      <button
+        class="border w-full py-2 my-2 rounded text-[#daa177] text-xs hover:bg-[#daa177] hover:text-white hover:border-transparent hover:shadow-md hover:scale-105 transition-all duration-200 ease-in-out"
+      >
+        Add to cart
+      </button>
+    </div>
+    <div
+      class="w-10/12 max-w-xs rounded-md bg-white p-4 hidden"
+      id="profile_page"
+    >
+      <div>
+        <span
+          class="material-symbols-outlined text-gray-700 cursor-pointer"
+          onclick="showFontPage()"
+        >
+          close
+        </span>
+      </div>
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9PKO_XRqc_Wi7Aqpk_PBwrnsyn5dpEA41UtoeG4WtsA&s"
+        alt=""
+        class="w-16 h-16 rounded-full mx-auto"
+      />
+      <h1 class="mx-auto w-fit text-slate-800 my-2">Etta Lamb</h1>
+      <p class="text-xs mx-auto w-5/6 text-center">
+        For custom orders please contact us at design@email.com
+      </p>
+      <div class="flex gap-4 mt-2">
+        <button class="border flex-1 py-2 text-[#daa177] rounded">
+          Follow
+        </button>
+        <button
+          class="border flex-1 py-2 bg-[#daa177] text-white rounded border-transparent"
+        >
+          Message
+        </button>
+      </div>
+    </div>
+    <div class="w-10/12 max-w-xs rounded-md bg-white p-4 flex gap-2">
+      <button
+        class="flex-1 border text-xs flex items-center gap-2 py-2 rounded p-1"
+        onclick="share()"
+      >
+        <span class="material-symbols-outlined text-sm"> share </span>Share
+      </button>
+      <button
+        class="flex-1 border text-xs flex items-center gap-2 py-2 rounded p-1"
+        onclick="like()"
+      >
+        <span class="material-symbols-outlined text-sm" id="like">
+          favorite </span
+        >144 Likes
+      </button>
+      <button
+        class="flex-1 border text-xs flex items-center gap-2 py-2 rounded p-1"
+        onclick="bookmark()"
+      >
+        <span class="material-symbols-outlined text-sm" id="bookmark">
+          bookmark </span
+        >Bookmark
+      </button>
+    </div>
+    <script>
+      var liked = false;
+      var bookmarked = false;
+      function hideFontPage() {
+        document.getElementById("font_page").style.display = "none";
+        document.getElementById("profile_page").style.display = "block";
+      }
+      function showFontPage() {
+        document.getElementById("font_page").style.display = "block";
+        document.getElementById("profile_page").style.display = "none";
+      }
+      function share() {
+        const text = "https://icodethis.com/app";
+        navigator.clipboard.writeText(text);
+        alert("Copied to clipboard");
+      }
+      function like() {
+        if (liked) {
+          document.getElementById("like").style.color = "#daa177";
+          liked = false;
+        } else {
+          document.getElementById("like").style.color = "#000000";
+          liked = true;
+        }
+      }
+      function bookmark() {
+        if (bookmarked) {
+          document.getElementById("bookmark").style.color = "#daa177";
+          bookmarked = false;
+        } else {
+          document.getElementById("bookmark").style.color = "#000000";
+          bookmarked = true;
+        }
+      }
+    </script>
+  </body>
+</html>

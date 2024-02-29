@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>iCodeMas #20</title>
+  </head>
+  <body class="w-screen h-screen bg-[#1b7493] flex items-center justify-center">
+    <div class="w-10/12 max-w-3xl h-fit bg-white">
+      <header
+        class="flex flex-col gap-3 sm:gap-0 sm:flex-row items-center justify-between px-5 py-2"
+      >
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+          <h1 class="text-xl font-bold">iCodeMas</h1>
+          <div class="flex items-center gap-3 bg-[#eff3f6] rounded-3xl p-2">
+            <span class="material-symbols-outlined"> search </span>
+            <input
+              type="text"
+              placeholder="Search"
+              class="bg-transparent focus:outline-none text-gray-600"
+            />
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <a href="">Featured</a>
+          <a href="">Shop</a>
+          <a href="">FAQ</a>
+          <div class="relative">
+            <span class="material-symbols-outlined"> local_mall </span>
+            <span
+              class="absolute top-0 right-0 text-[10px] bg-red-500 h-3 w-3 flex items-center justify-center text-white rounded-full"
+              >2</span
+            >
+          </div>
+        </div>
+      </header>
+      <div class="w-full h-fit flex items-center justify-end px-10">
+        <p
+          class="w-fit bg-[#d0e7fc] font-light p-2 opacity-0"
+          id="added_to_cart"
+        >
+          Product added to your cart
+        </p>
+      </div>
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-10 py-5"
+      >
+        <div
+          class="w-full h-fit relative flex flex-col items-center justify-center"
+        >
+          <span
+            class="absolute top-0 left-0 uppercase bg-[#197592] text-white text-xs p-1"
+            >New</span
+          >
+          <img
+            src="https://icodethis.com/images/iCodeMas/tree.png"
+            alt=""
+            class="object-cover h-28 w-auto"
+          />
+          <button
+            onclick="addToCart(event)"
+            class="mt-1 bg-[#197592] py-2 flex items-center gap-2 w-full justify-center text-white text-xs"
+          >
+            Add to cart
+            <span class="material-symbols-outlined text-xs"> local_mall </span>
+          </button>
+          <p class="text-start text-xs w-full">Christmas Tree Decoration</p>
+          <p class="text-start text-lg font-bold w-full">$19.99</p>
+        </div>
+        <div
+          class="w-full h-fit relative flex flex-col items-center justify-center"
+        >
+          <span
+            class="absolute top-0 left-0 uppercase bg-[#dc7e77] text-white text-xs p-1"
+            >-23%</span
+          >
+          <img
+            src="https://icodethis.com/images/iCodeMas/gift.png"
+            alt=""
+            class="object-cover h-28 w-auto"
+          />
+          <button
+            class="mt-1 bg-[#197592] py-2 flex items-center gap-2 w-full justify-center text-white text-xs"
+            onclick="addToCart(event)"
+          >
+            Add to cart
+            <span class="material-symbols-outlined text-xs"> local_mall </span>
+          </button>
+          <p class="text-start text-xs w-full">Gift Box</p>
+          <p class="text-start text-lg font-bold w-full">
+            $9.99
+            <span class="line-through text-gray-400 text-xs font-light"
+              >$12.99</span
+            >
+          </p>
+        </div>
+        <div
+          class="w-full h-fit relative flex flex-col items-center justify-center"
+        >
+          <span
+            class="absolute hidden top-0 left-0 uppercase bg-[#dc7e77] text-white text-xs p-1"
+            >-23%</span
+          >
+          <img
+            src="https://icodethis.com/images/iCodeMas/gingerbread_cookie.png"
+            alt=""
+            class="object-cover h-28 w-auto"
+          />
+          <button
+            class="mt-1 bg-[#197592] flex py-2 items-center gap-2 w-full justify-center text-white text-xs"
+            onclick="addToCart(event)"
+          >
+            Add to cart
+            <span class="material-symbols-outlined text-xs"> local_mall </span>
+          </button>
+          <button
+            class="mt-1 bg-[#d0e7fc] py-2 hidden items-center gap-2 w-full justify-center text-xs text-black"
+            id="added_to_cart"
+          >
+            Added to cart
+          </button>
+          <p class="text-start text-xs w-full">Gingerbread Man Cookie</p>
+          <p class="text-start text-lg font-bold w-full">$12.99</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      function addToCart(event) {
+        document.getElementById("added_to_cart").classList.remove("opacity-0");
+
+        setTimeout(() => {
+          document.getElementById("added_to_cart").classList.add("opacity-0");
+        }, 2000);
+
+        // Change the background color of the button
+        event.target.classList.remove("bg-[#197592]");
+        event.target.classList.remove("text-white");
+        event.target.classList.add("bg-[#d0e7fc]");
+        event.target.classList.add("text-black");
+
+        // Change the text of the button
+
+        event.target.innerHTML = `
+          Added to cart
+        `;
+      }
+    </script>
+  </body>
+</html>

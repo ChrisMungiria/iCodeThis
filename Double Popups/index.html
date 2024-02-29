@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Double Popups</title>
+  </head>
+  <body class="w-screen h-screen bg-[#f1f7fb] flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-xs h-fit rounded bg-white p-3 shadow-md"
+      id="phone-number"
+    >
+      <p class="w-full text-end text-gray-400">
+        <span class="material-symbols-outlined cursor-pointer"> close </span>
+      </p>
+      <div
+        class="w-20 h-20 bg-red-400/10 p-4 mx-auto rounded-full"
+        style="box-shadow: 0px 0px 20px pink"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/3059/3059433.png"
+          alt=""
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <h1 class="font-bold w-fit mx-auto my-1 text-center">
+        Add your phone number
+      </h1>
+      <p class="w-11/12 mx-auto text-center text-sm my-1">
+        Make it easier for your friends to get in touch with you
+      </p>
+      <div class="flex gap-4 items-center justify-around my-2">
+        <button
+          class="border border-red-500 text-red-500 rounded-3xl px-4 py-2"
+          onclick="showEmailPopup()"
+        >
+          Not now
+        </button>
+        <button
+          class="bg-red-500 text-white rounded-3xl px-4 py-2"
+          onclick="showPhoneNumberInput()"
+        >
+          Add number
+        </button>
+      </div>
+      <div class="hidden" id="phone-number-input">
+        <input
+          type="number"
+          placeholder="Enter your phone number"
+          class="rounded-3xl border border-gray-300 mx-auto w-full my-2 px-4 py-2 focus:outline-none text-gray-600"
+        />
+        <button
+          class="rounded-3xl bg-red-500 text-white px-4 py-2 mx-auto w-full flex items-center justify-center"
+          onclick="showEmailPopup()"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-fit rounded bg-white p-3 shadow-md hidden"
+      id="email-popup"
+    >
+      <p class="w-full text-end text-gray-400">
+        <span class="material-symbols-outlined cursor-pointer"> close </span>
+      </p>
+      <div
+        class="w-20 h-20 bg-red-100/10 p-4 mx-auto rounded-full"
+        style="box-shadow: 0px 0px 20px pink"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/7524/7524159.png"
+          alt=""
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <h1 class="font-bold w-3/4 mx-auto my-1 text-center">
+        Stay up to date wuith out hot news!
+      </h1>
+      <p class="w-11/12 mx-auto text-center text-sm my-1">
+        Get weekly updates on what's happening in the tech industry
+      </p>
+
+      <input
+        type="email"
+        placeholder="Enter your email address"
+        class="rounded-3xl border border-gray-300 w-11/12 mx-auto my-2 px-4 py-2 flex focus:outline-none text-gray-600"
+      />
+      <button
+        class="rounded-3xl bg-red-500 text-white px-4 py-2 mx-auto w-11/12 flex items-center justify-center"
+      >
+        Subscribe
+      </button>
+    </div>
+    <script>
+      function showEmailPopup() {
+        document.getElementById("phone-number").classList.add("hidden");
+        document.getElementById("email-popup").classList.remove("hidden");
+      }
+      function showPhoneNumberInput() {
+        document
+          .getElementById("phone-number-input")
+          .classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

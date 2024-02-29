@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #reasons::before {
+        content: "✓";
+        margin-right: 4px;
+      }
+    </style>
+    <title>Course CTA</title>
+  </head>
+  <body class="w-screen h-screen bg-[#17103c] flex items-center justify-center">
+    <div
+      class="w-10/12 max-w-xl h-fit bg-gradient-to-r gap-2 p-2 from-green-100 to-green-100/90 grid sm:grid-cols-3 grid-cols-2 rounded-md"
+    >
+      <div class="h-full p-3">
+        <p class="font-bold">Study with us</p>
+        <p class="font-bold text-3xl my-2">90%</p>
+        <p class="text-xs">
+          Graduates who are working in the entertainment industry
+        </p>
+
+        <p class="mt-10 mb-2 font-bold px-2">Enrollment</p>
+        <ul class="flex flex-col gap-2">
+          <li
+            class="uppercase rounded tracking-wide text-xs hover:bg-green-200 transition-all duration-150 ease-in-out p-2 cursor-pointer"
+          >
+            Summer 2021
+          </li>
+          <li
+            class="uppercase rounded tracking-wide text-xs hover:bg-green-200 transition-all duration-150 ease-in-out p-2 cursor-pointer"
+          >
+            Autumn 2021
+          </li>
+          <li
+            class="uppercase rounded tracking-wide text-xs hover:bg-green-200 transition-all duration-150 ease-in-out p-2 cursor-pointer"
+          >
+            Winter 2021
+          </li>
+        </ul>
+      </div>
+      <div class="h-full p-3">
+        <p class="font-bold"></p>
+        <p class="font-bold text-3xl my-2">80%</p>
+        <p class="text-xs">The importance of your portfolio when job hunting</p>
+
+        <div class="w-full bg-green-200 mt-16 p-2 rounded">
+          <p class="text-xs">Enrollment Deadline</p>
+          <p class="text-xs font-bold">05 August</p>
+          <p class="text-xs mt-5">Commencement</p>
+          <p class="text-xs font-bold">03 October</p>
+          <p class="text-xs mt-5">Completion Date</p>
+          <p class="text-xs font-bold">12 September</p>
+        </div>
+      </div>
+      <div
+        class="h-full bg-white/20 col-span-2 sm:col-span-1 flex flex-col p-4 border border-white/80 rounded-xl"
+      >
+        <p class="font-bold text-xs text-center sm:text-start">
+          Why choose us?
+        </p>
+        <ul class="mt-2 flex flex-col gap-2">
+          <li class="text-xs" id="reasons">Experienced mentors</li>
+          <li class="text-xs" id="reasons">Proven track record</li>
+          <li class="text-xs" id="reasons">Effective process</li>
+          <li class="text-xs" id="reasons">Strong industry network</li>
+          <li class="text-xs" id="reasons">Relevant courses</li>
+        </ul>
+
+        <button
+          class="mt-10 shadow-lg w-full py-2 rounded-md text-xs text-slate-800 bg-[#ffa593]"
+        >
+          Apply now
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

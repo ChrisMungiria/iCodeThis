@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Progress Bar 2</title>
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen bg-slate-700 flex items-center justify-center"
+    >
+      <div
+        class="w-10/12 h-1/6 bg-slate-950 shadow-lg shadow-blue-700 flex flex-col items-center justify-around p-5 max-w-md"
+      >
+        <p class="text-purple-600 text-xs">
+          You have completed <span class="text-purple-400">79%</span> of this
+          course
+        </p>
+        <div class="w-full h-3 bg-slate-500 rounded-lg">
+          <div
+            class="w-3/4 h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg"
+          ></div>
+        </div>
+        <button
+          class="border border-purple-500 text-white text-xs px-4 py-2 rounded-3xl"
+        >
+          Continue
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

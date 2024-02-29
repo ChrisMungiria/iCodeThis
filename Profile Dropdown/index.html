@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile Dropdown</title>
+  </head>
+  <body class="w-screen h-screen bg-zinc-600 flex items-center justify-center">
+    <div class="w-11/12 max-w-xs h-fit bg-zinc-700 rounded-md p-10">
+      <div class="w-full flex items-center justify-end gap-4">
+        <span class="material-symbols-outlined text-gray-400">
+          notifications
+        </span>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfwik48e3aar7g-HQkxRhWTK09JcOuRQxIw&usqp=CAU"
+          alt=""
+          class="w-10 h-10 rounded-full"
+        />
+      </div>
+      <div class="w-full bg-zinc-600 rounded-sm shadow-sm p-4">
+        <div class="w-full flex flex-row gap-4">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIfwik48e3aar7g-HQkxRhWTK09JcOuRQxIw&usqp=CAU"
+            alt=""
+            class="w-14 h-14 rounded-full"
+          />
+          <div class="text-xs flex flex-col gap-1">
+            <p class="text-gray-100 font-bold">Stella Swanson</p>
+            <p class="text-gray-400">stella67@email.com</p>
+            <button
+              class="bg-gradient-to-r from-orange-500 to-orange-400 text-gray-100 p-2 rounded-lg shadow-md"
+            >
+              Account settings
+            </button>
+          </div>
+        </div>
+        <div class="flex flex-row w-full my-2">
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center bg-green-200 text-white"
+          >
+            <p>SS</p>
+          </div>
+          <div class="text-gray-100 text-xs flex flex-col justify-center ml-3">
+            <p>Stella Swanson</p>
+            <p class="text-gray-400">support@email.com</p>
+          </div>
+        </div>
+        <div class="flex flex-row w-full my-2">
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center bg-blue-200 text-white"
+          >
+            <p>SS</p>
+          </div>
+          <div class="text-gray-100 text-xs flex flex-col justify-center ml-3">
+            <p>Stella Swanson</p>
+            <p class="text-gray-400">accounting@email.com</p>
+          </div>
+        </div>
+        <div class="flex flex-row w-full my-2">
+          <div
+            class="w-12 h-12 rounded-full flex items-center justify-center bg-purple-200 text-white"
+          >
+            <p>SS</p>
+          </div>
+          <div class="text-gray-100 text-xs flex flex-col justify-center ml-3">
+            <p>Stella Swanson</p>
+            <p class="text-gray-400">hello@email.com</p>
+          </div>
+        </div>
+
+        <div class="flex flex-row justify-between w-full my-2">
+          <div
+            class="w-8 h-8 rounded-full flex items-center justify-center border border-dashed border-zinc-800 group"
+          >
+            <p class="text-white absolute">+</p>
+            <span
+              class="relative opacity-0 top-3/4 left-0 text-[5px] bg-zinc-700 text-gray-200 w-fit p-2 rounded-md text-center group-hover:opacity-100 transition-all duration-300 transform ease-in-out"
+            >
+              Add account
+            </span>
+          </div>
+          <button
+            class="text-white text-[8px] flex items-center justify-center border border-zinc-800/50 px-8 py-1 capitalize rounded"
+          >
+            Sign Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Analytics Graph</title>
+  </head>
+  <body class="w-screen h-screen bg-[#101841] flex items-center justify-center">
+    <div class="w-10/12 max-w-xs h-fit bg-[#161e51]">
+      <header class="w-full p-2 bg-[#151b4b]">
+        <h1 class="text-white uppercase text-center tracking-wider">
+          Visitors per day
+        </h1>
+      </header>
+      <div class="flex justify-between">
+        <div
+          class="w-28 h-28 bg-red-500 rounded-full m-5 p-2"
+          style="
+            background: conic-gradient(
+              #b869c8 0% 41%,
+              #ea417c 41% 70%,
+              #ed6d03 70% 93%,
+              #fbd93d 93% 97%,
+              #69efb0 97% 100%
+            );
+          "
+        >
+          <div
+            class="w-full h-full bg-[#161e51] rounded-full flex items-center justify-center"
+          >
+            <p class="text-xl text-center text-white font-bold">
+              38K <span class="block text-xs font-normal">visitors total</span>
+            </p>
+          </div>
+        </div>
+        <div class="flex-1 mt-5 py-2">
+          <ul class="flex flex-col gap-3">
+            <li class="text-xs text-white">
+              <span class="bg-[#b66ac9] px-2 py-1 rounded-3xl text-slate-900"
+                >41%</span
+              >
+              Morbi ligula
+            </li>
+            <li class="text-xs text-white">
+              <span class="bg-[#ea417c] px-2 py-1 rounded-3xl text-slate-900"
+                >29%</span
+              >
+              Scelerisque
+            </li>
+            <li class="text-xs text-white">
+              <span class="bg-[#ed6d03] px-2 py-1 rounded-3xl text-slate-900"
+                >23%</span
+              >
+              Praesent maecenas
+            </li>
+            <li class="text-xs text-white">
+              <span class="bg-[#fdd841] px-2 py-1 rounded-3xl text-slate-900"
+                >4%</span
+              >
+              Morbi ligula
+            </li>
+            <li class="text-xs text-white">
+              <span class="bg-[#66f1ae] px-2 py-1 rounded-3xl text-slate-900"
+                >3%</span
+              >
+              Morbi ligula
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

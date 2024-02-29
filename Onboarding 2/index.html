@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Onboarding 2</title>
+  </head>
+  <body class="w-screen h-screen bg-blue-100 flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-xs h-fit bg-gray-100 rounded-md shadow-md absolute overflow-hidden"
+      id="first_screen"
+    >
+      <div
+        style="box-shadow: 20px 20px 40px 10px rgba(235, 242, 255, 255)"
+        class="w-96 h-96 rounded-full bg-blue-200/60 relative -right-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg flex items-center justify-end flex-col pb-10 gap-4"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/1020/1020586.png"
+          alt=""
+          class="w-20"
+        />
+        <p class="w-1/3 text-center font-bold text-blue-700">
+          Find campings near you
+        </p>
+      </div>
+      <p class="w-10/12 text-center mx-auto text-gray-700">
+        Olutpat mattis suspendisse varius lorem massa. In eget laoreet
+        sollicitudin mi.
+      </p>
+      <div class="flex flex-row w-1/6 gap-3 mx-auto my-4">
+        <div class="w-2 h-2 rounded-full bg-blue-800"></div>
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+      </div>
+      <div class="w-1/2 mx-auto my-12">
+        <button
+          class="px-4 py-2 rounded-3xl bg-gray-200 text-gray-600 font-bold"
+          onclick="gotoScreen(3)"
+        >
+          Skip
+        </button>
+        <button
+          class="px-4 py-2 rounded-3xl bg-blue-700 text-gray-200 font-bold"
+          onclick="gotoScreen(2)"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-fit bg-gray-100 rounded-md shadow-md absolute overflow-hidden hidden"
+      id="second_screen"
+    >
+      <div
+        style="box-shadow: 20px 20px 40px 10px rgba(235, 242, 255, 255)"
+        class="w-96 h-96 rounded-full bg-blue-200/60 relative -right-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg flex items-center justify-end flex-col pb-10 gap-4"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/7616/7616285.png"
+          alt=""
+          class="w-20"
+        />
+        <p class="w-1/3 text-center font-bold text-blue-700">
+          Reserve directly from your phone
+        </p>
+      </div>
+      <p class="w-10/12 text-center mx-auto text-gray-700">
+        Blandit amet andipiscing sed etiam, a sapien molestie odio viverra quam,
+        vestibulum
+      </p>
+      <div class="flex flex-row w-1/6 gap-3 mx-auto my-4">
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+        <div class="w-2 h-2 rounded-full bg-blue-800"></div>
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+      </div>
+      <div class="w-1/2 mx-auto my-12">
+        <button
+          class="px-4 py-2 rounded-3xl bg-gray-200 text-gray-600 font-bold"
+          onclick="gotoScreen(3)"
+        >
+          Skip
+        </button>
+        <button
+          class="px-4 py-2 rounded-3xl bg-blue-700 text-gray-200 font-bold"
+          onclick="gotoScreen(3)"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-fit bg-gray-100 rounded-md shadow-md absolute overflow-hidden hidden"
+      id="third_screen"
+    >
+      <div
+        style="box-shadow: 20px 20px 40px 10px rgba(235, 242, 255, 255)"
+        class="w-96 h-96 rounded-full bg-blue-200/60 relative -right-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg flex items-center justify-end flex-col pb-10 gap-4"
+      >
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/6313/6313539.png"
+          alt=""
+          class="w-20"
+        />
+        <p class="w-1/3 text-center font-bold text-blue-700">
+          Get directions to the locations
+        </p>
+      </div>
+      <p class="w-10/12 text-center mx-auto text-gray-700">
+        Felis donec fusce nex amet ipsum etiam nascetur molestias at fermentum
+        felis felis.
+      </p>
+      <div class="flex flex-row w-1/6 gap-3 mx-auto my-4">
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+        <div class="w-2 h-2 rounded-full bg-gray-200"></div>
+        <div class="w-2 h-2 rounded-full bg-blue-800"></div>
+      </div>
+      <div class="w-1/2 mx-auto my-12">
+        <button
+          class="px-4 py-2 rounded-3xl bg-gray-200 text-gray-600 font-bold"
+          onclick="alert('You have skipped the onboarding')"
+        >
+          Skip
+        </button>
+        <button
+          class="px-4 py-2 rounded-3xl bg-blue-700 text-gray-200 font-bold"
+          onclick="gotoScreen(1)"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+    <script>
+      function gotoScreen(screen) {
+        if (screen == 2) {
+          document.getElementById("first_screen").classList.add("hidden");
+          document.getElementById("second_screen").classList.remove("hidden");
+        } else if (screen == 3) {
+          document.getElementById("second_screen").classList.add("hidden");
+          document.getElementById("third_screen").classList.remove("hidden");
+        } else if (screen == 1) {
+          document.getElementById("third_screen").classList.add("hidden");
+          document.getElementById("first_screen").classList.remove("hidden");
+        }
+      }
+    </script>
+  </body>
+</html>

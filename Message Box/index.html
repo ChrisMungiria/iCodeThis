@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      input[type="file"] {
+        display: none;
+      }
+    </style>
+    <title>Message Box</title>
+  </head>
+  <body class="w-screen h-screen bg-gray-100 flex items-center justify-center">
+    <div class="w-11/12 max-w-xs h-fit bg-white rounded-xl shadow-xl">
+      <header
+        class="w-full bg-rose-400 flex justify-between items-center text-gray-100 rounded-t-xl p-4"
+      >
+        <p>Send us a message</p>
+        <p class="text-xl cursor-pointer" id="collapse">-</p>
+      </header>
+      <div id="form">
+        <div class="px-4 flex flex-col my-3">
+          <label for="name" class="uppercase text-xs text-gray-500"
+            >Your name</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Walter"
+            class="border border-gray-200 px-4 py-2 rounded-lg focus:outline-none"
+          />
+        </div>
+        <div class="px-4 flex flex-col my-3">
+          <label for="email" class="uppercase text-xs text-gray-500"
+            >Email address
+            <address></address
+          ></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="walter@email.com"
+            class="border border-gray-200 px-4 py-2 rounded-lg focus:outline-none"
+          />
+        </div>
+        <div class="px-4 flex flex-col my-3">
+          <label class="uppercase text-xs text-gray-500"
+            >What can we do for you?
+            <address></address
+          ></label>
+          <textarea
+            rows="5"
+            placeholder="Type your message here"
+            class="border border-gray-200 px-4 py-2 rounded-lg focus:outline-none"
+          >
+          </textarea>
+        </div>
+        <div class="px-4 flex flex-col my-3">
+          <label class="uppercase text-xs text-gray-500"
+            >Attachments
+            <address></address
+          ></label>
+          <label
+            class="border border-dashed border-gray-300 p-3 text-center text-gray-400 capitalize rounded-lg cursor-pointer"
+          >
+            <input
+              type="file"
+              class="border border-dashed border-gray-300 p-3 rounded-lg"
+            />
+            Upload files
+          </label>
+        </div>
+        <button
+          class="bg-rose-400 capitalize py-2 rounded-lg text-gray-100 w-11/12 block mx-auto mb-10 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out"
+        >
+          Send message
+        </button>
+      </div>
+    </div>
+    <script>
+      const collapse = document.getElementById("collapse");
+      const form = document.getElementById("form");
+
+      collapse.addEventListener("click", () => {
+        collapse.innerText = collapse.innerText === "-" ? "+" : "-";
+        form.style.opacity = form.style.opacity === "0" ? "1" : "0";
+        form.style.height = form.style.height === "0px" ? "fit-content" : "0px";
+      });
+    </script>
+  </body>
+</html>

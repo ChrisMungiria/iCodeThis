@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Course Progress</title>
+  </head>
+  <body class="w-screen h-screen bg-[#122b62] flex items-center justify-center">
+    <div class="w-11/12 max-w-xl shadow-lg">
+      <div class="p-4 bg-[#0d2251]">
+        <h1 class="text-center text-3xl w-3/4 mx-auto font-bold text-[#0092d4]">
+          Your first saas stylesheet lesson
+        </h1>
+        <p class="text-center w-11/12 mx-auto text-slate-500 my-2">
+          Style your own lemonade stand's website by compiling Sass and learning
+          to use variables and nests.
+        </p>
+      </div>
+      <div class="w-full">
+        <h2 class="uppercase tracking-wider text-slate-200 m-4">Exercises</h2>
+        <ul class="space-y-2">
+          <li
+            id="1"
+            class="py-2 px-4 text-slate-100 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">1</span> Why Sass?</p>
+            <i class="fa-solid fa-check"></i>
+          </li>
+          <li
+            id="2"
+            class="py-2 px-4 text-slate-100 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">2</span> Compiling Sass</p>
+            <i class="fa-solid fa-check"></i>
+          </li>
+          <li
+            id="3"
+            class="py-2 px-4 text-slate-100 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">3</span> Sass Overview</p>
+            <i class="fa-solid fa-check"></i>
+          </li>
+          <li
+            id="4"
+            class="py-2 px-4 text-slate-500 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">4</span> Nesting Selectors</p>
+            <i class="fa-solid fa-check hidden"></i>
+          </li>
+          <li
+            id="5"
+            class="py-2 px-4 text-slate-500 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">5</span> Nesting Properties</p>
+            <i class="fa-solid fa-check hidden"></i>
+          </li>
+          <li
+            id="6"
+            class="py-2 px-4 text-slate-500 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">6</span> Variables in Sass</p>
+            <i class="fa-solid fa-check hidden"></i>
+          </li>
+          <li
+            id="7"
+            class="py-2 px-4 text-slate-500 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">7</span> Sass(y) Types</p>
+            <i class="fa-solid fa-check hidden"></i>
+          </li>
+          <li
+            id="8"
+            class="py-2 px-4 text-slate-500 flex items-center justify-between hover:bg-[#0092d4] transition-all duration-200 cursor-pointer"
+          >
+            <p><span class="mr-3">8</span> Maps&Lists</p>
+            <i class="fa-solid fa-check hidden"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const items = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+      items.forEach((item) => {
+        document.getElementById(item).addEventListener("click", () => {
+          document.getElementById(item).classList.remove("text-slate-500");
+          document.getElementById(item).classList.add("text-slate-100");
+          document
+            .getElementById(item)
+            .querySelector("i")
+            .classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

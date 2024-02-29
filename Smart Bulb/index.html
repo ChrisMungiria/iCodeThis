@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Smart Bulb</title>
+  </head>
+  <body class="w-screen h-screen bg-blue-100 flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-xs h-96 bg-white rounded-xl shadow-md"
+      id="login_page"
+    >
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5904/5904659.png"
+        alt="bulb"
+        class="h-1/4 mx-auto object-cover"
+      />
+      <div class="w-full p-3 text-slate-900">
+        <label for="username" class="uppercase text-xs font-bold block"
+          >Username</label
+        >
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Enter username"
+          class="border-2 border-slate-200 my-2 p-3 focus:outline-none w-full rounded-md"
+        />
+        <label for="password" class="uppercase text-xs font-bold block"
+          >Password</label
+        >
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter password"
+          class="border-2 border-slate-200 my-2 p-3 focus:outline-none w-full rounded-md"
+        />
+        <button
+          class="uppercase w-full text-white bg-blue-800/70 rounded-md py-4"
+          onclick="login()"
+        >
+          Log In
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-96 bg-blue-950 rounded-xl shadow-md hidden"
+      id="dark_screen"
+    >
+      <div
+        class="self-end w-24 h-24 mb-5 rounded-full bg-blue-800/40 mx-auto p-2 cursor-pointer"
+        onclick="toLight()"
+      >
+        <div
+          class="w-full h-full bg-blue-950 rounded-full flex items-center justify-center"
+        >
+          <p class="uppercase text-blue-400 font-bold">Off</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs h-96 bg-white rounded-xl shadow-md hidden relative overflow-hidden"
+      id="light_screen"
+      onclick="toDark()"
+    >
+      <div
+        class="w-72 h-72 border-4 border-slate-500/30 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 flex items-center justify-center"
+      >
+        <div
+          class="w-24 h-24 mb-5 rounded-full bg-slate-500/50 p-2 cursor-pointer"
+        >
+          <div
+            class="w-full h-full bg-white rounded-full flex items-center justify-center"
+          >
+            <p class="uppercase text-slate-900 font-bold">On</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        if (!username) {
+          alert("Please enter username");
+        } else if (!password) {
+          alert("Please enter password");
+        }
+
+        if (username && password) {
+          const login_page = document.getElementById("login_page");
+          const dark_screen = document.getElementById("dark_screen");
+          dark_screen.classList.remove("hidden");
+          dark_screen.classList.add("flex");
+          login_page.classList.add("hidden");
+        }
+      }
+
+      function toLight() {
+        const light = document.getElementById("light_screen");
+        const dark_screen = document.getElementById("dark_screen");
+        dark_screen.classList.add("hidden");
+        dark_screen.classList.remove("flex");
+        light.classList.remove("hidden");
+      }
+
+      function toDark() {
+        const light = document.getElementById("light_screen");
+        const dark_screen = document.getElementById("dark_screen");
+        dark_screen.classList.remove("hidden");
+        dark_screen.classList.add("flex");
+        light.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>

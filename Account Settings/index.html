@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .striped-background {
+        background: repeating-linear-gradient(
+          45deg,
+          #ffffff,
+          #ffffff 10px,
+          #b0b0b041 10px,
+          #b0b0b041 20px
+        );
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Account Settings</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-slate-100 flex flex-col space-y-5 items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xl bg-white rounded-md shadow-lg p-4">
+      <div class="flex items-center gap-4">
+        <i class="fa-solid fa-shield-dog text-4xl text-blue-500"></i>
+        <div>
+          <h2 class="text-xl font-bold">Login and security</h2>
+          <p class="text-sm text-slate-400">
+            Add or remove email addresses on your account
+          </p>
+        </div>
+      </div>
+      <p class="font-semibold text-sm my-2">Email addresses</p>
+      <div class="flex items-center justify-between text-xs py-4 border-b">
+        <p class="text-slate-700">johnjohnson@email.com</p>
+        <button
+          class="text-[10px] uppercase font-semibold bg-slate-200 px-2 py-1"
+        >
+          primary
+        </button>
+      </div>
+      <div class="flex items-center justify-between text-xs py-4">
+        <p class="text-slate-700">johnsoncompany@email.com</p>
+        <span class="text-xl font-bold text-slate-700 px-4">...</span>
+      </div>
+      <button class="text-xs text-yellow-500 flex gap-4 items-center">
+        <div
+          class="w-6 h-6 rounded-full text-yellow-500 border-[1px] flex items-center justify-center"
+        >
+          +
+        </div>
+        <span>Add email address</span>
+      </button>
+    </div>
+    <div class="w-11/12 max-w-xl p-4 bg-white rounded-md shadow-lg">
+      <div class="flex items-center gap-4">
+        <i class="fa-solid fa-mobile-screen text-4xl text-green-500"></i>
+        <div>
+          <h2 class="text-xl font-bold">Phone numbers</h2>
+          <p class="text-sm text-slate-400">
+            Add a phone number in case you have trouble signing in
+          </p>
+        </div>
+      </div>
+      <div class="w-full py-5 my-2 striped-background">
+        <p class="text-center text-xs font-bold">
+          You haven't added any phone numbers yet.
+        </p>
+        <p class="w-2/3 text-center mx-auto text-xs my-2">
+          You phone number helps us keep your account secure. It also helps
+          people who already have your number discover and connect with you.
+        </p>
+      </div>
+      <button class="text-xs text-yellow-500 flex gap-4 items-center">
+        <div
+          class="w-6 h-6 rounded-full text-yellow-500 border-[1px] flex items-center justify-center"
+        >
+          +
+        </div>
+        <span>Add email address</span>
+      </button>
+    </div>
+  </body>
+</html>

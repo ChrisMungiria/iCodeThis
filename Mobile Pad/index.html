@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mobile Pad</title>
+  </head>
+  <body>
+    <section class="w-screen h-screen bg-green-400 flex">
+      <div class="h-fit bg-white m-auto p-7 w-10/12 max-w-sm">
+        <input
+          type="text"
+          id="inputBox"
+          class="w-full h-24 text-3xl p-5 text-gray-600 text-center focus:outline-none"
+          readonly
+          value="0748 "
+        />
+        <p class="w-full text-center text-2xl text-gray-400 hidden" id="name">
+          Larry Black
+        </p>
+        <div class="grid grid-cols-3 gap-x-14 gap-y-8 mt-5">
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(1)"
+          >
+            <p>1</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(2)"
+          >
+            <p>2</p>
+            <p class="text-xs">ABC</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(3)"
+          >
+            <p>3</p>
+            <p class="text-xs">DEF</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(4)"
+          >
+            <p>4</p>
+            <p class="text-xs">GHI</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(5)"
+          >
+            <p>5</p>
+            <p class="text-xs">JKL</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(6)"
+          >
+            <p>6</p>
+            <p class="text-xs">MNO</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(7)"
+          >
+            <p>7</p>
+            <p class="text-xs">PQRS</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(8)"
+          >
+            <p>8</p>
+            <p class="text-xs">TUV</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(9)"
+          >
+            <p>9</p>
+            <p class="text-xs">XYZ</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+          >
+            <p>*</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="appendToInput(0)"
+          >
+            <p>0</p>
+          </div>
+          <div
+            class="border-2 border-blue-300 w-16 h-16 rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+          >
+            <p>#</p>
+          </div>
+          <div
+            class="w-16 h-16 flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+          >
+            <p class="text-3xl font-light text-gray-400">+</p>
+          </div>
+          <div
+            class="w-16 h-16 bg-blue-300 shadow-2xl rounded-full flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+          >
+            <i class="fa-solid fa-phone text-white"></i>
+          </div>
+          <div
+            class="w-16 h-16 flex flex-col items-center justify-center text-gray-600 cursor-pointer"
+            onclick="clearInput()"
+          >
+            <i class="fa-solid fa-delete-left text-gray-400 text-2xl"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

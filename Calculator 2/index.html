@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator 2</title>
+  </head>
+  <body class="w-screen h-screen bg-[#2c3b3e] flex items-center justify-center">
+    <div class="w-10/12 max-w-xs bg-white">
+      <input
+        type="text"
+        class="border w-full p-2 focus:outline-none text-end"
+        readonly
+      />
+      <div class="grid grid-cols-4">
+        <div
+          id="ac"
+          class="w-full bg-[#2f4249] border border-y-transparent border-l-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">AC</p>
+        </div>
+        <div
+          id="plus-minus"
+          class="w-full bg-[#2f4249] border border-y-transparent border-l-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">+/-</p>
+        </div>
+        <div
+          id="percentage"
+          class="w-full bg-[#2f4249] border border-y-transparent border-l-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">%</p>
+        </div>
+        <div
+          id="divide"
+          class="w-full bg-[#2f4249] flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">/</p>
+        </div>
+        <div
+          id="7"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">7</p>
+        </div>
+        <div
+          id="8"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">8</p>
+        </div>
+        <div
+          id="9"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">9</p>
+        </div>
+        <div
+          id="multiply"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-transparent flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">X</p>
+        </div>
+        <div
+          id="4"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">4</p>
+        </div>
+        <div
+          id="5"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">5</p>
+        </div>
+        <div
+          id="6"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">6</p>
+        </div>
+        <div
+          id="plus"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-transparent flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">+</p>
+        </div>
+        <div
+          id="1"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">1</p>
+        </div>
+        <div
+          id="2"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">2</p>
+        </div>
+        <div
+          id="3"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">3</p>
+        </div>
+        <div
+          id="minus"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-transparent flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">-</p>
+        </div>
+        <div
+          id="0"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">0</p>
+        </div>
+        <div
+          id="comma"
+          class="w-full bg-[#2f4249] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">,</p>
+        </div>
+        <div
+          id="equal"
+          class="col-span-2 bg-[#d71b61] border border-t-slate-800/50 border-l-transparent border-b-transparent border-r-slate-800/50 flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-white p-4">=</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const ac = document.getElementById("ac");
+      const plusMinus = document.getElementById("plus-minus");
+      const percentage = document.getElementById("percentage");
+      const divide = document.getElementById("divide");
+      const multiply = document.getElementById("multiply");
+      const plus = document.getElementById("plus");
+      const minus = document.getElementById("minus");
+      const equal = document.getElementById("equal");
+      const comma = document.getElementById("comma");
+      const zero = document.getElementById("0");
+      const one = document.getElementById("1");
+      const two = document.getElementById("2");
+      const three = document.getElementById("3");
+      const four = document.getElementById("4");
+      const five = document.getElementById("5");
+      const six = document.getElementById("6");
+      const seven = document.getElementById("7");
+      const eight = document.getElementById("8");
+      const nine = document.getElementById("9");
+
+      const input = document.querySelector("input");
+
+      let firstNumber = 0;
+      let secondNumber = 0;
+      let operator = "";
+
+      const clearInput = () => {
+        input.value = "";
+      };
+
+      const clearAll = () => {
+        firstNumber = 0;
+        secondNumber = 0;
+        operator = "";
+        clearInput();
+      };
+
+      const calculate = () => {
+        switch (operator) {
+          case "+":
+            input.value = firstNumber + secondNumber;
+            break;
+          case "-":
+            input.value = firstNumber - secondNumber;
+            break;
+          case "*":
+            input.value = firstNumber * secondNumber;
+            break;
+          case "/":
+            input.value = firstNumber / secondNumber;
+            break;
+          default:
+            break;
+        }
+      };
+
+      const setOperator = (op) => {
+        if (firstNumber === 0) {
+          firstNumber = Number(input.value);
+          operator = op;
+          clearInput();
+        } else {
+          secondNumber = Number(input.value);
+          calculate();
+          firstNumber = Number(input.value);
+          operator = op;
+          clearInput();
+        }
+      };
+
+      const setNumber = (number) => {
+        input.value += number;
+      };
+
+      ac.addEventListener("click", clearAll);
+      plusMinus.addEventListener("click", () => {
+        input.value = Number(input.value) * -1;
+      });
+      percentage.addEventListener("click", () => {
+        input.value = Number(input.value) / 100;
+      });
+      divide.addEventListener("click", () => setOperator("/"));
+      multiply.addEventListener("click", () => setOperator("*"));
+      plus.addEventListener("click", () => setOperator("+"));
+      minus.addEventListener("click", () => setOperator("-"));
+      equal.addEventListener("click", () => {
+        secondNumber = Number(input.value);
+        calculate();
+        firstNumber = 0;
+        secondNumber = 0;
+        operator = "";
+      });
+      comma.addEventListener("click", () => {
+        if (!input.value.includes(".")) {
+          input.value += ".";
+        }
+      });
+      zero.addEventListener("click", () => setNumber(0));
+      one.addEventListener("click", () => setNumber(1));
+      two.addEventListener("click", () => setNumber(2));
+      three.addEventListener("click", () => setNumber(3));
+      four.addEventListener("click", () => setNumber(4));
+      five.addEventListener("click", () => setNumber(5));
+      six.addEventListener("click", () => setNumber(6));
+      seven.addEventListener("click", () => setNumber(7));
+      eight.addEventListener("click", () => setNumber(8));
+      nine.addEventListener("click", () => setNumber(9));
+
+      document.addEventListener("keydown", (event) => {
+        switch (event.key) {
+          case "0":
+            setNumber(0);
+            break;
+          case "1":
+            setNumber(1);
+            break;
+          case "2":
+            setNumber(2);
+            break;
+          case "3":
+            setNumber(3);
+            break;
+          case "4":
+            setNumber(4);
+            break;
+          case "5":
+            setNumber(5);
+            break;
+          case "6":
+            setNumber(6);
+            break;
+          case "7":
+            setNumber(7);
+            break;
+          case "8":
+            setNumber(8);
+            break;
+          case "9":
+            setNumber(9);
+            break;
+          case "+":
+            setOperator("+");
+            break;
+          case "-":
+            setOperator("-");
+            break;
+          case "*":
+            setOperator("*");
+            break;
+          case "/":
+            setOperator("/");
+            break;
+          case "Enter":
+            calculate();
+            break;
+          case "Backspace":
+            clearAll();
+            break;
+          case ".":
+            if (!input.value.includes(".")) {
+              input.value += ".";
+            }
+            break;
+          default:
+            break;
+        }
+      });
+
+      input.addEventListener("input", (event) => {
+        if (event.target.value.length > 10) {
+          event.target.value = event.target.value.slice(0, 10);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pricing Saas</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-900 absolute">
+    <div
+      class="relative top-0 left-1/2 -translate-x-1/2 p-4 w-fit bg-[#bc1e4b] rounded-b-md"
+    >
+      <p class="text-gray-100 text-center text-sm font-light">
+        Your current plan:
+      </p>
+      <p class="text-gray-100 text-center text-lg font-bold">
+        Starter trial + 500MAUs
+      </p>
+    </div>
+    <h1 class="w-fit mx-auto mt-10 text-gray-100 text-3xl font-bold">
+      Choose a plan
+    </h1>
+    <div class="flex gap-2 mx-auto w-fit mt-10 text-gray-100">
+      <p>Billed monthly</p>
+      <div
+        class="w-14 h-7 bg-[#bc1e4b] rounded-3xl bg p-1 cursor-pointer"
+        onclick="turnSwitch()"
+      >
+        <div class="w-5 h-5 bg-white rounded-3xl" id="switch"></div>
+      </div>
+      <p>Billed annually</p>
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-5 w-fit mx-auto mt-10 text-gray-100"
+    >
+      <div
+        class="flex-1 flex flex-col justify-between h-auto bg-slate-700 px-3 py-6 rounded-lg"
+      >
+        <h2 class="text-center">Starter</h2>
+        <h1 class="text-4xl text-center font-bold my-2">$19</h1>
+        <ul class="ml-5 my-5">
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            500 MAUs
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            3 projects
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited guides
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited flows
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited branded themes
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Email support
+          </li>
+        </ul>
+        <button
+          class="border border-[#bc1e4b] w-full py-3 rounded-lg capitalize hover:text-white hover:bg-[#bc1e4b] transition-all transform duration-150 ease-in-out"
+        >
+          Choose plan
+        </button>
+      </div>
+      <div
+        class="flex-1 flex flex-col justify-between h-auto bg-slate-700 px-3 py-6 rounded-lg"
+      >
+        <h2 class="text-center">Pro</h2>
+        <h1 class="text-4xl text-center font-bold my-2" id="billing">
+          $99<span class="text-sm" id="timing">/month</span>
+        </h1>
+        <select
+          class="bg-transparent border border-[#bc1e4b] p-2 mx-auto w-fit flex items-center focus:outline-none justify-center rounded-lg capitalize hover:text-white hover:bg-[#bc1e4b] transition-all transform duration-150 ease-in-out"
+        >
+          <option value="1">1-1000 MAUs</option>
+          <option value="2">1000-5000 MAUs</option>
+          <option value="3">5000-10000 MAUs</option>
+          <option value="4">10000+ MAUs</option>
+        </select>
+        <ul class="ml-5 my-5">
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            All starter features, plus:
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited projects
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited fully customizable themes
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            A dedicated Customer Success Manager
+          </li>
+        </ul>
+        <button
+          class="border border-[#bc1e4b] w-full py-3 rounded-lg capitalize hover:text-white hover:bg-[#bc1e4b] transition-all transform duration-150 ease-in-out"
+        >
+          Choose plan
+        </button>
+      </div>
+      <div
+        class="flex-1 flex flex-col justify-between h-auto bg-slate-700 px-3 py-6 rounded-lg"
+      >
+        <h2 class="text-center">Enterprise</h2>
+        <h1 class="text-4xl text-center font-bold my-2">Let's Talk</h1>
+        <ul class="ml-5 my-5">
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            All pro features
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Unlimited MAUs
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Dedicated environment
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Enterprise account administation
+          </li>
+          <li class="flex items-center gap-2">
+            <div class="h-2 w-2 bg-[#bc1e4b] rounded-full"></div>
+            Premium support and services
+          </li>
+        </ul>
+        <button
+          class="border border-[#bc1e4b] w-full py-3 rounded-lg capitalize hover:text-white hover:bg-[#bc1e4b] transition-all transform duration-150 ease-in-out"
+        >
+          Choose plan
+        </button>
+      </div>
+    </div>
+    <script>
+      function turnSwitch() {
+        const switchBtn = document.getElementById("switch");
+        const billing = document.getElementById("billing");
+        if (switchBtn.classList.contains("translate-x-7")) {
+          switchBtn.classList.remove("translate-x-7");
+          switchBtn.classList.add("translate-x-0");
+          billing.innerHTML = `$99<span class="text-sm" id="timing">/month</span>`;
+        } else {
+          switchBtn.classList.remove("translate-x-0");
+          switchBtn.classList.add("translate-x-7");
+          billing.innerHTML = `$990<span class="text-sm" id="timing">/year</span>`;
+        }
+      }
+    </script>
+  </body>
+</html>

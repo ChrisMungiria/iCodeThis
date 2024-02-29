@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active {
+        font-weight: bold;
+      }
+    </style>
+    <title>Nav Header UI</title>
+  </head>
+  <body class="w-screen h-screen bg-white flex items-center justify-center">
+    <header
+      class="w-10/12 bg-gradient-to-r from-[#bc82fd] to-[#ff6b96] shadow-xl"
+    >
+      <div class="relative flex items-center justify-between">
+        <h2 class="font-bold text-pretty m-4 text-white">UIDesignDaily</h2>
+        <div
+          class="border absolute left-1/2 -translate-x-1/2 border-gray-100/50 rounded-b-md h-fit px-4 py-1 mb-3 flex items-centerk justify-center"
+        >
+          <p class="uppercase font-light text-white text-sm">
+            Day <span class="block font-bold">905</span>
+          </p>
+        </div>
+        <div
+          class="flex flex-col sm:flex-row items-center gap-4 p-4 text-gray-100"
+        >
+          <a href="" class="active">Designs</a>
+          <a href="">About</a>
+          <a href="">License</a>
+          <a href="">Contact</a>
+        </div>
+      </div>
+      <p class="uppercase text-center my-4 font-light text-slate-100">
+        Don't miss out the latest
+      </p>
+      <p class="font-bold text-center text-xl text-white">
+        Weekly FREE UI resources straight to your inbox
+      </p>
+      <div class="flex gap-3 mx-auto w-fit my-4">
+        <input
+          type="email"
+          class="rounded-md p-2 bg-[#bc62b2] focus:outline-none text-white placeholder:text-gray-300"
+          placeholder="Email address"
+        />
+        <button class="p-2 border rounded text-white">Stay inspired</button>
+      </div>
+      <p class="text-center text-gray-200 text-xs my-5">
+        Committment issues? Unsubscribe at any time.
+      </p>
+    </header>
+  </body>
+</html>

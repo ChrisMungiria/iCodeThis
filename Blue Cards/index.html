@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blue Cards</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-700 flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-lg h-fit grid gap-4 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1"
+    >
+      <div class="grid grid-rows-2 gap-5">
+        <div
+          class="h-fit w-full rounded-lg bg-blue-500 p-4 text-white group cursor-pointer"
+        >
+          <p class="font-bold my-1">86 Places</p>
+          <div class="flex flex-row text-xs">
+            <p class="text-gray-200">
+              See the most visited places and the places you've visited
+            </p>
+            <span
+              class="material-symbols-outlined group-hover:rotate-90 group-hover:scale-110 transition-all"
+            >
+              chevron_right
+            </span>
+          </div>
+        </div>
+        <div
+          class="h-fit w-full rounded-lg bg-blue-500 p-4 text-white group cursor-pointer"
+        >
+          <p class="font-bold my-1">Home and Work</p>
+          <p class="text-xs text-center w-fit text-gray-200">
+            <span class="material-symbols-outlined text-xs"> home </span>
+            <span class="underline">Add your home address</span>
+            <span class="material-symbols-outlined text-sm">
+              chevron_right
+            </span>
+          </p>
+          <p class="text-xs text-center w-fit text-gray-200">
+            <span class="material-symbols-outlined text-xs"> computer </span>
+            <span class="underline">Add your work address</span>
+            <span class="material-symbols-outlined text-sm">
+              chevron_right
+            </span>
+          </p>
+        </div>
+      </div>
+      <div class="rounded-lg bg-blue-500 p-4 group">
+        <div class="w-full h-1/2 overflow-hidden rounded-lg">
+          <img
+            src="https://img.marinas.com/v2/0d293aa5662294dc2c070bf9623ab6ee9a410e6d285c05b01ee9ce6f44dcf6ec.jpg"
+            alt=""
+            class="w-full h-full object-cover rounded-lg group-hover:scale-125 transition-all"
+          />
+        </div>
+        <p class="text-blue-100 my-1 font-semibold">Romania and Norway</p>
+        <p class="text-xs text-blue-300">Mar 18 - 31, 2018</p>
+        <button
+          class="px-2 py-1 rounded bg-blue-400 text-white text-xs mt-2 shadow-md"
+        >
+          View trips
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

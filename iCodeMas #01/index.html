@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .timer-value {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        transition: transform 0.5s ease-in-out;
+        list-style: none;
+      }
+    </style>
+    <title>iCodeMas #01</title>
+  </head>
+  <body class="w-screen h-screen bg-[#a2b3bf] flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-xl h-fit py-10 bg-white pb-20"
+      style="
+        background-image: url('https://www.bluepecantraining.com/wp-content/uploads/2017/12/lgi01a201312060500.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <h1 class="w-fit mx-auto text-white text-3xl mt-10 text-center">
+        iCodeMas is coming to town
+      </h1>
+      <p class="text-white text-xs mt-3 w-fit mx-auto text-center">
+        Celebrate the magic of the season! Exclusive Christmas challenges for 24
+        days!
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 w-10/12 mx-auto mt-5">
+        <div class="bg-gray-100 h-fit py-5 rounded-md">
+          <p
+            class="text-3xl font-bold text-center my-auto text-slate-500"
+            id="days"
+          >
+            23
+          </p>
+          <p class="text-center my-auto text-slate-500">Days</p>
+        </div>
+        <div class="bg-gray-100 h-fit py-5 rounded-md">
+          <p
+            class="text-3xl font-bold text-center my-auto text-slate-500"
+            id="hours"
+          >
+            23
+          </p>
+          <p class="text-center my-auto text-slate-500">Hours</p>
+        </div>
+        <div class="bg-gray-100 h-fit py-5 rounded-md">
+          <p
+            class="text-3xl font-bold text-center my-auto text-slate-500"
+            id="minutes"
+          >
+            58
+          </p>
+          <p class="text-center my-auto text-slate-500">Minutes</p>
+        </div>
+        <div class="bg-gray-100 h-fit py-5 rounded-md">
+          <p
+            class="text-3xl font-bold text-center my-auto text-slate-500"
+            id="seconds"
+          >
+            30
+          </p>
+          <p class="text-center my-auto text-slate-500">Seconds</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minsEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      const christmas = "25 Dec 2023";
+
+      function countdown() {
+        const christmasDate = new Date(christmas);
+        const currentDate = new Date();
+
+        const totalSeconds = (christmasDate - currentDate) / 1000;
+
+        const days = Math.floor(totalSeconds / 3600 / 24);
+        const hours = Math.floor(totalSeconds / 3600) % 24;
+        const mins = Math.floor(totalSeconds / 60) % 60;
+        const seconds = Math.floor(totalSeconds) % 60;
+
+        daysEl.innerHTML = days;
+        hoursEl.innerHTML = formatTime(hours);
+        minsEl.innerHTML = formatTime(mins);
+        secondsEl.innerHTML = formatTime(seconds);
+      }
+
+      function formatTime(time) {
+        return time < 10 ? `0${time}` : time;
+      }
+
+      countdown();
+
+      setInterval(countdown, 1000);
+    </script>
+  </body>
+</html>

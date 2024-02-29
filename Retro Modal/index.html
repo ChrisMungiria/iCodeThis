@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Retro Modal</title>
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen flex items-center justify-center before:content-[''] before:absolute before:inset-0 before:bg-black before:bg-opacity-50 before:z-10"
+      style="
+        background-image: url('https://e0.pxfuel.com/wallpapers/668/111/desktop-wallpaper-high-resolution-ocean.jpg');
+        background-size: cover;
+      "
+    >
+      <div class="max-w-sm w-11/12 h-fit bg-white rounded-md">
+        <div class="w-full flex justify-between items-center p-3 text-gray-400">
+          <h2>Confirm</h2>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <hr />
+        <div class="w-full flex items-center justify-center mt-5">
+          <i
+            class="fa-solid fa-circle-question mx-auto text-5xl text-blue-200"
+          ></i>
+        </div>
+        <p class="w-1/2 mx-auto text-center font-light mt-4 text-blue-400">
+          Are you sure you want to navigate away from this page?
+        </p>
+        <p class="w-fit mx-auto text-xs text-gray-400 mt-5 text-center">
+          Press OK to continue, or Cancel to stay on the current page
+        </p>
+        <div class="w-full flex items-center justify-around mt-5 mb-5">
+          <button class="bg-blue-400 text-white px-8 py-2 shadow-xl rounded-lg">
+            OK
+          </button>
+          <button class="bg-gray-200 px-8 py-2 shadow-xl rounded-lg">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

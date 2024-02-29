@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Store Location</title>
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen bg-slate-800 flex items-center justify-center"
+    >
+      <div
+        class="relative w-8/12 max-w-sm h-1/3 bg-gradient-to-br from-pink-400 to-purple-400 right-20 bottom-20 rounded-tr-3xl rounded-bl-3xl"
+      ></div>
+      <div class="w-11/12 max-w-sm h-fit bg-slate-900 rounded-lg p-4 absolute">
+        <h2 class="text-purple-300 text-xl">Closest Stores</h2>
+        <div class="mt-5 flex items-center justify-around">
+          <div class="flex-1">
+            <p class="text-purple-300 text-xs">Postal Code</p>
+            <input
+              type="text"
+              placeholder="5055"
+              class="border border-purple-200/80 bg-transparent px-4 py-2 rounded-lg w-2/3 focus:outline-none textpurple-200"
+            />
+          </div>
+          <div
+            class="flex-1 flex flex-row h-fit items-center justify-center text-indigo-600"
+          >
+            <i class="fa-solid fa-location-dot mr-2"></i>
+            <p>Use my location</p>
+          </div>
+        </div>
+        <div class="flex justify-between items-center mt-3">
+          <h2 class="text-purple-300">
+            <span class="uppercase">Point</span> Bergen Sentrum
+          </h2>
+          <span
+            class="px-2 py-1 bg-pink-400 text-white rounded-2xl text-sm uppercase"
+            >Closed</span
+          >
+        </div>
+        <p class="text-purple-300 font-extralight">
+          Strandagaten 55-57, 6007 Bergen
+        </p>
+        <div class="flex items-center text-purple-300 font-extralight">
+          <i class="fa-regular fa-clock mr-2"></i>
+          <p>9:00 - 19:00</p>
+        </div>
+        <div class="flex justify-between items-center mt-3">
+          <h2 class="text-purple-300">
+            <span class="uppercase">Poiv</span>estkanten
+          </h2>
+          <span
+            class="px-2 py-1 bg-green-400 text-white rounded-2xl text-sm uppercase"
+            >Open</span
+          >
+        </div>
+        <p class="text-purple-300 font-extralight">
+          Strandagaten 55-57, 6007 Bergen
+        </p>
+        <div class="flex items-center text-purple-300 font-extralight">
+          <i class="fa-regular fa-clock mr-2"></i>
+          <p>9:00 - 21:00</p>
+        </div>
+        <button class="w-full bg-blue-500 py-4 text-white rounded-lg mt-4">
+          View all
+        </button>
+      </div>
+    </section>
+  </body>
+</html>

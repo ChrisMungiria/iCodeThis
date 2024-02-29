@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cart Details</title>
+  </head>
+  <body class="w-screen h-screen bg-cyan-100 flex items-center justify-center">
+    <div class="w-11/12 max-w-xs h-fit bg-white rounded-xl p-4 relative z-20">
+      <h1 class="text-xl font-bold">Your shopping cart</h1>
+      <p>ID: 548856</p>
+      <div class="flex items-center">
+        <img
+          src="https://desertmi.ae/wp-content/uploads/2023/05/5-15.jpg"
+          alt=""
+          class="w-20 h-20"
+        />
+        <div class="text-xs">
+          <p class="font-bold">
+            Ecovacs Deebot OZMO N8 + robot vaccuum cleaner W125978483
+          </p>
+          <p class="text-white bg-lime-500 w-fit rounded-xl px-2 my-1">
+            In stock
+          </p>
+          <div class="flex gap-1">
+            <span
+              class="w-5 h-5 bg-blue-100 rounded flex items-center justify-center"
+              onclick="minus()"
+              >-</span
+            ><span
+              class="w-5 h-5 border rounded flex items-center justify-center"
+              id="number"
+              >1</span
+            ><span
+              class="w-5 h-5 bg-blue-100 rounded flex items-center justify-center"
+              onclick="plus()"
+              >+</span
+            >
+          </div>
+        </div>
+      </div>
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <div class="flex justify-between text-sm my-1">
+        <p>Standard package</p>
+        <p class="font-bold uppercase">Free</p>
+      </div>
+      <div class="flex justify-between text-sm my-1">
+        <p>Total VAT</p>
+        <p class="font-bold uppercase">879,-</p>
+      </div>
+      <div class="flex justify-between text-sm my-1">
+        <p>Total NOK</p>
+        <p class="font-bold uppercase">4395,-</p>
+      </div>
+      <a href="#" class="text-xs underline text-blue-500" onclick="showCode()"
+        >Got a gift card or a promotional code?</a
+      >
+      <input
+        type="text"
+        class="border rounded my-1 hidden focus:outline-none p-2 text-xs text-gray-600"
+        id="code"
+      />
+
+      <button
+        class="bg-blue-500 text-white rounded-3xl text-xs w-full py-2 mt-3"
+        onclick="validateCode()"
+      >
+        Checkout
+      </button>
+    </div>
+    <script>
+      function plus() {
+        var currentNumber = document.getElementById("number").innerText;
+
+        var newNumber = parseInt(currentNumber) + 1;
+
+        document.getElementById("number").innerText = newNumber;
+      }
+      function minus() {
+        var currentNumber = document.getElementById("number").innerText;
+
+        if (currentNumber == 1) {
+          return;
+        }
+
+        var newNumber = parseInt(currentNumber) - 1;
+
+        document.getElementById("number").innerText = newNumber;
+      }
+
+      function showCode() {
+        document.getElementById("code").classList.toggle("hidden");
+      }
+
+      function validateCode() {
+        var codeValue = document.getElementById("code").value;
+        const codeElement = document.getElementById("code");
+
+        if (codeValue == "") {
+          return;
+        }
+        if (codeValue == "icodethis") {
+          codeElement.classList.add("bg-green-500/50");
+        } else {
+          codeElement.classList.add("bg-red-500/50");
+        }
+      }
+    </script>
+  </body>
+</html>

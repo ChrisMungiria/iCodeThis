@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Booking Calendar</title>
+  </head>
+  <body>
+    <section
+      class="w-screen h-screen bg-slate-200 flex items-center justify-center"
+    >
+      <div class="w-11/12 h-fit bg-white rounded-xl max-w-sm">
+        <div
+          class="w-full bg-blue-900 p-4 flex items-center justify-between rounded-t-xl text-gray-100"
+        >
+          <h2 class="font-bold">Book a training</h2>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="flex w-1/2 mx-auto mt-5 justify-around items-center">
+          <i class="fa-solid fa-chevron-left"></i>
+          <div>
+            <h2 class="font-bold text-xl">Sep. 24</h2>
+            <p class="w-full text-center">Today</p>
+          </div>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div
+          class="w-3/4 bg-blue-900 text-gray-100 flex flex-row justify-between mx-auto rounded-xl p-5 mt-4"
+        >
+          <div>
+            <h2 class="font-bold">Body Pump</h2>
+            <p class="text-sm font-light">9:30 . 60 min</p>
+            <p class="text-xs mt-10">Trained by</p>
+            <div class="flex flex-row items-center mt-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHz5UN-r9cMq6TmQu0AvOgmet4ZtZHKAuRV_3blQ&s"
+                class="w-10 h-10 rounded-full border-2 border-blue-800"
+                alt=""
+              />
+              <p class="text-xs ml-2">Emily Stark</p>
+            </div>
+          </div>
+          <button
+            class="bg-gray-100 text-blue-900 px-5 py-2 font-bold w-fit h-fit rounded-lg"
+          >
+            Book a spot
+          </button>
+        </div>
+        <div
+          class="w-3/4 bg-blue-900 text-gray-100 flex flex-row justify-between mx-auto rounded-xl p-5 mt-4 mb-4"
+        >
+          <div>
+            <h2 class="font-bold">Pilates</h2>
+            <p class="text-sm font-light">10:30 . 60 min</p>
+            <p class="text-xs mt-10">Trained by</p>
+            <div class="flex flex-row items-center mt-2">
+              <img
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHx8&w=1000&q=80"
+                class="w-10 h-10 rounded-full border-2 border-blue-800"
+                alt=""
+              />
+              <p class="text-xs ml-2">Erik Nest</p>
+            </div>
+          </div>
+          <button
+            class="bg-gray-100 text-blue-900 px-5 py-2 font-bold w-fit h-fit rounded-lg"
+          >
+            Book a spot
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
