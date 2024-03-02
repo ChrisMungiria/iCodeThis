@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Form Dark Theme</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-zinc-900 flex items-center justify-center gap-10"
+  >
+    <div
+      id="pop_up"
+      class="w-11/12 hidden max-w-xs p-4 space-y-2 rounded-md bg-zinc-800"
+    >
+      <i class="fa-regular fa-envelope text-4xl text-white"></i>
+      <h1 class="text-white text-lg">Subscribe to our newsletter</h1>
+      <div class="flex items-center gap-3">
+        <input
+          type="email"
+          name=""
+          id=""
+          class="flex-[3] border border-zinc-600 rounded-md p-2 bg-transparent"
+        />
+        <button
+          class="flex-1 h-full rounded-md p-2 bg-blue-500 text-white"
+          id="ok"
+        >
+          Ok
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs p-5 rounded-xl bg-zinc-800 gap-3"
+      id="get_started"
+    >
+      <i class="fa-solid fa-shield text-4xl text-blue-500"></i>
+      <div class="text-white space-y-1">
+        <h1 class="font-bold">Show others that you are safe</h1>
+        <p class="text-xs">
+          If you approve your profile with BankID, you are perceived as a safer
+          person to trade with
+        </p>
+        <button
+          class="px-4 py-2 text-xs my-2 rounded-md bg-white text-slate-700"
+          id="get_started_button"
+        >
+          Get started
+        </button>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs hidden p-5 rounded-xl bg-zinc-800 space-y-4"
+      id="form"
+    >
+      <div class="flex items-center justify-end text-gray-200">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <p class="text-white text-xs">Hi</p>
+      <p class="text-white text-xs">
+        One of your consultants will assist you as soon as they can.
+      </p>
+      <div class="flex flex-col gap-2 text-white text-xs">
+        <label>Name</label>
+        <input
+          type="text"
+          class="border border-zinc-600 rounded-md p-3 bg-transparent"
+        />
+      </div>
+      <div class="flex flex-col gap-2 text-white text-xs">
+        <label>Email</label>
+        <input
+          type="email"
+          class="border border-zinc-600 rounded-md p-3 bg-transparent"
+        />
+      </div>
+      <div class="flex flex-col gap-2 text-white text-xs">
+        <label>Phone number (optional)</label>
+        <input
+          type="number"
+          class="border border-zinc-600 rounded-md p-3 bg-transparent"
+        />
+      </div>
+      <div class="flex flex-col gap-2 text-white text-xs">
+        <label>Phone number (optional)</label>
+        <textarea
+          class="border border-zinc-600 rounded-md p-3 bg-transparent"
+          cols="30"
+          rows="3"
+        ></textarea>
+      </div>
+      <button class="py-2 rounded-md bg-blue-500 w-full text-white">
+        Start chat
+      </button>
+    </div>
+    <script>
+      const get_started_button = document.getElementById("get_started_button");
+      const get_started = document.getElementById("get_started");
+      const form = document.getElementById("form");
+      const pop_up = document.getElementById("pop_up");
+
+      get_started_button.addEventListener("click", () => {
+        // Change the get started text to loading for 2sec
+        get_started_button.textContent = "Loading...";
+        setTimeout(() => {
+          get_started.classList.add("hidden");
+          form.classList.remove("hidden");
+
+          //   Drop down the pop up slowly from top-0 to top-20
+          pop_up.classList.remove("hidden");
+        }, 2000);
+      });
+
+      const ok = document.getElementById("ok");
+      ok.addEventListener("click", () => {
+        pop_up.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
