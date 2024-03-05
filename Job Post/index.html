@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background: linear-gradient(
+          160deg,
+          #fee4ea,
+          #fee4ea 60%,
+          #232e4d 60%,
+          #232e4d
+        );
+      }
+    </style>
+    <title>Job Post</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-pink-300">
+    <div class="w-11/12 max-w-xl p-4 bg-white">
+      <div class="flex items-center justify-end">
+        <span>...</span>
+      </div>
+      <div class="w-full flex gap-2">
+        <div class="w-20 h-20 p-4 border rounded-full">
+          <img
+            src="https://avatars.githubusercontent.com/u/5321906?s=200&v=4"
+            alt=""
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <div>
+          <p class="capitalize text-xl font-semibold">
+            Product designer at Wisely
+          </p>
+          <div class="flex text-slate-400 gap-2 items-center">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Austin, TX or Remote</p>
+          </div>
+          <div>
+            <button
+              class="px-5 py-2 border border-[#232e4d] text-[#232e4d] text-xs"
+            >
+              Save
+            </button>
+            <button class="px-5 py-2 bg-[#232e4d] text-white text-xs">
+              Apply
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="grid place-items-center text-xs bg-slate-100 border rounded-md mt-5 grid-cols-3 gap-3"
+      >
+        <div class="p-4">
+          <p class="uppercase">Job</p>
+          <ul class="list-disc">
+            <li>7/9 skill match</li>
+            <li>32 applicants</li>
+          </ul>
+        </div>
+        <div class="p-4">
+          <p class="uppercase">Company</p>
+          <ul class="list-disc">
+            <li>51 - 200 employee</li>
+            <li>Computer software</li>
+          </ul>
+        </div>
+        <div class="p-4">
+          <p class="uppercase">Connections</p>
+          <p>You don't have any connections working at Wisely</p>
+        </div>
+      </div>
+      <p class="capitalize my-3 text-center w-full text-slate-400">
+        View job post
+      </p>
+    </div>
+  </body>
+</html>
