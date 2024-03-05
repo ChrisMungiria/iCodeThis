@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .active {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #536288;
+        background-color: #edfbfa;
+      }
+    </style>
+    <title>Hiring Profile</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-gradient-to-tr from-blue-700 to-blue-300 flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xs bg-white">
+      <div class="h-32 relative">
+        <img
+          src="https://i.pinimg.com/originals/d3/46/0f/d3460f5523d64b4cd2adbfcdc209c2f0.jpg"
+          alt=""
+          class="w-full h-full object-cover absolute z-10 opacity-80"
+        />
+        <i
+          class="fa-solid fa-arrow-left text-2xl z-20 absolute top-5 left-5 text-white"
+        ></i>
+        <i
+          class="fa-regular fa-star text-2xl z-20 absolute top-5 right-5 text-white"
+        ></i>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1592334873219-42ca023e48ce?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3w3NjA4Mjc3NHx8ZW58MHx8fHx8"
+        alt=""
+        class="w-20 h-20 object-cover rounded-full -mt-10 border-4 border-blue-200 absolute left-1/2 -translate-x-1/2 z-30"
+      />
+      <p
+        class="mt-10 text-xs w-3/4 text-center mx-auto font-bold text-slate-700"
+      >
+        Justo tempor commodo id quo, mea vidisse albucius singulis te. Natum
+        eripuit electram at has, natum oratio pericipitur in qui, ea mucius
+        invenire pri.
+      </p>
+      <hr class="mt-2" />
+      <div>
+        <ul class="flex gap-2">
+          <li class="w-full flex items-center justify-center cursor-pointer">
+            About me
+          </li>
+          <li class="w-full flex items-center justify-center cursor-pointer">
+            Skills
+          </li>
+          <li
+            class="w-full active flex items-center justify-center cursor-pointer"
+          >
+            Portfolio
+          </li>
+        </ul>
+      </div>
+      <div class="w-3/4 mx-auto my-2">
+        <p class="text-sm text-[#3cb9a8]">Advertising</p>
+        <div class="w-full h-2 rounded-full bg-[#c0ece7]">
+          <div
+            class="w-1/2 h-full rounded-l-full bg-gradient-to-r from-[#395188] to-[#0aaf9f]"
+          ></div>
+        </div>
+      </div>
+      <div class="w-3/4 mx-auto my-2">
+        <p class="text-sm text-[#3cb9a8]">Wedding</p>
+        <div class="w-full h-2 rounded-full bg-[#c0ece7]">
+          <div
+            class="w-2/3 h-full rounded-l-full bg-gradient-to-r from-[#395188] to-[#0aaf9f]"
+          ></div>
+        </div>
+      </div>
+      <div class="w-3/4 mx-auto my-2">
+        <p class="text-sm text-[#3cb9a8]">Fashion</p>
+        <div class="w-full h-2 rounded-full bg-[#c0ece7]">
+          <div
+            class="w-2/3 h-full rounded-l-full bg-gradient-to-r from-[#395188] to-[#0aaf9f]"
+          ></div>
+        </div>
+      </div>
+      <button class="w-full bg-[#02b5a3] uppercase text-white py-4">
+        Hire me
+      </button>
+    </div>
+    <script>
+      const items = document.querySelectorAll("li");
+      items.forEach((item) => {
+        item.addEventListener("click", () => {
+          items.forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
