@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/leader-line-new@1.1.9/leader-line.min.js
+"></script>
+    <title>Mind Map</title>
+  </head>
+  <body class="w-screen h-screen bg-[#eaeaf5] flex items-center justify-center">
+    <div
+      class="w-11/12 max-w-xl rounded-lg h-96 bg-[#f5f7fb] shadow-xl flex items-center justify-center relative"
+    >
+      <div
+        id="intuitive"
+        class="p-4 bg-[#f5efea] border-b border-orange-500 rounded-t-md absolute top-10 left-10"
+      >
+        <p class="text-xs">Intuitive</p>
+      </div>
+      <div
+        id="memory"
+        class="p-4 bg-[#f6e7e7] border-b border-red-500 rounded-t-md absolute top-2/3 left-10"
+      >
+        <p class="text-xs">Memory and restoration</p>
+      </div>
+      <div
+        id="collaboration"
+        class="p-4 bg-[#e3f5ef] border-b border-green-500 rounded-t-md absolute top-20 right-10"
+      >
+        <p class="text-xs">Collaboration</p>
+      </div>
+      <div
+        id="focus"
+        class="p-4 bg-[#e2ebf8] border-b border-blue-500 rounded-t-md absolute top-80 right-5"
+      >
+        <p class="text-xs">Focus</p>
+      </div>
+
+      <div class="p-2 bg-white w-fit rounded-md shadow-lg" id="middle">
+        <p class="text-center text-xs font-bold">
+          Online Mind Mapping <span class="block">-benefits-</span>
+        </p>
+      </div>
+    </div>
+    <script>
+      const intuitive = document.getElementById("intuitive");
+      const memory = document.getElementById("memory");
+      const collaboration = document.getElementById("collaboration");
+      const focusEl = document.getElementById("focus");
+      const middle = document.getElementById("middle");
+
+      new LeaderLine(middle, intuitive, {
+        color: "#e1ab47",
+        size: 2,
+        dash: true,
+        endPlugColor: "transparent",
+      });
+
+      new LeaderLine(memory, middle, {
+        color: "#c56a6e",
+        size: 2,
+        dash: true,
+        endPlugColor: "transparent",
+      });
+
+      new LeaderLine(middle, collaboration, {
+        color: "#53cce3",
+        size: 2,
+        dash: true,
+        endPlugColor: "transparent",
+      });
+
+      new LeaderLine(middle, focusEl, {
+        color: "#aecdf7",
+        size: 2,
+        dash: true,
+        endPlugColor: "transparent",
+      });
+    </script>
+  </body>
+</html>
