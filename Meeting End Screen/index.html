@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .active {
+        background-color: #2b4372;
+        border: 1px solid #3b5c9e;
+      }
+    </style>
+    <title>Meeting End Screen</title>
+  </head>
+  <body class="w-screen h-screen bg-[#2c4170] flex items-center justify-center">
+    <div class="w-11/12 max-w-xs">
+      <h1 class="text-[#889fc7] text-xl">You left the meeting</h1>
+      <div class="flex gap-2 my-2">
+        <button
+          class="flex-1 rounded-md p-2 text-xs border border-[#889fc7] text-[#889fc7]"
+        >
+          Rejoin
+        </button>
+        <button
+          class="flex-[3] rounded-md p-2 text-xs bg-[#3b5c9e] text-[#889fc7]"
+        >
+          Return to home page
+        </button>
+      </div>
+      <div class="w-full p-4 bg-[#243a69] rounded-md">
+        <p class="text-[#889fc7]">How was the audio and video?</p>
+        <div class="flex gap-3 w-fit mx-auto">
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer button"
+          >
+            <p class="text-xl">😭</p>
+          </div>
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer button"
+          >
+            <p class="text-xl">🙁</p>
+          </div>
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer button"
+          >
+            <p class="text-xl">🙄</p>
+          </div>
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer button"
+          >
+            <p class="text-xl">🙂</p>
+          </div>
+          <div
+            class="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer button"
+          >
+            <p class="text-xl">😄</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between text-[#889fc7]">
+          <p class="text-xs">Very bad</p>
+          <p class="text-xs">Very good</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const buttons = document.querySelectorAll(".button");
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          buttons.forEach((button) => {
+            button.classList.remove("active");
+          });
+          button.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
