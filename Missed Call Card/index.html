@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Missed Call Card</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div
+      class="w-11/12 max-w-xs p-3 bg-white rounded-sm shadow-xl shadow-blue-200"
+    >
+      <div class="flex items-center justify-between">
+        <p class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-red-500">
+            phone_missed </span
+          >Missed call
+        </p>
+        <div
+          class="w-8 h-8 flex items-center justify-center border rounded-full"
+        >
+          <span class="material-symbols-outlined text-sm text-gray-600">
+            close
+          </span>
+        </div>
+      </div>
+      <div class="my-5 flex gap-3">
+        <div class="w-16 h-16 bg-slate-200 rounded-full p-1">
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt=""
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <div class="text-sm">
+          <p>You missed a call from</p>
+          <p class="font-bold">Fredrick Floyd</p>
+          <p class="font-light mt-2 text-xs text-slate-500">22 hours ago</p>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <button
+          class="flex-1 border rounded-md p-2 flex text-xs items-center justify-center gap-2 text-slate-500"
+        >
+          <span class="material-symbols-outlined text-xs"> chat_bubble </span>
+          Send message
+        </button>
+        <button
+          class="flex-1 bg-[#1ca370] rounded-md p-2 flex text-xs items-center justify-center gap-2 text-white"
+        >
+          <span class="material-symbols-outlined"> call </span>
+          Call back
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
