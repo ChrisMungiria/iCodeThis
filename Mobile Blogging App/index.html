@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .active {
+        border: 1px solid #ff757f;
+      }
+      .active + p {
+        background-color: #ff757f;
+        border-radius: 50px;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Mobile Blogging App</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-[#81f1f9] to-[#347ee1]"
+  >
+    <div class="w-11/12 max-w-xs bg-[#1d339b] rounded-md" id="selection">
+      <div class="flex items-center justify-end p-3">
+        <i class="fa-solid fa-xmark text-slate-300"></i>
+      </div>
+      <h1 class="text-center text-xl text-slate-100 capitalize">
+        Choose your interests
+      </h1>
+      <p class="w-2/3 text-center text-slate-400 text-xs mx-auto my-2">
+        Ultrices perspiciatis pellentesque, tristique tempor tellus eget
+      </p>
+      <div class="grid grid-cols-3 gap-3 place-items-center">
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-atom text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Science</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-hands-holding-circle text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Culture</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-lightbulb text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Creativity</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-building text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Politics</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-book text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Self</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-photo-film text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Media</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-regular fa-pen-to-square text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Productivity</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-ruler-combined text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">Design</p>
+        </div>
+        <div class="item">
+          <div
+            class="w-16 h-16 bg-[#233aa9] rounded-full flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-wand-magic-sparkles text-2xl"></i>
+          </div>
+          <p class="text-white text-xs text-center mt-2">More</p>
+        </div>
+      </div>
+      <button
+        onclick="showHome()"
+        class="bg-[#ff757f] text-xs text-white w-fit px-3 flex mx-auto rounded-full p-2 my-4"
+      >
+        Continue
+      </button>
+    </div>
+    <div class="w-11/12 max-w-xs bg-white rounded-md hidden" id="home">
+      <p class="font-bold text-center w-2/3 mx-auto m-5">
+        Articles based on your interest
+      </p>
+      <div class="overflow-scroll h-96 p-4">
+        <div>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*04xuuo00V9mXRgKn3IA8Sw.jpeg"
+            alt=""
+            class="h-28 object-cover object-top w-full mx-auto"
+          />
+          <div class="flex items-center justify-between">
+            <p class="font-bold w-2/3">
+              Harvard study shows how to have lifetime joy
+            </p>
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
+          <div class="flex mt-2 gap-2">
+            <img
+              src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+              alt=""
+              class="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p class="text-xs">Cecilia Duncan</p>
+              <p class="text-xs text-slate-400">3rd April | 7 min read</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*04xuuo00V9mXRgKn3IA8Sw.jpeg"
+            alt=""
+            class="h-28 object-cover object-top w-full mx-auto"
+          />
+          <div class="flex items-center justify-between">
+            <p class="font-bold w-2/3">
+              Harvard study shows how to have lifetime joy
+            </p>
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
+          <div class="flex mt-2 gap-2">
+            <img
+              src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+              alt=""
+              class="w-10 h-10 rounded-full"
+            />
+            <div>
+              <p class="text-xs">Cecilia Duncan</p>
+              <p class="text-xs text-slate-400">3rd April | 7 min read</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full p-4 bg-[#233aa9] grid grid-cols-4 gap-5 place-items-center text-xs"
+      >
+        <div
+          class="w-full h-10 text-white flex items-center justify-center flex-col"
+        >
+          <i class="fa-solid fa-house"></i>
+          <p>Home</p>
+        </div>
+        <div
+          class="w-full h-10 text-slate-400 flex items-center justify-center flex-col"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Search</p>
+        </div>
+        <div
+          class="w-full h-10 text-slate-400 flex items-center justify-center flex-col"
+        >
+          <i class="fa-regular fa-bookmark"></i>
+          <p>Bookmarks</p>
+        </div>
+        <div
+          class="w-full h-10 text-slate-400 flex items-center justify-center flex-col"
+        >
+          <i class="fa-solid fa-crown"></i>
+          <p>Premium</p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const items = document.querySelectorAll(".item");
+      items.forEach((item) => {
+        // Get the inner div of each item
+        const innerDiv = item.querySelector("div");
+        // Add the active class when clicked
+        innerDiv.addEventListener("click", () => {
+          innerDiv.classList.toggle("active");
+        });
+      });
+
+      function showHome() {
+        const selection = document.getElementById("selection");
+        const home = document.getElementById("home");
+        selection.classList.add("hidden");
+        home.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>
