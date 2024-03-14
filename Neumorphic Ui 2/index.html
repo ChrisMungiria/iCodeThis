@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .neumorphic {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        background: #e0e0e0;
+        box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+        text-align: center;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .neumorphic:active {
+        box-shadow: 5px 5px 15px #bebebe, -5px -5px 15px #ffffff;
+      }
+    </style>
+    <title>Neumorphic Ui 2</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#eef0f8]">
+    <div class="w-11/12 max-w-xl flex gap-3">
+      <div class="bg-white flex-1 rounded-md shadow-lg">
+        <div class="flex items-center justify-between p-2 border-b">
+          <p>Filters</p>
+          <button
+            class="bg-[#7b90fd] text-sm text-white p-3 py-1 rounded-md shadow-md"
+          >
+            Done
+          </button>
+        </div>
+        <ul class="p-3 space-y-2 text-xs">
+          <li class="flex items-center gap-3">
+            <input
+              type="checkbox"
+              class="w-5 h-5 rounded-lg accent-[#7991fd]"
+            /><label>Date</label>
+          </li>
+          <li class="flex items-center gap-3">
+            <input
+              type="checkbox"
+              class="w-5 h-5 rounded-lg accent-[#7991fd]"
+            /><label>Amount</label>
+          </li>
+          <li class="flex items-center gap-3">
+            <input
+              type="checkbox"
+              class="w-5 h-5 rounded-lg accent-[#7991fd]"
+            /><label>Status</label>
+          </li>
+          <li class="flex items-center gap-3">
+            <input
+              type="checkbox"
+              class="w-5 h-5 rounded-lg accent-[#7991fd]"
+            /><label>Payment method</label>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-1">
+        <div class="flex items-center justify-between text-xs">
+          <button class="neumorphic">+ Add new</button
+          ><button class="neumorphic">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Export
+          </button>
+        </div>
+        <div
+          class="bg-[#eaebf3] shadow-inner p-2 rounded-md w-fit mx-auto mt-5"
+        >
+          <div class="bg-white rounded-md flex flex-col items-center w-fit p-2">
+            <i class="fa-solid fa-award text-2xl"></i>
+            <p class="w-2/3 text-center">You don't have any certificates</p>
+            <button
+              class="px-10 text-white text-xs py-2 rounded-full bg-[#7991fd]"
+            >
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
