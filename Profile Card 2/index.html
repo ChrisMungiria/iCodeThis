@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Profile Card 2</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#ebf0fc]">
+    <div
+      class="w-11/12 max-w-xs p-6 bg-white rounded-md shadow-lg flex flex-col items-center justify-center space-y-3 relative"
+    >
+      <div class="w-16 h-16 rounded-full bg-[#edeffc] p-2">
+        <img
+          src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+          alt=""
+          class="w-full h-full rounded-full"
+        />
+      </div>
+      <p class="text-xl text-center font-bold">Ildiko Gaspar</p>
+      <p class="text-xs text-slate-700">UX Designer</p>
+      <div class="grid grid-cols-3 gap-5 w-full">
+        <div
+          class="border rounded-md w-full flex flex-col space-y-2 items-center justify-center p-2 cursor-pointer"
+        >
+          <i class="fa-regular fa-face-smile"></i>
+          <p class="text-[9px]">Set a status</p>
+        </div>
+        <div
+          class="border rounded-md w-full flex flex-col space-y-2 items-center justify-center p-2 cursor-pointer"
+        >
+          <i class="fa-solid fa-pencil"></i>
+          <p class="text-[9px]">Edit profile</p>
+        </div>
+        <div
+          class="border rounded-md w-full flex flex-col space-y-2 items-center justify-center p-2 cursor-pointer"
+          id="more"
+        >
+          <i class="fa-solid fa-ellipsis"></i>
+          <p class="text-[9px]">More</p>
+        </div>
+      </div>
+      <div
+        class="w-64 p-4 bg-[#130c35] shadow-lg rounded-md absolute md:left-[300px] top-[180px] hidden"
+        id="popup"
+      >
+        <ul class="text-xs space-y-2 text-white">
+          <li class="p-2 hover:bg-[#2d255a]">Login</li>
+          <li class="p-2 hover:bg-[#2d255a]">Join</li>
+          <li class="p-2 hover:bg-[#2d255a]">Change language</li>
+          <li class="p-2 hover:bg-[#2d255a]">Image & Video API</li>
+          <li class="p-2 hover:bg-[#2d255a]">Apps & plugins</li>
+          <li class="p-2 hover:bg-[#2d255a]">FAQ</li>
+          <li class="p-2 hover:bg-[#2d255a]">Partnerships</li>
+          <li class="p-2 hover:bg-[#2d255a]">Inprint & Terms</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const more = document.getElementById("more");
+      const popup = document.getElementById("popup");
+
+      more.addEventListener("click", () => {
+        popup.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
