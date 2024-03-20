@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pricing Plans</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f8f9fe]">
+    <div
+      class="w-11/12 max-w-3xl bg-white grid sm:grid-cols-4 grid-cols-2 border shadow-md"
+    >
+      <div
+        class="border-r flex flex-col items-center justify-center space-y-2 h-56"
+      >
+        <ul>
+          <li>
+            <input type="radio" name="bill" id="yearly" />
+            <label for="bill">Billed yearly</label>
+          </li>
+          <li>
+            <input type="radio" name="bill" id="monthly" />
+            <label for="bill">Billed monthly</label>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="border-r flex flex-col items-center justify-center space-y-2 h-56"
+      >
+        <p class="text-sm font-bold">For individuals</p>
+        <p class="text-xs font-semibold">$9.99 / month</p>
+        <button class="text-xs text-white py-2 px-4 bg-slate-950">
+          Buy now
+        </button>
+      </div>
+      <div
+        class="border-r border-t sm:border-t-transparent flex flex-col items-center justify-center space-y-2 h-56"
+      >
+        <p class="text-sm font-bold">For families</p>
+        <p class="text-xs font-semibold">$16.99 / month</p>
+        <button class="text-xs text-white py-2 px-4 bg-slate-950">
+          Buy now
+        </button>
+      </div>
+      <div
+        class="flex border-t sm:border-t-transparent flex-col items-center justify-center space-y-2 h-56"
+      >
+        <p class="text-sm font-bold">For teams</p>
+        <p class="text-xs font-semibold">$16.58 / month</p>
+        <button class="text-xs text-white py-2 px-4 bg-slate-950">
+          Buy now
+        </button>
+        <p class="text-xs">or <span class="underline">purchase now</span></p>
+      </div>
+    </div>
+  </body>
+</html>
