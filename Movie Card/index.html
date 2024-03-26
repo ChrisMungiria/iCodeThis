@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Movie Card</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-100 flex items-center justify-center">
+    <div class="w-11/12 max-w-2xl bg-white shadow-lg px-10 py-4">
+      <div class="flex items-center justify-between py-4">
+        <div>
+          <h1 class="text-xl font-bold">Star Wars: The Last Jedi</h1>
+          <p class="text-blue-500 text-xs">Action and Adventure</p>
+        </div>
+        <p class="text-gray-700 font-light text-xs">
+          <span class="text-blue-500 font-bold">7.4</span>/10
+        </p>
+      </div>
+      <div class="flex">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_.jpg"
+          alt="star wars"
+          class="w-1/3 h-64 object-cover"
+        />
+        <div class="px-4">
+          <h2 class="capitalize text-lg font-bold">About the movie</h2>
+          <p class="text-xs">
+            In Lucasfilm's Star Wars: The Last Jedi, the Skywalkwer saga
+            continues as the heroes of The Force Awakens joins the galactic
+            legends in an epic adventure that unlocks new mysteries of the Force
+            and shoking revelations of the past.
+          </p>
+          <div class="grid grid-cols-3 gap-4 mt-5">
+            <div>
+              <p class="font-bold">Actors</p>
+              <ul class="text-xs text-blue-500">
+                <li>Oscar Isaac</li>
+                <li>Mark Hamil</li>
+                <li>Daisy Ridley</li>
+                <li>John Boyega</li>
+                <li>Kelly Marie Tran</li>
+              </ul>
+              <a href="#" class="text-blue-500 font-bold text-xs underline"
+                >More</a
+              >
+            </div>
+            <div>
+              <p class="font-bold">Director</p>
+              <ul class="text-xs text-blue-500">
+                <li>Rian Johnson</li>
+              </ul>
+              <p class="font-bold">Screenwriter</p>
+              <ul class="text-xs text-blue-500">
+                <li>Rian Johnson</li>
+              </ul>
+            </div>
+            <div>
+              <p class="font-bold">Producers</p>
+              <ul class="text-xs text-blue-500">
+                <li>Kathleen Kennedy</li>
+                <li>Ram Bergman</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-3 my-2">
+        <div class="w-1/3 flex items-center justify-between">
+          <p class="font-bold">$19.00</p>
+          <button
+            class="border-2 border-slate-900 rounded-full text-xs px-3 py-1"
+          >
+            Buy
+          </button>
+        </div>
+        <div class="w-full flex items-center justify-end">
+          <div class="bg-slate-800 flex items-center rounded-full">
+            <p class="text-slate-100 m-2 uppercase text-xs">Watch trailer</p>
+            <div
+              class="w-8 h-8 bg-white rounded-full flex items-center justify-center m-1"
+            >
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
