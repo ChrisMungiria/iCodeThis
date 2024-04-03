@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Movie Ticket</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-teal-50">
+    <div class="w-11/12 max-w-xs bg-white">
+      <div class="relative h-56">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BNjM0NTc0NzItM2FlYS00YzEwLWE0YmUtNTA2ZWIzODc2OTgxXkEyXkFqcGdeQXVyNTgwNzIyNzg@._V1_.jpg"
+          alt="background"
+          class="w-full h-full object-cover object-top rounded-t-md absolute z-10 opacity-50"
+        />
+        <i
+          class="fa-solid fa-arrow-left absolute text-white text-xl z-20 top-5 left-5"
+        ></i>
+        <div class="absolute bottom-0 left-5 z-20 text-sm text-white font-bold">
+          <p>Guardians of the Galaxy Vol 2</p>
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Cineplex Entertainment, Toronto ON</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-around my-2">
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-couch text-teal-500"></i>
+          <p>Available</p>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-couch text-slate-500"></i>
+          <p>Booked</p>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <i class="fa-solid fa-couch text-red-500"></i>
+          <p>Selected</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-10 gap-1 px-2">
+        <!-- Row 1 -->
+        <p class="text-sm text-slate-500 font-semibold">G</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <!-- Row 2 -->
+        <p class="text-sm text-slate-500 font-semibold">F</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <!-- Row 3 -->
+        <p class="text-sm text-slate-500 font-semibold">E</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <!-- Row 4 -->
+        <p class="text-sm text-slate-500 font-semibold">D</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-red-500"></i>
+        <i class="fa-solid fa-couch text-red-500"></i>
+        <i class="fa-solid fa-couch text-red-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <!-- Row 5 -->
+        <p class="text-sm text-slate-500 font-semibold">C</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <!-- Row 6 -->
+        <p class="text-sm text-slate-500 font-semibold">B</p>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <i class="fa-solid fa-couch text-slate-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <!-- Row 7 -->
+        <p class="text-sm text-slate-500 font-semibold">A</p>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <div class="w-2 h-2"></div>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+        <i class="fa-solid fa-couch text-teal-500"></i>
+      </div>
+      <div
+        class="h-10 border border-teal-800 my-2 w-3/4 mx-auto border-t-transparent flex justify-center"
+        style="
+          border-bottom-left-radius: 1000px;
+          border-bottom-right-radius: 1000px;
+          /* box shadow inset from the bottom */
+          box-shadow: 0px -20px 10px -10px rgba(17, 94, 89, 0.1) inset;
+        "
+      >
+        <p class="text-xs text-slate-500">Screen</p>
+      </div>
+      <div class="w-full bg-pink-500 flex">
+        <div class="h-full bg-pink-700 flex-1 p-2 text-white">
+          <p>Date</p>
+          <p>Tickets</p>
+          <p class="uppercase font-bold">Total</p>
+        </div>
+        <div
+          class="h-full flex-[4] p-2 text-white flex items-center justify-between"
+        >
+          <div>
+            <p>Jul 11, 19:15</p>
+            <p>3</p>
+            <p class="font-bold">$31</p>
+          </div>
+          <button
+            class="flex gap-2 items-center bg-slate-100 text-slate-800 rounded-md p-4 text-xs shadow-lg"
+          >
+            Next <i class="fa-solid fa-chevron-right text-lg"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
