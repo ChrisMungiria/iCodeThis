@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Password Field</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center">
+    <div
+      class="h-full w-11/12 max-w-xl bg-slate-100 flex items-center justify-center"
+    >
+      <div class="w-11/12 max-w-xs bg-white p-4 rounded-md shadow-lg">
+        <h1 class="font-bold text-2xl">Enter your password</h1>
+        <div class="flex gap-2 items-center mt-5">
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-14 h-14 rounded-full object-cover"
+          />
+          <div>
+            <p class="text-sm text-slate-600">Business Account</p>
+            <p class="text-lg text-slate-800 font-semibold">Sarah Bills</p>
+          </div>
+        </div>
+        <div class="mt-5">
+          <label for="password" class="p-2 text-xs text-slate-600 font-bold"
+            >Password</label
+          >
+          <div class="p-2 flex items-center gap-4">
+            <div class="border border-slate-800 px-2 rounded-md">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="rounded-md focus:outline-none p-2"
+                placeholder="********"
+              />
+            </div>
+            <i class="fa-solid fa-eye-slash cursor-pointer" id="hide"></i>
+          </div>
+        </div>
+        <div class="flex items-center justify-between pr-4">
+          <div class="flex items-center gap-2">
+            <div class="w-14 h-7 rounded-full border border-slate-800 p-1">
+              <div
+                class="w-5 h-5 bg-slate-900 rounded-full cursor-pointer"
+                id="move"
+              ></div>
+            </div>
+            <p class="text-xs">Stay signed in</p>
+          </div>
+          <button class="bg-slate-800 text-white px-4 py-2 text-xs rounded-md">
+            Continue
+          </button>
+        </div>
+        <p class="underline text-slate-700 text-xs font-bold my-10">
+          Reset password
+        </p>
+      </div>
+    </div>
+    <script>
+      const password = document.getElementById("password");
+      const hide = document.getElementById("hide");
+      const move = document.getElementById("move");
+
+      hide.addEventListener("click", () => {
+        if (password.type === "password") {
+          password.type = "text";
+          hide.classList.remove("fa-eye-slash");
+          hide.classList.add("fa-eye");
+        } else {
+          password.type = "password";
+          hide.classList.remove("fa-eye");
+          hide.classList.add("fa-eye-slash");
+        }
+      });
+
+      move.addEventListener("click", () => {
+        move.classList.toggle("ml-7");
+      });
+    </script>
+  </body>
+</html>
