@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pricing Table</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-slate-100 relative"
+  >
+    <div class="w-11/12 max-w-xl absolute z-10">
+      <div
+        class="w-40 h-40 rounded-full bg-purple-500/50 blur-2xl absolute top-10 left-10"
+      ></div>
+      <div
+        class="w-40 h-40 rounded-full bg-sky-500/50 blur-2xl absolute bottom-10 left-24"
+      ></div>
+      <div
+        class="w-40 h-40 rounded-full bg-yellow-500/50 blur-2xl absolute top-1/2 right-20 -translate-y-1/2"
+      ></div>
+    </div>
+    <div
+      class="w-11/12 max-w-xl bg-white/40 border-8 border-white rounded-md absolute z-20 grid md:grid-cols-3 grid-cols-2 gap-4 p-4"
+    >
+      <div class="h-64 flex flex-col justify-between">
+        <div>
+          <h2 class="font-semibold text-xl">Free</h2>
+          <p class="text-sm font-bold mt-3">$<span class="text-3xl">0</span></p>
+          <p class="my-2 text-slate-500 text-xs">Free for your whole team</p>
+          <p class="text-sm text-slate-700">
+            For individuals or teams looking to organize anything.
+          </p>
+        </div>
+        <button class="bg-purple-300 p-2 rounded-md mt-2 capitalize w-fit">
+          Get started
+        </button>
+      </div>
+      <div class="h-64 flex flex-col justify-between">
+        <div>
+          <h2 class="font-semibold text-xl">Free</h2>
+          <p class="text-sm font-bold mt-3">$<span class="text-3xl">6</span></p>
+          <p class="my-2 text-slate-500 text-xs">Per user per month</p>
+          <p class="text-sm text-slate-700">
+            For teams that need to manage more work.
+          </p>
+        </div>
+        <button class="bg-teal-300 p-2 rounded-md mt-2 capitalize w-fit">
+          Upgrade now
+        </button>
+      </div>
+      <div class="h-64 flex flex-col justify-between">
+        <div>
+          <h2 class="font-semibold text-xl">Premium</h2>
+          <p class="text-sm font-bold mt-3">
+            $<span class="text-3xl">12</span>
+          </p>
+          <p class="my-2 text-slate-500 text-xs">
+            Best for teams that need to track multiple projects
+          </p>
+          <p class="text-sm text-slate-700">
+            For teams that need to manage more work.
+          </p>
+        </div>
+        <button class="bg-orange-300 p-2 rounded-md mt-2 capitalize w-fit">
+          Try for free
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
