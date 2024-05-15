@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Upload Media</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#08043c]">
+    <div
+      id="input-container"
+      class="w-11/12 max-w-xs p-4 px-8 bg-[#1b174d] rounded-md text-slate-100"
+    >
+      <h1 class="capitalize text-white text-xl font-semibold">
+        Upload photos and videos
+      </h1>
+      <p class="w-3/4 mx-auto text-sm text-center text-slate-300 my-2">
+        We are glad you decided to join our cause!
+      </p>
+      <div
+        id="input"
+        class="w-3/4 py-6 border border-dashed border-slate-500 rounded-md mx-auto my-2 flex items-center justify-center flex-col"
+      >
+        <button class="text-xs bg-[#6148f4] px-4 py-2 rounded-lg" id="browse">
+          Browse
+        </button>
+        <p class="text-xs my-2 text-slate-400">or drag and drop</p>
+      </div>
+    </div>
+    <div
+      id="show"
+      class="w-11/12 max-w-lg gap-2 p-4 px-8 bg-[#1b174d] rounded-md text-slate-100 flex-row hidden"
+    >
+      <div class="flex-1">
+        <img
+          src="https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm00NzYtcGYtczEyNy1iLTA2MC5wbmc.png"
+          alt="flower"
+          class="w-full h-auto object-cover rounded-lg"
+        />
+      </div>
+      <div class="flex-1 h-full flex flex-col">
+        <label class="text-xs">Name your file</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Please enter a name for the file"
+          class="bg-transparent border rounded-md p-2 focus:outline-none placeholder:text-xs border-slate-400 text-slate-400 my-2"
+        />
+        <label class="text-xs">Location (Optional)</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Eg. on a tree, in the car"
+          class="bg-transparent border rounded-md p-2 focus:outline-none placeholder:text-xs border-slate-400 text-slate-400 my-2"
+        />
+        <label class="text-xs">Tags (Optional)</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Eg. #nature, #car"
+          class="bg-transparent border rounded-md p-2 focus:outline-none placeholder:text-xs border-slate-400 text-slate-400 my-2"
+        />
+        <button class="my-2 text-xs bg-[#6148f4] p-2 rounded-md">Upload</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const input = document.getElementById("input");
+    const input_container = document.getElementById("input-container");
+    input.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      input.classList.add("border-slate-200");
+    });
+    input.addEventListener("dragleave", (e) => {
+      e.preventDefault();
+      input.classList.remove("border-slate-200");
+    });
+
+    input.addEventListener("drop", (e) => {
+      e.preventDefault();
+      //   Only accept an image
+      if (e.dataTransfer.files[0].type.includes("image")) {
+        const file = e.dataTransfer.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const show = document.getElementById("show");
+          show.classList.remove("hidden");
+          show.classList.add("flex");
+          input_container.classList.add("hidden");
+          show.children[0].children[0].src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      } else {
+        alert("Please upload an image");
+      }
+    });
+
+    const browse = document.getElementById("browse");
+
+    browse.addEventListener("click", () => {
+      // Button to acccept images only
+      const input = document.createElement("input");
+      input.type = "file";
+      input.accept = "image/*";
+      input.click();
+      input.addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const show = document.getElementById("show");
+          show.classList.remove("hidden");
+          show.classList.add("flex");
+          input_container.classList.add("hidden");
+          show.children[0].children[0].src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      });
+    });
+  </script>
+</html>
