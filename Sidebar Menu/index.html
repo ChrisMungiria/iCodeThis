@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sidebar Menu</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-tr from-blue-200 to-blue-100"
+  >
+    <div
+      class="w-2/3 max-w-xs p-4 bg-white rounded-md h-5/6 flex flex-col justify-between"
+    >
+      <div>
+        <div class="flex items-center justify-end">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <button
+          class="uppercase bg-blue-500 shadow-md text-white rounded-md p-2 w-full my-2"
+        >
+          Sign in
+        </button>
+        <ul>
+          <li class="flex gap-4 items-center my-2 text-slate-500">
+            <i class="fa-solid fa-book"></i>
+            <p>Dictionary</p>
+          </li>
+          <li class="flex items-center my-2 text-slate-500 justify-between">
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-book-open"></i>
+              <p>Thesaurus</p>
+            </div>
+            <i class="fa-solid fa-caret-down text-blue-500"></i>
+          </li>
+          <li class="flex items-center my-2 text-slate-500 justify-between">
+            <div class="flex items-center gap-4">
+              <i class="fa-brands fa-wpexplorer"></i>
+              <p>Explore</p>
+            </div>
+            <i class="fa-solid fa-caret-up text-blue-500"></i>
+          </li>
+          <li class="flex items-center my-2 text-slate-500 justify-between">
+            <div class="flex items-center gap-4">
+              <i class="fa-solid fa-award"></i>
+              <p>Word of the year</p>
+            </div>
+            <i class="fa-solid fa-caret-down text-blue-500"></i>
+          </li>
+          <li class="flex gap-4 items-center my-2 text-slate-500">
+            <i class="fa-regular fa-comments"></i>
+            <p>Forum</p>
+          </li>
+          <li class="flex gap-4 items-center my-2 text-slate-500">
+            <i class="fa-regular fa-file"></i>
+            <p>Blog</p>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-3/4 mx-auto text-slate-400 flex items-center justify-around"
+      >
+        <i class="fa-brands fa-google-plus-g"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </div>
+  </body>
+</html>
