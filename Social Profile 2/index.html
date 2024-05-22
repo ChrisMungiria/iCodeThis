@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Social Profile 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-purple-500"
+  >
+    <div class="w-11/12 max-w-xs bg-white">
+      <div
+        class="flex items-center justify-between text-purple-500 p-4 text-lg"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <div class="flex mx-auto w-3/4 gap-5">
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="Profile image"
+          class="w-20 h-20 rounded-full object-cover"
+        />
+        <div class="text-slate-600">
+          <p class="font-bold">Dorothy Carter</p>
+          <p class="text-sm">Photographer</p>
+          <button
+            class="bg-gradient-to-r from-purple-500 to-purple-600 px-4 py-2 text-xs rounded-full text-white shadow-md"
+          >
+            + Follow
+          </button>
+        </div>
+      </div>
+      <div
+        class="w-3/4 mx-auto mt-10 flex items-center justify-between text-slate-500"
+      >
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-behance"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-pinterest-p"></i>
+      </div>
+      <div class="flex justify-between items-center w-3/4 mx-auto mt-5">
+        <p class="capitalize text-center text-slate-500 font-bold">
+          2589 <span class="block text-sm font-normal">followers</span>
+        </p>
+        <p class="capitalize text-center text-slate-500 font-bold">
+          1896 <span class="block text-sm font-normal">following</span>
+        </p>
+      </div>
+      <div class="flex px-4 gap-3 mt-2">
+        <div class="cursor-pointer" id="all">
+          <p>All</p>
+          <div class="w-full h-1 bg-purple-500"></div>
+        </div>
+        <div class="cursor-pointer" id="photos">
+          <p>Photos</p>
+          <div class="w-full h-1 bg-purple-500 hidden"></div>
+        </div>
+        <div class="cursor-pointer" id="videos">
+          <p>Videos</p>
+          <div class="w-full h-1 bg-purple-500 hidden"></div>
+        </div>
+      </div>
+      <div class="grid grid-cols-3 mt-px">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGsIVY5z-D0257KwuhLG9H5v-csK7TMd_rZOlk6Xv1Lg&s"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+        <img
+          src="https://media-cdn.tripadvisor.com/media/photo-s/19/9c/93/21/random-pics.jpg"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT301-O44d0zGakxaUb_Z5leHAtWRQddBpgkWPuqE2Oyw&s"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOg7cUZXFKr_j7LUojrdeZMcKV8i6pH3bn4CTwGYb6TA&s"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+        <img
+          src="https://preview.redd.it/the-most-random-image-every-seen-in-the-history-of-the-v0-xqvc2q6aw2sb1.jpg?width=640&crop=smart&auto=webp&s=f3688b9214ee3041120a2db385c976c77e5f0028"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQtE9QlpNzQTdzIgxPCQZ8Aq2PxqxqGCUZM-e-quKB1Q&s"
+          alt="photo"
+          class="w-full h-20 object-cover"
+        />
+      </div>
+    </div>
+    <script>
+      const buttons = ["all", "photos", "videos"];
+
+      buttons.forEach((button) => {
+        document.getElementById(button).addEventListener("click", () => {
+          buttons.forEach((btn) => {
+            document.getElementById(btn).children[1].classList.add("hidden");
+          });
+          document
+            .getElementById(button)
+            .children[1].classList.remove("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
