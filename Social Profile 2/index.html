@@ -16,14 +16,17 @@
   <body
     class="w-screen h-screen flex items-center justify-center bg-purple-500"
   >
-    <div class="w-11/12 max-w-xs bg-white">
+    <div class="w-11/12 max-w-xs bg-white relative">
+      <div
+        class="w-96 h-96 bg-purple-500/20 rounded-full absolute -top-40 left-1/2 -translate-x-1/2 z-10"
+      ></div>
       <div
         class="flex items-center justify-between text-purple-500 p-4 text-lg"
       >
         <i class="fa-solid fa-arrow-left"></i>
         <i class="fa-solid fa-ellipsis"></i>
       </div>
-      <div class="flex mx-auto w-3/4 gap-5">
+      <div class="flex mx-auto w-3/4 gap-5 relative z-30">
         <img
           src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
           alt="Profile image"
@@ -40,7 +43,7 @@
         </div>
       </div>
       <div
-        class="w-3/4 mx-auto mt-10 flex items-center justify-between text-slate-500"
+        class="w-3/4 mx-auto mt-10 flex items-center justify-between text-slate-500 relative z-30"
       >
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-facebook-f"></i>
