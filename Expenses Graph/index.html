@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Expenses Graph</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-blue-300 to-blue-500"
+  >
+    <div class="w-11/12 max-w-2xl bg-white/20 rounded-xl">
+      <div class="w-full h-full bg-white m-5 rounded-xl p-8">
+        <h1 class="text-2xl font-bold">Expenses</h1>
+        <div class="flex items-center justify-between">
+          <div
+            class="flex flex-row items-center gap-3 mt-5 bg-slate-100 p-2 rounded-full"
+          >
+            <p
+              class="p-3 rounded-full bg-gradient-to-r from-blue-300 to-blue-700 text-white cursor-pointer"
+              id="weekly"
+            >
+              Weekly
+            </p>
+            <p class="cursor-pointer p-3 rounded-full" id="montly">Monthly</p>
+            <p class="cursor-pointer p-3 rounded-full" id="yearly">Yearly</p>
+          </div>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <canvas id="myChart" style="width: 100%; max-width: 700px"></canvas>
+      </div>
+    </div>
+    <script>
+      const buttons = ["weekly", "montly", "yearly"];
+
+      buttons.forEach((button) => {
+        document.getElementById(button).addEventListener("click", () => {
+          buttons.forEach((btn) => {
+            if (btn === button) {
+              document
+                .getElementById(btn)
+                .classList.add(
+                  "bg-gradient-to-r",
+                  "from-blue-300",
+                  "to-blue-700",
+                  "text-white"
+                );
+            } else {
+              document
+                .getElementById(btn)
+                .classList.remove(
+                  "bg-gradient-to-r",
+                  "from-blue-300",
+                  "to-blue-700",
+                  "text-white"
+                );
+            }
+          });
+        });
+      });
+
+      const incomeData = [100, 200, 300, 400, 500, 600, 700];
+      const expensesData = [50, 100, 150, 200, 250, 300, 350];
+
+      const ctx = document.getElementById("myChart").getContext("2d");
+      const myChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+          datasets: [
+            {
+              label: "Income",
+              data: incomeData,
+              backgroundColor: "#6672F1",
+              barPercentage: ".2",
+              borderRadius: [20],
+            },
+            {
+              label: "Expenses",
+              data: expensesData,
+              backgroundColor: "#EC55A8",
+              barPercentage: ".1",
+              borderRadius: [20],
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+            x: {
+              grid: {
+                display: false,
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
