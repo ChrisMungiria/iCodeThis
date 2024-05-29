@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Leaderboard #1</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-2xl bg-white shadow-xl z-30">
+      <div class="p-2 flex items-center justify-between">
+        <h1 class="text-xl font-bold uppercase">Ranking</h1>
+        <div class="px-6 p-2 bg-pink-500 rounded-3xl">
+          <i class="fa-solid fa-share-nodes text-white"></i>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="flex items-center justify-between relative text-white">
+        <p class="text-xl z-30 mx-6 my-2">1 Ricardo Franklin</p>
+        <div class="flex items-center gap-4 text-xl z-30 mx-6">
+          <p>258.244</p>
+          <i class="fa-solid fa-award text-red-500"></i>
+        </div>
+        <!-- Upside down triangle at the bottom left -->
+        <div
+          id="triangle"
+          class="w-2 h-2 bg-purple-800 absolute -left-2 -bottom-1 rotate-45 z-20"
+        ></div>
+
+        <!-- Upside down triangle at the bottom right -->
+        <div
+          id="triangle"
+          class="w-2 h-2 bg-purple-800 absolute -right-2 -bottom-1 rotate-45 z-20"
+        ></div>
+        <!-- Background -->
+        <div
+          id="background"
+          class="w-[104%] h-full absolute bg-purple-500 z-20 -left-[2%] shadow-lg"
+        ></div>
+      </div>
+      <div class="flex items-center justify-between px-6 p-3">
+        <p class="text-xl">2 Brandon Lawson</p>
+        <p>258.244</p>
+      </div>
+      <div class="flex items-center justify-between px-6 p-3 bg-slate-100/50">
+        <p class="text-xl">3 Ruby Shelton</p>
+        <p>258.244</p>
+      </div>
+      <div class="flex items-center justify-between px-6 p-3">
+        <p class="text-xl">4 Jon Shelton</p>
+        <p>258.244</p>
+      </div>
+      <div class="flex items-center justify-between px-6 p-3 bg-slate-100/50">
+        <p class="text-xl">5 Isabelle Willis</p>
+        <p>258.244</p>
+      </div>
+      <div class="flex items-center justify-evenly mt-5 p-4">
+        <button class="text-xl text-slate-500">Exit</button>
+        <button class="text-xl px-6 p-2 bg-purple-600 text-white rounded-3xl">
+          Continue
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
