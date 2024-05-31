@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ui Design Daily</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-200 flex items-center justify-center">
+    <main class="w-11/12 max-w-6xl bg-slate-100 rounded-lg hidden lg:block">
+      <nav class="flex items-center justify-between p-4 border border-b">
+        <div class="flex items-center gap-2">
+          <span
+            class="w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center text-white"
+            >UI</span
+          >
+          <p>Design Daily</p>
+        </div>
+        <ul class="flex items-center gap-2 text-sm">
+          <li
+            class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+          >
+            Free Designs
+          </li>
+          <li
+            class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+          >
+            License
+          </li>
+          <li
+            class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+          >
+            Articles
+          </li>
+          <li
+            class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+          >
+            Contributors
+          </li>
+          <li
+            class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+          >
+            About
+          </li>
+        </ul>
+        <div class="space-x-3">
+          <button class="text-slate-800">Log in</button>
+          <button class="bg-slate-800 text-white rounded-md px-4 py-2">
+            Sign up
+          </button>
+        </div>
+      </nav>
+      <div class="md:p-8 p-4">
+        <p class="text-xl font-semibold text-pink-400/50">Day 1384</p>
+        <h1 class="text-center text-2xl font-bold">
+          Free UI Resources for everyone
+        </h1>
+        <p
+          class="w-2/3 md:w-2/5 text-center mx-auto text-sm text-slate-600 my-2 font-light"
+        >
+          The largest database of 100% free UI components and designs available
+          in the formats popular by UI designers
+        </p>
+        <div
+          class="w-2/3 md:w-3/5 border mx-auto flex items-center bg-white p-2 shadow-lg"
+        >
+          <select class="w-fit p-2 border-r">
+            <option value="free">Free Designs</option>
+            <option value="premium">Premium Designs</option>
+          </select>
+          <i
+            class="fa-solid fa-magnifying-glass mx-4 text-xl text-slate-700"
+          ></i>
+          <input
+            type="text"
+            class="flex-1 h-full focus:outline-none"
+            placeholder="Search"
+          />
+        </div>
+        <div class="flex items-center justify-between mt-10">
+          <div class="p-1 rounded-3xl flex border gap-2 bg-slate-200">
+            <p class="px-4 py-2 rounded-full cursor-pointer" id="latest">
+              Latest
+            </p>
+            <p
+              class="px-4 py-2 rounded-full cursor-pointer bg-white font-bold shadow-md"
+              id="popular"
+            >
+              Popular
+            </p>
+          </div>
+          <ul class="flex items-center gap-2 text-sm">
+            <li
+              class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+            >
+              All
+            </li>
+            <li
+              class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+            >
+              Web
+            </li>
+            <li
+              class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+            >
+              Mobile
+            </li>
+            <li
+              class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+            >
+              UI Kit
+            </li>
+            <li
+              class="px-4 py-2 rounded-3xl cursor-pointer hover:font-bold hover:bg-slate-200 transition-all duration-200"
+            >
+              Coded
+            </li>
+          </ul>
+          <div class="flex gap-2 items-center">
+            <div
+              class="w-10 h-10 rounded-full border p-2 cursor-pointer"
+              id="figma"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png"
+                alt=""
+                class="w-full h-full"
+              />
+            </div>
+            <div
+              class="w-10 h-10 rounded-full border p-2 cursor-pointer"
+              id="gem"
+            ></div>
+            <div
+              class="w-10 h-10 rounded-full border p-2 cursor-pointer"
+              id="xd"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5611/5611129.png"
+                alt=""
+                class="w-full h-full"
+              />
+            </div>
+            <div
+              class="w-10 h-10 rounded-full border p-2 cursor-pointer"
+              id="ps"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/5968/5968520.png"
+                alt=""
+                class="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="w-full grid grid-cols-3 gap-3 mt-2">
+          <div class="w-full">
+            <div class="w-full h-40 rounded-md relative">
+              <img
+                src="https://icodethis.com/images/projects/e-ticket.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md"
+              />
+              <span
+                class="absolute top-5 left-5 w-10 h-10 bg-white rounded-full p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4251/4251687.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-2 text-sm">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                  alt=""
+                  class="w-8 h-8 rounded-full"
+                />
+                <p>by <span class="font-bold">Jenny Molla</span></p>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-code"></i>
+                <p>25</p>
+                <i class="fa-solid fa-hands-bound"></i>
+                <p>25</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full h-40 rounded-md relative">
+              <img
+                src="https://icodethis.com/images/projects/e-ticket.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md"
+              />
+              <span
+                class="absolute top-5 left-5 w-10 h-10 bg-white rounded-full p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4251/4251687.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-2 text-sm">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                  alt=""
+                  class="w-8 h-8 rounded-full"
+                />
+                <p>by <span class="font-bold">Jenny Molla</span></p>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-code"></i>
+                <p>25</p>
+                <i class="fa-solid fa-hands-bound"></i>
+                <p>25</p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="w-full h-40 rounded-md relative">
+              <img
+                src="https://icodethis.com/images/projects/e-ticket.jpg"
+                alt=""
+                class="w-full h-full object-cover rounded-md"
+              />
+              <span
+                class="absolute top-5 left-5 w-10 h-10 bg-white rounded-full p-2"
+              >
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/4251/4251687.png"
+                  alt=""
+                  class="w-full h-full"
+                />
+              </span>
+            </div>
+            <div class="flex items-center justify-between mt-2 text-sm">
+              <div class="flex items-center gap-2">
+                <img
+                  src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+                  alt=""
+                  class="w-8 h-8 rounded-full"
+                />
+                <p>by <span class="font-bold">Jenny Molla</span></p>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-code"></i>
+                <p>25</p>
+                <i class="fa-solid fa-hands-bound"></i>
+                <p>25</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <main class="w-11/12 max-w-md p-4 lg:hidden">
+      <p>Please view on desktop, it's not responsive yet</p>
+    </main>
+    <script>
+      // Links
+      const links = ["latest", "popular"];
+
+      links.forEach((link) => {
+        document.getElementById(link).addEventListener("click", () => {
+          console.log("Clicked: ", link);
+          //   Remove the bg-white and font-bold class from all the links
+          links.forEach((l) => {
+            document
+              .getElementById(l)
+              .classList.remove("bg-white", "font-bold", "shadow-md");
+          });
+
+          //   Add the bg-white and font-bold class to the clicked link
+          document
+            .getElementById(link)
+            .classList.add("bg-white", "font-bold", "shadow-md");
+        });
+      });
+
+      //   Icons
+      const icons = ["figma", "gem", "xd", "ps"];
+
+      icons.forEach((icon) => {
+        document.getElementById(icon).addEventListener("click", () => {
+          // Remove the pink border from all the icons
+          icons.forEach((i) => {
+            document.getElementById(i).classList.remove("border-pink-400");
+          });
+
+          // Add the pink border to the clicked icon
+          document.getElementById(icon).classList.add("border-pink-400");
+        });
+      });
+    </script>
+  </body>
+</html>
