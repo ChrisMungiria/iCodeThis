@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rating Comps</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div
+      class="absolute z-0 w-80 h-80 md:w-96 md:h-96 xl:w-[500px] xl:h-[500px] rounded-full bg-gradient-to-b from-pink-400/50 to-orange-400/50"
+    ></div>
+    <div class="w-11/12 max-w-xl p-8 bg-white shadow-lg z-10 flex gap-5">
+      <div class="flex-1">
+        <div class="w-20 h-20 p-6 rounded-md bg-slate-200">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/739/739249.png"
+            alt="image"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+      <div class="flex-[3]">
+        <div class="flex items-center justify-between">
+          <h1 class="font-bold text-lg lg:text-xl w-2/3">
+            Online collaborative platform
+          </h1>
+          <i id="heart" class="fa-regular fa-heart"></i>
+        </div>
+        <p class="text-sm">
+          Company Inc. <span class="text-blue-400">Business</span>
+        </p>
+        <p class="my-2 text-xs">
+          Finding the perfect learning tool for Flash is a daunting task to any
+          novice web developer. One can find help in a number of ways through
+          books, friends and private tutors
+        </p>
+        <button
+          class="px-10 shadow-lg py-3 text-xs text-white rounded-full bg-gradient-to-r from-blue-400 to-blue-500"
+        >
+          Get
+        </button>
+        <a class="block my-2 text-sm text-blue-500 hover:underline" href="">
+          Get system requirements <i class="fa-solid fa-chevron-right"></i
+        ></a>
+      </div>
+    </div>
+    <script>
+      const heart = document.getElementById("heart");
+      heart.addEventListener("click", () => {
+        heart.classList.toggle("fa-regular");
+        heart.classList.toggle("fa-solid");
+        heart.classList.toggle("text-red-500");
+        if (heart.classList.contains("fa-solid")) {
+          heart.classList.add("animate-ping");
+          setTimeout(() => {
+            heart.classList.remove("animate-ping");
+          }, 1000);
+        }
+      });
+    </script>
+  </body>
+</html>
