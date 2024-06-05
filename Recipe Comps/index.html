@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Recipe Comps</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f2e9e7]">
+    <div class="w-11/12 max-w-xs rounded-xl bg-white shadow-xl" id="welcome">
+      <img
+        src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"
+        alt="food background"
+        class="w-full h-32 object-cover rounded-t-xl"
+      />
+      <p class="text-xs tracking-wider my-2 uppercase text-center">
+        Subscribe today
+      </p>
+      <h1 class="text-xl capitalize font-semibold text-center">
+        Never miss a recipe
+      </h1>
+      <input
+        type="email"
+        class="border border-slate-300 rounded-md p-3 mx-auto flex w-11/12 focus:outline-none my-2"
+        placeholder="Your email address"
+      />
+      <button
+        id="subscribe"
+        class="flex mx-auto items-center justify-center shadow-lg w-11/12 p-3 rounded-md text-white bg-[#f55a51]"
+      >
+        Subscribe
+      </button>
+      <p class="my-2 text-sm text-center">
+        We won't send you any spam.
+        <span class="block">Unsubscribe at any time</span>
+      </p>
+    </div>
+    <div
+      class="w-11/12 max-w-xl rounded-lg bg-white shadow-lg hidden"
+      id="home"
+    >
+      <div class="flex items-center justify-between p-4">
+        <div
+          class="w-8 h-8 rounded-full bg-[#fbf2f0] flex items-center justify-center"
+        >
+          <i class="fa-solid fa-chevron-left text-[#f1736e]"></i>
+        </div>
+        <div class="flex-1 px-2 gap-5 flex justify-around">
+          <div
+            class="w-28 p-2 h-full rounded-md border border-[#f55a50] flex flex-col items-center space-y-4 cursor-pointer"
+            id="recipe_0"
+          >
+            <img
+              src="https://www.budgetbytes.com/wp-content/uploads/2019/09/Homemade-Croutons-V.jpg"
+              alt="crispy crouton salad"
+              class="w-20 h-20 object-cover rounded-full"
+            />
+            <p class="capitalize text-xs text-center">Crispy crouton salad</p>
+          </div>
+          <div
+            class="w-28 p-2 h-full rounded-md border border-transparent flex flex-col items-center space-y-4 cursor-pointer"
+            id="recipe_1"
+          >
+            <img
+              src="https://juliasalbum.com/wp-content/uploads/2013/08/greek-yogurt-pancakes.jpg"
+              alt="Pancakes with yoghurt"
+              class="w-20 h-20 object-cover rounded-full"
+            />
+            <p class="capitalize text-xs text-center">Pancakes with yoghurt</p>
+          </div>
+          <div
+            class="w-28 p-2 h-full rounded-md border border-transparent flex flex-col items-center space-y-4 cursor-pointer"
+            id="recipe_2"
+          >
+            <img
+              src="https://www.aziendaagricolascotti.it/wp-content/uploads/2016/06/recipe-2.jpg"
+              alt="Crispy and creamy doughnuts"
+              class="w-20 h-20 object-cover rounded-full"
+            />
+            <p class="capitalize text-[10px] text-center">
+              Crispy and creamy doughnuts
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-8 h-8 rounded-full bg-[#fbf2f0] flex items-center justify-center"
+        >
+          <i class="fa-solid fa-chevron-right text-[#f1736e]"></i>
+        </div>
+      </div>
+      <div class="p-4">
+        <p class="text-lg font-bold">Difficulty</p>
+        <div class="flex gap-3">
+          <div
+            class="p-2 px-4 bg-[#fcf3f2] rounded-full border cursor-pointer text-xs"
+            id="easy"
+          >
+            <p>Easy</p>
+          </div>
+          <div
+            class="p-2 px-4 bg-[#f55a50] rounded-full border cursor-pointer text-xs text-white"
+            id="medium"
+          >
+            <p>Medium</p>
+          </div>
+          <div
+            class="p-2 px-4 bg-[#fcf3f2] rounded-full border cursor-pointer text-xs"
+            id="hard"
+          >
+            <p>Hard</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex gap-5 p-4">
+        <div class="flex-1 h-36">
+          <img
+            src="https://www.budgetbytes.com/wp-content/uploads/2019/09/Homemade-Croutons-V.jpg"
+            alt="crispy crouton salad"
+            class="w-full h-full object-cover rounded-md"
+            id="recipe_image"
+          />
+        </div>
+        <div class="flex-[3]">
+          <div class="flex items-center justify-end">
+            <div
+              id="like"
+              class="w-8 h-8 rounded-full border flex items-center justify-center"
+            >
+              <i class="fa-regular fa-heart"></i>
+            </div>
+          </div>
+          <h1 class="text-xl font-bold capitalize" id="recipe_title">
+            Crispy crouton salad
+          </h1>
+          <p class="text-xs text-slate-700 my-0" id="recipe_description">
+            Simple recipe for a weeknight or a celebration table. I promise it
+            is one of the easiest salads you can make.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const subscribe = document.getElementById("subscribe");
+
+      subscribe.addEventListener("click", () => {
+        const welcome = document.getElementById("welcome");
+        const home = document.getElementById("home");
+
+        welcome.classList.add("hidden");
+        home.classList.remove("hidden");
+      });
+
+      const difficulties = ["easy", "medium", "hard"];
+
+      difficulties.forEach((difficulty) => {
+        const difficultyElement = document.getElementById(difficulty);
+
+        difficultyElement.addEventListener("click", (e) => {
+          // Remove active class from all elements
+          difficulties.forEach((diff) => {
+            const diffElement = document.getElementById(diff);
+            diffElement.classList.remove(
+              "bg-[#f55a50]",
+              "text-white",
+              "shadow-lg"
+            );
+            diffElement.classList.add("bg-[#fcf3f2]");
+          });
+
+          // Add active class to clicked element
+          difficultyElement.classList.remove("bg-[#fcf3f2]");
+          difficultyElement.classList.add(
+            "bg-[#f55a50]",
+            "text-white",
+            "shadow-lg"
+          );
+        });
+      });
+
+      const like = document.getElementById("like");
+      like.addEventListener("click", () => {
+        // change the classname of the icon
+        const icon = like.querySelector("i");
+        //  <i class="fa-regular fa-heart"></i>
+        // <i class="fa-solid fa-heart"></i>
+        if (icon.classList.contains("fa-regular")) {
+          icon.classList.remove("fa-regular");
+          icon.classList.add("text-red-500");
+          icon.classList.add("fa-solid");
+          //   Add a pulse animation for one second
+          icon.classList.add("animate-ping");
+          setTimeout(() => {
+            icon.classList.remove("animate-ping");
+          }, 1000);
+        } else {
+          icon.classList.remove("fa-solid");
+          icon.classList.add("fa-regular");
+          icon.classList.remove("text-red-500");
+        }
+      });
+
+      const recipes = ["recipe_0", "recipe_1", "recipe_2"];
+
+      const recipes_object = [
+        {
+          id: "recipe_0",
+          title: "Crispy crouton salad",
+          description:
+            "Simple recipe for a weeknight or a celebration table. I promise it is one of the easiest salads you can make.",
+          image:
+            "https://www.budgetbytes.com/wp-content/uploads/2019/09/Homemade-Croutons-V.jpg",
+        },
+        {
+          id: "recipe_1",
+          title: "Pancakes with yoghurt",
+          description:
+            "A delicious breakfast recipe that is easy to make and tastes great. You can add your favorite toppings to make it even better.",
+          image:
+            "https://juliasalbum.com/wp-content/uploads/2013/08/greek-yogurt-pancakes.jpg",
+        },
+        {
+          id: "recipe_2",
+          title: "Crispy and creamy doughnuts",
+          description:
+            "A delicious dessert recipe that is perfect for any occasion. These doughnuts are crispy on the outside and creamy on the inside.",
+          image:
+            "https://www.aziendaagricolascotti.it/wp-content/uploads/2016/06/recipe-2.jpg",
+        },
+      ];
+
+      recipes.forEach((recipe) => {
+        const recipeElement = document.getElementById(recipe);
+
+        recipeElement.addEventListener("click", (e) => {
+          // Change the title, description and image of the recipe
+          const recipeObject = recipes_object.find(
+            (recipeObject) => recipeObject.id === recipe
+          );
+
+          const recipeTitle = document.getElementById("recipe_title");
+          const recipeDescription =
+            document.getElementById("recipe_description");
+          const recipeImage = document.getElementById("recipe_image");
+
+          recipeTitle.innerText = recipeObject.title;
+          recipeDescription.innerText = recipeObject.description;
+          recipeImage.src = recipeObject.image;
+
+          //   Remove the border from all the recipes
+          recipes.forEach((recipe) => {
+            const recipeElement = document.getElementById(recipe);
+            recipeElement.classList.remove("border-[#f55a50]");
+            recipeElement.classList.add("border-transparent");
+          });
+
+          // Add border to the clicked recipe
+          recipeElement.classList.remove("border-transparent");
+          recipeElement.classList.add("border-[#f55a50]");
+        });
+      });
+    </script>
+  </body>
+</html>
