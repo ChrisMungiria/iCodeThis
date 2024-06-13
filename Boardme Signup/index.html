@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Boardme Signup</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#e3dff2]">
+    <div
+      class="w-11/12 max-w-2xl bg-white rounded-md border shadow-lg flex md:flex-row flex-col"
+      id="get_started"
+    >
+      <div class="flex-1 p-4 bg-[#19195d] rounded-l-md text-white">
+        <p>
+          <span class="bg-white p-1 rounded-md text-slate-700">b. </span>
+          boardme
+        </p>
+
+        <h1 class="mt-14 text-lg font-semibold">
+          Implement user
+          <span class="underline decoration-pink-500">onboarding</span>
+          experiences with just a few click
+        </h1>
+        <p class="text-xs text-slate-300 mt-5">
+          Guide your customers on a fantastic journey within your web app
+        </p>
+      </div>
+      <div class="flex-[3] p-10 bg-slate-100 space-y-4">
+        <h1 class="capitalize text-xl font-semibold">Get started</h1>
+        <div class="w-full p-2 bg-white rounded-md flex items-center gap-4">
+          <div
+            class="w-10 h-10 rounded-md bg-slate-200 flex items-center justify-center"
+          >
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+          <p class="text-lg">Sign up with email</p>
+        </div>
+        <div class="w-full p-2 bg-white rounded-md flex items-center gap-4">
+          <div
+            class="w-10 h-10 rounded-md bg-slate-200 flex items-center justify-center"
+          >
+            <i class="fa-brands fa-twitter text-blue-500"></i>
+          </div>
+          <p class="text-lg">Sign up with Twitter</p>
+        </div>
+        <div class="w-full p-2 bg-white rounded-md flex items-center gap-4">
+          <div
+            class="w-10 h-10 rounded-md bg-slate-200 flex items-center justify-center"
+          >
+            <i class="fa-brands fa-facebook text-blue-500"></i>
+          </div>
+          <p class="text-lg">Sign up with Facebook</p>
+        </div>
+        <p>
+          Already have an account?
+          <span class="text-blue-500 cursor-pointer" id="log_in">Log in</span>
+        </p>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-2xl bg-white rounded-md border shadow-lg hidden md:flex-row flex-col"
+      id="log_in_page"
+    >
+      <div class="flex-1 p-4 bg-[#19195d] rounded-l-md text-white">
+        <p>
+          <span class="bg-white p-1 rounded-md text-slate-700">b. </span>
+          boardme
+        </p>
+
+        <h1 class="mt-14 text-lg font-semibold">
+          Implement user
+          <span class="underline decoration-pink-500">onboarding</span>
+          experiences with just a few click
+        </h1>
+        <p class="text-xs text-slate-300 mt-5">
+          Guide your customers on a fantastic journey within your web app
+        </p>
+      </div>
+      <div class="flex-[3] p-10 bg-slate-100 space-y-4">
+        <i class="fa-solid fa-rotate-left" id="back"></i>
+        <h1 class="capitalize text-xl font-semibold">Create your account</h1>
+        <div class="flex flex-col">
+          <label for="">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="border rounded-md p-2 focus:outline-blue-700"
+            placeholder="Denver Duke"
+          />
+          <label for="">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="border rounded-md p-2 focus:outline-blue-700"
+            placeholder="duke@email.com"
+          />
+          <label for="">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="border rounded-md p-2 focus:outline-blue-700"
+            placeholder="********"
+          />
+        </div>
+        <button
+          class="bg-[#19195d] p-2 w-full shadow-lg shadow-[#19195d7e] rounded-md text-white"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <script>
+      const loginButton = document.getElementById("log_in");
+      const getStarted = document.getElementById("get_started");
+      const back = document.getElementById("back");
+
+      loginButton.addEventListener("click", () => {
+        getStarted.classList.add("hidden");
+        document.getElementById("log_in_page").classList.remove("hidden");
+        document.getElementById("log_in_page").classList.add("flex");
+      });
+
+      back.addEventListener("click", () => {
+        getStarted.classList.remove("hidden");
+        document.getElementById("log_in_page").classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
