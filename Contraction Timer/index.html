@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contraction Timer</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-xs p-4 bg-white rounded-md shadow-md">
+      <div class="flex items-center justify-between p-3">
+        <i class="fa-solid fa-arrow-left"></i>
+        <p>Contraction Timer</p>
+        <i class="fa-regular fa-bell"></i>
+      </div>
+      <p id="timer" class="text-3xl font-bold text-center">00:00:10</p>
+      <p class="text-center w-3/4 mx-auto my-2 text-xs">
+        Time since last contraction
+        <span class="block font-bold">7 min 32 sec</span>
+      </p>
+      <button
+        id="stop_timer"
+        class="px-6 py-3 bg-slate-800 text-white rounded-full flex mx-auto text-xs font-bold"
+      >
+        Stop timing
+      </button>
+      <table class="text-xs w-full mt-5">
+        <tr class="text-slate-400 font-bold">
+          <th>Length</th>
+          <th>Time apart</th>
+          <th>Start & end time</th>
+        </tr>
+        <tr>
+          <td>8s</td>
+          <td>3 mmin 21 sec</td>
+          <td>4:49 pm - 4:49 pm</td>
+        </tr>
+        <tr>
+          <td>8s</td>
+          <td>3 mmin 21 sec</td>
+          <td>4:49 pm - 4:49 pm</td>
+        </tr>
+        <tr>
+          <td>8s</td>
+          <td>3 mmin 21 sec</td>
+          <td>4:49 pm - 4:49 pm</td>
+        </tr>
+        <tr>
+          <td>8s</td>
+          <td>3 mmin 21 sec</td>
+          <td>4:49 pm - 4:49 pm</td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      // On document load, start the timer from 00:10:00
+      const timer = document.getElementById("timer");
+
+      let seconds = 0;
+      let minutes = 0;
+
+      let isTiming = true;
+
+      const interval = setInterval(() => {
+        seconds++;
+
+        if (seconds < 0) {
+          seconds = 59;
+          minutes--;
+        }
+
+        if (minutes < 0) {
+          clearInterval(interval);
+        }
+
+        timer.textContent = `${minutes.toString().padStart(2, "0")}:${seconds
+          .toString()
+          .padStart(2, "0")}`;
+      }, 1000);
+
+      // On the button click, stop the timer
+      const stopTimer = document.getElementById("stop_timer");
+
+      stopTimer.addEventListener("click", () => {
+        if (isTiming) {
+          clearInterval(interval);
+          isTiming = false;
+          stopTimer.textContent = "Start timing";
+        } else {
+          isTiming = true;
+          stopTimer.textContent = "Stop timing";
+          setInterval(() => {
+            seconds++;
+
+            if (seconds < 0) {
+              seconds = 59;
+              minutes--;
+            }
+
+            if (minutes < 0) {
+              clearInterval(interval);
+            }
+
+            timer.textContent = `${minutes
+              .toString()
+              .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+          }, 1000);
+        }
+      });
+    </script>
+  </body>
+</html>
