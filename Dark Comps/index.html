@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      input[type="checkbox"] {
+        /* Add if not using autoprefixer */
+        -webkit-appearance: none;
+        appearance: none;
+        /* For iOS < 15 to remove gradient background */
+        background-color: transparent;
+        /* Not removed via appearance */
+        margin: 0;
+        font: inherit;
+        color: gray;
+        width: 1.15em;
+        height: 1.15em;
+        border: 0.15em solid gray;
+        border-radius: 0.15em;
+        transform: translateY(-0.075em);
+        display: grid;
+        place-content: center;
+      }
+
+      input[type="checkbox"]::before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em var(--form-control-color);
+        /* Windows High Contrast Mode */
+        background-color: #fff;
+        border: 1px solid white;
+        transform-origin: bottom left;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+      input[type="checkbox"]:checked::before {
+        transform: scale(1);
+      }
+
+      input[type="checkbox"]:checked + label {
+        color: white;
+      }
+    </style>
+
+    <title>Dark Comps</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-pink-100">
+    <div class="w-11/12 max-w-xs space-y-5">
+      <div class="w-full p-3 rounded-md bg-slate-800 text-slate-100">
+        <h1>Who can see your content?</h1>
+        <ul>
+          <li class="flex items-center gap-3 text-slate-600">
+            <input type="checkbox" name="me" id="me" />
+            <label for="me">Only me</label>
+          </li>
+          <li class="flex items-center gap-3 text-slate-600">
+            <input type="checkbox" name="everyone" id="everyone" />
+            <label for="everyone">Everyone</label>
+          </li>
+          <li class="flex items-center gap-3 text-slate-600">
+            <input type="checkbox" name="customize" id="customize" />
+            <label for="customize">Customize</label>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-3/4 mx-auto flex flex-col p-3 rounded-md bg-slate-800 text-slate-100"
+      >
+        <button
+          class="bg-yellow-400 text-slate-800 rounded-md p-4 w-3/4 flex mx-auto font-bold items-center justify-center"
+        >
+          + Add new
+        </button>
+
+        <ul>
+          <li
+            class="flex items-center gap-4 justify-center p-3 hover:bg-slate-100 hover:text-slate-800 my-2 rounded-md transition-all duration-200"
+          >
+            <i class="fa-solid fa-file-arrow-up"></i>
+            <p>Upload files</p>
+          </li>
+          <li
+            class="flex items-center gap-4 justify-center p-3 hover:bg-slate-100 hover:text-slate-800 my-2 rounded-md transition-all duration-200"
+          >
+            <i class="fa-regular fa-folder-open"></i>
+            <p>Upload folder</p>
+          </li>
+          <li
+            class="flex items-center gap-4 justify-center p-3 hover:bg-slate-100 hover:text-slate-800 my-2 rounded-md transition-all duration-200"
+          >
+            <i class="fa-solid fa-folder-plus"></i>
+            <p>New folder</p>
+          </li>
+        </ul>
+         <li
+            class="flex items-center gap-4 justify-center p-3 hover:bg-slate-100 hover:text-slate-800 my-2 rounded-md transition-all duration-200"
+          >
+           <i class="fa-solid fa-file-import"></i>
+            <p>Import folder</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
