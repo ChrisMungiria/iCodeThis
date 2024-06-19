@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .slider {
+        -webkit-appearance: none;
+        width: 100%;
+        height: 15px;
+        border-radius: 5px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: 0.2s;
+        transition: opacity 0.2s;
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #04aa6d;
+        cursor: pointer;
+      }
+
+      .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: #04aa6d;
+        cursor: pointer;
+        padding: 2px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Dark Theme Comps</title>
+  </head>
+  <body class="w-screen h-screen bg-slate-700 flex items-center justify-center">
+    <div class="w-11/12 max-w-2xl rounded-md space-y-3">
+      <div class="w-full p-2 rounded-md bg-slate-800 shadow-md">
+        <ul class="flex justify-end space-x-2 items-center text-slate-100">
+          <li>Home</li>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+          <li>
+            <button
+              class="px-4 p-2 rounded-md bg-gradient-to-r from-blue-500 to-purple-500"
+            >
+              Sign up
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="w-full flex gap-5">
+        <div class="w-full flex-[3] p-3 rounded-md bg-slate-800">
+          <div>
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+        <div class="w-full flex-1 p-3 rounded-md">
+          <div class="w-full flex gap-5">
+            <div class="flex-1">
+              <ul class="text-xs space-y-2">
+                <li>
+                  <button
+                    class="w-full p-2 rounded-md bg-gradient-to-r from-blue-500 to-purple-500 flex items-center gap-1 text-white"
+                  >
+                    Options <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="w-full p-2 rounded-md border border-slate-900 text-slate-400"
+                  >
+                    Edit
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="flex-1 text-slate-200">
+              <ul>
+                <li
+                  class="p-2 rounded-md hover:bg-slate-800 transition-all duration-200"
+                >
+                  Sound
+                </li>
+                <li
+                  class="p-2 rounded-md hover:bg-slate-800 transition-all duration-200"
+                >
+                  Effects
+                </li>
+                <li
+                  class="p-2 rounded-md hover:bg-slate-800 transition-all duration-200"
+                >
+                  Animations
+                </li>
+                <li
+                  class="p-2 rounded-md hover:bg-slate-800 transition-all duration-200"
+                >
+                  Preferences
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [1, 2, 3, 4, 5, 6, 7],
+          datasets: [
+            {
+              label: "Data",
+              data: [0, 10, 5, 33.4, 30, 20, 18, 28],
+              borderWidth: 1,
+              fill: { value: -30 },
+              lineTension: 0.4,
+              radius: 6,
+              borderColor: "rgb(168,85,247)",
+              backgroundColor: "rgba(2, 6, 23,0.3)",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
