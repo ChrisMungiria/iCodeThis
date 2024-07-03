@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Chatbox</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#2f2d40]">
+    <div class="w-11/12 max-w-xs bg-[#282639] rounded-md relative" id="main">
+      <!-- Top header -->
+      <div class="w-full p-2 rounded-t-md bg-[#ff686a] flex items-center gap-5">
+        <!-- Image container -->
+        <div class="flex items-center">
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover border border-slate-100"
+          />
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover border border-slate-100 -ml-3"
+          />
+          <img
+            src="https://i0.wp.com/www.mobileworldlive.com/wp-content/uploads/2015/10/Dorsey-iamge.png?fit=550%2C532&ssl=1"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover border border-slate-100 -ml-3"
+          />
+        </div>
+        <!-- Users section -->
+        <div class="text-slate-100">
+          <p class="text-xs font-semibold">Elnora, Leila, Lucinda</p>
+          <p class="text-[10px] font-light">
+            We typically reply in a few minutes
+          </p>
+        </div>
+      </div>
+      <!-- Chat section -->
+      <div class="w-full h-72 relative pb-10">
+        <!-- Single chat -->
+        <div class="overflow-y-scroll h-full">
+          <div id="chat" class="w-3/4 my-2 mx-auto flex gap-2">
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-10 h-10 rounded-full object-cover border border-slate-100"
+            />
+            <div
+              class="flex-1 p-4 bg-[#3a394c] rounded-md text-xs text-slate-100"
+            >
+              <p>Hi there!</p>
+              <p>Looking to get started? I can help answer your questions</p>
+            </div>
+          </div>
+        </div>
+        <!-- Send text section -->
+        <div
+          class="absolute bottom-0 w-full p-2 z-10 flex items-center gap-5 bg-[#282639]"
+        >
+          <input
+            type="text"
+            name="message"
+            id="message"
+            class="flex-1 rounded-full p-2 bg-[#3a394c] text-slate-100 focus:outline-none"
+            placeholder="Type a message..."
+          />
+          <div
+            class="w-10 h-10 flex items-center justify-center hover:bg-[#ff686a] rounded-full transition-all duration-150 ease-in-out"
+          >
+            <i class="fa-regular fa-paper-plane text-white" id="send"></i>
+          </div>
+        </div>
+        <!-- Terms section -->
+        <div
+          class="w-full p-4 bg-[#3a394c] text-slate-100 text-xs absolute bottom-0 z-20"
+          id="terms"
+        >
+          <p>
+            By using the chat, I confirm that I have read the
+            <span class="underline text-[#ff686a]">privacy policy</span> and do
+            not object to the use of my personal data.
+          </p>
+          <button
+            id="accept"
+            class="text-[#ff686a] border border-[#ff686a] px-4 py-2 rounded-full my-2"
+          >
+            I agree
+          </button>
+        </div>
+      </div>
+      <!-- Close button -->
+      <div
+        id="close-chat"
+        class="w-10 h-10 bg-[#ff686a] absolute right-0 rounded-full mt-2 text-slate-100 flex items-center justify-center group cursor-pointer"
+      >
+        <i
+          class="fa-solid fa-xmark group-hover:rotate-90 transition-all duration-150 ease-in-out"
+        ></i>
+      </div>
+    </div>
+    <!-- Open button -->
+    <div
+      id="open-chat"
+      class="w-10 h-10 hidden bg-[#ff686a] rounded-full mt-2 text-slate-100 items-center justify-center group cursor-pointer"
+    >
+      <i
+        class="fa-solid fa-plus group-hover:rotate-90 transition-all duration-150 ease-in-out"
+      ></i>
+    </div>
+    <script>
+      // Accept the terms and hide the terms section
+      const acceptTerms = document.getElementById("accept");
+      const terms = document.getElementById("terms");
+
+      acceptTerms.addEventListener("click", () => {
+        terms.style.display = "none";
+      });
+
+      //   Send message button
+      const sendButton = document.getElementById("send");
+      //   Get the message input
+      const message = document.getElementById("message");
+
+      //   If the send button is clicked, create a new 'chat' section and add the message to it
+      sendButton.addEventListener("click", () => {
+        const chat = document.getElementById("chat");
+        const newChat = chat.cloneNode(true);
+        // For the newChat, change the flex direction to reverse
+        newChat.style.flexDirection = "row-reverse";
+        newChat.children[1].textContent = message.value;
+        chat.after(newChat);
+        message.value = "";
+      });
+
+      //   Check if the message is in focus and the user presses enter
+      message.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          //   Check if the message is empty
+          if (message.value.trim() === "") {
+            return;
+          }
+          sendButton.click();
+        }
+      });
+
+      //   Close the chat
+      const closeChat = document.getElementById("close-chat");
+      const main = document.getElementById("main");
+      const openChat = document.getElementById("open-chat");
+
+      closeChat.addEventListener("click", () => {
+        main.style.display = "none";
+        openChat.style.display = "flex";
+      });
+
+      openChat.addEventListener("click", () => {
+        main.style.display = "block";
+        openChat.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
