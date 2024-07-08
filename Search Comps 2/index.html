@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Search Comps 2</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-200">
+    <div class="w-11/12 max-w-3xl">
+      <!-- Input container -->
+      <div
+        class="w-full bg-zinc-800 p-3 rounded-lg flex gap-5 flex-col md:flex-row"
+      >
+        <div class="flex gap-5">
+          <!-- Input -->
+          <div
+            class="p-2 bg-white rounded-md w-fit flex items-center border text-slate-400 focus-within:border-orange-500"
+          >
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              name="keyword"
+              id="keyword"
+              class="placeholder:capitalize focus:outline-none h-full w-full p-2 rounded-md"
+              placeholder="Search keyword"
+            />
+          </div>
+          <!-- Input 2 -->
+          <div
+            class="p-2 relative bg-white rounded-md w-fit flex items-center border text-slate-400 focus-within:border-orange-500"
+          >
+            <i class="fa-solid fa-location-dot"></i>
+            <input
+              type="text"
+              name="location"
+              id="location"
+              class="placeholder:capitalize focus:outline-none h-full w-full p-2 rounded-md"
+              placeholder="Location"
+            />
+            <div class="bg-white absolute top-[100%] hidden" id="suggestions">
+              <ul class="p-1">
+                <li
+                  class="w-full hover:bg-slate-200 text-slate-800 p-3 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  Online jobs in Bergen
+                </li>
+                <li
+                  class="w-full hover:bg-slate-200 text-slate-800 p-3 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  Online jobs in Bergen
+                </li>
+                <li
+                  class="w-full hover:bg-slate-200 text-slate-800 p-3 flex items-center gap-3"
+                >
+                  <i class="fa-solid fa-location-dot"></i>
+                  Online jobs in Bergen
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="bg-orange-500 text-white flex-1 rounded-md p-4">
+          Search
+        </button>
+      </div>
+      <!-- Other cards -->
+      <div class="w-full flex flex-col md:flex-row gap-5 mt-5">
+        <div
+          class="p-4 flex-[2] bg-zinc-800 text-slate-100 rounded-md space-y-3"
+        >
+          <h1 class="text-center text-xl">Need to hire a freelancer?</h1>
+          <p class="text-xs text-center">
+            Sign up, type in what you need and receive free quotes in seconds
+          </p>
+          <input
+            type="text"
+            name="need"
+            id="need"
+            placeholder="What do you need done?"
+            class="p-3 border focus:border-orange-500 rounded-md w-full"
+          />
+          <button
+            class="capitalize bg-orange-500 text-white w-full p-3 rounded-md"
+          >
+            Post a project
+          </button>
+        </div>
+        <div
+          class="p-4 flex-[3] h-fit bg-zinc-800 text-slate-100 rounded-md space-y-3"
+        >
+          <h1 class="text-xl text-center">What do you need?</h1>
+          <div class="flex p-3 gap-5">
+            <button class="flex-1 h-full bg-orange-500 rounded-md p-4">
+              I want to hire
+            </button>
+            <button class="flex-1 h-full border rounded-md p-4">
+              I want to work
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const locationInput = document.getElementById("location");
+      const suggestions = document.getElementById("suggestions");
+
+      const suggestionsArray = [
+        "Online jobs in Bergen",
+        "Online jobs in Stavanger",
+        "Online jobs in Tromso",
+        "Online jobs in Oslo",
+      ];
+
+      locationInput.addEventListener("input", (e) => {
+        //    If the input is empty, hide the suggestions
+        if (e.target.value === "") {
+          suggestions.classList.add("hidden");
+        } else {
+          suggestions.classList.remove("hidden");
+          //   Clear the suggestions
+          suggestions.innerHTML = "";
+
+          //   Filter the suggestions
+          const filteredSuggestions = suggestionsArray.filter((suggestion) =>
+            suggestion.toLowerCase().includes(e.target.value.toLowerCase())
+          );
+
+          //   Display the suggestions
+          filteredSuggestions.forEach((suggestion) => {
+            const li = document.createElement("li");
+            li.classList.add(
+              "w-full",
+              "hover:bg-slate-200",
+              "text-slate-800",
+              "p-3",
+              "flex",
+              "items-center",
+              "gap-3"
+            );
+            li.innerHTML = `<i class="fa-solid fa-location-dot"></i>${suggestion}`;
+            suggestions.appendChild(li);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
