@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Poll</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-800">
+    <div class="w-11/12 max-w-xs bg-white rounded-md">
+      <div class="bg-teal-50/90 p-4 rounded-t-md">
+        <p class="text-xs text-center">
+          If you write a book about failure, and it doesn't sell, is it called
+          success?
+        </p>
+      </div>
+      <div class="p-3">
+        <div class="flex items-center gap-4">
+          <input
+            type="checkbox"
+            name="success"
+            id="success"
+            class="w-5 h-5 rounded-md accent-teal-500"
+          />
+          <label for="success">Definitely a success</label>
+        </div>
+        <div class="w-full flex items-center gap-4">
+          <div class="w-full h-2 bg-slate-100 rounded-full">
+            <div class="w-[65%] h-full rounded-full bg-green-300"></div>
+          </div>
+          <p>65%</p>
+        </div>
+      </div>
+      <div class="p-3">
+        <div class="flex items-center gap-4">
+          <input
+            type="checkbox"
+            name="no"
+            id="no"
+            class="w-5 h-5 rounded-md accent-red-500"
+          />
+          <label for="no">No</label>
+        </div>
+        <div class="w-full flex items-center gap-4">
+          <div class="w-full h-2 bg-slate-100 rounded-full">
+            <div class="w-[12%] h-full rounded-full bg-red-300"></div>
+          </div>
+          <p>12%</p>
+        </div>
+      </div>
+      <div class="p-3">
+        <div class="flex items-center gap-4">
+          <input
+            type="checkbox"
+            name="how-to"
+            id="how-to"
+            class="w-5 h-5 rounded-md accent-orange-500"
+          />
+          <label for="how-to"
+            >Only if it's in the How To section in a library</label
+          >
+        </div>
+        <div class="w-full flex items-center gap-4">
+          <div class="w-full h-2 bg-slate-100 rounded-full">
+            <div class="w-[23%] h-full rounded-full bg-orange-300"></div>
+          </div>
+          <p>23%</p>
+        </div>
+      </div>
+      <button
+        class="flex mx-auto bg-blue-500 text-white px-4 py-2 rounded-md mb-5 hover:shadow-lg transition duration-200 ease-in-out"
+      >
+        Submit
+      </button>
+    </div>
+  </body>
+</html>
