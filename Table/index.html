@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      table {
+        border-spacing: 20px;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Table</title>
+  </head>
+  <body class="w-screen h-screen p-20 bg-slate-50">
+    <div class="w-full h-full bg-slate-100 p-10">
+      <div class="w-full flex items-center justify-between py-5">
+        <p>
+          Show
+          <select
+            name="number"
+            id="number"
+            class="focus:outline-none p-2 mx-2 text-sm rounded-md"
+          >
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+          </select>
+          entries
+        </p>
+        <div class="bg-white p-2 rounded-lg border">
+          <i class="fa-solid fa-magnifying-glass text-slate-400 font-bold"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="focus:outline-none"
+            placeholder="Search"
+          />
+        </div>
+      </div>
+      <table class="w-full">
+        <tr class="uppercase font-light text-slate-400">
+          <th class="text-start">
+            First name <i class="fa-solid fa-chevron-down"></i>
+          </th>
+          <th class="text-start">
+            Last name <i class="fa-solid fa-chevron-down"></i>
+          </th>
+          <th class="text-start">
+            Email <i class="fa-solid fa-chevron-down"></i>
+          </th>
+          <th class="text-start">
+            Created At <i class="fa-solid fa-chevron-down"></i>
+          </th>
+          <th class="opacity-0">Action</th>
+        </tr>
+        <tr id="row-1" class="group bg-white text-slate-600 mt-3">
+          <td class="p-4">John</td>
+          <td>Doe</td>
+          <td>johndoe@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-2" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Daisy</td>
+          <td>Kelly</td>
+          <td>daisykelly@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-3" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Shane</td>
+          <td>Underwood</td>
+          <td>shaneunderwood@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-4" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Ray</td>
+          <td>Wise</td>
+          <td>raywise@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-5" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Sue</td>
+          <td>Hammond</td>
+          <td>suehammond@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-6" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Banks</td>
+          <td>Roxie</td>
+          <td>banksroxie@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-7" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Alfred</td>
+          <td>Reese</td>
+          <td>alfredreese@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+        <tr id="row-8" class="group bg-white text-slate-600 mt-2">
+          <td class="p-4">Maurice</td>
+          <td>Lowe</td>
+          <td>mauricelowe@mail.com</td>
+          <td>09-06-2020</td>
+          <td
+            class="border border-blue-500 flex items-center justify-center p-2 rounded-md w-fit px-6 text-blue-500 opacity-0 group-hover:opacity-100"
+          >
+            Go to workplace
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      const number = document.getElementById("number");
+      const search = document.getElementById("search");
+      const rows = document.querySelectorAll("tr");
+      const rowArray = Array.from(rows);
+
+      number.addEventListener("change", (e) => {
+        const value = e.target.value;
+        rowArray.forEach((row, index) => {
+          if (index > value) {
+            row.style.display = "none";
+          } else {
+            row.style.display = "table-row";
+          }
+        });
+      });
+
+      search.addEventListener("input", (e) => {
+        const value = e.target.value;
+        rowArray.forEach((row) => {
+          const text = row.textContent.toLowerCase();
+          if (text.includes(value.toLowerCase())) {
+            row.style.display = "table-row";
+          } else {
+            row.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
