@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Filter Comps</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-pink-100 relative"
+  >
+    <div
+      class="w-11/12 max-w-4xl flex flex-col-reverse md:flex-row gap-5 justify-between z-20"
+    >
+      <div class="flex items-center gap-4 relative text-xs md:text-base">
+        <div
+          id="filter"
+          class="px-6 py-2 rounded-full bg-white border-4 border-pink-400/50 flex items-center gap-2 hover:border-pink-400 cursor-pointer transition-all duration-150"
+        >
+          <div class="w-2 h-2 bg-blue-500"></div>
+          Artwork
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div
+          class="px-6 py-2 rounded-full bg-white border-4 border-pink-400/50 flex items-center gap-2 hover:border-pink-400 cursor-pointer transition-all duration-150"
+        >
+          All
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div
+          class="px-6 py-2 rounded-full bg-white border-4 border-pink-400/50 flex items-center gap-2 hover:border-pink-400 cursor-pointer transition-all duration-150"
+        >
+          All tags
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div
+          id="categories"
+          class="absolute w-full p-4 bg-white top-14 rounded-md shadow-xl"
+        >
+          <div class="border-b p-2 flex items-center gap-2">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              class="w-full focus:outline-none"
+              placeholder="Search"
+            />
+          </div>
+          <p class="font-bold text-xs uppercase my-2">All categories</p>
+          <div class="grid grid-cols-2">
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-blue-500 shadow-md"></div>
+              <p>Artwork</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-lime-500 shadow-md"></div>
+              <p>Game engine</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-pink-500 shadow-md"></div>
+              <p>Support</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-yellow-500 shadow-md"></div>
+              <p>Jobs</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-teal-500 shadow-md"></div>
+              <p>Coding</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-orange-500 shadow-md"></div>
+              <p>General forums</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-green-500 shadow-md"></div>
+              <p>Contests</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-2 h-2 bg-red-500 shadow-md"></div>
+              <p>Promotions</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 w-fit bg-pink-200 rounded-full flex gap-1">
+        <div class="p-2 px-4 rounded-full bg-white hover:bg-slate-800 group">
+          <p class="group-hover:text-white">Latest</p>
+        </div>
+        <div class="p-2 px-4 rounded-full bg-white hover:bg-slate-800 group">
+          <p class="group-hover:text-white">Categories</p>
+        </div>
+        <div class="p-2 px-4 rounded-full bg-white hover:bg-slate-800 group">
+          <p class="group-hover:text-white">Top</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-40 h-40 bg-pink-200/40 rounded-md absolute z-10"></div>
+    <script>
+      const filter = document.getElementById("filter");
+      const categories = document.getElementById("categories");
+
+      filter.addEventListener("click", () => {
+        categories.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
