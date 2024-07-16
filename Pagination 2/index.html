@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pagination 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col items-center justify-center bg-[#1c3246]"
+  >
+    <div
+      class="w-11/12 max-w-4xl p-4 shadow-xl bg-[#102133] flex items-center justify-between"
+    >
+      <button id="prev" class="text-[#9c3f79]">Prev</button>
+      <ul class="flex items-center gap-3">
+        <li
+          class="w-8 h-8 rounded-full border flex items-center justify-center text-slate-200"
+        >
+          1
+        </li>
+        <li
+          class="w-8 h-8 rounded-full border flex items-center justify-center"
+        >
+          2
+        </li>
+        <li
+          class="w-8 h-8 rounded-full border flex items-center justify-center"
+        >
+          3
+        </li>
+        <li
+          class="w-8 h-8 rounded-full border flex items-center justify-center"
+        >
+          4
+        </li>
+        <li
+          class="w-8 h-8 rounded-full border flex items-center justify-center"
+        >
+          5
+        </li>
+      </ul>
+      <button id="next" class="text-[#9c3f79]">Next</button>
+      <script>
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+
+        let currentPage = 1;
+
+        prev.addEventListener("click", () => {
+          if (currentPage > 1) {
+            currentPage--;
+            console.log(currentPage);
+          }
+        });
+
+        next.addEventListener("click", () => {
+          if (currentPage < 5) {
+            currentPage++;
+            console.log(currentPage);
+          }
+        });
+
+        const lis = document.querySelectorAll("li");
+
+        lis.forEach((li) => {
+          li.addEventListener("click", () => {
+            currentPage = parseInt(li.innerText);
+            console.log(currentPage);
+          });
+        });
+
+        function updateUI() {
+          lis.forEach((li) => {
+            if (parseInt(li.innerText) === currentPage) {
+              li.style.borderColor = "#9c3f79";
+              li.style.color = "#9c3f79";
+            } else {
+              li.style.borderColor = "#102133";
+              li.style.color = "#e2e8f0";
+            }
+          });
+        }
+
+        updateUI();
+
+        setInterval(() => {
+          updateUI();
+        }, 100);
+      </script>
+    </div>
+  </body>
+</html>
