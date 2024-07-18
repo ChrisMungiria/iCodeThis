@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Signup Form #1</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#deeeff]">
+    <div
+      class="w-11/12 max-w-xl p-4 shadow-xl bg-white rounded-xl text-slate-700"
+    >
+      <div class="flex items-center justify-end">
+        <i class="fa-solid fa-xmark text-gray-600 text-3xl"></i>
+      </div>
+      <div class="w-3/4 flex flex-col mx-auto">
+        <h1 class="text-2xl text-center font-bold">Sign up</h1>
+        <p class="w-3/4 text-center flex mx-auto">
+          Create an account to unlock all the benefits to easily save, like or
+          submit your favorite content
+        </p>
+
+        <button
+          class="border rounded-md flex items-center justify-start gap-3 px-10 w-3/4 flex mx-auto py-4 mt-10 hover:shadow-md transition-all duration-300 ease-in-out"
+        >
+          <i class="fa-brands fa-google text-xl"></i>
+          <span class="text-sm">Sign up with Google</span>
+        </button>
+
+        <button
+          class="border rounded-md flex items-center justify-start gap-3 px-10 w-3/4 flex mx-auto py-4 mt-2 hover:shadow-md transition-all duration-300 ease-in-out"
+        >
+          <i class="fa-brands fa-facebook text-xl"></i>
+          <span class="text-sm">Sign up with Facebook</span>
+        </button>
+        <button
+          class="border rounded-md flex items-center justify-start gap-3 px-10 w-3/4 flex mx-auto py-4 mt-2 hover:shadow-md transition-all duration-300 ease-in-out"
+        >
+          <i class="fa-brands fa-twitter text-xl"></i>
+          <span class="text-sm">Sign up with Twitter</span>
+        </button>
+      </div>
+      <div
+        class="w-5/6 h-10 flex justify-center mx-auto mt-5 flex items-center gap-3"
+      >
+        <input
+          type="checkbox"
+          name="opt-out"
+          id="opt-out"
+          class="w-4 h-4 rounded-md border border-slate-300"
+        />
+        <label for="opt-out" class="text-xs"
+          >I'm not interested in update about products and services</label
+        >
+      </div>
+      <button
+        class="text-blue-400 flex mx-auto my-5 border w-1/2 flex items-center justify-center h-10 rounded-md relative group"
+      >
+        <div
+          class="w-0 h-full bg-blue-300 absolute z-10 rounded-md group-hover:w-full transition-all duration-300 ease-in-out"
+        ></div>
+        <span
+          class="z-20 group-hover:text-white transition-all duration-300 ease-in-out"
+          >Sign in</span
+        >
+      </button>
+    </div>
+  </body>
+</html>
