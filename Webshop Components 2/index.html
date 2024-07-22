@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Webshop Components 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col space-y-5 items-center justify-center bg-slate-100"
+  >
+    <div
+      class="w-11/12 max-w-xl p-4 rounded-full flex flex-col md:flex-row items-center justify-between bg-white text-xs"
+    >
+      <div class="flex items-center gap-1">
+        <i class="fa-solid fa-check"></i>
+        <p>30 days open after purchase</p>
+      </div>
+      <div class="flex items-center gap-1">
+        <i class="fa-solid fa-check"></i>
+        <p>Safe home delivery</p>
+      </div>
+      <div class="flex items-center gap-1">
+        <i class="fa-solid fa-check"></i>
+        <p>Free shipping over $70</p>
+      </div>
+    </div>
+    <div class="flex w-full max-w-3xl gap-4">
+      <div class="flex-1 h-full bg-white shadow-xl p-2 rounded-lg">
+        <img
+          src="https://public-files.gumroad.com/yrm9795rngjfrel8phj38ij2xovy"
+          alt="chair"
+          class="h-56 w-full object-cover rounded-md"
+        />
+        <h2
+          class="uppercase text-center tracking-wider text-xs text-slate-600 my-2"
+        >
+          Dixie
+        </h2>
+        <h1 class="text-center">Cue Chair, wood</h1>
+        <h3 class="text-lg font-bold text-center">
+          $57 <span class="text-base line-through">$120</span>
+        </h3>
+        <div
+          class="flex mx-auto w-fit p-2 bg-slate-100 rounded-full items-center gap-2"
+        >
+          <div class="w-2 h-2 rounded-full bg-teal-500"></div>
+          <p class="text-slate-600 font-bold text-xs">In stock</p>
+        </div>
+      </div>
+      <div class="flex-[2] h-full space-y-4">
+        <div
+          class="w-full h-28 flex flex-col items-center justify-center bg-white shadow-lg rounded-lg"
+        >
+          <div class="w-10/12 h-2 bg-slate-100 rounded-full"></div>
+          <div class="w-10/12 flex items-center justify-around mt-2">
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$50</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$100</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$150</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$200</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$250</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$300</p>
+            </div>
+            <div
+              class="text-slate-400 text-xs flex flex-col items-center justify-center"
+            >
+              <div class="h-3 w-0 border"></div>
+              <p>$350</p>
+            </div>
+          </div>
+        </div>
+        <div class="w-full relative flex items-center justify-end space-x-4">
+          <p>365 products</p>
+          <div class="flex items-center gap-1">
+            <p>Show bg 48</p>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <div class="flex items-center gap-1 cursor-pointer" id="sort">
+            <p>Sort by</p>
+            <i class="fa-solid fa-chevron-up"></i>
+          </div>
+          <div
+            id="list"
+            class="absolute bg-white w-1/2 top-10 shadow-xl hidden"
+          >
+            <ul>
+              <li class="py-3 px-2 border-y">Popularity</li>
+              <li class="py-3 px-2 border-y">Price rising</li>
+              <li class="py-3 px-2 border-y">Price falling</li>
+              <li class="py-3 px-2 border-y">Highest discount</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const button = document.getElementById("sort");
+      const list = document.getElementById("list");
+
+      button.addEventListener("click", () => {
+        list.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
