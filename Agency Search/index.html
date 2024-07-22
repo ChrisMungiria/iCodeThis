@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Agency Search</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#eef4f4]">
+    <div class="w-11/12 max-w-4xl p-4 bg-white rounded-md shadow-lg">
+      <div class="flex flex-col md:flex-row items-center gap-4">
+        <div class="flex-1">
+          <h1 class="text-xl font-bold">Explore agencies</h1>
+          <p class="text-xs">
+            Select a region and city to discover the best digital developer
+            agencies
+          </p>
+        </div>
+        <select
+          name="region"
+          id="region"
+          class="flex-1 border rounded-md py-3 px-2 w-full"
+        >
+          <option value="europe">Europe</option>
+          <option value="asia">Asia</option>
+          <option value="africa">Africa</option>
+          <option value="north-america">North America</option>
+          <option value="south-america">South America</option>
+          <option value="australia">Australia</option>
+        </select>
+        <select
+          name="city"
+          id="city"
+          class="flex-1 border rounded-md py-3 px-2 w-full"
+        >
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="berlin">Berlin</option>
+          <option value="new-york">New York</option>
+          <option value="los-angeles">Los Angeles</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+        <button
+          class="bg-[#2ecf9c] text-white shadow-lg flex-1 h-fit p-3 rounded-md w-full"
+        >
+          Find
+        </button>
+      </div>
+      <div
+        class="bg-slate-100 rounded-md grid md:grid-cols-3 grid-cols-1 gap-4 mt-4"
+      >
+        <div class="w-full h-full flex gap-3 p-3">
+          <i class="fa-solid fa-magnifying-glass text-2xl text-[#2ecf9c]"></i>
+          <div>
+            <h1 class="capitalize font-bold">
+              Get <span class="block">discovered</span>
+            </h1>
+            <p class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </p>
+          </div>
+        </div>
+        <div class="w-full h-full flex gap-3 p-3">
+          <i class="fa-solid fa-book text-2xl text-[#2ecf9c]"></i>
+          <div>
+            <h1 class="capitalize font-bold">
+              Publish <span class="block">content</span>
+            </h1>
+            <p class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </p>
+          </div>
+        </div>
+        <div class="w-full h-full flex gap-3 p-3">
+          <i class="fa-solid fa-briefcase text-2xl text-[#2ecf9c]"></i>
+          <div>
+            <h1 class="capitalize font-bold">
+              Post <span class="block">jobs</span>
+            </h1>
+            <p class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
