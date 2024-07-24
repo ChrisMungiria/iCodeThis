@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Projects Chart</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-tr from-[#4e9ec5] via-[#8eceec] to-[#69b2d5]"
+  >
+    <div class="w-11/12 max-w-xs p-6 pb-0 bg-white shadow-lg">
+      <div class="w-32 h-32 rounded-full border p-2 mx-auto">
+        <img
+          src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+          alt="profile image"
+          class="w-full h-full rounded-full object-cover"
+        />
+      </div>
+      <h1 class="font-bold text-center my-1">John Hawkins</h1>
+      <div
+        class="px-6 p-2 rounded-full border border-[#83c9fa] text-[#83c9fa] w-fit flex mx-auto"
+      >
+        <p>UI/UX Designer</p>
+      </div>
+      <p class="w-5/6 text-center mx-auto text-sm my-1">
+        Mauris ac quam quisque, donec ac, praesent in hymenaeos wisi.
+      </p>
+      <div class="scale-125 bg-[#253941] p-6 text-slate-100 mt-10">
+        <h1 class="text-lg text-center">Projects</h1>
+        <div
+          class="bg-red-500 p-1 w-32 h-32 rounded-full my-2 flex mx-auto"
+          style="
+            background-image: conic-gradient(
+              #e2b40c 30deg,
+              #8268f1 30deg 170deg,
+              #14c6af 170deg
+            );
+          "
+        >
+          <div
+            class="w-full h-full rounded-full bg-[#253941] flex items-center justify-center"
+          >
+            <p class="text-center text-xl capitalize font-bold">
+              314
+              <span class="block text-xs text-slate-300 font-normal"
+                >total</span
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="mx-auto shadow-lg my-3 grid grid-cols-3 gap-3 bg-[#202a31] p-1 rounded-lg"
+        >
+          <div class="w-full space-y-2">
+            <h1 class="text-sm text-center font-bold capitalize">
+              167
+              <span class="text-xs font-light text-slate-300 block"
+                >completed</span
+              >
+            </h1>
+            <div class="h-3 w-3 bg-[#14c6af] rounded-full mx-auto"></div>
+          </div>
+          <div class="w-full space-y-2">
+            <h1 class="text-sm text-center font-bold capitalize">
+              24
+              <span class="text-xs font-light text-slate-300 block"
+                >overdue</span
+              >
+            </h1>
+            <div class="h-3 w-3 bg-[#d2ab10] rounded-full mx-auto"></div>
+          </div>
+          <div class="w-full space-y-2">
+            <h1 class="text-sm text-center font-bold capitalize">
+              24
+              <span class="text-xs font-light text-slate-300 block"
+                >in progress</span
+              >
+            </h1>
+            <div class="h-3 w-3 bg-[#7060cb] rounded-full mx-auto"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
