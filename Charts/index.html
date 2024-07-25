@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Charts</title>
+  </head>
+  <body
+    class="w-screen h-screen flex gap-5 flex-col md:flex-row items-center justify-center bg-[#f6f8fa]"
+  >
+    <div class="w-11/12 max-w-xs p-4 bg-white shadow-lg rounded-md">
+      <div class="flex items-center justify-between">
+        <h2 class="font-bold">Recycled</h2>
+        <div class="w-10 h-10 border rounded flex items-center justify-center">
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+      </div>
+      <div class="flex gap-2 mt-5">
+        <div
+          class="h-32 w-32 rounded-full p-3"
+          style="
+            background-image: conic-gradient(
+              #fa8646 0% 15%,
+              #fec745 15% 45%,
+              #eb3067 45% 55%,
+              #0f1931 55% 100%
+            );
+          "
+        >
+          <div
+            class="bg-white rounded-full h-full w-full flex items-center justify-center"
+          >
+            <p class="text-slate-600 text-center">
+              Total
+              <span class="block font-bold text-lg text-slate-950">$47.1K</span>
+            </p>
+          </div>
+        </div>
+        <div class="flex-1 h-full">
+          <ul>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-sm text-slate-500">
+                <div class="w-2 h-2 rounded-full bg-[#0f1931]"></div>
+                <p>Text</p>
+              </div>
+              <p class="font-semibold text-sm">32%</p>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-sm text-slate-500">
+                <div class="w-2 h-2 rounded-full bg-[#fa8646]"></div>
+                <p>Images</p>
+              </div>
+              <p class="font-semibold text-sm">25%</p>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-sm text-slate-500">
+                <div class="w-2 h-2 rounded-full bg-[#fec745]"></div>
+                <p>Documents</p>
+              </div>
+              <p class="font-semibold text-sm">22%</p>
+            </li>
+            <li class="flex items-center justify-between">
+              <div class="flex items-center gap-1 text-sm text-slate-500">
+                <div class="w-2 h-2 rounded-full bg-[#eb3067]"></div>
+                <p>Videos</p>
+              </div>
+              <p class="font-semibold text-sm">11%</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="w-11/12 max-w-lg p-4 bg-white shadow-lg">
+      <div class="flex items-center justify-between">
+        <h2 class="font-bold">Goals</h2>
+        <input
+          list="times"
+          name="time"
+          id="time"
+          placeholder="This month"
+          class="border rounded-md w-32 p-2 placeholder:text-slate-300 focus:outline-none"
+        />
+        <datalist id="times">
+          <option value="This week"></option>
+          <option value="This month"></option>
+          <option value="This year"></option>
+        </datalist>
+      </div>
+      <ul class="mt-5 space-y-2">
+        <li class="space-y-1">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Direct</p>
+            <p class="font-bold">3,183</p>
+          </div>
+          <div class="w-full h-2 bg-[#f6f8fa] rounded-full">
+            <div class="rounded-full h-full w-2/3 bg-[#3ebcd9]"></div>
+          </div>
+        </li>
+        <li class="space-y-1">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Organic</p>
+            <p class="font-bold">3,846</p>
+          </div>
+          <div class="w-full h-2 bg-[#f6f8fa] rounded-full">
+            <div class="rounded-full h-full w-3/4 bg-[#0d1632]"></div>
+          </div>
+        </li>
+        <li class="space-y-1">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Social</p>
+            <p class="font-bold">1,058</p>
+          </div>
+          <div class="w-full h-2 bg-[#f6f8fa] rounded-full">
+            <div class="rounded-full h-full w-1/3 bg-[#8035e2]"></div>
+          </div>
+        </li>
+        <li class="space-y-1">
+          <div class="flex items-center justify-between">
+            <p class="font-semibold">Referral</p>
+            <p class="font-bold">174</p>
+          </div>
+          <div class="w-full h-2 bg-[#f6f8fa] rounded-full">
+            <div class="rounded-full h-full w-1/4 bg-[#404aeb]"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
