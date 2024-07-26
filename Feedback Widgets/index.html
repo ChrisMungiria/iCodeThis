@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Feedback Widgets</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div id="first" class="w-11/12 max-w-lg p-6 bg-white rounded-md shadow-lg">
+      <div class="text-slate-500 flex items-center justify-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 class="font-bold text-center w-full sm:w-2/3 mx-auto">
+        How likely are you to answer this question?
+      </h1>
+      <div class="flex flex-wrap gap-3 items-center justify-center my-3">
+        <div
+          id="0"
+          class="w-8 h-8 border rounded flex items-center justify-center bg-slate-800 shadow-xl cursor-pointer"
+        >
+          <p class="text-slate-200">0</p>
+        </div>
+        <div
+          id="1"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">1</p>
+        </div>
+        <div
+          id="2"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">2</p>
+        </div>
+        <div
+          id="3"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">3</p>
+        </div>
+        <div
+          id="4"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">4</p>
+        </div>
+        <div
+          id="5"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">5</p>
+        </div>
+        <div
+          id="6"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">6</p>
+        </div>
+        <div
+          id="7"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">7</p>
+        </div>
+        <div
+          id="8"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">8</p>
+        </div>
+        <div
+          id="9"
+          class="w-8 h-8 border rounded flex items-center justify-center cursor-pointer"
+        >
+          <p class="">9</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-between text-slate-300 text-xs">
+        <p>Not likely at all</p>
+        <p>Extremely likely</p>
+      </div>
+      <div class="my-3 space-y-2" id="improve_first">
+        <p class="font-semibold text-sm">Tell us how we can improve</p>
+        <textarea
+          name=""
+          id=""
+          rows="3"
+          class="border w-full resize-none p-2 rounded-md text-sm"
+          placeholder="Write your message here"
+        ></textarea>
+      </div>
+      <div class="flex items-center justify-between my-4">
+        <button onclick="goToSecond()" class="text-slate-400">Skip</button>
+        <button
+          onclick="goToSecond()"
+          class="text-white bg-blue-500 px-4 py-2 rounded-md"
+        >
+          Submit
+        </button>
+      </div>
+    </div>
+    <div
+      id="second"
+      class="w-11/12 hidden max-w-lg p-6 bg-white rounded-md shadow-lg"
+    >
+      <div class="text-slate-500 flex items-center justify-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 class="font-bold text-center w-full sm:w-2/3 mx-auto">
+        How likely are you to answer this question?
+      </h1>
+      <div class="grid grid-cols-3 gap-2 w-fit mx-auto my-3">
+        <div
+          id="emoji_1"
+          class="w-12 h-12 border rounded-md flex items-center justify-center shadow-md border-blue-500 cursor-pointer"
+        >
+          <p>🙁</p>
+        </div>
+        <div
+          id="emoji_2"
+          class="w-12 h-12 border rounded-md flex items-center justify-center cursor-pointer"
+        >
+          <p>🙂</p>
+        </div>
+        <div
+          id="emoji_3"
+          class="w-12 h-12 border rounded-md flex items-center justify-center cursor-pointer"
+        >
+          <p>😁</p>
+        </div>
+      </div>
+      <div class="my-3 space-y-2" id="improve_second">
+        <p class="font-semibold text-sm">Tell us how we can improve</p>
+        <textarea
+          name=""
+          id=""
+          rows="3"
+          class="border w-full resize-none p-2 rounded-md text-sm"
+          placeholder="Write your message here"
+        ></textarea>
+      </div>
+      <div class="flex items-center justify-between my-4">
+        <button class="text-slate-400">Skip</button>
+        <button class="text-white bg-blue-500 px-4 py-2 rounded-md">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const ratings = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+      const improve_first = document.getElementById("improve_first");
+
+      ratings.forEach((rating) => {
+        const el = document.getElementById(rating);
+
+        el.addEventListener("click", (e) => {
+          // Remove all active classes - 'bg-slate-800' 'shadow-x' and remove the 'text-slate-200' class on the child <p> element
+          ratings.forEach((rating) => {
+            const el = document.getElementById(rating);
+            el.classList.remove("bg-slate-800", "shadow-xl");
+            el.children[0].classList.remove("text-slate-200");
+          });
+          // if the rating is less than 5, show the 'improve_first' div
+          if (parseInt(rating) < 5) {
+            improve_first.style.display = "block";
+          } else {
+            improve_first.style.display = "none";
+          }
+
+          // Add the active classes to the clicked element
+          el.classList.add("bg-slate-800", "shadow-xl");
+
+          // Add the 'text-slate-200' class to the child <p> element
+          el.children[0].classList.add("text-slate-200");
+        });
+      });
+
+      const emojis = ["emoji_1", "emoji_2", "emoji_3"];
+      const improve_second = document.getElementById("improve_second");
+
+      emojis.forEach((emoji) => {
+        const el = document.getElementById(emoji);
+
+        el.addEventListener("click", (e) => {
+          // Remove all active classes - 'border-blue-500' and 'shadow-md'
+          emojis.forEach((emoji) => {
+            const el = document.getElementById(emoji);
+            el.classList.remove("border-blue-500", "shadow-md");
+          });
+
+          //   If the emoji index is less than 1, show the 'improve_second' div
+          if (emojis.indexOf(emoji) < 1) {
+            improve_second.style.display = "block";
+          } else {
+            improve_second.style.display = "none";
+          }
+
+          // Add the active classes to the clicked element
+          el.classList.add("border-blue-500", "shadow-md");
+        });
+      });
+
+      function goToSecond() {
+        document.getElementById("first").style.display = "none";
+        document.getElementById("second").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
