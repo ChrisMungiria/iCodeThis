@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=Login Card, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login Card</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f9eff0]">
+    <div class="w-11/12 max-w-xl flex bg-white rounded-md shadow-md">
+      <div class="flex-1 md:flex-[2] h-full p-4">
+        <h1 class="capitalize text-xl font-bold">Log in</h1>
+        <p class="text-sm text-slate-600">
+          Log in to your account to to upload or download pictures, videos or
+          music
+        </p>
+        <input
+          type="text"
+          class="p-3 rounded placeholder:text-slate-400 border w-full my-4 focus:outline-none"
+          placeholder="Enter your email address"
+        />
+        <div class="flex items-center justify-between">
+          <p class="text-[#056586]">Forgot password?</p>
+          <button
+            class="p-4 px-8 shadow-lg flex items-center rounded bg-[#056586] text-sm text-white group"
+          >
+            Next
+            <i
+              class="fa-solid fa-arrow-right -ml-4 opacity-0 group-hover:opacity-100 group-hover:ml-4 transition-all duration-300 ease-in-out"
+            ></i>
+          </button>
+        </div>
+        <hr class="my-4" />
+        <p class="text-center my-4 text-slate-400 text-xs">Or log in with</p>
+        <div class="flex items-center justify-around">
+          <button class="px-4 p-2 rounded-md border flex items-center gap-3">
+            <i class="fa-brands fa-facebook"></i>Facebook
+          </button>
+          <button class="px-4 p-2 rounded-md border flex items-center gap-3">
+            <i class="fa-brands fa-google"></i>Google
+          </button>
+        </div>
+        <p class="text-center text-sm my-4">
+          Don't have an account yet?
+          <span class="underline text-[#056586]">Sign up</span>
+        </p>
+      </div>
+      <div class="flex-1 rounded-r-md hidden sm:block relative">
+        <div
+          class="absolute top-5 right-5 w-8 h-8 bg-slate-200/80 rounded-full z-50 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-xmark text-slate-600 text-xl"></i>
+        </div>
+        <img
+          src="https://images.pexels.com/photos/2533089/pexels-photo-2533089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          alt="background"
+          class="object-cover w-full h-full rounded-r-md"
+        />
+      </div>
+    </div>
+  </body>
+</html>
