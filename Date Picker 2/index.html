@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Date Picker 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col space-y-4 items-center justify-center bg-[#aeacfc]"
+  >
+    <div class="flex flex-col space-y-3 w-full items-center">
+      <div
+        class="w-11/12 p-4 bg-white rounded-md shadow-lg max-w-sm flex items-center justify-between"
+      >
+        <p id="selected-date" class="font-bold">Sep. 12, 2020 - Sep 19, 2020</p>
+        <div
+          class="p-2 px-3 bg-[#f1f1fd] w-12 h-full space-y-1 rounded-md cursor-pointer"
+        >
+          <div class="w-full p-1 rounded-xl border-2 border-[#aeacfc]"></div>
+          <div class="w-full p-1 rounded-xl border-2 border-[#aeacfc]"></div>
+        </div>
+      </div>
+      <div class="w-11/12 p-1 bg-white rounded-md shadow-lg max-w-sm">
+        <ul class="space-y-1">
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">Today</p>
+            <p id="today" class="text-slate-300">Sep 18, 2020</p>
+          </li>
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">Yesterday</p>
+            <p id="yesterday" class="text-slate-300">Sep 17, 2020</p>
+          </li>
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">Last 7 days</p>
+            <p id="last_7_days" class="text-slate-300">
+              Sep 12, 2020 - Sep 18, 2020
+            </p>
+          </li>
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">Month to date</p>
+            <p id="month_to_date" class="text-slate-300">
+              Sep 1, 2020 - Sep 18, 2020
+            </p>
+          </li>
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">Year to date</p>
+            <p id="year_to_date" class="text-slate-300">
+              Jan 1, 2020 - Sep 18, 2020
+            </p>
+          </li>
+          <li
+            class="flex items-center justify-between hover:bg-slate-200 p-2 rounded-md transition-all duration-200 ease-in-out cursor-pointer"
+          >
+            <p class="text-[#aeacfc] font-semibold">All time</p>
+            <p id="all_time" class="text-slate-300">
+              Jan 1, 2020 - Sep 18, 2020
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="w-11/12 max-w-sm p-2 bg-white rounded-md shadow-lg">
+      <div class="flex items-center justify-between p-2 border-b">
+        <i class="fa-solid fa-chevron-left"></i>
+        <p>September</p>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <div
+        class="col-span-7 grid grid-cols-7 font-bold place-items-center my-2"
+      >
+        <p>S</p>
+        <p>M</p>
+        <p>T</p>
+        <p>W</p>
+        <p>T</p>
+        <p>F</p>
+        <p>S</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p>30</p>
+        <p>31</p>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+        <p>5</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p>6</p>
+        <p>7</p>
+        <p>8</p>
+        <p>9</p>
+        <p>10</p>
+        <p>11</p>
+        <p>12</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p>13</p>
+        <p>14</p>
+        <p>15</p>
+        <p>16</p>
+        <p>17</p>
+        <p>18</p>
+        <p>19</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p>20</p>
+        <p>21</p>
+        <p>22</p>
+        <p>23</p>
+        <p>24</p>
+        <p>25</p>
+        <p>26</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p>27</p>
+        <p>28</p>
+        <p>29</p>
+        <p>30</p>
+        <p class="text-slate-300">1</p>
+        <p class="text-slate-300">2</p>
+        <p class="text-slate-300">3</p>
+      </div>
+      <div class="col-span-7 grid grid-cols-7 place-items-center my-2">
+        <p class="text-slate-300">4</p>
+        <p class="text-slate-300">5</p>
+        <p class="text-slate-300">6</p>
+        <p class="text-slate-300">7</p>
+        <p class="text-slate-300">8</p>
+        <p class="text-slate-300">9</p>
+        <p class="text-slate-300">10</p>
+      </div>
+    </div>
+    <script>
+      const today = new Date();
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+      const last_7_days = new Date(today);
+      last_7_days.setDate(last_7_days.getDate() - 7);
+      const month_to_date = new Date(today);
+      month_to_date.setDate(1);
+      const year_to_date = new Date(today);
+      year_to_date.setMonth(0, 1);
+      const all_time = new Date(2020, 0, 1);
+
+      const formatDate = (date) => {
+        const month = date.toLocaleString("default", { month: "short" });
+        const day = date.getDate();
+        const year = date.getFullYear();
+        return `${month}. ${day}, ${year}`;
+      };
+
+      const selectedDate = document.getElementById("selected-date");
+      const todayEl = document.getElementById("today");
+      const yesterdayEl = document.getElementById("yesterday");
+      const last7DaysEl = document.getElementById("last_7_days");
+      const monthToDateEl = document.getElementById("month_to_date");
+      const yearToDateEl = document.getElementById("year_to_date");
+      const allTimeEl = document.getElementById("all_time");
+
+      selectedDate.textContent = `${formatDate(today)} - ${formatDate(today)}`;
+      todayEl.textContent = formatDate(today);
+      yesterdayEl.textContent = formatDate(yesterday);
+      last7DaysEl.textContent = `${formatDate(last_7_days)} - ${formatDate(
+        today
+      )}`;
+      monthToDateEl.textContent = `${formatDate(month_to_date)} - ${formatDate(
+        today
+      )}`;
+      yearToDateEl.textContent = `${formatDate(year_to_date)} - ${formatDate(
+        today
+      )}`;
+      allTimeEl.textContent = `${formatDate(all_time)} - ${formatDate(today)}`;
+    </script>
+  </body>
+</html>

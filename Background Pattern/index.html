@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+        grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+        width: 100%;
+        height: 100vh;
+        z-index: 20;
+        position: relative;
+      }
+      .dot {
+        position: absolute;
+        background-color: white;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+      }
+      .cell {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+    <title>Background Pattern</title>
+  </head>
+  <body class="w-screen h-screen bg-gradient-to-br from-[#72b856] to-[#05676a]">
+    <div id="grid" class="grid"></div>
+    <script>
+      const grid = document.getElementById("grid");
+
+      const createCell = () => {
+        const cell = document.createElement("div");
+        cell.className = "cell";
+        return cell;
+      };
+
+      const createDot = (x, y) => {
+        const dot = document.createElement("div");
+        dot.className = "dot";
+        dot.style.left = `${x}px`;
+        dot.style.top = `${y}px`;
+        return dot;
+      };
+
+      const windowHeight = window.innerHeight;
+      const windowWidth = window.innerWidth;
+
+      const generateGrid = () => {
+        // Dynamically create grid cells based on window size
+        for (let i = 0; i < windowHeight / 20; i++) {
+          for (let j = 0; j < windowWidth / 20; j++) {
+            const cell = createCell();
+            grid.appendChild(cell);
+          }
+        }
+      };
+
+      const generateDots = (numDots) => {
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        for (let i = 0; i < numDots; i++) {
+          const x = Math.random() * width;
+          const y = Math.random() * height;
+          const dot = createDot(x, y);
+          grid.appendChild(dot);
+        }
+      };
+
+      generateDots(20);
+      generateGrid();
+    </script>
+  </body>
+</html>
