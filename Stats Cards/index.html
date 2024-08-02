@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Stats Cards</title>
+    <style>
+      .list:hover .icon {
+        animation: bounce 0.5s ease-in-out;
+      }
+      .list:hover .down {
+        animation: bounceDown 0.5s ease-in-out;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+      @keyframes bounceDown {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="w-screen h-screen items-center justify-center bg-slate-100 flex flex-col space-y-5"
+  >
+    <div
+      class="w-11/12 max-w-xs h-40 bg-white rounded-md shadow-lg p-4 relative"
+    >
+      <!-- Lines -->
+      <div class="space-y-10 absolute bottom-10 w-11/12 z-10">
+        <div class="w-full h-px bg-slate-200"></div>
+        <div class="w-full h-px bg-slate-200"></div>
+        <div class="w-full h-px bg-slate-200"></div>
+      </div>
+      <!-- Graphs -->
+      <div class="w-full h-full flex justify-between relative z-20">
+        <div class="w-20 h-full flex flex-col justify-end items-center group">
+          <p
+            class="text-xs font-semibold translate-y-5 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+          >
+            12.2%
+          </p>
+          <div class="h-1/4 bg-[#515dfa] w-2/3"></div>
+          <p class="text-slate-500">Current</p>
+        </div>
+        <div class="w-20 h-full flex flex-col justify-end items-center group">
+          <p
+            class="text-xs font-semibold translate-y-5 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+          >
+            34.8%
+          </p>
+          <div class="h-5/6 bg-[#42aaed] w-2/3"></div>
+          <p class="text-slate-500">All</p>
+        </div>
+        <div class="w-20 h-full flex flex-col justify-end items-center group">
+          <p
+            class="text-xs font-semibold translate-y-5 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-200 ease-in-out"
+          >
+            28.7%
+          </p>
+          <div class="h-1/2 bg-[#8743f1] w-2/3"></div>
+          <p class="text-slate-500">Average</p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-11/12 max-w-xs p-4 bg-white shadow-lg rounded-md flex justify-between"
+    >
+      <h1 class="text-center font-bold text-3xl flex-1 border-r">
+        0 <span class="block text-base font-light">Tweets</span>
+      </h1>
+      <h1 class="text-center font-bold text-3xl flex-1">
+        98 <span class="block text-base font-light">Clicks</span>
+      </h1>
+    </div>
+    <div class="w-11/12 max-w-sm p-4 bg-white rounded-md shadow-lg">
+      <h1 class="text-lg font-semibold">Overview</h1>
+      <ul class="font-light">
+        <li
+          class="flex items-center justify-between border-b p-2 list cursor-pointer"
+        >
+          <p>Deliveries</p>
+          <div class="flex gap-4 items-center">
+            <div
+              class="w-5 h-5 bg-slate-200 rounded-full flex items-center justify-center icon"
+            >
+              <i class="fa-solid fa-arrow-up text-green-500 text-xs"></i>
+            </div>
+            <p>99.7%</p>
+          </div>
+        </li>
+        <li
+          class="flex items-center justify-between border-b p-2 cursor-pointer"
+        >
+          <p>Total opens</p>
+          <div class="flex gap-4 items-center">
+            <p>857</p>
+          </div>
+        </li>
+        <li
+          class="flex items-center justify-between border-b p-2 list cursor-pointer"
+        >
+          <p>Forwarded</p>
+          <div class="flex gap-4 items-center">
+            <div
+              class="w-5 h-5 bg-slate-200 rounded-full flex items-center justify-center down"
+            >
+              <i class="fa-solid fa-arrow-down text-red-500 text-xs"></i>
+            </div>
+            <p>71</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
