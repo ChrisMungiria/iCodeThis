@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Big Menu</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col gap-5 items-center justify-center bg-[#16142d]"
+  >
+    <div class="w-11/12 max-w-xl p-4 flex items-center justify-end">
+      <ul
+        class="flex flex-col md:flex-row items-end gap-4 md:items-center text-slate-400 text-sm"
+      >
+        <li class="flex items-center gap-2">
+          Product <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="flex items-center gap-2">
+          Features <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="flex items-center gap-2 relative text-[#3676c0]">
+          Resources <i class="fa-solid fa-chevron-down"></i>
+          <div
+            class="absolute w-full h-1 bg-gradient-to-r from-[#45c2d3] to-[#498ae1] rounded-full -bottom-2"
+          ></div>
+        </li>
+        <li class="flex items-center gap-2">
+          Pricing <i class="fa-solid fa-chevron-down"></i>
+        </li>
+        <li class="flex items-center gap-2">
+          About <i class="fa-solid fa-chevron-down"></i>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="w-11/12 max-w-xl p-4 rounded-lg bg-gradient-to-r from-[#41c9e4] to-[#468be2] grid md:grid-cols-3 grid-cols-2 gap-4"
+    >
+      <div
+        class="w-full p-4 text-slate-800 text-xs border-r border-slate-800/10"
+      >
+        <h1 class="text-lg uppercase tracking-wider">Resources</h1>
+        <ul>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-quote-left"></i> Blog
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-computer"></i> Reports
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-photo-film"></i> Media
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-regular fa-newspaper"></i> Case studies
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-compact-disc"></i> Podcasts
+          </li>
+        </ul>
+      </div>
+      <div
+        class="w-full p-4 text-slate-800 text-xs border-r border-slate-800/10"
+      >
+        <h1 class="text-lg uppercase tracking-wider">Developers</h1>
+        <ul>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-book"></i> Documentation
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-code"></i> API
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-film"></i> Videos and tutorial
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-regular fa-comment"></i> Forum
+          </li>
+          <li
+            class="flex items-center gap-2 p-2 rounded-full hover:bg-[#87d3ee] w-full"
+          >
+            <i class="fa-solid fa-headset"></i> Support
+          </li>
+        </ul>
+      </div>
+      <div class="w-full p-4 col-span-2 md:col-span-1 space-y-2">
+        <img
+          src="https://cdn01.alison-static.net/courses/3531/alison_courseware_intro_3531.jpg"
+          alt="background image"
+          class="w-full h-32 object-cover rounded-lg"
+        />
+        <h1 class="font-semibold text-sm">
+          Why and how serverless computing helps scale teams up
+        </h1>
+        <p class="text-xs">Christopher Gehlot</p>
+        <p class="text-xs">Sep 7. 4 min read</p>
+      </div>
+    </div>
+  </body>
+</html>
