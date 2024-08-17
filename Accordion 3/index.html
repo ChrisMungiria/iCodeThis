@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Accordion 3</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-[#fdf4f3] to-[#edf2fe]"
+  >
+    <div class="w-11/12 max-w-md p-4 bg-white shadow-md rounded">
+      <h1 class="text-lg font-semibold">
+        Several windows stacked on each other
+      </h1>
+      <p class="text-sm text-gray-800">
+        The accordion is a graphical control element comprising a vertically
+        stakced list of items, such as labels or thumbnails
+      </p>
+      <hr class="h-px w-full bg-slate-600 mx-auto my-5" />
+      <div class="px-10">
+        <div
+          class="w-full flex flex-col font-bold cursor-pointer bg-blue-100 p-2 rounded-md"
+          id="accordion"
+        >
+          <div class="flex items-center">
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center"
+            >
+              +
+            </div>
+            <p>Why this term</p>
+          </div>
+          <div class="font-normal space-y-2" id="content">
+            <p class="text-xs">
+              The term accordion is a reference to the musical instrument of the
+              same name, which can expand and contract. The accordion control is
+              a graphical control element comprising a vertically stacked list
+              of items, such as labels or thumbnails. Each item can be
+              "expanded" or "stretched" to reveal the content associated with
+              that item. The accordion control is used in many web applications,
+              including Google Drive, Dropbox, and Microsoft Outlook.
+            </p>
+            <button
+              class="px-6 py-3 rounded-full bg-purple-600 text-white text-xs"
+            >
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const accordion = document.getElementById("accordion");
+      const content = document.getElementById("content");
+
+      accordion.addEventListener("click", () => {
+        content.classList.toggle("hidden");
+      });
+
+      //   If the content is hidden, show the plus sign
+      content.addEventListener("transitionend", () => {
+        if (content.classList.contains("hidden")) {
+          accordion.innerHTML = `
+            <div class="w-10 h-10 rounded-full flex items-center justify-center">
+              +
+            </div>
+            <p>Why this term</p>
+          `;
+        } else {
+          accordion.innerHTML = `
+            <div class="w-10 h-10 rounded-full flex items-center justify-center">
+              -
+            </div>
+            <p>Why this term</p>
+          `;
+        }
+      });
+    </script>
+  </body>
+</html>
