@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Search Ui</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-[#f9f4ff] relative"
+  >
+    <div class="w-56 h-96 bg-[#f0ecfb] rounded-lg absolute z-10"></div>
+    <div class="w-11/12 max-w-sm p-4 bg-white rounded-md shadow-xl z-20">
+      <div class="flex gap-2">
+        <div
+          class="flex-1 border border-slate-300 rounded-md flex items-center h-fit p-2 gap-2"
+        >
+          <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+          <input
+            type="text"
+            placeholder="Search for a part-time job"
+            class="text-gray-500 placeholder:text-sm focus:outline-none"
+          />
+        </div>
+        <button
+          class="flex items-center gap-2 bg-[#271a50] px-4 py-2 rounded-md text-white shadow-xl text-xs md:text-base text-nowrap"
+        >
+          <i class="fa-regular fa-map"></i>Use map
+        </button>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 mt-4">
+        <div
+          class="p-4 rounded-md bg-[#ffeded] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-couch"></i>
+          <p class="font-light text-sm text-center">Furniture</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#f7ecff] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-person-shelter"></i>
+          <p class="font-light text-sm text-center">Property</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#ecf1ff] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-regular fa-building"></i>
+          <p class="font-light text-sm text-center">Job</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#d7faf3] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-plane"></i>
+          <p class="font-light text-sm text-center">Travel</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#e1ffd3] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-sailboat"></i>
+          <p class="font-light text-sm text-center">Boat</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#e1ffd3] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-motorcycle"></i>
+          <p class="font-light text-sm text-center">MC</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#fff5cb] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-regular fa-money-bill-1"></i>
+          <p class="font-light text-sm text-center">Economy</p>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#ffdbca] border border-transparent space-y-4 flex flex-col items-center hover:bg-white hover:shadow-xl transition-all duration-200 ease-in-out cursor-pointer hover:border-slate-200"
+        >
+          <i class="fa-solid fa-couch"></i>
+          <p class="font-light text-sm text-center">Holiday</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
