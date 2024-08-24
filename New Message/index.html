@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>New Message</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-xs p-4 bg-white rounded-md shadow-lg">
+      <div class="flex items-center justify-between">
+        <h2 class="text-lg font-semibold">New message</h2>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div
+        class="my-2 rounded-md border bg-[#f4f6fa] p-3 flex items-center gap-2"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input
+          type="text"
+          class="w-full bg-transparent h-full focus:outline-none"
+          placeholder="Type to search"
+        />
+      </div>
+      <p class="text-xs font-bold uppercase tracking-widest my-2">
+        Recent conversations
+      </p>
+      <div
+        class="flex justify-between p-2 rounded-md hover:bg-slate-200 transition-all duration-200 ease-in-out cursor-pointer"
+      >
+        <div class="flex items-center gap-2 w-full">
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <div class="flex flex-col justify-between text-sm">
+            <p class="font-semibold">David Jacobsen</p>
+            <p class="text-xs">@dav_id</p>
+          </div>
+        </div>
+        <div
+          class="w-10 h-10 rounded-full border flex-shrink-0 flex items-center justify-center bg-blue-500"
+          id="checkbox_1"
+        >
+          <i class="fa-solid fa-check text-white text-xs"></i>
+        </div>
+      </div>
+      <div
+        class="flex justify-between p-2 rounded-md hover:bg-slate-200 transition-all duration-200 ease-in-out cursor-pointer"
+      >
+        <div class="flex items-center gap-2 w-full">
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <div class="flex flex-col justify-between text-sm">
+            <p class="font-semibold">Christy Riccio</p>
+            <p class="text-xs">@christy-ric</p>
+          </div>
+        </div>
+        <div
+          class="w-10 h-10 rounded-full border flex-shrink-0 flex items-center justify-center bg-blue-500"
+          id="checkbox_2"
+        >
+          <i class="fa-solid fa-check text-white text-xs"></i>
+        </div>
+      </div>
+      <div
+        class="flex justify-between p-2 rounded-md hover:bg-slate-200 transition-all duration-200 ease-in-out cursor-pointer"
+      >
+        <div class="flex items-center gap-2 w-full">
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <div class="flex flex-col justify-between text-sm">
+            <p class="font-semibold">James Lawther</p>
+            <p class="text-xs">@hristy-ric</p>
+          </div>
+        </div>
+        <div
+          class="w-10 h-10 rounded-full border flex-shrink-0 flex items-center justify-center bg-blue-500"
+          id="checkbox_3"
+        >
+          <i class="fa-solid fa-check text-white text-xs"></i>
+        </div>
+      </div>
+      <div
+        class="flex justify-between p-2 rounded-md hover:bg-slate-200 transition-all duration-200 ease-in-out cursor-pointer"
+      >
+        <div class="flex items-center gap-2 w-full">
+          <img
+            src="https://lh6.googleusercontent.com/proxy/DelGxf0Rsr3xSZnqvIt3nw0Re7mhoWg-Oq4EKM77LVBs7EYx04-o3VAY-_set8AoV0hM6WRcOYwZ4cPGCMYKpHXIEt5gAqgILTq8qsERIp-pNuSo7YdsXFVgp0Gu"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <div class="flex flex-col justify-between text-sm">
+            <p class="font-semibold">Dannica Dogget</p>
+            <p class="text-xs">@dani-dani-d</p>
+          </div>
+        </div>
+        <div
+          class="w-10 h-10 rounded-full border flex-shrink-0 flex items-center justify-center bg-blue-500"
+          id="checkbox_4"
+        >
+          <i class="fa-solid fa-check text-white text-xs"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      const checkboxes = [
+        "checkbox_1",
+        "checkbox_2",
+        "checkbox_3",
+        "checkbox_4",
+      ];
+
+      checkboxes.forEach((checkbox) => {
+        document.getElementById(checkbox).addEventListener("click", () => {
+          document.getElementById(checkbox).classList.toggle("bg-blue-500");
+          document.getElementById(checkbox).classList.toggle("bg-white");
+          document
+            .getElementById(checkbox)
+            .querySelector("i")
+            .classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
