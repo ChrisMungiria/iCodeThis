@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tabbed Ui</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#ececf8]">
+    <div
+      class="w-11/12 max-w-6xl grid gap-2 md:grid-cols-3 grid-cols-1 place-items-center"
+    >
+      <div class="p-2 bg-[#f8f7fc] rounded-md shadow-xl h-fit">
+        <div class="grid grid-cols-3 text-xs">
+          <div
+            class="p-2 flex items-center justify-center shadow-xl bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Details</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Tutorials</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span class="text-center">Code snippets</span>
+          </div>
+        </div>
+        <h1 class="text-lg font-semibold px-2">Color Palette</h1>
+        <h2 class="text-slate-600 text-xs px-2">
+          Click on the color to copy the code
+        </h2>
+        <div class="grid grid-cols-2 gap-2 p-2">
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#bcc5e4]"></div>
+            <p class="text-sm uppercase">#bcc5e4</p>
+          </div>
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#e8f1fc]"></div>
+            <p class="text-sm uppercase">#e8f1fc</p>
+          </div>
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#f0f5f5]"></div>
+            <p class="text-sm uppercase">#f0f5f5</p>
+          </div>
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#8d94a6]"></div>
+            <p class="text-sm uppercase">#8d94a6</p>
+          </div>
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#5482f6]"></div>
+            <p class="text-sm uppercase">#5482f6</p>
+          </div>
+          <div class="p-1 rounded-full border flex gap-2 items-center">
+            <div class="w-7 h-7 rounded-full bg-[#1f304c]"></div>
+            <p class="text-sm uppercase">#1f304c</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-2 bg-[#f8f7fc] rounded-md shadow-xl h-fit max-w-xs">
+        <div class="grid grid-cols-3 text-xs">
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Details</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center shadow-xl bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Tutorials</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span class="text-center">Code snippets</span>
+          </div>
+        </div>
+        <h1 class="text-lg font-semibold px-2">Tutorials</h1>
+        <h2 class="text-slate-600 text-xs px-2">
+          Learn how to build this component
+        </h2>
+        <h3 class="text-slate-400 px-2 text-xs">HTML/CSS</h3>
+        <div class="p-2 rounded-md bg-white shadow-xl my-2">
+          <div class="flex items-center justify-between my-2">
+            <h2 class="text-xs">Andrew Gabriel</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+            class="text-[8px] w-1/3 text-slate-400"
+          >
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D
+          </a>
+        </div>
+        <div class="p-2 rounded-md bg-white shadow-xl my-2">
+          <div class="flex items-center justify-between my-2">
+            <h2 class="text-xs">Shangai Raj</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+            class="text-[8px] w-1/3 text-slate-400"
+          >
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D
+          </a>
+        </div>
+        <h3 class="text-slate-400 px-2 text-xs">React Native</h3>
+        <div class="p-2 rounded-md bg-white shadow-xl my-2">
+          <div class="flex items-center justify-between my-2">
+            <h2 class="text-xs">Jason Brown</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+            class="text-[8px] w-1/3 text-slate-400"
+          >
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D
+          </a>
+        </div>
+        <p class="text-center text-slate-400 text-xs">
+          Did you make a tutorial with this component?
+          <span class="underline text-pink-500">Send your link</span> and we
+          will post it here
+        </p>
+      </div>
+      <div class="p-2 bg-[#f8f7fc] rounded-md shadow-xl h-fit max-w-xs">
+        <div class="grid grid-cols-3 text-xs">
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Details</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center hover:shadow-xl hover:bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span>Tutorials</span>
+          </div>
+          <div
+            class="p-2 flex items-center justify-center shadow-xl bg-white cursor-pointer transition-all duration-200 ease-in-out rounded-md"
+          >
+            <span class="text-center">Code snippets</span>
+          </div>
+        </div>
+        <h1 class="text-lg font-semibold px-2">Code Snippets</h1>
+        <h2 class="text-slate-600 text-xs px-2">
+          Inspect the solutions other implemented
+        </h2>
+
+        <div class="p-2 rounded-md bg-white shadow-xl my-2">
+          <div class="flex items-center justify-between my-2">
+            <h2 class="text-xs">Stefan Galescu</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+            class="text-[8px] w-1/3 text-slate-400"
+          >
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D
+          </a>
+        </div>
+        <div class="p-2 rounded-md bg-white shadow-xl my-2">
+          <div class="flex items-center justify-between my-2">
+            <h2 class="text-xs">fredric</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D"
+            class="text-[8px] w-1/3 text-slate-400"
+          >
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUXbmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA%3D
+          </a>
+        </div>
+
+        <p class="text-center text-slate-400 text-xs">
+          Did you build this component?
+          <span class="underline text-pink-500">Send your link</span> and we
+          will post it here
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
