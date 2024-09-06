@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Shopping Cart</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#1a193b]">
+    <divc class="w-11/12 max-w-3xl rounded-md bg-white flex">
+      <div
+        class="flex-1 bg-[#ececfc] rounded-l-md p-4 space-y-4 hidden md:block"
+      >
+        <img
+          src="https://d3f1iyfxxz8i1e.cloudfront.net/courses/course_image_variant/c94c3ea378f0_w480.webp"
+          alt="saas image"
+          class="w-full h-auto object-cover rounded-md"
+        />
+        <div class="flex justify-center">
+          <p class="text-xs">
+            The complete Saas and SCSS course: From beginner to advanced
+          </p>
+          <p>$9.99</p>
+        </div>
+        <div class="w-full h-28 bg-white rounded-md"></div>
+        <div class="flex items-center justify-between gap-5">
+          <div class="flex-[3] h-2 rounded-full bg-white"></div>
+          <div class="flex-1 h-2 rounded-full bg-white"></div>
+        </div>
+        <div class="w-1/3 h-2 rounded-full bg-white"></div>
+      </div>
+      <div class="flex-[3] bg-[#2d2b4e] rounded-r-md p-4 text-white space-y-4">
+        <h2>Total $9.99</h2>
+        <input
+          type="email"
+          placeholder="Email address"
+          class="w-full border-b bg-transparent focus:outline-none"
+        />
+        <input
+          type="text"
+          placeholder="Full name"
+          class="w-full border-b bg-transparent focus:outline-none"
+        />
+        <div class="flex items-center border-b">
+          <input
+            type="number"
+            placeholder="Card number"
+            class="w-full bg-transparent focus:outline-none"
+          />
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="flex items-center gap-3">
+          <input
+            type="text"
+            placeholder="MM/YY"
+            class="w-full bg-transparent border-b focus:outline-none flex-1"
+          />
+          <input
+            type="text"
+            placeholder="CVC"
+            class="w-full bg-transparent border-b focus:outline-none flex-1"
+          />
+          <div class="flex items-center gap-2 flex-nowrap">
+            <input type="checkbox" class="bg-transparent accent-blue-500" />
+            <label>Save card?</label>
+          </div>
+        </div>
+        <p class="text-xs text-center text-slate-400">
+          You will be charged with $9.99
+        </p>
+        <button
+          class="p-3 w-3/4 mx-auto bg-blue-500 text-white flex uppercase items-center justify-center rounded-md hover:shadow-xl transition-all duration-200 ease-in-out"
+        >
+          Pay
+        </button>
+        <p class="text-slate-200 text-center">or pay with</p>
+        <button
+          class="bg-white rounded-md p-2 text-slate-800 flex mx-auto items-center gap-2"
+        >
+          <i class="fa-brands fa-paypal"></i> PayPal
+        </button>
+      </div>
+    </divc>
+  </body>
+</html>
