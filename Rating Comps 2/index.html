@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rating Comps</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div
+      class="w-11/12 max-w-3xl md:grid md:grid-cols-4 md:grid-rows-1 flex flex-col gap-5"
+    >
+      <div class="col-span-1 space-y-4 flex flex-row md:flex-col gap-5">
+        <div class="p-3 bg-white rounded-md space-y-4 shadow-lg h-fit">
+          <h1 class="text-6xl font-bold text-center">2.7</h1>
+          <div class="flex items-center justify-between">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i
+            ><i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+          </div>
+          <button
+            class="px-6 p-2 bg-gradient-to-r from-[#87c7ff] to-[#678afe] text-white flex mx-auto text-xs rounded-full"
+          >
+            Sign in
+          </button>
+        </div>
+        <div class="p-3 bg-white rounded-md space-y-4 shadow-lg h-fit">
+          <p class="text-sm font-semibold">2390 reviews</p>
+          <ul class="space-y-4 w-full">
+            <li class="w-full flex items-center gap-2 text-xs">
+              <span>5</span>
+              <i class="fa-solid fa-star"></i>
+              <div class="flex-1 bg-slate-200 rounded-full h-1">
+                <div
+                  class="w-[28%] h-full bg-gradient-to-r from-[#87c7ff] to-[#678afe] rounded-full"
+                ></div>
+              </div>
+              <span>28%</span>
+            </li>
+            <li class="w-full flex items-center gap-2 text-xs">
+              <span>4</span>
+              <i class="fa-solid fa-star"></i>
+              <div class="flex-1 bg-slate-200 rounded-full h-1">
+                <div
+                  class="w-[0%] h-full bg-gradient-to-r from-[#87c7ff] to-[#678afe] rounded-full"
+                ></div>
+              </div>
+              <span>0%</span>
+            </li>
+            <li class="w-full flex items-center gap-2 text-xs">
+              <span>3</span>
+              <i class="fa-solid fa-star"></i>
+              <div class="flex-1 bg-slate-200 rounded-full h-1">
+                <div
+                  class="w-[14%] h-full bg-gradient-to-r from-[#87c7ff] to-[#678afe] rounded-full"
+                ></div>
+              </div>
+              <span>14%</span>
+            </li>
+            <li class="w-full flex items-center gap-2 text-xs">
+              <span>2</span>
+              <i class="fa-solid fa-star"></i>
+              <div class="flex-1 bg-slate-200 rounded-full h-1">
+                <div
+                  class="w-[28%] h-full bg-gradient-to-r from-[#87c7ff] to-[#678afe] rounded-full"
+                ></div>
+              </div>
+              <span>28%</span>
+            </li>
+            <li class="w-full flex items-center gap-2 text-xs">
+              <span>1</span>
+              <i class="fa-solid fa-star"></i>
+              <div class="flex-1 bg-slate-200 rounded-full h-1">
+                <div
+                  class="w-[28%] h-full bg-gradient-to-r from-[#87c7ff] to-[#678afe] rounded-full"
+                ></div>
+              </div>
+              <span>28%</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-span-3 bg-white p-3 shadow-lg flex flex-col md:flex-row">
+        <div class="flex-1 p-3">
+          <img
+            src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
+            alt="image placeholder"
+            class="w-20 h-20 object-cover rounded-md mx-auto"
+          />
+        </div>
+        <div class="flex-[3] p-3 space-y-4">
+          <div class="flex justify-between">
+            <h1 class="text-3xl font-bold capitalize">
+              Online collaborative platform
+            </h1>
+            <i class="fa-regular fa-heart"></i>
+          </div>
+          <p class="text-sm text-slate-700">
+            Company inc. <span class="text-blue-500">Business</span>
+          </p>
+          <p class="text-sm">
+            Finding the perfect learning tool for Flash is a daunting task for
+            any novice web developer. One can find help in a number of ways
+            through books, friends and private tutors
+          </p>
+          <button
+            class="px-8 p-3 bg-gradient-to-r from-[#87c7ff] to-[#678afe] text-white flex text-xs rounded-full"
+          >
+            Get
+          </button>
+          <p class="text-sm text-blue-500">
+            Get system requirements <i class="fa-solid fa-chevron-right"></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
