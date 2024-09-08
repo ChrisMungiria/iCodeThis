@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Followers</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-[#1453b9] to-[#2879fc]"
+  >
+    <div class="w-11/12 max-w-sm bg-[#d6ecff] shadow-xl">
+      <div class="bg-gradient-to-r from-[#0f4aa5] to-[#1b66db] p-4 space-y-4">
+        <div class="text-white flex items-center relative">
+          <i class="fa-solid fa-chevron-left"></i>
+          <h2 class="capitalize absolute left-1/2 -translate-x-1/2">
+            Find friends
+          </h2>
+        </div>
+        <div class="p-2 rounded-full border border-slate-400 bg-slate-100/10">
+          <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+          <input
+            type="text"
+            class="bg-transparent placeholder:text-slate-400"
+            placeholder="Enter a friend's name"
+          />
+        </div>
+      </div>
+      <ul>
+        <li class="p-2 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 p-1 rounded-full bg-[#abc4f6]">
+              <img
+                src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+                alt="profile image"
+                class="w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <p class="text-[#0f4eab] font-semibold text-nowrap">Jason Graham</p>
+          </div>
+          <button
+            class="px-8 p-3 rounded-full bg-gradient-to-r from-[#0b4aa4] to-[#1a65d9] text-white follow_button"
+          >
+            Follow
+          </button>
+        </li>
+        <li class="p-2 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 p-1 rounded-full bg-[#abc4f6]">
+              <img
+                src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+                alt="profile image"
+                class="w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <p class="text-[#0f4eab] font-semibold text-nowrap">
+              Ophelia Gaddy
+            </p>
+          </div>
+          <button
+            class="px-8 p-3 rounded-full bg-gradient-to-r from-[#0b4aa4] to-[#1a65d9] text-white follow_button"
+          >
+            Follow
+          </button>
+        </li>
+        <li class="p-2 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 p-1 rounded-full bg-[#abc4f6]">
+              <img
+                src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+                alt="profile image"
+                class="w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <p class="text-[#0f4eab] font-semibold text-nowrap">
+              Lillian Whitmire
+            </p>
+          </div>
+          <button
+            class="px-8 p-3 rounded-full bg-gradient-to-r from-[#0b4aa4] to-[#1a65d9] text-white follow_button"
+          >
+            Follow
+          </button>
+        </li>
+        <li class="p-2 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 p-1 rounded-full bg-[#abc4f6]">
+              <img
+                src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+                alt="profile image"
+                class="w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <p class="text-[#0f4eab] font-semibold text-nowrap">
+              Joseph Shepherd
+            </p>
+          </div>
+          <button
+            class="px-8 p-3 rounded-full bg-gradient-to-r from-[#0b4aa4] to-[#1a65d9] text-white follow_button"
+          >
+            Follow
+          </button>
+        </li>
+        <li class="p-2 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-14 h-14 p-1 rounded-full bg-[#abc4f6]">
+              <img
+                src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+                alt="profile image"
+                class="w-full h-full rounded-full object-cover"
+              />
+            </div>
+            <p class="text-[#0f4eab] font-semibold text-nowrap">
+              Alex R. Prowell
+            </p>
+          </div>
+          <button
+            class="px-8 p-3 rounded-full bg-gradient-to-r from-[#0b4aa4] to-[#1a65d9] text-white follow_button"
+          >
+            Follow
+          </button>
+        </li>
+      </ul>
+      <script>
+        const follow_buttons = document.querySelectorAll(".follow_button");
+
+        follow_buttons.forEach((button) => {
+          button.addEventListener("click", (e) => {
+            if (button.classList.contains("bg-gradient-to-r")) {
+              button.classList.remove("bg-gradient-to-r");
+              button.classList.remove("from-[#0b4aa4]");
+              button.classList.remove("to-[#1a65d9]");
+              button.classList.remove("text-white");
+
+              button.classList.add("border");
+              button.classList.add("border-[#0f4aa7]");
+              button.classList.add("text-[#0f4aa7]");
+              button.textContent = "Unfollow";
+            } else {
+              button.classList.add("bg-gradient-to-r");
+              button.classList.add("from-[#0b4aa4]");
+              button.classList.add("to-[#1a65d9]");
+              button.classList.add("text-white");
+
+              button.classList.remove("border");
+              button.classList.remove("border-[#0f4aa7]");
+              button.classList.remove("text-[#0f4aa7]");
+              button.textContent = "Follow";
+            }
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>
