@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Progress Bar</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center"
+    style="
+      background: radial-gradient(
+        circle,
+        rgba(0, 103, 114, 1) 0%,
+        rgba(0, 159, 164, 1) 50%,
+        rgba(0, 103, 114, 1) 100%
+      );
+    "
+  >
+    <div class="w-11/12 max-w-xl h-2 bg-slate-800 rounded-full relative">
+      <div
+        class="w-[63%] h-full bg-gradient-to-r from-[#68c5e9] to-[#66edc0] rounded-full"
+      ></div>
+      <div
+        class="p-2 rounded-md bg-slate-800 absolute left-[63%] top-6 text-xs text-white -translate-x-1/2"
+      >
+        <div
+          class="w-2 h-2 bg-slate-800 absolute -top-1 left-1/2 -translate-x-1/2 rotate-45"
+        ></div>
+        63%
+      </div>
+    </div>
+  </body>
+</html>
