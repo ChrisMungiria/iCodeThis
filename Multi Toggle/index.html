@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Multi Toggle</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#23242c]">
+    <div class="w-11/12 max-w-xl p-4 rounded-md bg-[#1d1c25] space-y-4">
+      <div class="flex items-center justify-end">
+        <div class="w-8 h-8 rounded-full flex items-center justify-center">
+          <p class="text-xl text-[#8c8f9c]">x</p>
+        </div>
+      </div>
+      <h1 class="text-2xl text-[#8c8f9c] text-center">Browse by interests</h1>
+      <p class="text-[#8c8f9c] md:w-3/4 text-center mx-auto text-sm">
+        Select some interests to help us personalise your experience on Edmondo.
+      </p>
+      <div class="grid grid-cols-3 gap-2 md:w-5/6 mx-auto text-xs">
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="math"
+        >
+          <p>Math</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="science"
+        >
+          <p>Science</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="english"
+        >
+          <p>English</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="world_languages"
+        >
+          <p>World languages</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="health_and_PE"
+        >
+          <p>Health & PE</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="special_education"
+        >
+          <p>Special Education</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="development"
+        >
+          <p>Development</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="technology"
+        >
+          <p>Technology</p>
+        </div>
+        <div
+          class="p-4 bg-[#17181e] flex items-center justify-center text-[#8c8f9c]"
+          id="social_studies"
+        >
+          <p>Social studies</p>
+        </div>
+      </div>
+      <div class="flex items-center justify-around mx-auto w-3/4">
+        <button
+          class="border border-[#17181e] text-xs px-8 p-2 rounded-md text-[#8c8f9c]"
+        >
+          Skip
+        </button>
+        <button class="bg-[#c74061] text-white text-xs px-8 p-2 rounded-md">
+          Save
+        </button>
+      </div>
+    </div>
+    <script>
+      const buttons = [
+        "math",
+        "science",
+        "english",
+        "world_languages",
+        "health_and_PE",
+        "special_education",
+        "development",
+        "technology",
+        "social_studies",
+      ];
+
+      buttons.map((button, index) => {
+        const el = document.getElementById(button);
+        el.addEventListener("click", () => {
+          if (!el.classList.contains("border-red-500")) {
+            el.classList.add("border");
+            el.classList.add("border-red-500");
+            el.classList.add("shadow");
+            el.classList.add("shadow-red-500");
+          } else {
+            el.classList.remove("border");
+            el.classList.remove("border-red-500");
+            el.classList.remove("shadow");
+            el.classList.remove("shadow-red-500");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
