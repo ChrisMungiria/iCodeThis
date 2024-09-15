@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Weather App</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-xs bg-white shadow-xl">
+      <div class="w-full h-40 relative">
+        <img
+          src="https://cdn.britannica.com/01/94501-050-7C939333/Big-Ben-London.jpg"
+          alt="london_england"
+          class="w-full h-full object-cover absolute z-10 opacity-60"
+        />
+        <div
+          class="w-full p-1 text-white z-20 absolute flex items-center justify-between"
+        >
+          <div class="flex items-center gap-1 text-xs">
+            <div class="w-2 h-2 bg-white rounded-full"></div>
+            <div class="w-2 h-2 bg-white rounded-full"></div>
+            <div class="w-2 h-2 border border-white rounded-full"></div>
+            <div class="w-2 h-2 border border-white rounded-full"></div>
+            <div class="w-2 h-2 border border-white rounded-full"></div>
+            <p>EE</p>
+            <i class="fa-solid fa-wifi"></i>
+          </div>
+          <p class="absolute left-1/2 -translate-x-1/2 text-xs">12:53 pm</p>
+          <div class="flex items-center gap-2">
+            <p class="text-xs">31%</p>
+            <i class="fa-solid fa-battery-quarter"></i>
+          </div>
+        </div>
+        <p class="text-center text-white mt-5 w-full absolute z-30">
+          London, England
+        </p>
+        <p class="w-full text-white absolute z-30 mt-14 text-4xl text-center">
+          23° <span class="block text-sm">cloudy</span>
+        </p>
+      </div>
+      <div class="p-4">
+        <ul>
+          <li class="w-full text-slate-600 flex items-center justify-between">
+            <p>Sunday</p>
+            <div class="flex items-center gap-2">
+              <p>18°</p>
+              <i class="fa-solid fa-cloud-showers-heavy"></i>
+            </div>
+          </li>
+          <li class="w-full text-slate-600 flex items-center justify-between">
+            <p>Monday</p>
+            <div class="flex items-center gap-2">
+              <p>20°</p>
+              <i class="fa-solid fa-cloud"></i>
+            </div>
+          </li>
+          <li class="w-full text-slate-600 flex items-center justify-between">
+            <p>Tuesday</p>
+            <div class="flex items-center gap-2">
+              <p>20°</p>
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+          </li>
+          <li class="w-full text-slate-600 flex items-center justify-between">
+            <p>Wednesday</p>
+            <div class="flex items-center gap-2">
+              <p>17°</p>
+              <i class="fa-solid fa-wind"></i>
+            </div>
+          </li>
+          <li class="w-full text-slate-600 flex items-center justify-between">
+            <p>Thursday</p>
+            <div class="flex items-center gap-2">
+              <p>15°</p>
+              <i class="fa-solid fa-wind"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button class="p-4 w-full bg-slate-500 text-white uppercase">
+        + Add location
+      </button>
+    </div>
+  </body>
+</html>
