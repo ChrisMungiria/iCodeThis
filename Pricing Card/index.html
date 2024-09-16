@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .main:hover + .my_shadow {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+      }
+    </style>
+    <title>Pricing card</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col items-center justify-center bg-[#b0282f]"
+  >
+    <div
+      class="w-11/12 max-w-xl p-4 bg-[#22161a] rounded-md shadow-xl grid md:grid-cols-2 grid-cols-1 gap-5 md:hover:-translate-y-10 transition-all duration-200 cursor-pointer main"
+    >
+      <div class="p-4 space-y-4 text-[#b0a6a9]">
+        <h1 class="text-2xl font-semibold">Basic</h1>
+        <h2 class="text-xl">
+          Free <span class="block text-base">3,000 monthly visitors</span>
+        </h2>
+        <ul>
+          <li>Limited reports</li>
+          <li>Unlimited projects</li>
+          <li>Data storage for 1 year</li>
+        </ul>
+        <button
+          class="w-full p-4 rounded-md text-[#b0282f] border border-[#b0282f] hover:bg-[#b0282f] hover:text-[#b7adb0] transition-all duration-200"
+        >
+          Start now
+        </button>
+      </div>
+      <div class="p-4 space-y-4 text-[#b0a6a9]">
+        <h1 class="text-2xl font-semibold">Pro</h1>
+        <h2 class="text-xl">
+          $19/month <span class="block text-base">10,000 monthly visitors</span>
+        </h2>
+        <ul>
+          <li>Unlimited reports</li>
+          <li>Unlimited projects</li>
+          <li>Data storage for 1 year</li>
+        </ul>
+        <button
+          class="w-full p-4 rounded-md bg-[#b0282f] text-[#b7adb0] hover:text-[#b0282f] border border-[#b0282f] hover:border-[#b0282f] hover:bg-transparent transition-all duration-200"
+        >
+          Try it
+        </button>
+      </div>
+    </div>
+    <div
+      style="border-radius: 50%"
+      class="w-11/12 max-w-xl h-10 bg-[#22161a]/40 -bottom-6 -z-10 md:my_shadow"
+    ></div>
+  </body>
+</html>
