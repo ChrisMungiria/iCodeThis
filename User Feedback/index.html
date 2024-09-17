@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+      }
+
+      * {
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+    <title>User Feedback</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f2f5ff]">
+    <div class="w-11/12 max-w-xs bg-[#e1e9ff] rounded-md">
+      <div
+        class="w-full h-full p-4 bg-[#f9fafe] m-5 shadow-xl rounded-md space-y-4"
+      >
+        <h1 class="text-2xl font-semibold">Give feedback</h1>
+        <p class="text-sm">
+          What do you think of the issue search experience within Jira projects?
+        </p>
+        <div class="grid grid-cols-5 gap-2">
+          <div
+            class="border p-2 flex flex-col items-center justify-center rounded text-xl hover:shadow-xl hover:shadow-red-200 transition-all duration-150 cursor-pointer"
+            id="terrible"
+          >
+            <i class="fa-regular fa-face-sad-tear"></i>
+            <p class="text-[8px]">Terrible</p>
+          </div>
+          <div
+            class="border p-2 flex flex-col items-center justify-center rounded text-xl hover:shadow-xl hover:shadow-red-200 transition-all duration-150 cursor-pointer"
+            id="bad"
+          >
+            <i class="fa-regular fa-face-frown"></i>
+            <p class="text-[8px]">Bad</p>
+          </div>
+          <div
+            class="border p-2 flex flex-col items-center justify-center rounded text-xl hover:shadow-xl hover:shadow-red-200 transition-all duration-150 cursor-pointer"
+            id="okay"
+          >
+            <i class="fa-regular fa-face-meh"></i>
+            <p class="text-[8px]">Okay</p>
+          </div>
+          <div
+            class="border p-2 flex flex-col items-center justify-center rounded text-xl hover:shadow-xl hover:shadow-red-200 transition-all duration-150 cursor-pointer"
+            id="good"
+          >
+            <i class="fa-regular fa-face-smile"></i>
+            <p class="text-[8px]">Good</p>
+          </div>
+          <div
+            class="border p-2 flex flex-col items-center justify-center rounded text-xl hover:shadow-xl hover:shadow-red-200 transition-all duration-150 cursor-pointer"
+            id="amazing"
+          >
+            <i class="fa-regular fa-face-smile-beam"></i>
+            <p class="text-[8px]">Amazing</p>
+          </div>
+        </div>
+        <div class="flex flex-col space-y-3">
+          <label for="reason" class="text-xs font-semibold">
+            What is the main reason for your rating?
+          </label>
+          <textarea
+            name="reason"
+            id="reason"
+            class="rounded-md border focus:outline-none p-2 text-xs"
+          ></textarea>
+        </div>
+        <div class="flex items-center gap-1">
+          <input
+            type="checkbox"
+            name="privacy"
+            id="privacy"
+            class="accent-[#ff71a4]"
+          />
+          <label for="privacy" class="text-[10px]"
+            >I may be contacted about this feedback.
+            <span class="text-[#ff71a4] capitalize">privacy policy</span></label
+          >
+        </div>
+        <div class="flex items-center gap-1">
+          <input
+            type="checkbox"
+            name="research_group"
+            id="research_group"
+            class="accent-[#ff71a4]"
+          />
+          <label for="research_group" class="text-[10px]"
+            >I'd like to help by joining the
+            <span class="text-[#ff71a4] capitalize">research group</span></label
+          >
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            class="flex-1 p-3 bg-[#ff71a4] rounded-md text-xs text-slate-600 hover:shadow-lg transition-all duration-200"
+          >
+            Submit
+          </button>
+          <button
+            class="flex-1 p-3 bg-[#feffff] rounded-md text-xs text-slate-600 hover:shadow-lg transition-all duration-200"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const options = ["terrible", "bad", "okay", "good", "amazing"];
+
+      options.forEach((option) => {
+        const el = document.getElementById(option);
+        el.addEventListener("click", function () {
+          options.forEach((opt) => {
+            document.getElementById(opt).classList.remove("border-red-500");
+          });
+          el.classList.add("border-red-500");
+        });
+      });
+    </script>
+  </body>
+</html>
