@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Contraction Timer</title>
+    <style>
+      #time_table tr:nth-child(even) {
+        background-color: #eceefd;
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f2f5ff]">
+    <div class="w-11/12 max-w-xs bg-[#171a3b] rounded-md">
+      <div class="w-full p-2 bg-white m-5 rounded-md shadow-xl space-y-3">
+        <div
+          class="w-full flex items-center justify-between relative text-lg p-2"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+          <p class="absolute left-1/2 -translate-x-1/2">Contraction timer</p>
+          <i class="fa-regular fa-bell"></i>
+        </div>
+        <h1 id="timer" class="text-4xl text-center">00:00:01</h1>
+        <h4 class="text-center">Time since last contractions</h4>
+        <h3 class="text-sm font-semibold text-center">7 min 32 sec</h3>
+        <button
+          id="timer_button"
+          class="text-slate-100 px-6 p-3 rounded-full bg-slate-900 flex mx-auto"
+        >
+          Stop timing
+        </button>
+
+        <table class="text-sm w-full" id="time_table">
+          <tr class="text-slate-400 text-sm font-normal">
+            <th>Length</th>
+            <th>Time apart</th>
+            <th>Start & end time</th>
+          </tr>
+          <tr class="p-2 text-sm rounded-md">
+            <td>6s</td>
+            <td>3 min 31 sec</td>
+            <td>4:49pm - 4:49pm</td>
+          </tr>
+          <tr class="p-2 text-sm rounded-md">
+            <td>6s</td>
+            <td>3 min 31 sec</td>
+            <td>4:49pm - 4:49pm</td>
+          </tr>
+          <tr class="p-2 text-sm rounded-md">
+            <td>6s</td>
+            <td>3 min 31 sec</td>
+            <td>4:49pm - 4:49pm</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <script>
+      const timer_button = document.getElementById("timer_button");
+      const timer = document.getElementById("timer");
+      const last_contraction = document.getElementById("last_contraction");
+      const time_table = document
+        .getElementById("time_table")
+        .querySelector("tbody");
+
+      let isTiming = false;
+      let startTime;
+      let lastContractionTime = null;
+      let intervalId;
+
+      timer_button.addEventListener("click", function () {
+        if (isTiming) {
+          stopTiming();
+        } else {
+          startTiming();
+        }
+      });
+
+      function startTiming() {
+        isTiming = true;
+        startTime = Date.now();
+        timer_button.textContent = "Stop timing";
+        intervalId = setInterval(updateTimer, 1000);
+      }
+
+      function stopTiming() {
+        isTiming = false;
+        const endTime = Date.now();
+        const duration = Math.floor((endTime - startTime) / 1000);
+        const start = new Date(startTime).toLocaleTimeString();
+        const end = new Date(endTime).toLocaleTimeString();
+        const timeApart = lastContractionTime
+          ? formatDuration((startTime - lastContractionTime) / 1000)
+          : "N/A";
+
+        lastContractionTime = startTime;
+
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td>${duration}s</td>
+          <td>${timeApart}</td>
+          <td>${start} - ${end}</td>
+        `;
+        time_table.appendChild(row);
+
+        last_contraction.textContent = timeApart;
+
+        clearInterval(intervalId);
+        timer.textContent = "00:00:00";
+        timer_button.textContent = "Start timing";
+      }
+
+      function updateTimer() {
+        const elapsed = Math.floor((Date.now() - startTime) / 1000);
+        timer.textContent = formatDuration(elapsed);
+      }
+
+      function formatDuration(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${minutes} min ${secs < 10 ? "0" : ""}${secs} sec`;
+      }
+    </script>
+  </body>
+</html>
