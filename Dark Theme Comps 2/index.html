@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Dark Theme Comps</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col gap-4 items-center justify-center bg-[#252c37]"
+  >
+    <div
+      class="w-11/12 max-w-xl p-4 bg-[#1e2530] rounded-md shadow-xl flex items-center justify-end"
+    >
+      <ul class="flex items-center gap-4 text-slate-200">
+        <li>Home</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Contact</li>
+        <li>
+          <button
+            class="px-4 p-2 rounded-md bg-gradient-to-r from-[#4c86f8] to-[#905ff4] text-white"
+          >
+            Sign up
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="w-11/12 max-w-xl gap-4 flex flex-col md:flex-row">
+      <div class="h-full flex-[3] bg-[#1e2530] p-3 rounded-md">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="h-full flex-[2]">
+        <div class="flex gap-2">
+          <div class="flex-1 space-y-2">
+            <button
+              class="text-xs bg-gradient-to-r from-[#4e87fb] to-[#8d60f6] p-2 w-full rounded-md text-white"
+            >
+              Options >
+            </button>
+            <button
+              class="w-full p-2 rounded-md border border-slate-900 text-slate-900 text-xs"
+            >
+              Edit
+            </button>
+          </div>
+          <div class="flex-1 bg-[#1e2530] rounded-md text-slate-100">
+            <ul class="text-xs">
+              <li class="hover:bg-[#181f2a] p-2">Sound</li>
+              <li class="hover:bg-[#181f2a] p-2">Effects</li>
+              <li class="hover:bg-[#181f2a] p-2">Animations</li>
+              <li class="hover:bg-[#181f2a] p-2">Preferences</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [0, 1, 2, 3, 4, 5, 6, 7],
+          datasets: [
+            {
+              label: "Some data",
+              data: [0, 10, 5, 33.4, 30, 22, 20, 25],
+              borderWidth: 2,
+              borderColor: "#8f5ff6",
+              tension: 0.3,
+              pointRadius: 0,
+            },
+          ],
+        },
+        options: {
+          legend: { display: false },
+        },
+      });
+    </script>
+  </body>
+</html>
