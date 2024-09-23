@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .circle-text {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        padding: 40px;
+      }
+
+      .circle-text img {
+        @apply rounded-full w-full h-full object-cover;
+      }
+
+      .circle-text svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .circle-text text {
+        font-size: 16px;
+        font-weight: bold;
+        fill: #1c64f2;
+      }
+    </style>
+    <title>Circle Team</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div
+      class="relative w-96 h-96 rounded-full flex items-center justify-center"
+    >
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-blue-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-blue-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(32deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-pink-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-pink-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://www.themarketingnutz.com/wp-content/uploads/2018/01/opulent-profile-square-07.jpg"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-32deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(64deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-teal-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-teal-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://cms-assets.tutsplus.com/uploads/users/810/profiles/19338/profileImage/profile-square-extra-small.png"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-64deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(96deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-slate-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-slate-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://i0.wp.com/www.mobileworldlive.com/wp-content/uploads/2015/10/Dorsey-iamge.png?fit=550%2C532&ssl=1"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-96deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(128deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-purple-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-purple-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://www.classicaloasis.com/wp-content/uploads/2014/03/profile-square.jpg"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-128deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(160deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-orange-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-orange-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://img.freepik.com/free-photo/portrait-modern-man_23-2147961425.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725062400&semt=ais_hybrid"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-160deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(192deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-orange-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-orange-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&s"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-192deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(224deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-yellow-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-yellow-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbUOggTIUocZJcFyki1aDdl2aUDbRzR6hnnA&s"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-224deg]"
+        />
+      </div>
+      <div
+        style="
+          top: calc(50% - 28px);
+          left: calc(50% - 28px);
+          transform: rotate(256deg) translateX(192px);
+        "
+        class="w-14 h-14 rounded-full absolute bg-yellow-300 group flex items-center justify-center cursor-pointer"
+      >
+        <div
+          class="w-10 h-10 bg-yellow-500 rounded-full absolute z-10 group-hover:animate-ping"
+        ></div>
+        <img
+          src="https://img.freepik.com/free-photo/handsome-man-indoors_144627-26422.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1721347200&semt=ais_user"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full absolute z-20 hover:scale-75 transition-all duration-200 ease-in-out rotate-[-256deg]"
+        />
+      </div>
+      <div class="circle-text">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQugb_Bwq4G4QY6V11WR8dMyDTJnX6JbleZ1A&s"
+          alt="Profile Image"
+          class="w-full h-full rounded-full"
+        />
+        <svg viewBox="0 0 200 200">
+          <defs>
+            <path
+              id="circlePath"
+              d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+            />
+          </defs>
+          <text>
+            <textPath xlink:href="#circlePath">
+              Ryan Williams - Back End Developer
+            </textPath>
+          </text>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>
