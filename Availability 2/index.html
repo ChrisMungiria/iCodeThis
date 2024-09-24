@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Availability 2</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-slate-100 flex items-center justify-center relative"
+  >
+    <div class="w-72 h-72 bg-slate-300 rounded-full absolute z-20"></div>
+    <div
+      class="w-11/12 max-w-xs p-4 rounded-md border border-slate-700 bg-white z-30"
+    >
+      <h1 class="capitalize font-semibold text-xl">Edit availability</h1>
+      <p>
+        Add a "Hire me" button to let people know that you're available for new
+        opportunities
+      </p>
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          name="full_time"
+          id="full_time"
+          class="accent-slate-800 bg-slate-100 w-5 h-5 outline-none border-0"
+        />
+        <label for="full_time">Full time</label>
+      </div>
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          name="freelance"
+          id="freelance"
+          class="accent-slate-800 bg-slate-100 w-5 h-5 outline-none border-0"
+        />
+        <label for="freelance">Freelance & projects</label>
+      </div>
+      <div class="w-full flex items-center gap-3 mt-2">
+        <button
+          class="flex-1 bg-[#1c1e56] p-2 rounded-md shadow-lg text-[#f5f8ff]"
+        >
+          Done
+        </button>
+        <button class="flex-1 bg-[#f5f8ff] p-2 rounded-md">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
