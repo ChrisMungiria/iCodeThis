@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Billing</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#e7e8fc]">
+    <div class="w-11/12 max-w-3xl bg-white shadow-xl rounded-lg flex">
+      <div
+        class="flex-1 hidden md:flex flex-col justify-between bg-[#f8f9ff] rounded-l-lg p-4"
+      >
+        <div>
+          <div class="flex items-center gap-2">
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-12 h-12 rounded-lg shadow-md"
+            />
+            <div>
+              <h3 class="font-semibold text-lg">Ildiko Gaspar</h3>
+              <h5 class="text-slate-400 textxs">@igaspar</h5>
+            </div>
+          </div>
+          <ul class="mt-5 space-y-2 text-xs">
+            <li
+              class="flex items-center gap-4 text-slate-500 text-lg before:content-[''] before:p-1 before:h-10 before:rounded-full before:bg-[#ed4e39] cursor-pointer before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 before:ease-in-out"
+            >
+              <i class="fa-solid fa-cube"></i>General
+            </li>
+            <li
+              class="flex items-center gap-4 text-slate-500 text-lg before:content-[''] before:p-1 before:h-10 before:rounded-full before:bg-[#ed4e39] cursor-pointer before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 before:ease-in-out"
+            >
+              <i class="fa-solid fa-lock"></i>Password
+            </li>
+            <li
+              class="flex items-center gap-4 text-slate-500 text-lg before:content-[''] before:p-1 before:h-10 before:rounded-full before:bg-[#ed4e39] cursor-pointer before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 before:ease-in-out"
+            >
+              <i class="fa-solid fa-envelope"></i>Invitations
+            </li>
+            <li
+              class="flex items-center gap-4 text-slate-500 text-lg before:content-[''] before:p-1 before:h-10 before:rounded-full before:bg-[#ed4e39] cursor-pointer before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 before:ease-in-out"
+            >
+              <i class="fa-solid fa-money-bills"></i>Billing
+            </li>
+            <li
+              class="flex items-center gap-4 text-slate-500 text-lg before:content-[''] before:p-1 before:h-10 before:rounded-full before:bg-[#ed4e39] cursor-pointer before:opacity-0 hover:before:opacity-100 before:transition-all before:duration-200 before:ease-in-out"
+            >
+              <i class="fa-brands fa-mendeley"></i>Apps
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="flex items-center gap-4 text-slate-500 text-lg cursor-pointer"
+        >
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out
+        </button>
+      </div>
+      <div
+        class="flex-[3] flex flex-col md:flex-row p-4 rounded-r-lg space-y-4"
+      >
+        <div class="flex-[3]">
+          <h1 class="text-3xl font-bold">Billing</h1>
+          <div>
+            <h3 class="text-lg font-semibold">Order history</h3>
+            <p class="text-xs text-slate-600">
+              Manage billing information and view receipts
+            </p>
+          </div>
+          <table class="w-full">
+            <tr>
+              <th>
+                <h2 class="text-start text-slate-500 font-light">Date</h2>
+              </th>
+              <th>
+                <h2 class="text-start text-slate-500 font-light">Type</h2>
+              </th>
+              <th>
+                <h2 class="text-start text-slate-500 font-light">Receipt</h2>
+              </th>
+            </tr>
+            <tr class="text-sm">
+              <td>Oct. 21 2021</td>
+              <td>Pro Annual</td>
+              <td><button class="p-2 border rounded-md">Download</button></td>
+            </tr>
+            <tr class="text-sm">
+              <td>Aug. 21 2021</td>
+              <td>Pro Portfolio</td>
+              <td><button class="p-2 border rounded-md">Download</button></td>
+            </tr>
+            <tr class="text-sm">
+              <td>July. 21 2021</td>
+              <td>Sponsored Post</td>
+              <td><button class="p-2 border rounded-md">Download</button></td>
+            </tr>
+            <tr class="text-sm">
+              <td>Aug. 21 2021</td>
+              <td>Sponsored Post</td>
+              <td><button class="p-2 border rounded-md">Download</button></td>
+            </tr>
+          </table>
+          <a href="#" class="text-[#ed4e39] underline">Load more</a>
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-lg font-semibold">Payment method</h3>
+              <p class="text-xs text-slate-600">
+                Manage billing information and view receipts
+              </p>
+            </div>
+            <div class="flex items-center justify-between pr-14">
+              <div class="flex items-center gap-2">
+                <div class="border px-2 p-1 rounded-md">
+                  <i class="fa-brands fa-cc-visa text-2xl"></i>
+                </div>
+                <p class="text-sm">Visa ending in 2255</p>
+              </div>
+              <button class="px-4 p-2 rounded-md border">Remove</button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="p-4 rounded-md bg-[#ed4e39] flex-1 h-fit w-fit mx-auto text-slate-100 space-y-2"
+        >
+          <h3>Your plan</h3>
+          <h1 class="text-2xl">Pro annual</h1>
+          <h3 class="text-xs">Renews on Nov. 2021</h3>
+          <button class="p-2 text-xs border text-nowrap rounded-md">
+            Cancel subscription
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
