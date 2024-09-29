@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Store</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-start md:items-center justify-center bg-slate-100"
+  >
+    <div class="w-11/12 max-w-4xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="capitalize text-slate-400">Le musique</h2>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            class="focus:outline-none rounded-md p-2"
+          />
+        </div>
+      </div>
+      <div
+        class="flex gap-2 flex-col md:flex-row bg-gradient-to-r from-red-300 to-purple-300"
+      >
+        <div class="flex-1 p-4 text-white space-y-4">
+          <h1 class="text-3xl">Explore</h1>
+          <p class="text-xs">
+            Torquent vel tellus sed cras turpis nibh, libero eget euismod,
+            mattis suscipit lobortis magna
+          </p>
+          <button class="px-4 py-2 text-blue-500 bg-white text-xs">
+            Read more
+          </button>
+        </div>
+        <div
+          class="flex-[3] grid grid-cols-2 md:grid-cols-4 gap-2 place-items-start p-4"
+        >
+          <div class="bg-white p-1 space-y-2">
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-full h-28 object-cover"
+            />
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$15</p>
+            </div>
+            <p class="capitalize text-sm text-slate-600">
+              This is acting (Deluxe version)
+            </p>
+          </div>
+          <div class="bg-white p-1 space-y-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSadKJtQysYZ2m4sL-jI8SX0wep081UGCnTuLuO0GvZlCReG-yUvEk3GCax20UxxHuiov8&usqp=CAU"
+              alt="profile image"
+              class="w-full h-28 object-cover"
+            />
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$15</p>
+            </div>
+            <p class="capitalize text-sm text-slate-600">Desire</p>
+          </div>
+          <div class="bg-white p-1 space-y-2">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-modern-man_23-2147961425.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725062400&semt=ais_hybrid"
+              alt="profile image"
+              class="w-full h-28 object-cover"
+            />
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$15</p>
+            </div>
+            <p class="capitalize text-sm text-slate-600">Human (Deluxe)</p>
+          </div>
+          <div class="bg-white p-1 space-y-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbUOggTIUocZJcFyki1aDdl2aUDbRzR6hnnA&s"
+              alt="profile image"
+              class="w-full h-28 object-cover"
+            />
+            <div class="flex items-center justify-between text-xs">
+              <div class="flex items-center gap-1 text-xs">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$15</p>
+            </div>
+            <p class="capitalize text-sm text-slate-600">Whatever you want</p>
+          </div>
+        </div>
+      </div>
+      <h2 class="capitalize text-slate-400">Top 3</h2>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="flex">
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="h-40 w-auto object-cover"
+          />
+          <div class="space-y-2 p-1">
+            <div class="flex items-center justify-between">
+              <div class="text-xs flex items-center gap-px text-blue-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="text-xs">$18</p>
+            </div>
+            <h2 class="text-sm font-semibold">Love Stuff</h2>
+            <p class="text-xs">
+              Love Stuff is the debut studio album by American singer and
+              songwriter Elle King.
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <img
+            src="https://i0.wp.com/www.mobileworldlive.com/wp-content/uploads/2015/10/Dorsey-iamge.png?fit=550%2C532&ssl=1"
+            alt="profile image"
+            class="h-40 w-auto object-cover"
+          />
+          <div class="space-y-2 p-1">
+            <div class="flex items-center justify-between">
+              <div class="text-xs flex items-center gap-px text-blue-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="text-xs">$18</p>
+            </div>
+            <h2 class="text-sm font-semibold">Demon Days</h2>
+            <p class="text-xs">
+              Demon Days is the second studio album by the British virtual band
+              Gorillaz. It was released on 11 May 2005
+            </p>
+          </div>
+        </div>
+        <div class="flex">
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="h-40 w-auto object-cover"
+          />
+          <div class="space-y-2 p-1">
+            <div class="flex items-center justify-between">
+              <div class="text-xs flex items-center gap-px text-blue-500">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="text-xs">$18</p>
+            </div>
+            <h2 class="text-sm font-semibold">Love Stuff</h2>
+            <p class="text-xs">
+              Love Stuff is the debut studio album by American singer and
+              songwriter Elle King.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 class="text-slate-400 capitalize">Recommended for you</h2>
+      <div class="grid grid-cols-2 md:grid-cols-6 gap-5">
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+        <div class="w-40">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-auto object-cover"
+          />
+          <div class="flex justify-between text-xs">
+            <div class="flex items-center gap-1 text-blue-500 text-xs">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p>$13</p>
+          </div>
+          <h3>Witness</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
