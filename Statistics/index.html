@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Statistics</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-3xl p-4 bg-white rounded-md shadow-md">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div
+          id="impressions"
+          class="px-8 p-4 rounded-md flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-center text-xs">
+            Impressions <span class="block text-xl font-semibold">383</span>
+          </p>
+        </div>
+        <div
+          id="clr"
+          class="px-8 p-4 bg-purple-500 rounded-md shadow-lg flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-center text-white text-xs text-nowrap">
+            Click-through rate
+            <span class="block text-xl font-semibold">9.1%</span>
+          </p>
+        </div>
+        <div
+          id="views"
+          class="px-8 p-4 rounded-md flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-center text-xs">
+            Views <span class="block text-xl font-semibold">97</span>
+          </p>
+        </div>
+        <div
+          id="unique_viewers"
+          class="px-8 p-4 rounded-md flex items-center justify-center cursor-pointer"
+        >
+          <p class="text-center text-xs text-nowrap">
+            Unique viewers <span class="block text-xl font-semibold">54</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const options = ["impressions", "clr", "views", "unique_viewers"];
+
+      const data = [
+        {
+          id: "impressions",
+          labels: ["0", "1", "2", "3", "4", "5"],
+          data: {
+            label: "Impressions",
+            data: [4, 10, 21, 30, 2, 13],
+            borderWidth: 1,
+          },
+        },
+        {
+          id: "clr",
+          labels: ["0", "1", "2", "3", "4", "5"],
+          data: {
+            label: "Click through rate",
+            data: [40, 20, 1, 15, 23, 31],
+            borderWidth: 1,
+          },
+        },
+        {
+          id: "views",
+          labels: ["0", "1", "2", "3", "4", "5"],
+          data: {
+            label: "Views",
+            data: [4, 5, 15, 5, 16, 20],
+            borderWidth: 1,
+          },
+        },
+        {
+          id: "unique_viewers",
+          labels: ["0", "1", "2", "3", "4", "5"],
+          data: {
+            label: "Unique Viewers",
+            data: [12, 19, 3, 5, 2, 3],
+            borderWidth: 1,
+          },
+        },
+      ];
+
+      var selectedOption = "clr";
+      let chartInstance = null;
+
+      options.forEach((option, index) => {
+        const el = document.getElementById(option);
+        el.addEventListener("click", () => {
+          // Remove the active classes from all elements
+          options.forEach((opt) => {
+            const element = document.getElementById(opt);
+            element.classList.remove("bg-purple-500", "shadow-lg");
+            const p = element.querySelector("p");
+            p.classList.remove("text-white");
+          });
+
+          // Add the active classes to the selected element
+          el.classList.add("bg-purple-500", "shadow-lg");
+          const p = el.querySelector("p");
+          p.classList.add("text-white");
+
+          // Update selectedOption
+          selectedOption = el.id;
+          updateChart();
+        });
+      });
+
+      function updateChart() {
+        console.log("Updating chart with data for: ", selectedOption);
+        const selectedData = data.find((d) => d.id === selectedOption);
+        const ctx = document.getElementById("myChart").getContext("2d");
+
+        if (chartInstance) {
+          chartInstance.destroy();
+        }
+
+        chartInstance = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: selectedData.labels,
+            datasets: [
+              {
+                label: selectedData.data.label,
+                data: selectedData.data.data,
+                borderWidth: selectedData.data.borderWidth,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+      }
+
+      // Initial chart load
+      updateChart();
+    </script>
+  </body>
+</html>
