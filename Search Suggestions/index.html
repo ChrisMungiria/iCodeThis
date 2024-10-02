@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Search Suggestions</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f6f8fe]">
+    <div
+      class="w-11/12 max-w-xs h-40 bg-[#f1f4ff] rounded-md flex items-center justify-center relative"
+    >
+      <div class="flex bg-white rounded-md">
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search"
+          class="bg-transparent focus:outline-none p-2"
+        />
+        <button class="bg-[#293e50] h-full p-2 rounded-r-md">
+          <i class="fa-solid fa-magnifying-glass text-slate-100"></i>
+        </button>
+      </div>
+      <div
+        id="suggestions"
+        class="absolute w-56 max-h-96 bg-white top-full mt-2 shadow-lg rounded-md overflow-auto"
+      ></div>
+    </div>
+    <script>
+      const data = [
+        {
+          id: 1,
+          name: "Apple",
+          description: "Fruit and tree",
+          image:
+            "https://www.applesfromny.com/wp-content/uploads/2020/05/20Ounce_NYAS-Apples2.png",
+        },
+        {
+          id: 2,
+          name: "Apple Inc",
+          description: "American multinational",
+          image:
+            "https://image.cnbcfm.com/api/v1/image/106941688-1631644205737-AppleEventSEP14KeynoteTim_Cook02.jpg?v=1674567719&w=1920&h=1080",
+        },
+        {
+          id: 3,
+          name: "Apple TV",
+          description: "Home media receiver",
+          image:
+            "https://www.pricepoint.co.ke/wp-content/uploads/2024/02/List-of-Apple-TVs.jpg",
+        },
+        {
+          id: 4,
+          name: "Apple Silicon",
+          description: "Processors designed by Apple",
+          image: "https://cdn.mos.cms.futurecdn.net/J4FJEda5fwdsp8qCborQxm.jpg",
+        },
+      ];
+
+      const search_box = document.getElementById("search");
+
+      const suggestionsBox = document.getElementById("suggestions");
+
+      search_box.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+        if (query) {
+          const filteredData = data.filter((item) =>
+            item.name.toLowerCase().includes(query)
+          );
+
+          filteredData.forEach((item) => {
+            const suggestionItem = document.createElement("div");
+            suggestionItem.className =
+              "flex items-center p-2 hover:bg-gray-100 cursor-pointer";
+            suggestionItem.innerHTML = `
+              <img src="${item.image}" alt="${item.name}" class="w-10 h-10 object-cover rounded-full mr-2">
+              <div>
+                <p class="font-bold">${item.name}</p>
+                <p class="text-sm text-gray-600">${item.description}</p>
+              </div>
+            `;
+            suggestionsBox.appendChild(suggestionItem);
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
