@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Statistics 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex md:items-center items-start justify-center bg-[#fdfdfd]"
+  >
+    <div
+      class="w-11/12 max-w-3xl p-5 gap-5 bg-[#f7f7f7] flex flex-col-reverse md:flex-row"
+    >
+      <div class="flex-[2] bg-white h-full shadow-lg p-4 space-y-4">
+        <h1 class="capitalize font-semibold text-lg">Projects by type</h1>
+        <div class="grid md:grid-cols-4 grid-cols-2 gap-5 place-items-center">
+          <div
+            class="flex flex-col items-center space-y-2 h-28 justify-between"
+          >
+            <div
+              style="background-image: conic-gradient(red 93deg, #e2e8f0 93deg)"
+              class="w-20 h-20 rounded-full bg-red-500 p-1 shadow-md flex-shrink-0"
+            >
+              <div
+                class="w-full h-full bg-white rounded-full flex items-center justify-center"
+              >
+                <p class="font-semibold">26%</p>
+              </div>
+            </div>
+            <h2 class="text-center text-slate-600 text-xs">
+              Software development
+            </h2>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-2 h-28 justify-between"
+          >
+            <div
+              style="
+                background-image: conic-gradient(red 230deg, #e2e8f0 230deg);
+              "
+              class="w-20 h-20 rounded-full bg-red-500 p-1 shadow-md"
+            >
+              <div
+                class="w-full h-full bg-white rounded-full flex items-center justify-center"
+              >
+                <p class="font-semibold">63%</p>
+              </div>
+            </div>
+            <h2 class="text-center text-slate-600 text-xs">Marketing</h2>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-2 h-28 justify-between"
+          >
+            <div
+              style="background-image: conic-gradient(red 28deg, #e2e8f0 28deg)"
+              class="w-20 h-20 rounded-full bg-red-500 p-1 shadow-md"
+            >
+              <div
+                class="w-full h-full bg-white rounded-full flex items-center justify-center"
+              >
+                <p class="font-semibold">8%</p>
+              </div>
+            </div>
+            <h2 class="text-center text-slate-600 text-xs">Sales</h2>
+          </div>
+          <div
+            class="flex flex-col items-center space-y-2 h-28 justify-between"
+          >
+            <div
+              style="background-image: conic-gradient(red 10deg, #e2e8f0 10deg)"
+              class="w-20 h-20 rounded-full bg-red-500 p-1 shadow-md"
+            >
+              <div
+                class="w-full h-full bg-white rounded-full flex items-center justify-center"
+              >
+                <p class="font-semibold">3%</p>
+              </div>
+            </div>
+            <h2 class="text-center text-slate-600 text-xs">Business</h2>
+          </div>
+        </div>
+        <div class="flex items-start justify-between flex-col md:flex-row">
+          <h1 class="text-lg font-semibold">Revenue</h1>
+          <div class="flex space-x-5">
+            <div>
+              <p class="text-sm text-slate-400">Current week</p>
+              <p class="font-semibold text-lg">$25,008.25</p>
+            </div>
+            <div>
+              <p class="text-sm text-slate-400">Previous week</p>
+              <p class="font-semibold text-lg text-slate-400">$25,008.25</p>
+            </div>
+          </div>
+        </div>
+        <div class="min-h-72">
+          <canvas id="chart" style="height: 100%"></canvas>
+        </div>
+      </div>
+      <div class="flex-1 bg-white h-full shadow-lg p-4 space-y-4">
+        <h1 class="capitalize font-semibold text-lg">Projects by managers</h1>
+        <p class="text-xs">
+          As a business owner or manager, the decision to opt for offshore
+          software development can.
+        </p>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Jessi Olohan</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[43%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">43%</p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Marci Vlasov</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[24%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">24%</p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Robbyn Rogeron</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[31%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">31%</p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Lucio O'Lyhane</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[12%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">12%</p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Elwin Couttes</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[6%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">6%</p>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="text-sm font-semibold">Caroline Caldwell</p>
+          <div class="w-full flex items-center gap-2">
+            <div class="flex-1 h-2 bg-[#f3f3f3] rounded-full">
+              <div class="w-[1%] h-full rounded-full bg-black"></div>
+            </div>
+            <p class="text-xs">1%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("chart");
+
+      const data = {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Current Week",
+            data: [25000, 35000, 15000, 32000, 2500, 20000, 32000],
+            borderColor: "#000000",
+            tension: 0.4,
+            pointRadius: 0,
+          },
+          {
+            label: "Previous Week",
+            data: [8000, 12000, 10000, 20000, 32000, 35000, 20000],
+            borderColor: "#acacac",
+            tension: 0.4,
+            pointRadius: 0,
+            borderDash: [2, 2],
+            borderDashOffset: 4,
+          },
+        ],
+      };
+
+      new Chart(ctx, {
+        type: "line",
+        data,
+        options: {
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              max: 40000,
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
