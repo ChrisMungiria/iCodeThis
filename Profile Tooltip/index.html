@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Tooltip</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-[#9481e5] to-[#322d75]"
+  >
+    <div class="w-11/12 max-w-xs">
+      <div
+        class="p-4 bg-white dark:bg-[#1c1a37] rounded-md shadow-lg flex relative"
+      >
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="profile image"
+          class="w-20 h-20 rounded-full object-cover"
+        />
+        <div class="space-y-2 p-2">
+          <h1 class="text-xl font-semibold dark:text-slate-100">
+            Nora Sanders
+          </h1>
+          <p class="dark:text-slate-100">
+            UX Designer <span class="text-[#6b51f8]">@Google</span>
+          </p>
+          <button class="p-2 rounded shadow-lg text-white bg-[#6b51f8] w-3/4">
+            Message
+          </button>
+        </div>
+        <div
+          class="absolute w-5 h-5 bg-white dark:bg-[#1c1a37] rotate-45 -bottom-2 left-1/2 -translate-x-1/2"
+        ></div>
+      </div>
+      <div class="w-20 h-20 bg-[#7467b8] rounded-full mx-auto mt-3 relative">
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="profile image"
+          class="w-5/6 h-5/6 mx-auto object-cover rounded-full absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 z-20"
+        />
+        <div
+          class="w-full h-full bg-[#7467b8] rounded-full absolute top-0 left-0 z-10 animate-ping"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
