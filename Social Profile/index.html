@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Social Profile</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f3f7ff]">
+    <div
+      class="w-11/12 max-w-sm p-4 bg-white rounded-md shadow-md space-y-2"
+      id="first"
+    >
+      <img
+        src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+        alt="Profile image"
+        class="w-20 h-20 object-cover rounded-full mx-auto"
+      />
+      <h2 class="font-semibold text-xl text-center">Sally Ramos</h2>
+      <h4 class="text-slate-400 text-center">@sallytheramos</h4>
+    </div>
+    <div
+      class="w-11/12 hidden max-w-sm p-4 bg-white rounded-md shadow-md space-y-2"
+      id="second"
+    >
+      <div class="flex items-center justify-between flex-1 relative">
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="Profile image"
+          class="w-20 h-20 object-cover rounded-full"
+        />
+        <div
+          class="absolute p-4 bg-white rounded-md -right-4 -top-28 text-xs space-y-2 hidden"
+          id="confirmation_popup"
+        >
+          <p>Are you sure you want to unfollow?</p>
+          <div class="flex items-center justify-between">
+            <button
+              id="cancel_button"
+              class="px-4 p-2 border rounded-full text-slate-100 bg-slate-800"
+            >
+              Cancel
+            </button>
+            <button
+              id="unfollow_button"
+              class="px-4 p-2 border rounded-full text-slate-500"
+            >
+              Unfollow
+            </button>
+          </div>
+        </div>
+        <button
+          id="follow_button"
+          class="px-4 p-2 border rounded-full text-slate-500"
+        >
+          Following
+        </button>
+      </div>
+      <h2 class="font-semibold text-xl">Sally Ramos</h2>
+      <h4 class="text-slate-400">@sallytheramos</h4>
+      <ul>
+        <li>Product designer at @company</li>
+        <li>Working on @theothercompany in my free time.</li>
+      </ul>
+      <p class="text-slate-500 text-sm">
+        <span class="font-semibold">15K </span> followers
+        <span class="font-semibold">7K</span> following. Since April 30, 2017
+      </p>
+    </div>
+    <script>
+      const first = document.getElementById("first");
+      const second = document.getElementById("second");
+      const follow_button = document.getElementById("follow_button");
+      const confirmation_popup = document.getElementById("confirmation_popup");
+      const cancel_button = document.getElementById("cancel_button");
+      const unfollow_button = document.getElementById("unfollow_button");
+
+      const following = ["border", "text-slate-500"];
+      const follow = ["bg-slate-800", "text-slate-100"];
+
+      first.addEventListener("click", function () {
+        second.classList.remove("hidden");
+        first.classList.add("hidden");
+      });
+
+      follow_button.addEventListener("click", function () {
+        if (follow_button.textContent === "Following") {
+          confirmation_popup.classList.remove("hidden");
+        } else {
+          follow_button.textContent = "Following";
+          follow_button.classList.remove(...follow);
+          follow_button.classList.add(...following);
+        }
+      });
+
+      cancel_button.addEventListener("click", function () {
+        confirmation_popup.classList.add("hidden");
+      });
+
+      unfollow_button.addEventListener("click", function () {
+        follow_button.textContent = "Follow";
+        follow_button.classList.remove(...following);
+        follow_button.classList.add(...follow);
+        confirmation_popup.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
