@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign In Form 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-[#9dc4fe] to-[#5d80d4]"
+  >
+    <div class="w-11/12 max-w-xl bg-white rounded-md shadow-lg pt-10 relative">
+      <div class="max-w-xs mx-auto space-y-4 pb-20">
+        <h1 class="text-center text-xl">Sign in to your account</h1>
+        <div class="mx-auto flex flex-col space-y-2 w-full">
+          <label for="email" class="font-semibold text-sm">
+            Username or email
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="mail@mail.com"
+            class="border rounded-md p-2"
+          />
+        </div>
+        <div class="mx-auto flex flex-col space-y-2 w-full">
+          <label for="password" class="font-semibold text-sm"> Password </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter your password"
+            class="border rounded-md p-2"
+          />
+        </div>
+        <div class="flex items-center justify-between max-w-xs mx-auto text-xs">
+          <div class="flex items-center gap-2">
+            <input type="checkbox" name="remember-me" id="remember-me" />
+            <label for="remember-me">Remember Me</label>
+          </div>
+
+          <a href="" class="text-sm text-blue-500">Forgot password?</a>
+        </div>
+        <button
+          class="max-w-xs p-4 rounded-md bg-slate-400 w-full text-slate-100"
+        >
+          Sign in
+        </button>
+        <p class="text-center text-slate-400 text-xs">
+          Don't have an account? <span class="text-blue-500">Sign up</span>
+        </p>
+      </div>
+      <div
+        class="absolute bottom-0 w-full p-4 flex items-center justify-around text-xs"
+      >
+        <p>Terms of Service</p>
+        <p>Privacy policy</p>
+        <p>Classic</p>
+        <p>© 2019 myBrand</p>
+      </div>
+    </div>
+  </body>
+</html>
