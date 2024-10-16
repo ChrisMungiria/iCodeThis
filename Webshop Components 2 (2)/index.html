@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Webshop Components 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col space-y-2 items-center justify-center bg-[#eff2fc]"
+  >
+    <div class="w-11/12 max-w-3xl p-4 rounded-full bg-white text-slate-800">
+      <ul
+        class="flex justify-between flex-col lg:flex-row items-start lg:items-center"
+      >
+        <li
+          class="flex-shrink-0 hover:text-slate-500 transition-all duration-200 ease-in-out cursor-pointer"
+        >
+          <i class="fa-solid fa-check"></i>
+          <span>30 days open per purchase</span>
+        </li>
+        <li
+          class="flex-shrink-0 hover:text-slate-500 transition-all duration-200 ease-in-out cursor-pointer"
+        >
+          <i class="fa-solid fa-check"></i>
+          <span>Safe home delivery</span>
+        </li>
+        <li
+          class="flex-shrink-0 hover:text-slate-500 transition-all duration-200 ease-in-out cursor-pointer"
+        >
+          <i class="fa-solid fa-check"></i>
+          <span>Free shipping over $70</span>
+        </li>
+      </ul>
+    </div>
+    <div class="flex w-11/12 max-w-4xl gap-5 flex-col">
+      <div class="flex-1 p-4 bg-white space-y-3 rounded-md shadow-md w-fit">
+        <div class="relative p-4 h-40 w-40">
+          <img
+            src="https://hodevi.com/wp-content/uploads/2020/03/metal-stool-1701100-scaled-562x843.jpg"
+            alt="chair image"
+            class="w-full h-full object-cover rounded-md absolute z-10 inset-0 mt-3 mx-1 blur-md"
+          />
+          <img
+            src="https://hodevi.com/wp-content/uploads/2020/03/metal-stool-1701100-scaled-562x843.jpg"
+            alt="chair image"
+            class="w-full h-full object-cover rounded-md absolute top-0 inset-0 z-20"
+          />
+        </div>
+        <h4 class="text-center uppercase tracking-wide text-xs font-semibold">
+          Dixie
+        </h4>
+        <h2 class="capitalize text-center">Cue chair, wood</h2>
+        <h1 class="text-xl text-center font-semibold">
+          $57 <span class="line-through text-base">$120</span>
+        </h1>
+        <div
+          class="w-fit p-1 rounded-full bg-slate-200 flex items-center gap-2 mx-auto px-4"
+        >
+          <div class="w-2 h-2 rounded-full bg-green-500"></div>
+          <h2 class="text-sm">In stock</h2>
+        </div>
+      </div>
+      <div class="flex-[3] space-y-4">
+        <div class="w-full p-4 rounded-md bg-white shadow-md">
+          <input type="range" min="0" max="100" class="bg-blue-500 w-full" />
+          <div class="flex items-center justify-between text-sm text-slate-400">
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$50</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$100</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$150</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$200</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$250</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$300</p>
+            </div>
+            <div class="flex flex-col space-y-2 items-center">
+              <div class="h-3 w-px bg-slate-500"></div>
+              <p>$350</p>
+            </div>
+          </div>
+        </div>
+        <ul class="flex items-center justify-end gap-4">
+          <li>365 products</li>
+          <li>Show by 48 <i class="fa-solid fa-angle-down"></i></li>
+          <li class="relative cursor-pointer" id="sort_by_button">
+            Sort by <i class="fa-solid fa-angle-down"></i>
+            <div
+              id="sort_by_list"
+              class="bg-white shadow-lg absolute top-10 p-2 right-0"
+            >
+              <div class="p-2 flex-shrink-0 text-nowrap border-b">
+                Popularity
+              </div>
+              <div class="p-2 flex-shrink-0 text-nowrap border-b">
+                Price rising
+              </div>
+              <div class="p-2 flex-shrink-0 text-nowrap border-b">
+                Price falling
+              </div>
+              <div class="p-2 flex-shrink-0 text-nowrap">Highest discount</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const sort_by_button = document.getElementById("sort_by_button");
+      const sort_by_list = document.getElementById("sort_by_list");
+      sort_by_button.addEventListener("click", function () {
+        if (sort_by_list.classList.contains("hidden")) {
+          sort_by_list.classList.remove("hidden");
+        } else {
+          sort_by_list.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
