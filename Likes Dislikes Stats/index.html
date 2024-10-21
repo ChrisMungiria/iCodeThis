@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DocLikes Dislikes Statsument</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f8f8e3]">
+    <div class="w-11/12 max-w-md p-4 bg-white rounded-md shadow-md space-y-4">
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/1189/1189178.png"
+        alt="smiley and not so smiley"
+        class="w-20 h-20 object-cover mx-auto"
+      />
+      <h2 class="text-center font-semibold text-lg">Likes vs Dislikes</h2>
+      <h3 class="text-center">Past 7 days</h3>
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <button
+        class="px-4 p-2 border rounded flex mx-auto hover:border-slate-800 transition-all duration-150"
+      >
+        View details
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      const data = {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Likes",
+            data: [200, 150, 250, 200, 275, 200, 100],
+            backgroundColor: "rgba(54, 162, 235, 0.6)",
+            borderColor: "rgba(54, 162, 235, 1)",
+            borderWidth: 1,
+          },
+          {
+            label: "Dislikes",
+            data: [150, 200, 200, 150, 225, 175, 150],
+            backgroundColor: "rgba(255, 99, 132, 0.6)",
+            borderColor: "rgba(255, 99, 132, 1)",
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      new Chart(ctx, {
+        type: "bar",
+        data,
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
