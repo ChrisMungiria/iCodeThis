@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pricing Table 2</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-2xl p-2 rounded-md space-y-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-xl font-semibold">Choose your plan</h1>
+        <div class="bg-slate-200 rounded-full flex p-1 gap-1">
+          <div
+            id="monthly"
+            class="p-2 rounded-full bg-transparent px-4 cursor-pointer"
+            data-starter-price="$10.99/month"
+            data-starter-billing="Billed monthly"
+            data-professional-price="$24.99/month"
+            data-professional-billing="Billed monthly"
+          >
+            <p>Monthly</p>
+          </div>
+          <div
+            id="yearly"
+            class="p-2 rounded-full bg-white shadow-md px-4 cursor-pointer"
+            data-starter-price="$8.99/month"
+            data-starter-billing="Billed yearly"
+            data-professional-price="$21.99/month"
+            data-professional-billing="Billed yearly"
+          >
+            <p>Yearly</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="w-full p-4 bg-white rounded shadow-md space-y-3">
+          <h2 class="text-2xl font-semibold">Starter</h2>
+          <div>
+            <h4 id="starter_price" class="text-lg font-semibold">
+              $8.99/month
+            </h4>
+            <p id="starter_billing">Billed yearly</p>
+          </div>
+          <p>
+            Pretium fusce id velit ut tortor pretium. Sit amet consectetur
+            adipiscing elit ut. Condimentum mattis pellentesque id nibh. Euismod
+            elementum.
+          </p>
+          <button class="w-full p-3 rounded bg-slate-900 text-white">
+            Get started
+          </button>
+        </div>
+        <div
+          class="w-full p-4 bg-white rounded shadow-md flex flex-col justify-between"
+        >
+          <div class="space-y-3">
+            <h2 class="text-2xl font-semibold">Professional</h2>
+            <div>
+              <h4 id="professional_price" class="text-lg font-semibold">
+                $21.99/month
+              </h4>
+              <p id="professional_billing">Billed yearly</p>
+            </div>
+            <p>
+              Duis at consectetur lorem donec massa sapien faucibus. Ac placerat
+              vestibulum lectus mauris.
+            </p>
+          </div>
+          <button
+            class="w-full p-3 rounded border border-slate-800 text-slate-800"
+          >
+            Get started
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = ["monthly", "yearly"];
+
+        buttons.forEach((button) => {
+          const el = document.getElementById(button);
+          if (el) {
+            el.addEventListener("click", function () {
+              // Remove active colors from all buttons
+              buttons.forEach((otherButton) => {
+                const otherEl = document.getElementById(otherButton);
+                if (otherEl) {
+                  otherEl.classList.remove("bg-white", "shadow-md");
+                  otherEl.classList.add("bg-transparent");
+                }
+              });
+
+              // Add active colors to the clicked button
+              el.classList.remove("bg-transparent");
+              el.classList.add("bg-white", "shadow-md");
+
+              // Update the prices and billing information
+              document.getElementById("starter_price").innerText =
+                el.dataset.starterPrice;
+              document.getElementById("starter_billing").innerText =
+                el.dataset.starterBilling;
+              document.getElementById("professional_price").innerText =
+                el.dataset.professionalPrice;
+              document.getElementById("professional_billing").innerText =
+                el.dataset.professionalBilling;
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
