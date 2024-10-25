@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Testimonial Slider</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-3xl bg-white shadow-md p-4 space-y-5 relative">
+      <!-- Testimonial Container -->
+      <div id="testimonial-container" class="space-y-5">
+        <!-- Testimonial 1 -->
+        <div
+          class="testimonial w-fit p-4 border rounded max-w-xs mx-auto relative"
+          data-testimonial="1"
+        >
+          <p class="text-slate-600">
+            Quem meis laudem ius no, sit similique necessitatibus in. Est liber
+            dicunt omittam an. Doming phaedrum per no, clita dolorum duo ne. Eos
+            option invenire ad, solet aliquam vix eu, et deserunt interesset
+            complectitur mel.
+          </p>
+          <div
+            class="absolute h-5 w-5 bg-white right-2 -bottom-[10px] rotate-45 z-0 border border-t-transparent border-l-transparent"
+          ></div>
+          <div class="max-w-xs mx-auto mt-5 flex justify-end gap-5">
+            <div class="flex flex-col items-start space-y-1">
+              <h1 class="font-semibold text-blue-500">Joanne Ellis</h1>
+              <hr class="w-full" />
+              <h2 class="text-slate-500">Designer</h2>
+            </div>
+            <img
+              src="https://lh6.googleusercontent.com/proxy/DelGxf0Rsr3xSZnqvIt3nw0Re7mhoWg-Oq4EKM77LVBs7EYx04-o3VAY-_set8AoV0hM6WRcOYwZ4cPGCMYKpHXIEt5gAqgILTq8qsERIp-pNuSo7YdsXFVgp0Gu"
+              alt="profile image"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div
+          class="testimonial w-fit p-4 border rounded max-w-xs mx-auto relative hidden"
+          data-testimonial="2"
+        >
+          <p class="text-slate-600">
+            Et dicant equidem eam, mel an audire veritus graecis, purto mutat
+            error ut vis. Utinam saperet id sed.
+          </p>
+          <div
+            class="absolute h-5 w-5 bg-white right-2 -bottom-[10px] rotate-45 z-0 border border-t-transparent border-l-transparent"
+          ></div>
+          <div class="max-w-xs mx-auto mt-5 flex justify-end gap-5">
+            <div class="flex flex-col items-start space-y-1">
+              <h1 class="font-semibold text-blue-500">John Doe</h1>
+              <hr class="w-full" />
+              <h2 class="text-slate-500">Developer</h2>
+            </div>
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&s"
+              alt="profile image"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div
+          class="testimonial w-fit p-4 border rounded max-w-xs mx-auto relative hidden"
+          data-testimonial="3"
+        >
+          <p class="text-slate-600">
+            No sea laudem periculis, ne audiam impedit scripserit mei. Magna
+            delectus ex his, no nobis vivendum sed.
+          </p>
+          <div
+            class="absolute h-5 w-5 bg-white right-2 -bottom-[10px] rotate-45 z-0 border border-t-transparent border-l-transparent"
+          ></div>
+          <div class="max-w-xs mx-auto mt-5 flex justify-end gap-5">
+            <div class="flex flex-col items-start space-y-1">
+              <h1 class="font-semibold text-blue-500">Alice Brown</h1>
+              <hr class="w-full" />
+              <h2 class="text-slate-500">Project Manager</h2>
+            </div>
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-20 h-20 rounded-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="max-w-xs mx-auto flex items-center justify-around mt-5">
+        <div
+          class="w-5 h-5 bg-slate-500 rounded-full dot cursor-pointer"
+          data-slide="1"
+        ></div>
+        <div
+          class="w-5 h-5 bg-slate-100 rounded-full dot cursor-pointer"
+          data-slide="2"
+        ></div>
+        <div
+          class="w-5 h-5 bg-slate-100 rounded-full dot cursor-pointer"
+          data-slide="3"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Carousel Script -->
+    <script>
+      const testimonials = document.querySelectorAll(".testimonial");
+      const dots = document.querySelectorAll(".dot");
+      let currentSlide = 1;
+
+      function showSlide(slideNumber) {
+        testimonials.forEach((testimonial) => {
+          testimonial.classList.add("hidden");
+        });
+        dots.forEach((dot) => {
+          dot.classList.replace("bg-slate-500", "bg-slate-100");
+        });
+        testimonials[slideNumber - 1].classList.remove("hidden");
+        dots[slideNumber - 1].classList.replace("bg-slate-100", "bg-slate-500");
+      }
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          currentSlide = parseInt(dot.getAttribute("data-slide"));
+          showSlide(currentSlide);
+        });
+      });
+
+      // Auto-slide every 5 seconds
+      setInterval(() => {
+        currentSlide =
+          currentSlide === testimonials.length ? 1 : currentSlide + 1;
+        showSlide(currentSlide);
+      }, 5000);
+
+      // Initialize first slide
+      showSlide(currentSlide);
+    </script>
+  </body>
+</html>
