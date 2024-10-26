@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tags</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-xl p-2 bg-white space-y-2">
+      <div class="space-y-2 flex flex-col">
+        <label for="tags">Tags</label>
+        <input
+          type="text"
+          name="tags"
+          id="tags"
+          placeholder="Add tags separated by a comma"
+          class="border p-2 rounded-md focus:outline-none"
+        />
+        <p class="text-xs">
+          For example
+          <span class="text-purple-500"
+            >fitness app, dashboard, navigation, webshop, landing page</span
+          >
+        </p>
+      </div>
+      <div class="space-y-2 flex flex-col">
+        <p>Tags</p>
+        <div class="p-2 border rounded-md flex gap-2">
+          <div
+            class="p-2 bg-slate-800 text-white rounded-md flex items-center gap-2"
+          >
+            <p>tag name</p>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div
+            class="p-2 bg-slate-800 text-white rounded-md flex items-center gap-2"
+          >
+            <p>tag name</p>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div
+            class="p-2 bg-slate-800 text-white rounded-md flex items-center gap-2"
+          >
+            <p>tag name</p>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div
+            class="p-2 bg-red-600 text-white rounded-md flex items-center gap-2"
+          >
+            <p>About to be deleted</p>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <p class="text-xs">
+          For example
+          <span class="text-purple-500"
+            >fitness app, dashboard, navigation, webshop, landing page</span
+          >
+        </p>
+      </div>
+      <div class="space-y-2">
+        <p>Tags</p>
+        <select name="select_tags" id="select_tags">
+          <option value="web">Web</option>
+          <option value="mobile">Mobile</option>
+          <option value="ui_kit">UI Kit</option>
+          <option value="coded">Coded</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
