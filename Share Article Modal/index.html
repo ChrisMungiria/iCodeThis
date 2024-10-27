@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Share Article Modal</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-slate-100">
+    <div class="w-11/12 max-w-md bg-white p-4 rounded-md shadow-md space-y-3">
+      <div class="flex items-center justify-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 class="text-center font-semibold text-xl">Share this article</h1>
+      <p class="w-3/4 mx-auto text-center">
+        If you liked this article share it with your friends, they will thank
+        you later
+      </p>
+      <div class="grid md:grid-cols-3 gap-5">
+        <button
+          class="bg-[#425897] p-2 rounded text-white text-xs text-nowrap space-x-1"
+        >
+          <i class="fa-brands fa-facebook-f"></i><span> Facebook </span>
+        </button>
+        <button
+          class="bg-[#1ba0f1] p-2 rounded text-white text-xs text-nowrap space-x-1"
+        >
+          <i class="fa-brands fa-twitter"></i><span>Twitter</span>
+        </button>
+        <button
+          class="bg-[#000] p-2 rounded text-white text-xs text-nowrap space-x-1"
+        >
+          <i class="fa-brands fa-reddit-alien"></i><span>Reddit</span>
+        </button>
+      </div>
+      <p class="text-center font-semibold">
+        4.5 K <span class="font-normal">shares</span>
+      </p>
+      <p class="text-center text-orange-500">Close this window</p>
+    </div>
+  </body>
+</html>
