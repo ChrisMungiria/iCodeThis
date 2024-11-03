@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>User Profile Form</title>
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen bg-[#cbcbcb] flex items-center justify-center">
+    <div class="w-11/12 max-w-3xl bg-white flex">
+      <div class="flex-1 shrink-0 hidden md:flex">
+        <img
+          src="https://effectivechurch.com/wp-content/uploads/2015/08/strength.jpg"
+          alt="background image"
+          class="w-full h-full object-cover"
+        />
+      </div>
+      <div class="flex-[2] p-4 bg-[#fafafa] space-y-3">
+        <h1 class="uppercase text-[#bc8364] text-2xl font-bold">
+          Tell us about yourself
+        </h1>
+        <div class="flex flex-col">
+          <label for="name" class="text-[#bc8364] uppercase font-semibold"
+            >My name</label
+          >
+          <div class="flex gap-3">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="space-y-2 flex flex-col">
+          <label for="gender" class="text-[#bc8364] uppercase font-semibold"
+            >Gender</label
+          >
+          <select
+            name="gender"
+            id="gender"
+            class="bg-white border border-[#5baec7] p-2 focus:outline-none w-fit"
+          >
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="birthday" class="text-[#bc8364] uppercase font-semibold"
+            >Birhthday</label
+          >
+          <div class="flex gap-2">
+            <input
+              type="number"
+              placeholder="Day"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+            <input
+              type="number"
+              placeholder="Month"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+            <input
+              type="number"
+              placeholder="Year"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <label for="country" class="text-[#bc8364] uppercase font-semibold"
+            >I live in</label
+          >
+          <div class="flex gap-3">
+            <input
+              type="text"
+              name="country"
+              id="country"
+              placeholder="Country"
+              class="bg-white border border-[#5baec7] p-2 focus:outline-none"
+            />
+          </div>
+        </div>
+        <div class="flex items-center justify-around space-x-3">
+          <button
+            class="bg-[#5baec7] px-4 py-2 text-white uppercase font-bold rounded-md"
+          >
+            Submit
+          </button>
+          <button class="text-[#5baec7] uppercase font-bold">Skip</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
