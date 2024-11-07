@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Social Ui Kit</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-start md:items-center justify-center bg-slate-800"
+  >
+    <div
+      class="absolute inset-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#3949ac] rounded-full -z-10"
+    ></div>
+    <div class="w-11/12 max-w-2xl space-y-3">
+      <div
+        class="w-full p-4 rounded-md bg-[#0f2747] flex items-center justify-between"
+      >
+        <div class="grid grid-cols-3 gap-2">
+          <div
+            class="text-slate-400 hover:text-slate-100 cursor-pointer flex items-center gap-2"
+          >
+            <i class="fa-solid fa-image"></i>
+            <p>Gallery</p>
+          </div>
+          <div
+            class="text-slate-400 hover:text-slate-100 cursor-pointer flex items-center gap-2"
+          >
+            <i class="fa-solid fa-image"></i>
+            <p>About</p>
+          </div>
+          <div
+            class="text-slate-400 hover:text-slate-100 cursor-pointer flex items-center gap-2"
+          >
+            <i class="fa-solid fa-image"></i>
+            <p>Gallery</p>
+          </div>
+        </div>
+        <div class="flex gap-2 items-center">
+          <div class="relative w-10 h-10 flex items-center justify-center">
+            <div
+              class="absolute w-5 h-5 rounded-full bg-yellow-500 top-0 right-0 flex items-center justify-center"
+            >
+              <p class="text-center text-xs font-semibold">4</p>
+            </div>
+            <i class="fa-regular fa-bell text-slate-400 text-xl"></i>
+          </div>
+          <div class="w-14 h-14 p-2 bg-slate-900 rounded-full">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC8kiSH5ZSAcVoj3tAQQDoP_ux0sSricMyUg&s"
+              alt="profile image"
+              class="w-full h-full object-cover rounded-full"
+            />
+          </div>
+        </div>
+      </div>
+      <!-- Notifications -->
+      <div class="w-full p-4 rounded-md bg-[#0f2747] text-white space-y-3">
+        <p class="capitalize">24 comments</p>
+        <div class="flex gap-4">
+          <img
+            src="https://www.classicaloasis.com/wp-content/uploads/2014/03/profile-square.jpg"
+            alt="profile image"
+            class="w-14 h-14 object-cover rounded-full"
+          />
+          <div class="space-y-2">
+            <p>
+              Francis P. Troia <span class="text-slate-500">2 hours ago</span>
+            </p>
+            <p>
+              This is the comment content, this is what Francis P. Troia had to
+              say
+            </p>
+            <a href="#" class="text-yellow-500">Reply</a>
+            <div class="flex items-center gap-2 font-semibold">
+              <p>View 3 replies</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <img
+            src="https://www.classicaloasis.com/wp-content/uploads/2014/03/profile-square.jpg"
+            alt="profile image"
+            class="w-14 h-14 object-cover rounded-full"
+          />
+          <div class="space-y-2">
+            <p>
+              Francis P. Troia <span class="text-slate-500">2 hours ago</span>
+            </p>
+            <p>
+              This is the comment content, this is what Francis P. Troia had to
+              say
+            </p>
+            <a href="#" class="text-yellow-500">Reply</a>
+            <div class="flex items-center gap-2 font-semibold">
+              <p>View 3 replies</p>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LinkedIn -->
+      <div
+        class="w-20 h-20 flex items-center justify-center bg-[#081d36] rounded-md text-white relative"
+      >
+        <div
+          class="absolute w-5 h-5 bg-yellow-500 rounded-full -top-1 -right-1 border-2 border-slate-900"
+        >
+          <p class="text-slate-900 text-center text-xs font-semibold">6</p>
+        </div>
+        <i class="fa-brands fa-linkedin-in text-2xl"></i>
+      </div>
+      <!-- Profile -->
+      <div
+        class="w-11/12 max-w-xs p-4 bg-[#0b213e] flex flex-col items-center text-white space-y-2"
+      >
+        <div class="w-16 h-16 rounded-full bg-[#071b32] p-2">
+          <img
+            src="https://www.classicaloasis.com/wp-content/uploads/2014/03/profile-square.jpg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h1 class="text-xl font-light text-center">Francis P. Troia</h1>
+        <p class="text-center text-slate-400">Photographer</p>
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <p class="text-center text-lg">753</p>
+            <p class="text-center text-slate-400 text-sm">posts</p>
+          </div>
+          <div>
+            <p class="text-center text-lg">1477</p>
+            <p class="text-center text-slate-400 text-sm">following</p>
+          </div>
+          <div>
+            <p class="text-center text-lg">874</p>
+            <p class="text-center text-slate-400 text-sm">posts</p>
+          </div>
+        </div>
+        <button
+          class="bg-yellow-500 text-slate-900 px-12 p-3 rounded-lg font-black text-xs"
+        >
+          Follow
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
