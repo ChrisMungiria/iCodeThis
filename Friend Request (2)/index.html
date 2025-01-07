@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Friend Request</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f7f5f5]">
+    <div
+      class="w-11/12 max-w-md bg-white rounded-md p-3 shadow-xl shadow-[#f7ccc6] overflow-hidden relative pt-5 pb-10"
+    >
+      <div
+        style="border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%"
+        class="absolute w-24 h-24 bg-gradient-to-tr from-[#fe7873] to-[#fe9951] rounded-full -top-5 -right-2 z-0"
+      ></div>
+      <div
+        style="border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%"
+        class="absolute w-20 h-10 bg-[#ff7777] rounded-full -bottom-5 -left-2 z-0"
+      ></div>
+      <div class="flex items-center justify-between">
+        <h1 class="text-lg font-semibold">Friend requests</h1>
+        <h2 class="relative z-20 text-white">View all</h2>
+      </div>
+      <ul class="mt-5 space-y-2">
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img
+              src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+              alt="profile image"
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <p class="text-lg font-semibold">Jerome Williams</p>
+              <p class="text-sm">7 mutual friends</p>
+            </div>
+          </div>
+          <button
+            class="px-3 p-2 rounded shadow hover:shadow-lg transition-all duration-150 ease-in-out"
+          >
+            Confirm
+          </button>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img
+              src="https://nanny.org/wp-content/uploads/2021/11/profile-square.jpeg"
+              alt="profile image"
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <p class="text-lg font-semibold">Sally Steele</p>
+              <p class="text-sm">3 mutual friends</p>
+            </div>
+          </div>
+          <button
+            class="px-3 p-2 rounded shadow hover:shadow-lg transition-all duration-150 ease-in-out"
+          >
+            Confirm
+          </button>
+        </li>
+        <li class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <img
+              src="https://l-ldesign.com.au/2016/wp-content/uploads/2020/01/profile-pic-katie-square.jpg"
+              alt="profile image"
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <p class="text-lg font-semibold">Rachel Ball</p>
+              <p class="text-sm">8 mutual friends</p>
+            </div>
+          </div>
+          <button
+            class="px-3 p-2 rounded shadow hover:shadow-lg transition-all duration-150 ease-in-out"
+          >
+            Confirm
+          </button>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
