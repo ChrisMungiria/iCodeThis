@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Expenses Graph</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-[#92c8f1] to-[#6f6ef5]"
+  >
+    <div class="w-11/12 max-w-xs bg-white/20 rounded-lg shadow-lg">
+      <div class="m-4 bg-white w-full p-3 rounded-md space-y-3">
+        <h1 class="text-xl font-semibold">Expenses</h1>
+        <div class="flex items-center justify-between">
+          <div class="p-1 rounded-full bg-[#eeefff] flex items-center gap-2">
+            <div
+              id="weekly"
+              class="p-2 rounded-full bg-gradient-to-br from-[#8cbbef] to-[#7677f7] text-white cursor-pointer"
+            >
+              <p>Weekly</p>
+            </div>
+            <div id="monthly" class="cursor-pointer p-2 rounded-full">
+              <p>Monthly</p>
+            </div>
+            <div id="yearly" class="cursor-pointer p-2 rounded-full">
+              <p>Yearly</p>
+            </div>
+          </div>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Income",
+              data: [3500, 2200, 1600, 3300, 2100, 1300, 500],
+              borderRadius: 10,
+              backgroundColor: "#7075f6",
+              barThickness: 6,
+            },
+            {
+              label: "Expenses",
+              data: [1800, 800, 300, 1800, 1200, 900, 300],
+              borderRadius: 10,
+              backgroundColor: "#e37db1",
+              barThickness: 3,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
