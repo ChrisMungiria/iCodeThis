@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Birthday List</title>
+    <style>
+      li {
+        animation: animateIn 300ms ease-out;
+        animation-delay: calc(var(--animation-order) * 100ms);
+        animation-fill-mode: both;
+      }
+      @keyframes animateIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen w-full bg-[#f089b0] flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xs p-4 bg-white rounded-md shadow-2xl space-y-4">
+      <h1 class="text-xl">24 birthdays today</h1>
+      <ul class="space-y-2">
+        <li class="flex gap-4" style="--animation-order: 1">
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Bertie Yates</p>
+            <p class="text-sm text-slate-500">29 years</p>
+          </div>
+        </li>
+        <li class="flex gap-4" style="--animation-order: 2">
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Hester Hogan</p>
+            <p class="text-sm text-slate-500">32 years</p>
+          </div>
+        </li>
+        <li class="flex gap-4" style="--animation-order: 3">
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Larry Little</p>
+            <p class="text-sm text-slate-500">36 years</p>
+          </div>
+        </li>
+        <li class="flex gap-4" style="--animation-order: 4">
+          <img
+            src="https://www.themarketingnutz.com/wp-content/uploads/2018/01/opulent-profile-square-07.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Larry Little</p>
+            <p class="text-sm text-slate-500">36 years</p>
+          </div>
+        </li>
+        <li class="flex gap-4" style="--animation-order: 5">
+          <img
+            src="https://cms-assets.tutsplus.com/uploads/users/810/profiles/19338/profileImage/profile-square-extra-small.png"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Sean Walsh</p>
+            <p class="text-sm text-slate-500">34 years</p>
+          </div>
+        </li>
+        <li class="flex gap-4" style="--animation-order: 6">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <p>Lala Gardner</p>
+            <p class="text-sm text-slate-500">29 years</p>
+          </div>
+        </li>
+      </ul>
+      <button
+        class="bg-gradient-to-r from-[#d971d4] to-[#fe6aa1] p-3 rounded-md w-full text-white font-semibold drop-shadow-md"
+      >
+        View all
+      </button>
+    </div>
+  </body>
+</html>
