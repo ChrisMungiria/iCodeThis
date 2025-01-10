@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Social Profile</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-r from-[#f6f8fc] to-[#f3f7ff]"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 bg-white rounded-md shadow-lg space-y-2 group"
+    >
+      <div
+        class="flex flex-col items-center justify-evenly group-hover:flex-row"
+      >
+        <div>
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-16 h-16 rounded-full object-cover mx-auto"
+          />
+          <div>
+            <h1 class="text-lg text-center font-semibold">Sally Ramos</h1>
+            <h2 class="text-sm text-slate-500 text-center">@sallytheramos</h2>
+          </div>
+        </div>
+        <button
+          id="follow-btn"
+          class="px-8 p-2 rounded-full border bg-[#11182e] text-white flex mx-auto"
+        >
+          Follow
+        </button>
+      </div>
+      <div id="description" class="space-y-4 hidden group-hover:block">
+        <p class="font-semibold text-sm">
+          Product Designer at @company. Working on @othercompany in my free time
+        </p>
+        <p class="text-xs text-slate-500">
+          <span class="font-semibold">15K</span>
+          followers. <span class="font-semibold">7K</span> following. Since
+          April 30, 2017
+        </p>
+      </div>
+    </div>
+    <script>
+      const followBtn = document.getElementById("follow-btn");
+      followBtn.addEventListener("click", () => {
+        if (followBtn.classList.contains("bg-[#11182e]")) {
+          followBtn.textContent = "Following";
+
+          followBtn.classList.remove("bg-[#11182e]");
+          followBtn.classList.add("text-slate-900");
+        } else {
+          followBtn.textContent = "Follow";
+
+          followBtn.classList.add("bg-[#11182e]");
+          followBtn.classList.remove("text-slate-900");
+        }
+      });
+    </script>
+  </body>
+</html>
