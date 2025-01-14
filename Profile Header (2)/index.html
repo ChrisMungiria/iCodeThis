@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .animate-width {
+        animation: animate-width 1s ease-in-out forwards;
+      }
+      @keyframes animate-width {
+        0% {
+          width: 0;
+        }
+        100% {
+          width: 75%;
+        }
+      }
+    </style>
+    <title>Profile Header</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#e0e0e0]">
+    <div
+      class="w-11/12 max-w-xl p-4 bg-[#fff9f2] shadow-xl rounded-xl flex flex-col md:flex-row gap-5"
+    >
+      <div class="flex-1 space-y-1">
+        <img
+          src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+          alt="profile image"
+          class="w-12 h-12 rounded-lg object-cover"
+        />
+        <h1 class="font-bold text-lg">Metamask</h1>
+        <h2 class="font-semibold text-sm">@metamask</h2>
+        <p>Metamask bring Ethereum to your web browser.</p>
+        <ul class="flex items-center space-x-2">
+          <li class="p-2 border rounded-lg bg-white px-3">
+            <i class="fa-brands fa-github"></i>
+          </li>
+          <li class="p-2 border rounded-lg bg-white px-3">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </li>
+          <li class="p-2 border rounded-lg bg-white px-3">
+            <i class="fa-brands fa-gitlab"></i>
+          </li>
+          <li class="p-2 border rounded-lg bg-white px-3">
+            <i class="fa-brands fa-ethereum"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-1 space-y-2 flex flex-col justify-center">
+        <div class="flex items-center justify-between">
+          <p>6/8 organizations</p>
+          <div
+            class="w-8 h-8 flex items-center justify-center border border-slate-800 rounded-full"
+          >
+            <i class="fa-solid fa-info"></i>
+          </div>
+        </div>
+        <div class="w-full h-2 bg-[#dedfdd] rounded-full">
+          <div class="h-full animate-width rounded-l-full bg-orange-500"></div>
+        </div>
+        <p class="capitalize text-right">
+          <span class="font-semibold">4K</span> followers
+        </p>
+        <button
+          class="px-4 py-2 bg-slate-800 text-white rounded-lg w-fit ml-auto"
+        >
+          Follow
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
