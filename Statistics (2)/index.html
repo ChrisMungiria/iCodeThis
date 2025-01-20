@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Statistics</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-[#e9f5fe] to-[#e9edfe]"
+  >
+    <div class="w-11/12 max-w-3xl p-4 bg-white rounded-lg shadow-lg">
+      <div class="grid md:grid-cols-4 grid-cols-2 gap-4">
+        <div
+          class="w-full p-4 rounded-lg cursor-pointer hover:bg-[#7d82f0] hover:text-white hover:shadow-lg transition-all duration-150 ease-in-out"
+        >
+          <p class="text-center text-sm">
+            Impressions <span class="text-xl font-semibold block">383</span>
+          </p>
+        </div>
+        <div
+          class="w-full p-4 rounded-lg cursor-pointer bg-[#7d82f0] text-white shadow-lg"
+        >
+          <p class="text-center text-sm">
+            Click-through rate
+            <span class="text-xl font-semibold block">9.1%</span>
+          </p>
+        </div>
+        <div
+          class="w-full p-4 rounded-lg cursor-pointer hover:bg-[#7d82f0] hover:text-white hover:shadow-lg transition-all duration-150 ease-in-out"
+        >
+          <p class="text-center text-sm">
+            Impressions <span class="text-xl font-semibold block">383</span>
+          </p>
+        </div>
+        <div
+          class="w-full p-4 rounded-lg cursor-pointer hover:bg-[#7d82f0] hover:text-white hover:shadow-lg transition-all duration-150 ease-in-out"
+        >
+          <p class="text-center">
+            Unique viewers <span class="text-xl font-semibold">54</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: ["0", "166", "322", "498", "664", "830", "996"],
+          datasets: [
+            {
+              label: "Some data",
+              data: [0, 225, 4, 103, 210, 90, 50],
+              borderWidth: 1,
+              borderColor: "rgba(125,130,240,255)",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

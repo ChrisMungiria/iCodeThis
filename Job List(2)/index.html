@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Job List</title>
+    <style>
+      li {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeIn 0.5s ease-in-out forwards;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f2f4ff]">
+    <div class="w-11/12 max-w-2xl space-y-4">
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-semibold">Latest open positions</h1>
+        <a href="#" class="underline text-[#7272b8]">See all positions</a>
+      </div>
+      <ul class="space-y-2">
+        <li
+          class="px-2 py-4 rounded-md bg-white grid grid-cols-4 place-items-center text-sm hover:shadow-lg transition-all duration-150 ease-in-out cursor-pointer"
+        >
+          <div class="w-full">
+            <p class="font-semibold capitalize">Account executive</p>
+          </div>
+          <div class="w-full">
+            <p class="font-light">Sales</p>
+          </div>
+          <div class="flex items-center gap-2 w-full">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Remote Americas (East)</p>
+          </div>
+          <div class="flex items-center justify-end w-full">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </li>
+        <li
+          class="px-2 py-4 rounded-md bg-white grid grid-cols-4 place-items-center text-sm hover:shadow-lg transition-all duration-150 ease-in-out cursor-pointer"
+        >
+          <div class="w-full">
+            <p class="font-semibold capitalize">Frontend engineer</p>
+          </div>
+          <div class="w-full">
+            <p class="font-light">Engineering</p>
+          </div>
+          <div class="flex items-center gap-2 w-full">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Remote</p>
+          </div>
+          <div class="flex items-center justify-end w-full">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </li>
+        <li
+          class="px-2 py-4 rounded-md bg-white grid grid-cols-4 place-items-center text-sm hover:shadow-lg transition-all duration-150 ease-in-out cursor-pointer"
+        >
+          <div class="w-full">
+            <p class="font-semibold capitalize">Search marketing manager</p>
+          </div>
+          <div class="w-full">
+            <p class="font-light">Marketing</p>
+          </div>
+          <div class="flex items-center gap-2 w-full">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Remote</p>
+          </div>
+          <div class="flex items-center justify-end w-full">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </li>
+        <li
+          class="px-2 py-4 rounded-md bg-white grid grid-cols-4 place-items-center text-sm hover:shadow-lg transition-all duration-150 ease-in-out cursor-pointer"
+        >
+          <div class="w-full">
+            <p class="font-semibold capitalize">
+              Staff product manager (Mobile)
+            </p>
+          </div>
+          <div class="w-full">
+            <p class="font-light">Marketing</p>
+          </div>
+          <div class="flex items-center gap-2 w-full">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Remote</p>
+          </div>
+          <div class="flex items-center justify-end w-full">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </li>
+        <li
+          class="px-2 py-4 rounded-md bg-white grid grid-cols-4 place-items-center text-sm hover:shadow-lg transition-all duration-150 ease-in-out cursor-pointer"
+        >
+          <div class="w-full">
+            <p class="font-semibold capitalize">Senior GRC Analyst</p>
+          </div>
+          <div class="w-full">
+            <p class="font-light">Secutiry & IT</p>
+          </div>
+          <div class="flex items-center gap-2 w-full">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Remote Americas (East)</p>
+          </div>
+          <div class="flex items-center justify-end w-full">
+            <i class="fa-solid fa-arrow-right"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const listItems = document.querySelectorAll("li");
+      listItems.forEach((li, index) => {
+        li.style.animationDelay = `${index * 0.1}s`;
+      });
+    </script>
+  </body>
+</html>
