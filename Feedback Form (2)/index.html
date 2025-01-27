@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Feedback Form</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center"
+    style="
+      background-image: conic-gradient(
+        from 300deg,
+        #0092e9 0deg,
+        #0092e9 180deg,
+        #fff 180deg
+      );
+    "
+  >
+    <div class="bg-[#eef1f7] w-11/12 max-w-xs shadow-lg space-y-2">
+      <div class="p-3 space-y-2">
+        <h1 class="text-xl text-[#0092e9] font-bold">Send us some feedback!</h1>
+        <p class="text-slate-500 text-sm">
+          Do you have a suggestion or found a bug? Let us know in the field
+          below
+        </p>
+      </div>
+      <textarea
+        rows="5"
+        id="comment"
+        name="comment"
+        placeholder="Describe your idea"
+        class="w-full resize-none focus:outline-none focus:ring-1 focus:ring-slate-500 p-2"
+      ></textarea>
+      <div class="p-3 space-y-2">
+        <ul class="flex items-center justify-between">
+          <li>
+            <input type="radio" id="bug" name="comment_type" value="bug" />
+            <label for="bug"> Bug </label>
+          </li>
+          <li>
+            <input
+              type="radio"
+              id="comment_radio"
+              name="comment_type"
+              value="comment_radio"
+            />
+            <label for="comment_radio"> Comment </label>
+          </li>
+          <li>
+            <input type="radio" id="other" name="comment_type" value="other" />
+            <label for="other"> Other </label>
+          </li>
+        </ul>
+        <button
+          class="w-full p-3 bg-[#0092e9] text-white capitalize font-semibold"
+        >
+          Send feedback
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
