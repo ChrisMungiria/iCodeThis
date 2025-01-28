@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Movie Card</title>
+  </head>
+  <body
+    class="w-screen h-screen flex sm:items-center items-start sm:py-0 justify-center bg-[#f3f5f8]"
+  >
+    <div
+      class="w-11/12 max-w-2xl p-4 bg-white shadow-lg rounded-lg mt-10 sm:mt-0"
+    >
+      <div class="flex items-center justify-between">
+        <div>
+          <h1 class="text-2xl font-semibold">Star Wars: The Last Jedi</h1>
+          <h2 class="text-xl capitalize text-blue-500">Action & adventure</h2>
+        </div>
+        <p class="text-slate-600">
+          <span class="text-blue-500 text-lg font-semibold">7.4</span> / 10
+        </p>
+      </div>
+      <div class="flex gap-5 flex-col sm:flex-row">
+        <div class="flex-1 space-y-2">
+          <img
+            src="https://images.moviesanywhere.com/8009215fb4980144700824b5817872e3/28219b33-2ed2-47a1-82ba-7fc700a1a77d.jpg"
+            alt="star wars poster"
+            class="w-full h-72 object-cover rounded-lg"
+          />
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold">$19.00</p>
+            <button
+              class="px-5 py-1 rounded-full border border-slate-800 text-xs font-semibold"
+            >
+              Buy
+            </button>
+          </div>
+        </div>
+        <div class="flex-[2] space-y-3">
+          <h3 class="text-lg capitalize font-semibold">About the movie</h3>
+          <p>
+            In Lucasfilm's Star Wars: The Last Jedi, the Skywalker saga
+            continues as the heroes of The Force Awakens joins the galactic
+            legends in an epic adventure that unlocks new mysteries of the Force
+            and shocking revelations of the past.
+          </p>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="w-full">
+              <h3 class="font-semibold">Actors</h3>
+              <ul class="text-blue-500 text-xs">
+                <li>Oscar Isaac</li>
+                <li>Mark Hamil</li>
+                <li>Daisy Ridley</li>
+                <li>John Boyega</li>
+                <li>Kelly Marie Tran</li>
+              </ul>
+              <a href="#" class="underline text-blue-500 font-semibold text-sm"
+                >More</a
+              >
+            </div>
+            <div class="w-full">
+              <h3 class="font-semibold">Director</h3>
+              <ul class="text-blue-500 text-xs">
+                <li>Rian Johnson</li>
+              </ul>
+              <h3 class="font-semibold">Screenwriter</h3>
+              <ul class="text-blue-500 text-xs">
+                <li>Rian Johnson</li>
+              </ul>
+            </div>
+            <div class="w-full">
+              <h3 class="font-semibold">Producers</h3>
+              <ul class="text-blue-500 text-xs">
+                <li>Kathleen Kennedy</li>
+                <li>Ram Bergman</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full flex items-center justify-end">
+            <button
+              class="text-xs bg-slate-800 text-white uppercase pr-1 pl-4 py-1 rounded-full group"
+            >
+              Watch trailer
+              <i
+                class="fa-solid fa-circle-play ml-2 group-hover:-rotate-45 group-hover:scale-110 transition-all duration-100 ease-in-out"
+              ></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
