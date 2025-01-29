@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Movie Ticket</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#e8f2ee]">
+    <div class="w-11/12 max-w-xs bg-white rounded-lg shadow-lg space-y-3">
+      <div class="w-full h-56 relative">
+        <i
+          class="fa-solid fa-arrow-left absolute z-30 text-white top-2 left-2 text-xl cursor-pointer"
+        ></i>
+        <img
+          src="https://sm.ign.com/t/ign_nordic/review/g/guardians-/guardians-of-the-galaxy-vol-2-review_srn1.1200.jpg"
+          alt="movie image"
+          class="w-full h-full object-cover absolute z-10 rounded-t-lg"
+        />
+        <div
+          class="bg-teal-500/30 inset-0 z-20 w-full h-full absolute flex flex-col justify-end p-3 text-white"
+        >
+          <h1 class="text-lg font-semibold">Guardians of the Galaxy Vol. 2</h1>
+          <div class="flex items-center gap-2 text-sm">
+            <i class="fa-solid fa-location-dot"></i>
+            <h2>Cineplex Entertainment, Toronto ON</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-evenly text-xs">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-couch text-teal-500"></i>
+          <p>Available</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-couch text-slate-500"></i>
+          <p>Booked</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-couch text-pink-500"></i>
+          <p>Selected</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-10 gap-1 place-items-center">
+        <!-- ROW G -->
+        <p>G</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW F -->
+        <p>F</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW E -->
+        <p>E</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW D -->
+        <p>D</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-selected w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-selected w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-selected w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW C -->
+        <p>C</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW B -->
+        <p>B</p>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-booked w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <!-- ROW A -->
+        <p>A</p>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div class="w-8 h-8"></div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+        <div
+          class="chair-available w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="fa-solid fa-couch"></i>
+        </div>
+      </div>
+      <div
+        style="border-radius: 54% 46% 48% 52% / 49% 50% 50% 51%"
+        class="flex-1 border-2 border-t-transparent border-x-transparent border-b-teal-500 flex items-center justify-center mx-5"
+      >
+        <p>Screen</p>
+      </div>
+      <div class="flex text-white text-sm">
+        <div class="flex-1 p-2 bg-[#dc376a]">
+          <p>Date</p>
+          <p>Tickets</p>
+          <p class="font-semibold">Total</p>
+        </div>
+        <div
+          class="flex-[3] p-2 bg-[#ec407a] flex items-center justify-between"
+        >
+          <div>
+            <p>Jul 11, 19:15</p>
+            <p id="tickets">3</p>
+            <p class="font-semibold" id="price">$30</p>
+          </div>
+          <button class="p-3 bg-white text-slate-800 rounded-xl shadow-lg">
+            Next <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const chairs = document.querySelectorAll(
+          ".chair-available, .chair-selected"
+        );
+
+        const price = document.getElementById("price");
+        const tickets = document.getElementById("tickets");
+
+        function updateTicketsAndPrice() {
+          const selected_seats =
+            document.querySelectorAll(".chair-selected").length + 1;
+          price.innerHTML = `$${selected_seats * 30}`;
+          tickets.innerHTML = selected_seats;
+        }
+
+        chairs.forEach((chair) => {
+          chair.addEventListener("click", function () {
+            updateTicketsAndPrice();
+            if (this.classList.contains("chair-available")) {
+              this.classList.remove("chair-available");
+              this.classList.add("chair-selected");
+              this.classList.add("text-pink-500");
+              this.classList.remove("text-teal-500");
+            } else if (this.classList.contains("chair-selected")) {
+              this.classList.remove("chair-selected");
+              this.classList.add("chair-available");
+              this.classList.add("text-teal-500");
+              this.classList.remove("text-pink-500");
+            }
+          });
+        });
+
+        // Set colors for initially available chairs
+        document.querySelectorAll(".chair-available").forEach((chair) => {
+          chair.classList.add("text-teal-500");
+        });
+
+        // Set colors for initially booked chairs
+        document.querySelectorAll(".chair-booked").forEach((chair) => {
+          chair.classList.add("text-slate-500");
+        });
+
+        // Set colors for initially selected chairs
+        document.querySelectorAll(".chair-selected").forEach((chair) => {
+          chair.classList.add("text-pink-500");
+        });
+      });
+    </script>
+  </body>
+</html>
