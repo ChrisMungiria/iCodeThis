@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Pagination 2</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#1c3248] to-[#493756]"
+  >
+    <div
+      class="w-11/12 max-w-xl bg-[#0c2038] shadow-xl p-2 flex items-center justify-between"
+    >
+      <p id="prev" class="text-pink-500 cursor-pointer">Prev</p>
+      <div class="flex items-center gap-5 text-slate-200">
+        <div
+          class="w-10 h-10 flex items-center justify-center border rounded-full border-transparent cursor-pointer"
+          id="1"
+        >
+          <p>1</p>
+        </div>
+        <div
+          class="w-10 h-10 flex items-center justify-center border rounded-full border-transparent cursor-pointer"
+          id="2"
+        >
+          <p>2</p>
+        </div>
+        <div
+          class="w-10 h-10 flex items-center justify-center border rounded-full border-transparent cursor-pointer"
+          id="3"
+        >
+          <p>3</p>
+        </div>
+        <div
+          class="w-10 h-10 flex items-center justify-center border rounded-full border-transparent cursor-pointer"
+          id="4"
+        >
+          <p>4</p>
+        </div>
+        <div
+          class="w-10 h-10 flex items-center justify-center border rounded-full border-transparent cursor-pointer"
+          id="5"
+        >
+          <p>5</p>
+        </div>
+      </div>
+      <p id="next" class="text-pink-500 cursor-pointer">Next</p>
+    </div>
+    <script>
+      const pages = [1, 2, 3, 4, 5];
+      let currentPage = 1; // Track the current active page
+
+      function updatePagination(page) {
+        pages.forEach((p) => {
+          const item = document.getElementById(p);
+          item.classList.remove("text-pink-500", "border-pink-500");
+          item.classList.add("border-transparent");
+        });
+
+        // Set active class on the selected page
+        const activeItem = document.getElementById(page);
+        activeItem.classList.remove("border-transparent");
+        activeItem.classList.add("text-pink-500", "border-pink-500");
+
+        currentPage = page; // Update the current page
+      }
+
+      pages.forEach((page) => {
+        const pageItem = document.getElementById(page);
+
+        pageItem.addEventListener("click", () => {
+          updatePagination(page);
+        });
+      });
+
+      document.getElementById("prev").addEventListener("click", () => {
+        if (currentPage > 1) {
+          updatePagination(currentPage - 1);
+        }
+      });
+
+      document.getElementById("next").addEventListener("click", () => {
+        if (currentPage < pages.length) {
+          updatePagination(currentPage + 1);
+        }
+      });
+
+      // Set initial active page
+      updatePagination(currentPage);
+    </script>
+  </body>
+</html>
