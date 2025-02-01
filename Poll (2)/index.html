@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Poll</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#436a73]">
+    <div class="w-11/12 max-w-xs bg-white rounded-lg">
+      <div class="w-full p-4 rounded-t-lg bg-[#f1fcfd]">
+        <p class="text-sm text-center">
+          if you write a book about failure and it doesn't sell, is it called
+          success
+        </p>
+      </div>
+      <div class="p-4">
+        <ul class="space-y-4">
+          <li>
+            <div class="flex items-center gap-2">
+              <input type="radio" name="options" id="success" value="success" />
+              <label for="success" class="text-xs">
+                Definitely a success
+              </label>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-slate-200 rounded-full flex-1">
+                <div
+                  id="success-bar"
+                  class="rounded-full h-full bg-green-500"
+                ></div>
+              </div>
+              <p class="text-xs" id="success-percentage">65%</p>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <input type="radio" name="options" id="no" value="no" />
+              <label for="no" class="text-xs"> No </label>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-slate-200 rounded-full flex-1">
+                <div id="no-bar" class="rounded-full h-full bg-red-500"></div>
+              </div>
+              <p class="text-xs" id="no-percentage">15%</p>
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <input type="radio" name="options" id="maybe" value="maybe" />
+              <label for="maybe" class="text-xs">
+                Only if it's into the How To section of the library
+              </label>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-slate-200 rounded-full flex-1">
+                <div
+                  id="maybe-bar"
+                  class="rounded-full h-full bg-orange-500"
+                ></div>
+              </div>
+              <p class="text-xs" id="maybe-percentage">23%</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const totalVotes = 100;
+      const successVotes = 65;
+      const noVotes = 15;
+      const maybeVotes = 23;
+
+      // when the page loads, set the bars to the correct percentage
+      document.addEventListener("DOMContentLoaded", () => {
+        // Success
+        const successPercentageElement =
+          document.getElementById("success-percentage");
+        const successBarElement = document.getElementById("success-bar");
+
+        // Maybe
+        const maybePercentageElement =
+          document.getElementById("maybe-percentage");
+        const maybeBarElement = document.getElementById("maybe-bar");
+
+        // No
+        const noPercentageElement = document.getElementById("no-percentage");
+        const noBarElement = document.getElementById("no-bar");
+
+        // set the percentage and bar width
+        // 1. Success
+        successBarElement.classList.add(
+          `w-[${(successVotes / totalVotes) * 100}%]`
+        );
+        successPercentageElement.textContent = `${
+          (successVotes / totalVotes) * 100
+        }%`;
+
+        // 2. Maybe
+        maybeBarElement.classList.add(
+          `w-[${(maybeVotes / totalVotes) * 100}%]`
+        );
+        maybePercentageElement.textContent = `${
+          (maybeVotes / totalVotes) * 100
+        }%`;
+
+        // 3. No
+        noBarElement.classList.add(`w-[${(noVotes / totalVotes) * 100}%]`);
+        noPercentageElement.textContent = `${(noVotes / totalVotes) * 100}%`;
+      });
+    </script>
+  </body>
+</html>
