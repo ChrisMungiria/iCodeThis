@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Projects Chart</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-blue-200">
+    <div class="w-11/12 max-w-xs">
+      <div class="p-2 bg-white space-y-2 w-5/6 mx-auto shadow-lg">
+        <div class="w-32 h-32 p-2 border rounded-full mx-auto">
+          <img
+            src="https://nanny.org/wp-content/uploads/2021/11/profile-square.jpeg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <h1 class="text-xl font-semibold text-center">John Hawkins</h1>
+        <h2
+          class="w-fit mx-auto border border-blue-300 text-blue-300 px-2 py-1 rounded-full"
+        >
+          UI/UX Designer
+        </h2>
+        <h3 class="mx-auto text-center w-3/4 text-sm">
+          Mauris ac quam quisique, donec ac, praesent in hymenaeos wisi.
+        </h3>
+      </div>
+      <div class="p-2 bg-slate-700 shadow-lg space-y-2">
+        <h1 class="text-center text-xl text-white">Projects</h1>
+        <div
+          class="w-32 h-32 rounded-full mx-auto p-1"
+          style="
+            background-image: conic-gradient(
+              #f1bb01 0deg,
+              #f1bb01 30deg,
+              #7968e0 30deg,
+              #7968e0 180deg,
+              #06e7c0 180deg
+            );
+          "
+        >
+          <div
+            class="w-full h-full bg-slate-700 rounded-full flex flex-col items-center justify-center text-white"
+          >
+            <p class="text-center text-xl">
+              314 <span class="block text-sm text-slate-200">total</span>
+            </p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-2 px-2 text-white">
+          <div class="space-y-2">
+            <p class="text-center text-xl">
+              167
+              <span class="block text-slate-400 text-xs capitalize"
+                >completed</span
+              >
+            </p>
+            <div class="w-2 h-2 mx-auto rounded-full bg-[#06e7c0]"></div>
+          </div>
+          <div class="space-y-2">
+            <p class="text-center text-xl">
+              24
+              <span class="block text-slate-400 text-xs capitalize"
+                >overdue</span
+              >
+            </p>
+            <div class="w-2 h-2 mx-auto rounded-full bg-[#f2b904]"></div>
+          </div>
+          <div class="space-y-2">
+            <p class="text-center text-xl">
+              123
+              <span class="block text-slate-400 text-xs capitalize"
+                >in progress</span
+              >
+            </p>
+            <div class="w-2 h-2 mx-auto rounded-full bg-[#7f67fc]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
