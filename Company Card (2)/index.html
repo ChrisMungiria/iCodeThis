@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .fa-star,
+      .fa-star-half {
+        color: yellow;
+        font-size: 12px;
+      }
+
+      @media (max-width: 768px) {
+        .company-info {
+          flex-direction: column !important;
+          align-items: center !important;
+          text-align: center !important;
+        }
+        .company-info div {
+          margin: 10px 0 !important;
+        }
+        .stats-container {
+          flex-direction: column !important;
+          padding: 10px !important;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Company Card</title>
+  </head>
+  <body
+    style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1e203b;
+      width: 100%;
+      height: 100vh;
+      padding: 10px;
+    "
+  >
+    <div style="max-width: 576px; background-color: #272c4a; width: 100%">
+      <div
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          padding: 10px;
+        "
+      >
+        <i
+          class="fa-solid fa-angle-left"
+          style="font-size: 2rem; color: white"
+        ></i>
+        <div
+          class="company-info"
+          style="
+            display: flex;
+            flex: 1;
+            padding: 10px;
+            margin: 0px 20px;
+            flex-direction: row;
+          "
+        >
+          <div>
+            <div
+              style="
+                width: 72px;
+                height: 72px;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                margin: 0 auto;
+              "
+            >
+              <img
+                src="https://images.seeklogo.com/logo-png/6/2/google-logo-png_seeklogo-62136.png"
+                alt="google logo"
+                style="width: 72px; height: 72px; object-fit: contain"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 0px;
+              "
+            >
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half"></i>
+            </div>
+            <p style="font-size: 10px; color: #ccc; text-align: center">
+              2278 reviews
+            </p>
+          </div>
+          <div style="margin: 0px 20px; text-align: left">
+            <h1 style="color: #ccc; font-size: 18px">#1. Google</h1>
+            <a href="https://www.google.com" style="color: #992154"
+              >https://www.google.com</a
+            >
+            <p style="color: #fff; font-size: 14px">
+              Google LLC is an American multinational technology company that
+              specializes in Internet-related services and products. These
+              include online advertising technologies, search, cloud computing,
+              software, and hardware.
+            </p>
+          </div>
+        </div>
+        <i
+          class="fa-solid fa-angle-right"
+          style="color: #ccc; font-size: 2rem"
+        ></i>
+      </div>
+      <div
+        class="stats-container"
+        style="
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          background-color: #222743;
+          padding: 20px;
+        "
+      >
+        <div style="flex: 1; color: white">
+          <h3 style="text-transform: uppercase; font-size: 14px">
+            Total employees
+          </h3>
+          <h2 style="font-size: 20px">72,053</h2>
+          <h3 style="text-transform: uppercase; font-size: 14px">
+            Job openings
+          </h3>
+          <h2 style="color: #d93273; font-size: 20px">1278</h2>
+        </div>
+        <div style="flex: 1; color: white; width: 100%">
+          <h2 style="font-size: 16px">Paid time off</h2>
+          <ul style="list-style: none; font-size: 12px; padding: 0">
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px 0;
+              "
+            >
+              <p>General PTO</p>
+              <div
+                style="
+                  flex: 1;
+                  height: 4px;
+                  background-color: #1a1f39;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  style="
+                    height: 100%;
+                    width: 50%;
+                    background-color: #d93273;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+              <p>15</p>
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px 0;
+              "
+            >
+              <p>Total PTO after 15 years</p>
+              <div
+                style="
+                  flex: 1;
+                  height: 4px;
+                  background-color: #1a1f39;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  style="
+                    height: 100%;
+                    width: 50%;
+                    background-color: #d93273;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+              <p>20</p>
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px 0;
+              "
+            >
+              <p>For volunteering</p>
+              <div
+                style="
+                  flex: 1;
+                  height: 4px;
+                  background-color: #1a1f39;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  style="
+                    height: 100%;
+                    width: 50%;
+                    background-color: #d93273;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+              <p>15</p>
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px 0;
+              "
+            >
+              <p>General PTO for part-time</p>
+              <div
+                style="
+                  flex: 1;
+                  height: 4px;
+                  background-color: #1a1f39;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  style="
+                    height: 100%;
+                    width: 50%;
+                    background-color: #d93273;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+              <p>7</p>
+            </li>
+            <li
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px 0;
+              "
+            >
+              <p># PTOs for part-time</p>
+              <div
+                style="
+                  flex: 1;
+                  height: 4px;
+                  background-color: #1a1f39;
+                  border-radius: 5px;
+                "
+              >
+                <div
+                  style="
+                    height: 100%;
+                    width: 50%;
+                    background-color: #d93273;
+                    border-radius: 5px;
+                  "
+                ></div>
+              </div>
+              <p>0</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
