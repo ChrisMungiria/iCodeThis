@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign In Form</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#ebf3ff]">
+    <div
+      class="w-11/12 max-w-xs rounded-lg p-4 bg-white shadow-lg space-y-2 mt-5 mr-5 relative before:absolute before:-top-9 before:w-56 before:h-96 before:rounded-lg before:-right-5 before:bg-[#4e49e7] before:-z-10"
+    >
+      <h1 class="capitalize text-xl font-semibold">Sign in</h1>
+      <div class="space-y-2">
+        <label for="email" class="text-xs">Username or email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="block border p-2 focus:outline-[#4e49e7] w-full rounded"
+        />
+      </div>
+      <div class="space-y-2">
+        <label for="password" class="text-xs">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          class="block border p-2 focus:outline-[#4e49e7] w-full rounded"
+        />
+      </div>
+      <div class="flex items-center justify-between text-xs">
+        <button class="bg-[#4e49e7] px-6 py-3 rounded-full text-white">
+          Sign in
+        </button>
+        <a href="#" class="font-semibold">Forgot your password</a>
+      </div>
+      <p class="text-center font-semibold text-sm">
+        Don't have an account? <a href="#" class="underline block">Sign up</a>
+      </p>
+    </div>
+  </body>
+</html>
