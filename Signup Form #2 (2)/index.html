@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign up form #2</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#f3f9fe]">
+    <div class="w-11/12 max-w-xs p-4 rounded-md bg-[#e8f1fe]">
+      <div class="w-full h-full bg-white rounded-md p-4 space-y-2">
+        <h1 class="text-xl font-bold text-center">Join the community</h1>
+        <h4 class="text-sm text-center font-semibold">
+          Take your art to the next level. Get it seen by millions of people
+        </h4>
+        <button
+          class="px-8 py-4 rounded-md bg-[#4868ad] text-white text-sm mx-auto flex"
+        >
+          Join with Facebook
+        </button>
+        <p class="text-center text-sm text-gray-400">Or</p>
+        <div class="flex items-center gap-2 w-full">
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="First name"
+            class="p-2 border rounded-md w-full"
+          />
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Last name"
+            class="p-2 border rounded-md w-full"
+          />
+        </div>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          class="p-2 border rounded-md w-full"
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="p-2 border rounded-md w-full"
+        />
+        <button
+          class="w-full p-3 rounded-md bg-[#1d2b4b] text-white capitalize"
+        >
+          Create new account
+        </button>
+        <p class="text-center text-xs text-gray-400">
+          By joining you agree to our
+          <span class="capitalize">terms of service and privacy policy</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
