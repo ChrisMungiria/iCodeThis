@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Background Pattern with Points</title>
+    <style>
+      .dot-grid {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(
+            to right,
+            #cccccc7f 1px,
+            transparent 1px
+          ),
+          linear-gradient(to bottom, #cccccc7f 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+
+      .dot-grid::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -12px;
+        top: -12px;
+        background-image: radial-gradient(
+          circle,
+          #cccccc7f 2px,
+          transparent 1px
+        );
+        background-size: 24px 24px;
+        pointer-events: none;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="w-screen h-screen bg-gradient-to-r from-[#71b852] to-[#0b726c]">
+    <div class="dot-grid"></div>
+  </body>
+</html>
