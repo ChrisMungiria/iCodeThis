@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .scale-animation {
+        animation-name: anim-scale-animation;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+      .with-delay {
+        opacity: 0;
+        scale: 0;
+        animation-delay: 1s;
+      }
+
+      @keyframes anim-scale-animation {
+        0% {
+          scale: 0;
+          opacity: 0;
+        }
+        100% {
+          scale: 1;
+          opacity: 1;
+        }
+      }
+    </style>
+    <title>Alerts</title>
+  </head>
+  <body
+    class="w-screen h-screen bg-gradient-to-br from-[#02b7c5] to-[#017c83] grid place-items-center"
+  >
+    <div class="w-11/12 max-w-xl space-y-4">
+      <div
+        class="w-full p-4 bg-gradient-to-r from-[#f4feff] to-[#dffbff] flex items-center justify-between shadow-lg scale-animation"
+      >
+        <div class="flex items-center gap-2 text-green-500">
+          <div
+            class="w-12 h-12 border-4 border-dashed border-green-500 rounded-full flex items-center justify-center p-1"
+          >
+            <div
+              class="bg-green-500 w-full h-full rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-check"></i>
+            </div>
+          </div>
+          <p class="text-sm font-semibold">
+            Your object has been successfully created.
+          </p>
+        </div>
+        <i class="fa-solid fa-xmark text-slate-500 text-xl"></i>
+      </div>
+      <div
+        class="w-full p-4 bg-gradient-to-r from-[#f4feff] to-[#dffbff] flex items-center justify-between shadow-lg scale-animation with-delay"
+      >
+        <div class="flex items-center gap-2 text-red-500">
+          <div
+            class="w-12 h-12 border-4 border-dashed border-red-500 rounded-full flex items-center justify-center p-1"
+          >
+            <div
+              class="bg-red-500 w-full h-full rounded-full flex items-center justify-center text-white"
+            >
+              <i class="fa-solid fa-exclamation"></i>
+            </div>
+          </div>
+          <p class="text-sm font-semibold">Your object couldn't be created</p>
+        </div>
+        <i class="fa-solid fa-xmark text-slate-500 text-xl"></i>
+      </div>
+    </div>
+  </body>
+</html>
