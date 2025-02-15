@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #images > img {
+        animation-name: anim-show-images;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        opacity: 0;
+        scale: 0;
+      }
+
+      #images > img:nth-child(1) {
+        animation-delay: 0s;
+      }
+      #images > img:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+      #images > img:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      #images > img:nth-child(4) {
+        animation-delay: 0.6s;
+      }
+      #images > img:nth-child(5) {
+        animation-delay: 0.8s;
+      }
+      #images > img:nth-child(6) {
+        animation-delay: 1s;
+      }
+
+      @keyframes anim-show-images {
+        0% {
+          opacity: 0;
+          scale: 0;
+        }
+        100% {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+    </style>
+    <title>Book Trip</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-[#272e3a]">
+    <div class="w-11/12 max-w-xs rounded-lg shadow-lg pb-10 bg-[#303946]">
+      <div class="grid grid-cols-3 p-3 bg-[#8ab2e0] rounded-t-lg text-white">
+        <i class="fa-solid fa-chevron-left"></i>
+        <p class="capitalize text-sm text-nowrap">Halaekala crater</p>
+      </div>
+      <div class="w-full h-40 relative group">
+        <img
+          src="https://www.quamproperties.com/wp-content/uploads/2019/04/cliff-crater-daylight-96457.jpg"
+          alt="Halaekala crater"
+          class="w-full h-full object-cover"
+        />
+        <span
+          class="absolute bottom-2 right-2 text-white text-xs bg-white/20 px-3 py-1 rounded-full cursor-pointer font-light opacity-0 -translate-y-6 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-in-out"
+          >Tap to veiw images</span
+        >
+      </div>
+      <div class="p-2 px-4 bg-[#2a303c] text-white">
+        <h1 class="text-lg capitalize">Halaekala crater</h1>
+        <div class="flex items-center gap-2 text-xs text-gray-300">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Sheild volcano in Hawaii</p>
+        </div>
+      </div>
+      <div class="p-2 px-4 bg-[#303946] text-gray-100 space-y-2">
+        <p class="text-xs">
+          Haleakalā, or the East Maui Volcano, is a massive shield volcano that
+          forms more than 75% of the Hawaiian Island of Maui. The western 25% of
+          the island is formed by another volcano, Mauna Kahalawai, also
+          referred to as the West Maui Mountains.
+        </p>
+        <div class="flex items-center" id="images">
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover -ml-4"
+          />
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-myron-gohindo-profile-square.cropimg.width=335.crop=square.JPG"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover -ml-4"
+          />
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover -ml-4"
+          />
+          <img
+            src="https://cms-assets.tutsplus.com/uploads/users/810/profiles/19338/profileImage/profile-square-extra-small.png"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover -ml-4"
+          />
+          <img
+            src="https://sholaemmanuel.com/wp-content/uploads/2024/06/photo-1535713875002-d1d0cf377fde.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover -ml-4"
+          />
+          <p class="text-[10px] ml-4 text-[#93bcf0]">
+            +16 users <span class="block text-white">visited this place</span>
+          </p>
+        </div>
+        <button
+          class="bg-[#8ab2e0] w-full p-3 rounded-full text-white uppercase text-xs"
+        >
+          Book a trip
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
