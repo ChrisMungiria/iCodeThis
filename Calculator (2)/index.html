@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    </style>
+    <title>Calculator</title>
+  </head>
+  <body
+    class="w-screen h-screen flex items-center justify-center bg-gradient-to-tr from-[#ced8df] to-[#eaeef1]"
+  >
+    <div class="w-11/12 max-w-xs bg-white">
+      <div
+        class="pt-20 p-4 space-y-4 bg-[#77919c] flex flex-col items-end text-white"
+      >
+        <input
+          type="text"
+          name="input"
+          id="input"
+          class="bg-transparent focus:outline-none text-end"
+          readonly
+        />
+        <input
+          type="text"
+          name="result"
+          id="result"
+          class="bg-transparent focus:outline-none text-end text-xl"
+          readonly
+        />
+      </div>
+      <div class="grid grid-cols-4 gap-px bg-slate-100">
+        <!-- Row 1 -->
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="ce"
+        >
+          <p class="text-xl">CE</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="c"
+        >
+          <p class="text-xl">C</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="delete"
+        >
+          <i class="fa-solid fa-delete-left"></i>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="divide"
+        >
+          <i class="fa-solid fa-divide"></i>
+        </div>
+        <!-- Row 2 -->
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="7"
+        >
+          <p class="text-xl">7</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="8"
+        >
+          <p class="text-xl">8</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="9"
+        >
+          <p class="text-xl">9</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="multiply"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <!-- Row 3 -->
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="4"
+        >
+          <p class="text-xl">4</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="5"
+        >
+          <p class="text-xl">5</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="6"
+        >
+          <p class="text-xl">6</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="minus"
+        >
+          <i class="fa-solid fa-minus"></i>
+        </div>
+        <!-- Row 4 -->
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="1"
+        >
+          <p class="text-xl">1</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="2"
+        >
+          <p class="text-xl">2</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="3"
+        >
+          <p class="text-xl">3</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#e4e8eb] flex items-center justify-center text-[#77919c]"
+          id="add"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <!-- Row 5 -->
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="plus-or-minus"
+        >
+          <i class="fa-solid fa-plus-minus"></i>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="0"
+        >
+          <p class="text-xl">0</p>
+        </div>
+        <div
+          class="w-full h-16 bg-white flex items-center justify-center text-[#77919c]"
+          id="decimal"
+        >
+          <p class="text-xl">.</p>
+        </div>
+        <div
+          class="w-full h-16 bg-[#ff6567] flex items-center justify-center text-white"
+          id="equals"
+        >
+          <i class="fa-solid fa-equals"></i>
+        </div>
+      </div>
+    </div>
+    <script>
+      const input = document.getElementById("input");
+      const result = document.getElementById("result");
+
+      const numbers = [...Array(10).keys()]; // [0,1,2,3,4,5,6,7,8,9]
+      const operators = {
+        add: "+",
+        minus: "-",
+        multiply: "*",
+        divide: "/",
+      };
+
+      numbers.forEach((number) => {
+        document
+          .getElementById(number.toString())
+          .addEventListener("click", () => {
+            input.value += number;
+          });
+      });
+
+      Object.keys(operators).forEach((operator) => {
+        document.getElementById(operator).addEventListener("click", () => {
+          if (input.value !== "" && !isNaN(input.value.slice(-1))) {
+            input.value += operators[operator];
+          }
+        });
+      });
+
+      document.getElementById("decimal").addEventListener("click", () => {
+        input.value += ".";
+      });
+
+      document.getElementById("delete").addEventListener("click", () => {
+        input.value = input.value.slice(0, -1);
+      });
+
+      document.getElementById("ce").addEventListener("click", () => {
+        input.value = "";
+        result.value = "";
+      });
+
+      document.getElementById("c").addEventListener("click", () => {
+        input.value = "";
+      });
+
+      document.getElementById("equals").addEventListener("click", () => {
+        try {
+          result.value = eval(input.value);
+        } catch {
+          result.value = "Error";
+        }
+      });
+    </script>
+  </body>
+</html>
