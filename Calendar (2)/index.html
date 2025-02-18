@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calendar</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-gradient-to-tr from-[#70465c] to-[#3b4751]"
+  >
+    <div class="w-11/12 max-w-xs bg-white/20 rounded-md">
+      <div
+        class="w-full p-3 bg-white/40 rounded-t-lg flex items-center justify-between text-white"
+      >
+        <i class="fa-solid fa-angle-left"></i>
+        <p>March 2017</p>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+      <div
+        class="grid grid-cols-7 place-items-center bg-gradient-to-r from-[#81f9d4] to-[#50c7ee] text-transparent bg-clip-text font-semibold"
+      >
+        <p>Su</p>
+        <p>Mo</p>
+        <p>Tu</p>
+        <p>We</p>
+        <p>Th</p>
+        <p>Fr</p>
+        <p>Sa</p>
+      </div>
+      <div class="grid grid-cols-7 text-gray-200" id="days"></div>
+    </div>
+    <script>
+      const days = document.getElementById("days");
+
+      const dates = Array.from(Array(35).keys()).map((day) => {
+        const startingDate = new Date(2017, 1, 26);
+
+        return new Date(startingDate.setDate(day + 26));
+      });
+
+      dates.map((date) => {
+        const p = document.createElement("p");
+        p.classList.add("text-center");
+        p.textContent = date.getDate();
+        days.appendChild(p);
+      });
+    </script>
+  </body>
+</html>
