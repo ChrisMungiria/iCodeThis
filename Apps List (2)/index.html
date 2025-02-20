@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .pop-up {
+        opacity: 0;
+        scale: 0;
+        transform-origin: center;
+        transition: all 0.3s ease-out;
+      }
+      .group:hover .pop-up {
+        opacity: 1;
+        scale: 1;
+      }
+    </style>
+    <title>App List</title>
+  </head>
+  <body class="w-screen h-screen flex items-center justify-center bg-gray-800">
+    <div class="w-11/12 max-w-3xl p-4 rounded-lg bg-white space-y-2">
+      <h1 class="text-center capitalize text-2xl font-bold">Recently added</h1>
+      <h2 class="text-center text-sm">
+        The latest tools that help you and your team build software better,
+        together.
+      </h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://cdn.worldvectorlogo.com/logos/instabug-logo-icon-color.svg"
+              alt="instabug logo"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">Instabug</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              The top apps in the world rely on Instabug for bug reporting,
+              crash reporting and in-app user feedback
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://deepscan.io/deepscan-full.png"
+              alt="instabug logo"
+              class="w-full h-auto object-cover rounded-full"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">Instabug</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              Deepscan is an advanced static analysis tool engineered to support
+              JavaScript
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://octobox.io/assets/app-icon-b0d8f544a604aad5b0175bd7e3b649c655d4ee3ae49ef0c47d7e13b6448a0261.png"
+              alt="instabug logo"
+              class="w-full h-auto object-cover rounded-full"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">Octobox</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              Octobox helps you manage your notificatoins in the same way Gmail
+              helps you manage your emails
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://img.freepik.com/premium-vector/eraser-icon-vector-design-templates-isolated-white-background_63220-970.jpg"
+              alt="instabug logo"
+              class="w-full h-auto object-cover rounded-full"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">LeanBoard</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              Learn Board is a collaborative whiteboard with sticky notes whichs
+              seamlessly connects with your GitHub issue.
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://gamma.ai/assets/images/gamma-seo.png"
+              alt="instabug logo"
+              class="w-full h-auto object-cover rounded-full"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">Gamma Data Leak Prevention</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              69% of data breaches start with negligence. One negligent employee
+              could cost your company a decade worth of reputation
+            </p>
+          </div>
+        </div>
+        <div class="w-full flex gap-2 group cursor-pointer">
+          <div
+            class="w-20 h-20 rounded-full flex items-center justify-center p-2 flex-shrink-0"
+          >
+            <img
+              src="https://play-lh.googleusercontent.com/YhVvdKFn9Qe-1nqEIQj3u6r-E77VxJFVm_aDgnIfVPGXtHgK7JxUS1MKXXLC-GOw9Q=w240-h480-rw"
+              alt="instabug logo"
+              class="w-full h-auto object-cover rounded-full"
+            />
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <h1 class="font-bold">ODIN</h1>
+              <div class="relative">
+                <i class="fa-solid fa-circle-check text-green-500"></i>
+                <div
+                  class="absolute px-2 py-2 bg-gray-900 -top-full -translate-y-1/2 right-1/2 translate-x-1/2 rounded-md text-white text-xs pop-up"
+                >
+                  <p>Verified</p>
+                  <div
+                    class="bg-gray-900 w-3 h-3 absolute left-1/2 -translate-x-1/2 rotate-45"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs">
+              The top apps in the world rely on Instabug for bug reporting,
+              crash reporting and in-app user feedback
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="flex mx-auto px-8 p-4 bg-gray-900 rounded-md text-white text-xs capitalize"
+      >
+        View all
+      </button>
+    </div>
+  </body>
+</html>
