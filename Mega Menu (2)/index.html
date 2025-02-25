@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .icon-container {
+        opacity: 0;
+        scale: 0;
+        animation: anim-show-icon-container 0.5s ease-in-out forwards;
+      }
+
+      @keyframes anim-show-icon-container {
+        0% {
+          opacity: 0;
+          scale: 0;
+        }
+        100% {
+          opacity: 1;
+          scale: 1;
+        }
+      }
+    </style>
+    <title>Mega Menu</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-slate-100"
+  >
+    <div
+      class="w-11/12 max-w-2xl p-4 bg-white shadow-xl grid grid-cols-2 md:grid-cols-4 gap-4"
+    >
+      <div class="w-full space-y-4">
+        <div
+          class="w-12 h-12 rounded-full flex items-center justify-center bg-[#ebfaff] text-[#49c2f6] icon-container"
+        >
+          <i class="fa-solid fa-newspaper"></i>
+        </div>
+        <h1 class="text-lg font-semibold text-start w-full">News</h1>
+        <ul class="text-xs">
+          <li>Clothes</li>
+          <li>Shoes and accessories</li>
+        </ul>
+      </div>
+      <div class="w-full space-y-4">
+        <div
+          class="w-12 h-12 rounded-full flex items-center justify-center bg-[#f6f4ff] text-[#8671e3] icon-container"
+        >
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <h1 class="text-lg font-semibold text-start w-full">Gifts</h1>
+        <ul class="text-xs w-full">
+          <li>Gift cards</li>
+        </ul>
+      </div>
+      <div class="w-full space-y-4">
+        <div
+          class="w-12 h-12 rounded-full flex items-center justify-center bg-[#fff2f7] text-[#da5c84] icon-container"
+        >
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <h1
+          class="text-lg font-semibold text-start w-full capitalize text-nowrap"
+        >
+          Shop by product
+        </h1>
+        <ul class="text-xs w-full">
+          <li>Dresses</li>
+          <li>Cardigan and sweaters</li>
+          <li>Shoe</li>
+          <li>Underwear and nightwear</li>
+          <li>Shorts</li>
+          <li class="text-blue-400">More ...</li>
+        </ul>
+      </div>
+      <div class="w-full space-y-4">
+        <div
+          class="w-12 h-12 rounded-full flex items-center justify-center bg-[#fff9e9] text-[#f0a82a] icon-container"
+        >
+          <i class="fa-solid fa-boxes-stacked"></i>
+        </div>
+        <h1
+          class="text-lg font-semibold text-start w-full capitalize text-nowrap"
+        >
+          Promotions
+        </h1>
+        <ul class="text-xs w-full">
+          <li>Party essentials</li>
+          <li>Walking into 2020</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
