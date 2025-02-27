@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Newsletter</title>
+  </head>
+  <body class="w-full min-h-screen flex items-center justify-center">
+    <div
+      class="absolute h-1/2 top-0 w-full bg-slate-900 flex items-center justify-center"
+    >
+      <div
+        class="w-11/12 max-w-xl grid md:grid-cols-3 place-items-center gap-5 text-white"
+      >
+        <div>
+          <h1 class="capitalize text-xl font-semibold text-center">
+            1,000+ <span class="block text-sm font-light"> UI components</span>
+          </h1>
+        </div>
+        <div>
+          <h1 class="capitalize text-xl font-semibold text-center">
+            5 <span class="block text-sm font-light"> software file types</span>
+          </h1>
+        </div>
+        <div>
+          <h1 class="capitalize text-xl font-semibold text-center">
+            5 <span class="block text-sm font-light"> weekly uploads</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div
+      class="absolute z-20 w-11/12 max-w-xl p-4 bg-gradient-to-r from-[#fe5b5f] to-[#dd6bad] rounded-lg shadow-lg text-white space-y-2"
+    >
+      <h1 class="text-center text-3xl font-semibold">Join our newsletter</h1>
+      <h2 class="text-center font-light">
+        Weekly free UI resources straight to your inbox
+      </h2>
+      <div
+        class="w-fit mx-auto flex items-center border border-white rounded-lg flex-col md:flex-row"
+      >
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Your email"
+          class="p-2 bg-transparent placeholder:text-white/40 focus:outline-none min-w-64"
+        />
+        <button
+          class="bg-white text-slate-900 h-full p-2 shadow-xl px-5 w-full rounded-b-lg md:rounded-r-lg md:rounded-b-none"
+        >
+          Sign up
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
