@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .rotating-div {
+        animation: anim-rotate-div 10s linear infinite;
+      }
+
+      .rotating-div:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes anim-rotate-div {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .rotating-div img {
+        animation: anim-rotate-img 10s linear infinite;
+      }
+
+      @keyframes anim-rotate-img {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+
+      .rotating-div:hover img {
+        animation-play-state: paused;
+      }
+    </style>
+    <title>User Card #1</title>
+  </head>
+  <body class="min-h-screen w-full grid place-items-center bg-[#f6f7fe]">
+    <div class="w-11/12 max-w-sm px-4 py-8 bg-white shadow-xl space-y-5">
+      <div class="w-40 h-40 rounded-full border mx-auto relative rotating-div">
+        <!-- 1 -->
+        <div
+          class="h-14 w-14 absolute bg-[#c6cbdc] rounded-full -top-6 left-1/2 -translate-x-1/2 p-2 profile"
+        >
+          <img
+            src="https://profilemagazine.com/wp-content/uploads/2020/04/Ajmere-Dale-Square-thumbnail.jpg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <!-- 2 -->
+        <div
+          class="h-14 w-14 absolute bg-[#c6cbdc] rounded-full -right-6 top-6 p-2 profile"
+        >
+          <img
+            src="https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Rachel-Montan%CC%83ez.jpeg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <!-- 3 -->
+        <div
+          class="h-14 w-14 absolute bg-[#c6cbdc] rounded-full bottom-0 right-0 p-2 profile"
+        >
+          <img
+            src="https://cultivatedculture.com/wp-content/uploads/2019/12/LinkedIn-Profile-Picture-Example-Rachel-Montan%CC%83ez.jpeg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <!-- 4 -->
+        <div
+          class="h-14 w-14 absolute bg-[#c6cbdc] rounded-full bottom-0 p-2 profile"
+        >
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <!-- 5 -->
+        <div
+          class="h-14 w-14 absolute bg-[#c6cbdc] rounded-full -left-6 top-6 p-2 profile"
+        >
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+      </div>
+      <h1 class="font-semibold text-center">Looking for more inspiration?</h1>
+      <p class="w-3/4 text-center mx-auto text-xs text-slate-600">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur.
+      </p>
+      <button
+        class="px-8 p-3 text-white bg-blue-500 rounded-full shadow-xl flex mx-auto uppercase text-sm"
+      >
+        See featured creatives
+      </button>
+    </div>
+  </body>
+</html>
