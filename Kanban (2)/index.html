@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Kanban</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#ebebeb]"
+  >
+    <div class="w-11/12 max-w-xs bg-[#f2f2f2]">
+      <div
+        class="p-1 w-full bg-gradient-to-r from-[#e332fe] to-[#3da2fb]"
+      ></div>
+      <div class="w-full p-2">
+        <h1 class="text-xl font-semibold capitalize text-[#454693]">
+          In progress
+        </h1>
+        <ul class="space-y-3">
+          <li class="w-full p-2 bg-white rounded-md shadow-md flex gap-5">
+            <div class="w-10 h-10 rounded-full shadow-md p-1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/2560px-Uber_logo_2018.svg.png"
+                alt="Uber Logo"
+                class="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div class="flex-1 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <p class="px-2 py-1 rounded-md text-white bg-[#f56092]">High</p>
+                <p class="text-slate-600">18 Dec 2017</p>
+              </div>
+              <h2 class="font-semibold">Prepare structural documentation</h2>
+              <div class="flex flex-wrap space-x-2">
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Development</span
+                >
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Architecture</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-users"></i>
+                  <p>3 people worked on this</p>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-comments"></i>
+                  <p>17 comments</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="w-full p-2 bg-white rounded-md shadow-md flex gap-5">
+            <div class="w-10 h-10 rounded-full shadow-md p-1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/2560px-Bosch-logo.svg.png"
+                alt="Uber Logo"
+                class="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div class="flex-1 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <p class="px-2 py-1 rounded-md text-white bg-[#37a5fe]">
+                  Medium
+                </p>
+                <p class="text-slate-600">18 Dec 2017</p>
+              </div>
+              <h2 class="font-semibold">Update requirements list</h2>
+              <div class="flex flex-wrap space-x-2">
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Development</span
+                >
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Management</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-users"></i>
+                  <p>2 people worked on this</p>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-comments"></i>
+                  <p>8 comments</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="w-full p-2 bg-white rounded-md shadow-md flex gap-5">
+            <div class="w-10 h-10 rounded-full shadow-md p-1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Bosch-logo.svg/2560px-Bosch-logo.svg.png"
+                alt="Uber Logo"
+                class="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div class="flex-1 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <p class="px-2 py-1 rounded-md text-white bg-[#44c2b3]">Low</p>
+                <p class="text-slate-600">18 Dec 2017</p>
+              </div>
+              <h2 class="font-semibold">New UI for dashboard</h2>
+              <div class="flex flex-wrap space-x-2">
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Development</span
+                >
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Architecture</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-users"></i>
+                  <p>7 people worked on this</p>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-comments"></i>
+                  <p>7 comments</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="w-full p-2 bg-white rounded-md shadow-md flex gap-5">
+            <div class="w-10 h-10 rounded-full shadow-md p-1">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/20/Adidas_Logo.svg"
+                alt="Uber Logo"
+                class="w-full h-full object-contain rounded-full"
+              />
+            </div>
+            <div class="flex-1 space-y-2">
+              <div class="flex items-center justify-between text-xs">
+                <p class="px-2 py-1 rounded-md text-white bg-[#44c2b3]">Low</p>
+                <p class="text-slate-600">18 Dec 2017</p>
+              </div>
+              <h2 class="font-semibold">Initial Landing page concepts</h2>
+              <div class="flex flex-wrap space-x-2">
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Development</span
+                >
+                <span
+                  class="px-2 py-1 text-slate-600 bg-slate-100 rounded-md text-xs"
+                  >Architecture</span
+                >
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-users"></i>
+                  <p>4 people worked on this</p>
+                </div>
+                <div class="flex items-center gap-2 text-[10px] text-slate-400">
+                  <i class="fa-solid fa-comments"></i>
+                  <p>2 comments</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="py-4">
+            <p class="text-slate-700 text-center">+ Add new card</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
