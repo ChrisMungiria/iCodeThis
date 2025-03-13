@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Select</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+      .shake {
+        animation: anim-shake 0.5s ease-in-out infinite;
+      }
+
+      @keyframes anim-shake {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        25%,
+        75% {
+          transform: rotate(5deg);
+        }
+        50% {
+          transform: rotate(-5deg);
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="min-h-dvh w-full flex items-center justify-center bg-[#1a182d]">
+    <!-- User Input Modal -->
+    <div
+      id="user-modal"
+      class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center backdrop-blur-md hidden"
+    >
+      <div
+        class="bg-[#131323] p-5 rounded-md text-white shadow-lg w-80 text-center space-y-3"
+      >
+        <p class="text-sm">Enter username</p>
+        <input
+          type="text"
+          id="name"
+          placeholder="Username"
+          class="w-full border border-gray-500 rounded-md p-2 focus:outline-none bg-transparent text-center"
+        />
+        <button
+          id="add-user"
+          class="w-full bg-[#587ca9] hover:bg-[#4a6b91] transition text-white py-2 rounded-md mt-2"
+        >
+          Add User
+        </button>
+      </div>
+    </div>
+
+    <!-- Main User Selection Card -->
+    <div
+      class="w-11/12 max-w-xs p-4 bg-[#131323] rounded-md text-slate-100 space-y-4 shadow-md"
+    >
+      <h1 class="text-center text-lg font-semibold">Who is playing now?</h1>
+
+      <div id="user-list" class="grid grid-cols-3 gap-3">
+        <div
+          class="user-card relative w-full p-4 bg-[#1a182d] rounded-md space-y-3"
+        >
+          <button
+            class="remove-user hidden absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-red-500 w-5 h-5 rounded-full flex items-center justify-center text-xs"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1356/1356479.png"
+            alt="rocket icon"
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-sm text-center text-slate-300">tika-m</p>
+        </div>
+
+        <div
+          class="user-card relative w-full p-4 bg-[#1a182d] rounded-md space-y-3"
+        >
+          <button
+            class="remove-user hidden absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-red-500 w-5 h-5 rounded-full flex items-center justify-center text-xs"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/836/836824.png"
+            alt="drum icon"
+            class="w-1/2 mx-auto"
+          />
+          <p class="text-sm text-center text-slate-300">drummer-x</p>
+        </div>
+
+        <!-- Add User Button -->
+        <div
+          id="add-user-btn"
+          class="w-full p-4 bg-[#1a182d] rounded-md space-y-3 cursor-pointer"
+        >
+          <div
+            class="w-8 h-8 border border-[#587ca9] rounded-full flex items-center justify-center mx-auto text-[#587ca9]"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </div>
+          <p class="text-center text-[#587ca9] text-xs">Add User</p>
+        </div>
+      </div>
+
+      <button
+        id="manage-users-btn"
+        class="w-full text-[#587ca9] border border-slate-500 text-xs py-2 rounded-md"
+      >
+        Manage Users
+      </button>
+    </div>
+
+    <script>
+      const manageUsersBtn = document.getElementById("manage-users-btn");
+      const userCards = document.getElementById("user-list");
+      const addUserBtn = document.getElementById("add-user-btn");
+      const addUserModal = document.getElementById("user-modal");
+      const addUser = document.getElementById("add-user");
+      const userNameInput = document.getElementById("name");
+      let isManagingUsers = false;
+
+      // Toggle Manage Users Mode
+      manageUsersBtn.addEventListener("click", () => {
+        isManagingUsers = !isManagingUsers;
+        document.querySelectorAll(".user-card").forEach((card) => {
+          card.classList.toggle("shake", isManagingUsers);
+          card
+            .querySelector(".remove-user")
+            .classList.toggle("hidden", !isManagingUsers);
+        });
+      });
+
+      // Remove User
+      userCards.addEventListener("click", (event) => {
+        if (event.target.closest(".remove-user")) {
+          event.target.closest(".user-card").remove();
+        }
+      });
+
+      // Show Add User Modal
+      addUserBtn.addEventListener("click", () => {
+        addUserModal.classList.remove("hidden");
+        userNameInput.focus();
+      });
+
+      // Add User Logic
+      addUser.addEventListener("click", () => {
+        const name = userNameInput.value.trim();
+        if (!name) return alert("Please enter a username");
+
+        // Create a new user card
+        const newUserCard = document.createElement("div");
+        newUserCard.classList.add(
+          "user-card",
+          "relative",
+          "w-full",
+          "p-4",
+          "bg-[#1a182d]",
+          "rounded-md",
+          "space-y-3"
+        );
+        newUserCard.innerHTML = `
+          <button class="remove-user ${
+            isManagingUsers ? "" : "hidden"
+          } absolute top-0 right-0 transform translate-x-1 -translate-y-1 bg-red-500 w-5 h-5 rounded-full flex items-center justify-center text-xs">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <img src="https://cdn-icons-png.flaticon.com/512/1356/1356479.png" alt="rocket icon" class="w-1/2 mx-auto">
+          <p class="text-sm text-center text-slate-300">${name}</p>
+        `;
+
+        // Append to the list
+        userCards.insertBefore(newUserCard, addUserBtn);
+
+        // Reset input & hide modal
+        userNameInput.value = "";
+        addUserModal.classList.add("hidden");
+      });
+
+      // Close Modal on Outside Click
+      addUserModal.addEventListener("click", (event) => {
+        if (event.target === addUserModal) {
+          addUserModal.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
