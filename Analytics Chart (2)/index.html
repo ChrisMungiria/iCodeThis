@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Analytics Chart</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#e1e1e4]"
+  >
+    <div class="max-w-sm bg-white rounded-md shadow-xl px-6 py-2 space-y-4">
+      <!-- The bar items -->
+      <div class="flex gap-5 w-fit relative pl-16">
+        <!-- The scales -->
+        <div class="absolute inset-0 flex flex-col justify-between pb-7">
+          <div class="w-full flex items-center gap-3">
+            <p class="text-xs font-semibold">200,000</p>
+            <hr class="flex-1 border border-dashed" />
+          </div>
+          <div class="w-full flex items-center gap-3">
+            <p class="text-xs font-semibold">100,000</p>
+            <hr class="flex-1 border border-dashed" />
+          </div>
+          <div class="w-full flex items-center gap-3">
+            <p class="text-xs font-semibold">150,000</p>
+            <hr class="flex-1 border border-dashed" />
+          </div>
+          <div class="w-full flex items-center gap-3">
+            <p class="text-xs font-semibold">50,000</p>
+            <hr class="flex-1 border border-dashed" />
+          </div>
+          <div class="w-full flex items-center gap-3">
+            <p class="text-xs font-semibold">0</p>
+            <hr class="flex-1 border-t border-slate-600" />
+          </div>
+        </div>
+        <!-- July item -->
+        <div class="relative h-72 flex flex-col items-center gap-5 july">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-5/6 bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-3/4 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/2 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/3 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">July</p>
+        </div>
+        <!-- August Item -->
+        <div class="relative h-72 flex flex-col items-center gap-5">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-3/4 bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/2 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-20 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-10 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">Aug</p>
+        </div>
+        <!-- September Item -->
+        <div class="relative h-72 flex flex-col items-center gap-5">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-full bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-5/6 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-3/4 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/2 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">Sep</p>
+        </div>
+        <!-- October Item -->
+        <div class="relative h-72 flex flex-col items-center gap-5">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-1/2 bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/3 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/4 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/5 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">Oct</p>
+        </div>
+        <!-- November Item -->
+        <div class="relative h-72 flex flex-col items-center gap-5">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-3/4 bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/2 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/3 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/5 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">Nov</p>
+        </div>
+        <!-- December Item -->
+        <div class="relative h-72 flex flex-col items-center gap-5">
+          <!-- Bar container -->
+          <div class="w-2 flex-1 relative">
+            <!-- Data items -->
+            <div
+              class="absolute bottom-0 w-full h-5/6 bg-[#f6592a] rounded-t-full shadow-md"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-3/4 bg-[#f8a425] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-2/3 bg-[#3ec7c7] border-t border-white"
+            ></div>
+            <div
+              class="absolute bottom-0 w-full h-1/3 bg-[#5189ca] border-t border-white"
+            ></div>
+          </div>
+          <p class="text-xs font-semibold">Dec</p>
+        </div>
+      </div>
+      <!-- The key -->
+      <div class="grid grid-cols-2 gap-3 w-fit mx-auto">
+        <div class="flex items-center gap-2 text-xs">
+          <div class="w-2 h-2 bg-[#5189ca] rounded-full"></div>
+          <p>United States</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <div class="w-2 h-2 bg-[#39cac7] rounded-full"></div>
+          <p>Canada</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <div class="w-2 h-2 bg-[#f5a326] rounded-full"></div>
+          <p>Australia</p>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <div class="w-2 h-2 bg-[#f65a24] rounded-full"></div>
+          <p>China</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
