@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Countdown</title>
+  </head>
+  <body
+    class="min-h-screen w-full bg-[#edf2f5] flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xl bg-[#e6ecf1] p-4 rounded-lg">
+      <div
+        class="w-full h-full bg-[#fafcfc] rounded-lg space-y-3 pt-4 shadow-xl"
+      >
+        <h1 class="text-center text-xl font-semibold capitalize">
+          Until new beginnings
+        </h1>
+        <div class="grid grid-cols-5">
+          <p class="text-3xl font-semibold text-center">
+            <span id="months">0</span> <span class="block text-xs">months</span>
+          </p>
+          <p class="text-3xl font-semibold text-center">
+            <span id="days">0</span> <span class="block text-xs">days</span>
+          </p>
+          <p class="text-3xl font-semibold text-center">
+            <span id="hours">0</span> <span class="block text-xs">hours</span>
+          </p>
+          <p class="text-3xl font-semibold text-center">
+            <span id="minutes">0</span>
+            <span class="block text-xs">minutes</span>
+          </p>
+          <p class="text-3xl font-semibold text-center">
+            <span id="seconds">0</span>
+            <span class="block text-xs">seconds</span>
+          </p>
+        </div>
+        <img
+          src="https://images.pexels.com/photos/2591462/pexels-photo-2591462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="mountain image"
+          class="w-full h-56 object-cover object-top"
+        />
+      </div>
+    </div>
+    <script>
+      const countDownDate = new Date(2025, 3, 1, 0, 0, 0);
+
+      function updateCountdown() {
+        const now = new Date();
+        let timeDiff = countDownDate - now;
+
+        if (timeDiff <= 0) {
+          document.getElementById("months").textContent = 0;
+          document.getElementById("days").textContent = 0;
+          document.getElementById("hours").textContent = 0;
+          document.getElementById("minutes").textContent = 0;
+          document.getElementById("seconds").textContent = 0;
+          return;
+        }
+
+        const months =
+          countDownDate.getMonth() -
+          now.getMonth() +
+          (countDownDate.getFullYear() - now.getFullYear()) * 12;
+        const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24)) % 30;
+        const hours = Math.floor((timeDiff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeDiff / (1000 * 60)) % 60);
+        const seconds = Math.floor((timeDiff / 1000) % 60);
+
+        document.getElementById("months").textContent = months;
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
+  </body>
+</html>
