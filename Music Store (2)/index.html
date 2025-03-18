@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Music Store</title>
+  </head>
+  <body class="w-full min-h-screen flex flex-col">
+    <nav class="pt-20 bg-white w-full">
+      <div class="max-w-2xl mx-auto flex items-center justify-between">
+        <h1 class="text-xl capitalize text-slate-500">Le musique</h1>
+        <div class="text-slate-500">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            class="focus:outline-none"
+          />
+        </div>
+      </div>
+    </nav>
+    <hr class="h-px border-none bg-slate-200" />
+    <div class="w-full max-w-3xl flex-1 mx-auto space-y-5">
+      <div class="w-full grid md:grid-cols-6 gap-5 relative p-2 px-4">
+        <div class="absolute -z-10 inset-0">
+          <img
+            src="https://media.istockphoto.com/id/1461816749/photo/a-crowd-of-people-with-raised-arms-during-a-music-concert-with-an-amazing-light-show-black.jpg?s=612x612&w=0&k=20&c=-hdWCLDP5AI9A3mjq3JPMPKhXxJ2P1iItPDFktQHxX8="
+            alt="concert image"
+            class="w-full h-full object-cover"
+          />
+          <div
+            class="w-full h-full absolute inset-0 bg-gradient-to-r from-[#c5366d7b] to-[#cd41d47b]"
+          ></div>
+        </div>
+        <div class="col-span-2 p-4 text-white space-y-2">
+          <h1 class="text-2xl font-semibold">Explore</h1>
+          <p class="text-xs">
+            Torquent vel tellus sed cras turpis nibh, libero eget euismod,
+            mattis suscipit lobortis magna
+          </p>
+          <button class="text-blue-500 bg-white px-4 p-2 text-xs">
+            Read more
+          </button>
+        </div>
+        <div class="bg-white h-full p-1 w-full space-y-2 shadow-xl">
+          <img
+            src="https://i.discogs.com/7hx2RvIBjnN1uBd041NUrhvEFhlRVw5Fk8fZ3RYXgCQ/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTkwOTg5/MTQtMTY1NTgyOTQ0/My0zNDc3LmpwZWc.jpeg"
+            alt="album cover"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="font-semibold text-black">$15</p>
+          </div>
+          <p class="text-xs capitalize font-semibold">
+            This is acting (Deluxe Version)
+          </p>
+        </div>
+        <div class="bg-white h-full p-1 w-full space-y-2 shadow-xl">
+          <img
+            src="https://a10.gaanacdn.com/gn_img/albums/9En3peWXDV/En3pn1NPbX/size_m.webp"
+            alt="album cover"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="font-semibold text-black">$15</p>
+          </div>
+          <p class="text-xs capitalize font-semibold">Desire</p>
+        </div>
+        <div class="bg-white h-full p-1 w-full space-y-2 shadow-xl">
+          <img
+            src="https://static.qobuz.com/images/covers/mb/4l/qzd72p8hg4lmb_230.jpg"
+            alt="album cover"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="font-semibold text-black">$15</p>
+          </div>
+          <p class="text-xs capitalize font-semibold">Human Deluxe</p>
+        </div>
+        <div class="bg-white h-full p-1 w-full space-y-2 shadow-xl">
+          <img
+            src="https://i.discogs.com/dnYBIHOzk_ag5-kfvUcFazPT1jUTs0h59pGAqV--QwY/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTExMDAw/Mjc1LTE2NzI4NjQ1/OTAtNzc1Ni5qcGVn.jpeg"
+            alt="album cover"
+            class="w-full h-auto object-cover"
+          />
+          <div
+            class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+          >
+            <div class="flex items-center gap-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <p class="font-semibold text-black">$15</p>
+          </div>
+          <p class="text-xs capitalize font-semibold">Whatever you want</p>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <h1 class="text-xl uppercase text-[#758283]">Top 3</h1>
+        <div class="grid md:grid-cols-3 px-8 gap-5">
+          <div class="grid grid-cols-2 border border-slate-200">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/albums/VdNW0JMKo5/dNW0XnzXWo/size_m.jpg"
+              alt="album cover"
+              class="w-full h-full object-cover"
+            />
+            <div class="w-full p-2">
+              <div class="w-full flex items-center justify-between text-[10px]">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="font-semibold text-black">$15</p>
+              </div>
+              <h2 class="text-sm font-semibold capitalize">Love stuff</h2>
+              <p class="text-[10px] font-light">
+                Love stuff is the debut studio album by American singer and
+                songwriter Elle King. It was released physicallt and digitally
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 border border-slate-200">
+            <img
+              src="https://i.ytimg.com/vi/AjDAUiX2JT0/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgSShGMA8=&rs=AOn4CLB23toemAWwgiQFZJDVIVdvR_Ag9A"
+              alt="album cover"
+              class="w-full h-full object-cover"
+            />
+            <div class="w-full p-2">
+              <div class="w-full flex items-center justify-between text-[10px]">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="font-semibold text-black">$15</p>
+              </div>
+              <h2 class="text-sm font-semibold capitalize">Demon Days</h2>
+              <p class="text-[10px] font-light">
+                Demon days is the second studio album by British virtual band
+                Gorillaz released on 11 May 2005
+              </p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 border border-slate-200">
+            <img
+              src="https://a10.gaanacdn.com/gn_img/albums/VdNW0JMKo5/dNW0XnzXWo/size_m.jpg"
+              alt="album cover"
+              class="w-full h-full object-cover"
+            />
+            <div class="w-full p-2">
+              <div class="w-full flex items-center justify-between text-[10px]">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <p class="font-semibold text-black">$15</p>
+              </div>
+              <h2 class="text-sm font-semibold capitalize">Love stuff</h2>
+              <p class="text-[10px] font-light">
+                Love stuff is the debut studio album by American singer and
+                songwriter Elle King. It was released physicallt and digitally
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <h1 class="text-xl uppercase text-[#758283]">Recommended for you</h1>
+        <div class="grid md:grid-cols-6 px-8 md:gap-5 gap-1">
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://external-preview.redd.it/DRhMxF6J-U3PN5-bEgupefHgvtgf9YYFGIUPih1Ji4c.jpg?auto=webp&s=846b81881495c237c89ce8c184336198b350a5f1"
+              alt="album cover"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">Witness</p>
+          </div>
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://i.discogs.com/LyXKUjozj2f8PoLvq8HCUZwuv4IIrQpLlM4lrK8tOM8/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwMzUx/NTQ2LTE0OTU4MjEz/OTItMzExNi5qcGVn.jpeg"
+              alt="album cover"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">More than you know</p>
+          </div>
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://www.introlyrics.com/wp-content/uploads/2017/09/stargazing.jpg"
+              alt="album cover"
+              class="w-full h-auto min-h-28 object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">Stargazing EP</p>
+          </div>
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQiFrbEkyEE33TKwuP8afB_w6CCTdcdQSww41OqYCqAZz52Q5N1"
+              alt="album cover"
+              class="w-full h-auto object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">My everything</p>
+          </div>
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/7321583/joanne-wallpaper-desktop.jpg.6b3fea4c51e8f3f88cd651f7b27ed45c.jpg?quality=90&strip=all&crop=3.125,0,93.75,100&w=2400"
+              alt="album cover"
+              class="w-full h-auto min-h-28 object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">Joanne (Deluxe)</p>
+          </div>
+          <div class="h-full p-1 w-full space-y-2 border border-slate-200">
+            <img
+              src="https://images.genius.com/03348fda2bf03706cef6c61790f30b7a.300x300x1.png"
+              alt="album cover"
+              class="w-full h-auto min-h-28 object-cover"
+            />
+            <div
+              class="flex items-center justify-between text-[10px] text-[#a0a3f2]"
+            >
+              <div class="flex items-center gap-1">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+              </div>
+              <p class="font-semibold text-black">$15</p>
+            </div>
+            <p class="text-xs capitalize font-semibold">The hunting party</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
