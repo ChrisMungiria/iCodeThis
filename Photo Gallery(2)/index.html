@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Photo Gallery</title>
+  </head>
+  <body
+    class="w-full min-h-screen bg-[#dde2ea] flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xl p-4 bg-white rounded-xl shadow-lg space-y-4">
+      <div class="flex items-center justify-end">
+        <ul class="flex items-center gap-2 text-sm">
+          <li class="group cursor-pointer">
+            Vector
+            <div
+              class="w-0 group-hover:w-2/3 flex mx-auto h-[2px] bg-slate-800 transition-all duration-150 ease-in-out"
+            ></div>
+          </li>
+          <li class="group cursor-pointer">
+            Illustrations
+            <div
+              class="w-0 group-hover:w-2/3 flex mx-auto h-[2px] bg-slate-800 transition-all duration-150 ease-in-out"
+            ></div>
+          </li>
+          <li class="group cursor-pointer">
+            Images
+            <div
+              class="w-2/3 flex mx-auto h-[2px] bg-slate-800 transition-all duration-150 ease-in-out"
+            ></div>
+          </li>
+          <li class="group cursor-pointer">
+            Icons
+            <div
+              class="w-0 group-hover:w-2/3 flex mx-auto h-[2px] bg-slate-800 transition-all duration-150 ease-in-out"
+            ></div>
+          </li>
+        </ul>
+      </div>
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 border-b border-slate-400">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            class="placeholder:text-slate-400 focus:outline-none p-1"
+          />
+          <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+        </div>
+        <button
+          class="text-xs px-8 p-2 rounded-md bg-slate-800 text-white hover:shadow-xl"
+        >
+          Upload
+        </button>
+      </div>
+      <div class="grid md:grid-cols-3 grid-cols-2 gap-3">
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://images.pexels.com/photos/2212718/pexels-photo-2212718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="portrait of a woman wearing teal eyelashes"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Portrait of a woman</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSknXqSicXUDRQfr7oGTswQCZ6ZoGGO2DdLrmGGTI6Q2fs9rFcC"
+            alt="arch window frame"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Arch window frame</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://images.mutualcdn.com/axter/images/scott-webb-293418-unsplash.jpg?auto=compress&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.5&&w=375&h=281.25"
+            alt="Neo-Bitumen Flame free waterproofing system"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Neo-Bitumen Flame free waterproofing system</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://img.goodfon.com/wallpaper/big/8/14/kanon-vershiny-gor-vid-s-verkhu-derevia-pesok-vysokhshee-rus.webp"
+            alt="Abstract painting"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Abstract painting</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQrBxNX_3Ilw1s4C2xqud04jwEjMXO3P8SFY7n-uhpofmtcFE0e"
+            alt="Residential buildings"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Residential buildings</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative group cursor-pointer h-full max-h-32 imageContainer"
+        >
+          <img
+            src="https://img.freepik.com/premium-photo/brown-wooden-door-flat-bricked-wall-photo_195114-71896.jpg?w=360"
+            alt="Brown wooden door"
+            class="h-full w-full object-cover"
+          />
+          <div
+            class="absolute translate-y-1/2 opacity-0 bottom-0 w-full p-2 bg-slate-900/50 text-white text-xs flex items-center justify-between group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-150 ease-in-out"
+          >
+            <p>Brown wooden door</p>
+            <button class="bookmark">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const bookmark = document.querySelectorAll(".bookmark");
+      bookmark.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Select the <i> tag within the button, remove the class "fa-regular" and add "fa-solid"
+          if (btn.querySelector("i").classList.contains("fa-regular")) {
+            btn.querySelector("i").classList.remove("fa-regular");
+            btn.querySelector("i").classList.add("fa-solid");
+          } else {
+            btn.querySelector("i").classList.remove("fa-solid");
+            btn.querySelector("i").classList.add("fa-regular");
+          }
+        });
+      });
+
+      //   Filter the images based on the search term
+      const search = document.getElementById("search");
+      const imageContainers = document.querySelectorAll(".imageContainer");
+      search.addEventListener("input", () => {
+        const inputValue = search.value.toLowerCase();
+        imageContainers.forEach((imageContainer) => {
+          const imageTitle = imageContainer
+            .querySelector("img")
+            .alt.toLowerCase();
+          if (imageTitle.includes(inputValue)) {
+            imageContainer.style.display = "block";
+          } else {
+            imageContainer.style.display = "none";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
