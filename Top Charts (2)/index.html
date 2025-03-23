@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .list-container {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation-name: fade-in;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      li {
+        opacity: 0;
+        transform: translateY(-20px);
+        animation-delay: 500ms;
+        animation-name: fade-in;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+    <title>Top Charts</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex justify-center items-center"
+    style="
+      background-image: conic-gradient(
+        from 70deg,
+        #f7f7f7 180deg,
+        #e36a7c 180deg
+      );
+    "
+  >
+    <div class="w-11/12 max-w-xl space-y-4">
+      <div class="flex items-center gap-2 text-white text-2xl">
+        <i class="fa-solid fa-arrow-left"></i>
+        <h1 class="uppercase font-bold">
+          Top 10 most listened songs
+          <span class="block normal-case text-gray-200 text-sm"
+            >in the past week</span
+          >
+        </h1>
+      </div>
+      <div class="w-full p-2 bg-white shadow-xl list-container">
+        <ul class="space-y-2">
+          <li class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center text-sm"
+              >
+                <p>1</p>
+              </div>
+              <img
+                src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ0UWzfHl_2jiFWgESV08nFziZ9GxYglViI2ymicti5KcmfCyLv"
+                alt="in my feelings album art"
+                class="w-20 h-20 object-cover rounded-lg"
+              />
+              <div class="space-y-2">
+                <h1 class="text-xl font-semibold text-gray-800 capitalize">
+                  In my feelings
+                </h1>
+                <h2 class="text-sm text-gray-600 capitalize">Drake</h2>
+              </div>
+            </div>
+            <p class="text-sm text-gray-400">2,089,766</p>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center text-sm"
+              >
+                <p>2</p>
+              </div>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzyU6QXqJ3suSkMxMGx9vLZ1zktJYnzmH4Yh-srHAusrmz9lh4"
+                alt="i like it album art"
+                class="w-20 h-20 object-cover rounded-lg"
+              />
+              <div class="space-y-2">
+                <h1 class="text-xl font-semibold text-gray-800 capitalize">
+                  I like it
+                </h1>
+                <h2 class="text-sm text-gray-600 capitalize">
+                  Cardi B & Bad Bunny & J Balvin
+                </h2>
+              </div>
+            </div>
+            <p class="text-sm text-gray-400">1,864,874</p>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center text-sm"
+              >
+                <p>3</p>
+              </div>
+              <img
+                src="https://i.discogs.com/jOKb5p2csZ7n0Ra6cNUEzWod6xpCOZJoH-2LAe_wj_M/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MTY2/NTEwLTE2MDQ1ODQ3/NTctMTMzMi5wbmc.jpeg"
+                alt="better now album art"
+                class="w-20 h-20 object-cover rounded-lg"
+              />
+              <div class="space-y-2">
+                <h1 class="text-xl font-semibold text-gray-800 capitalize">
+                  Better now
+                </h1>
+                <h2 class="text-sm text-gray-600 capitalize">Post Malone</h2>
+              </div>
+            </div>
+            <p class="text-sm text-gray-400">1,543,632</p>
+          </li>
+          <li class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center text-sm"
+              >
+                <p>3</p>
+              </div>
+              <img
+                src="https://i.discogs.com/pf4Jn5Mkk5HTK0XlwflPUXJK9tqPI-9hEK2I5e1l7aw/rs:fit/g:sm/q:40/h:150/w:150/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTk4ODg4/MjgtMTY5MDk4MDI0/Ni0yNjY1LmpwZWc.jpeg"
+                alt="boo'd up album art"
+                class="w-20 h-20 object-cover rounded-lg"
+              />
+              <div class="space-y-2">
+                <h1 class="text-xl font-semibold text-gray-800 capitalize">
+                  Boo'd up
+                </h1>
+                <h2 class="text-sm text-gray-600 capitalize">Ella Mai</h2>
+              </div>
+            </div>
+            <p class="text-sm text-gray-400">1,234, 877</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
