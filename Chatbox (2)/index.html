@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Chatbox</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#2f2d3f]"
+  >
+    <div class="w-11/12 max-w-sm rounded-md relative">
+      <div class="w-full p-2 bg-[#ff6a6a] rounded-t-md flex gap-5">
+        <div class="flex items-center">
+          <img
+            src="https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186122.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover border border-white"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsTXTE3FBqvPGLwVwasuF4iHYpSa01U9YkfA&s"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover border border-white -ml-5"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKE9c_PAUbggqPsYNzTjimfhzPVa0ee2cJGraonYQss8z7HFAX1_ZP8x6KKswMQ9Op9yc&usqp=CAU"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover border border-white -ml-5"
+          />
+        </div>
+        <div class="text-white">
+          <h1 class="text-lg font-semibold">Elnora, Lella, Lucinda</h1>
+          <h2 class="font-light text-xs">
+            We typically reply within a few minutes
+          </h2>
+        </div>
+      </div>
+      <div
+        id="messages_container"
+        class="p-4 bg-[#272639] h-84 relative overflow-y-scroll space-y-2"
+      >
+        <div class="flex gap-5">
+          <img
+            src="https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186122.jpg"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover border border-white"
+          />
+          <div
+            class="flex-1 p-4 bg-[#3a394b] relative rounded-md text-white text-sm"
+          >
+            <div
+              class="w-5 h-5 bg-[#3a394b] absolute -left-2 top-3 rotate-45"
+            ></div>
+            <p>Hi there!</p>
+            <p>Looking to get started? I can help answer your questions!</p>
+          </div>
+        </div>
+        <div
+          class="absolute w-full bottom-0 p-2 left-0 pl-10 flex items-center gap-2 z-40 bg-[#272639]"
+        >
+          <input
+            type="text"
+            name="message"
+            id="message"
+            placeholder="Message"
+            class="w-full p-2 focus:outline-none placeholder:text-gray-400 bg-slate-200 rounded-md shadow-xl"
+          />
+          <button
+            id="send"
+            class="w-10 h-10 bg-[#ff6a6a] rounded-full flex items-center justify-center text-white flex-shrink-0"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+        <div
+          id="agree"
+          class="absolute w-full p-6 bg-[#3a394b] bottom-0 left-0 space-y-4 z-40"
+        >
+          <p class="text-xs text-gray-100">
+            By using the chat, I confirm that I have read the
+            <span class="text-[#ff6a6a] underline">privacy policy</span> and do
+            not object to the use of my personal data
+          </p>
+          <button
+            id="agree_button"
+            class="border border-[#ff6a6a] px-6 py-2 rounded-full text-[#ff6a6a] text-xs"
+          >
+            I agree
+          </button>
+        </div>
+      </div>
+      <div
+        class="absolute w-10 h-10 bg-[#ff6a6a] rounded-full top-full mt-5 right-0 flex items-center justify-center text-white shadow-xl"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+    </div>
+    <script>
+      const agree_button = document.getElementById("agree_button");
+      const agree = document.getElementById("agree");
+
+      agree_button.addEventListener("click", () => {
+        agree.style.display = "none";
+      });
+
+      const send = document.getElementById("send");
+      const message = document.getElementById("message");
+      const messages_container = document.getElementById("messages_container");
+
+      send.addEventListener("click", () => {
+        const message_content = message.value;
+        console.log("Clicked");
+
+        if (message_content.trim() === "") {
+          alert("Please enter a message");
+        } else {
+          const message_div = document.createElement("div");
+          message_div.classList.add("flex", "gap-5", "flex-row-reverse");
+          const profile_image = document.createElement("img");
+          profile_image.src =
+            "https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg";
+          profile_image.alt = "profile image";
+          profile_image.classList.add(
+            "w-12",
+            "h-12",
+            "rounded-full",
+            "object-cover",
+            "border-white"
+          );
+          const message_content_div = document.createElement("div");
+          message_content_div.classList.add(
+            "flex-1",
+            "p-4",
+            "bg-[#3a394b]",
+            "relative",
+            "rounded-md",
+            "text-white",
+            "text-sm"
+          );
+          const message_bubble = document.createElement("div");
+          message_bubble.classList.add(
+            "w-5",
+            "h-5",
+            "bg-[#3a394b]",
+            "absolute",
+            "-right-2",
+            "top-3",
+            "rotate-45"
+          );
+          const message_text = document.createElement("p");
+          message_text.textContent = message_content;
+          message_content_div.appendChild(message_bubble);
+          message_content_div.appendChild(message_text);
+          message_div.appendChild(profile_image);
+          message_div.appendChild(message_content_div);
+          messages_container.appendChild(message_div);
+
+          // Clear the text input
+          message.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
