@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Donate</title>
+  </head>
+
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#21213c]"
+  >
+    <div
+      class="w-11/12 max-w-xl p-4 bg-[#2f2f4f] rounded-md grid md:grid-cols-2 gap-5 text-white"
+    >
+      <div class="space-y-4">
+        <h1 class="text-2xl font-semibold">Help us do more</h1>
+        <p class="text-sm">
+          We'll get right to the point: we're asking you to support us. We're a
+          nonprofit that relies on support from people like you. If everyone
+          reading this gives $10 monthly, we can thrive for years.
+        </p>
+      </div>
+      <div class="space-y-2">
+        <p class="text-xs">Select gift frequency</p>
+        <div class="p-2 rounded-full bg-[#21213c] text-sm w-fit flex gap-2">
+          <div class="p-2 has-checked:bg-[#2f2f4f] rounded-full">
+            <label for="monthly">Monthly</label>
+            <input
+              type="radio"
+              id="monthly"
+              name="frequency"
+              value="monthly"
+              class="hidden"
+              checked
+            />
+          </div>
+          <div class="p-2 has-checked:bg-[#2f2f4f] rounded-full">
+            <label for="one_time">One time</label>
+            <input
+              type="radio"
+              id="one_time"
+              name="frequency"
+              value="one_time"
+              class="hidden"
+            />
+          </div>
+        </div>
+        <p class="text-xs">Select amount (in US Dollar)</p>
+        <div class="flex items-center gap-2 text-xs">
+          <div
+            class="border px-2 py-1 rounded-full border-slate-800 has-checked:bg-white has-checked:text-slate-800"
+          >
+            <input
+              type="radio"
+              id="10"
+              name="amount"
+              value="10"
+              class="hidden"
+            />
+            <label for="10">$10</label>
+          </div>
+          <div
+            class="border px-2 py-1 rounded-full border-slate-800 has-checked:bg-white has-checked:text-slate-800"
+          >
+            <input
+              type="radio"
+              id="20"
+              name="amount"
+              value="20"
+              class="hidden"
+            />
+            <label for="20">$20</label>
+          </div>
+          <div
+            class="border px-2 py-1 rounded-full border-slate-800 has-checked:bg-white has-checked:text-slate-800"
+          >
+            <input
+              type="radio"
+              id="30"
+              name="amount"
+              value="30"
+              class="hidden"
+              checked
+            />
+            <label for="30">$30</label>
+          </div>
+          <div
+            class="border px-2 py-1 rounded-full border-slate-800 has-checked:bg-white has-checked:text-slate-800"
+          >
+            <input
+              type="radio"
+              id="40"
+              name="amount"
+              value="40"
+              class="hidden"
+            />
+            <label for="40">$40</label>
+          </div>
+          <div
+            class="border px-2 py-1 rounded-full border-slate-800 has-checked:bg-white has-checked:text-slate-800"
+          >
+            <input
+              type="radio"
+              id="other"
+              name="amount"
+              value="other"
+              class="hidden"
+            />
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <input
+            type="checkbox"
+            name="add_monthly"
+            id="add_monthly"
+            class="bg-[#2f2f4f] w-10 h-10"
+          />
+          <label for="add_monthly">
+            Yes I'll generously add $0.75 each month to cover the transaction
+            fees
+          </label>
+        </div>
+        <div class="text-xs space-y-2 flex flex-col gap-2">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            class="p-2 border border-slate-800 w-full rounded-md"
+          />
+        </div>
+        <a href="#" class="text-xs text-[#696eb5]"
+          >Click here to give in honour of another person</a
+        >
+        <button
+          class="bg-[#1865f2] text-white px-4 py-2 rounded-md text-xs my-4"
+        >
+          Donate now
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
