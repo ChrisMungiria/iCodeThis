@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Login Card</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f9eff0]"
+  >
+    <div class="w-11/12 max-w-xl rounded-md shadow-xl flex">
+      <div class="flex-[2] bg-white p-8 rounded-md space-y-2">
+        <h1 class="text-xl font-semibold capitalize">Log in</h1>
+        <h2 class="text-sm">
+          Log into your account to upload or download pictures, music or videos
+        </h2>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter your email address"
+          class="p-2 border border-gray-200 w-full focus:outline-none rounded-md"
+        />
+        <div class="flex items-center justify-between text-xs">
+          <a href="#" class="text-[#056586]">Forgot your password?</a>
+          <button
+            class="px-6 py-3 rounded-md shadow-md bg-[#056586] text-white group hover:scale-95 transition-all duration-150 ease-in-out"
+          >
+            Next
+            <i
+              class="fa-solid fa-arrow-right group-hover:-rotate-45 transition-all duration-150 ease-in-out"
+            ></i>
+          </button>
+        </div>
+        <hr class="text-gray-200 my-3" />
+        <p class="text-center text-xs text-gray-400">Or log in with</p>
+        <div class="flex items-center gap-2 text-xs font-semibold">
+          <button
+            class="p-2 flex-1 border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-facebook"></i><span>Facebook</span>
+          </button>
+          <button
+            class="p-2 flex-1 border border-gray-200 flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-google"></i><span>Google</span>
+          </button>
+        </div>
+        <p class="text-center text-gray-500 text-sm my-3">
+          Don't have an account? <a href="#" class="text-[#056586]">Sign up</a>
+        </p>
+      </div>
+      <div class="flex-1 flex-shrink-0 relative rounded-r-md hidden md:block">
+        <div
+          class="absolute w-8 h-8 bg-white/50 flex items-center justify-center rounded-full top-2 right-2 font-light"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <img
+          src="https://images.pexels.com/photos/2533089/pexels-photo-2533089.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="ocean background image"
+          class="w-full h-full object-cover rounded-r-md"
+        />
+      </div>
+    </div>
+  </body>
+</html>
