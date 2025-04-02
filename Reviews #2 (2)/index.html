@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Reviews #2</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#1d1c2c]"
+  >
+    <div class="w-11/12 max-w-xs p-4 bg-[#211f32] text-gray-100 space-y-3">
+      <h1>Reviews</h1>
+      <div
+        class="w-full border border-gray-500 flex items-center gap-2 p-2 rounded"
+      >
+        <i class="fa-solid fa-magnifying-glass text-gray-500"></i>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Search reviews"
+          class="w-full focus:outline-none"
+        />
+      </div>
+      <div class="flex items-center flex-wrap gap-2 text-xs mt-5">
+        <label
+          for="experience"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="experience"
+            name="filters"
+            id="experience"
+            class="hidden peer"
+          />Experience</label
+        >
+        <label
+          for="quality"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="quality"
+            name="filters"
+            id="quality"
+            class="hidden peer"
+          />Quality</label
+        >
+        <label
+          for="design"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="design"
+            name="filters"
+            id="design"
+            class="hidden peer"
+          />Design</label
+        >
+        <label
+          for="size"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="size"
+            name="filters"
+            id="size"
+            class="hidden peer"
+          />Size</label
+        >
+        <label
+          for="features"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="features"
+            name="filters"
+            id="features"
+            class="hidden peer"
+          />Features</label
+        >
+        <label
+          for="value"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="value"
+            name="filters"
+            id="value"
+            class="hidden peer"
+          />Value</label
+        >
+        <label
+          for="replacement"
+          class="p-3 rounded-md cursor-pointer has-checked:bg-[#8a7ffb] bg-[#1d1c2c]"
+        >
+          <input
+            type="checkbox"
+            value="replacement"
+            name="filters"
+            id="replacement"
+            class="hidden peer"
+          />Replacement</label
+        >
+      </div>
+      <ul class="space-y-2">
+        <li class="p-3 rounded-md bg-[#2c2b40] space-y-2">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center gap-2 text-sm">
+              <div
+                class="w-10 h-10 bg-[#d56b6b] rounded-full flex items-center justify-center"
+              >
+                <p>J</p>
+              </div>
+              <p>Jesse Hopkins</p>
+            </div>
+            <div class="text-xs text-[#fac350]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="text-xs">
+            Gorgeous design! Even more responsive than the previous version. A
+            pleasure to use!
+          </p>
+          <div class="flex items-center justify-between text-xs text-gray-400">
+            <p>Feb 13, 2021</p>
+            <button
+              class="flex items-center gap-2 py-2 px-4 rounded-md border border-[#1d1c2c]"
+            >
+              <i class="fa-solid fa-arrow-up-from-bracket"></i
+              ><span>Share</span>
+            </button>
+          </div>
+        </li>
+        <li class="p-3 rounded-md bg-[#2c2b40] space-y-2">
+          <div class="w-full flex items-center justify-between">
+            <div class="flex items-center gap-2 text-sm">
+              <div
+                class="w-10 h-10 bg-[#d4a767] rounded-full flex items-center justify-center"
+              >
+                <p>A</p>
+              </div>
+              <p>Alice Banks</p>
+            </div>
+            <div class="text-xs text-[#fac350]">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+          <p class="text-xs">
+            The device has a clean design, and the metal housing feels sturdy in
+            my hands. Soft rounded corners make it a pleasure to look at.
+          </p>
+          <div class="flex items-center justify-between text-xs text-gray-400">
+            <p>Feb 13, 2021</p>
+            <button
+              class="flex items-center gap-2 py-2 px-4 rounded-md border border-[#1d1c2c]"
+            >
+              <i class="fa-solid fa-arrow-up-from-bracket"></i
+              ><span>Share</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
