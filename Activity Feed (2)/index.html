@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      #content {
+        scale: 0;
+        opacity: 0;
+        animation-name: animate-in;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes animate-in {
+        0% {
+          scale: 0;
+        }
+        100% {
+          scale: 1;
+          opacity: 1;
+        }
+      }
+    </style>
+    <title>Activity Feed</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#faf9fe]"
+  >
+    <div class="w-11/12 max-w-sm space-y-5">
+      <button
+        class="w-12 h-12 bg-gradient-to-r from-[#7f93f6] to-[#4f8dd9] flex mx-auto rounded-full items-center justify-center text-white"
+      >
+        <i class="fa-solid fa-wave-square"></i>
+      </button>
+      <div
+        class="w-full p-4 rounded-md bg-white shadow-md relative"
+        id="content"
+      >
+        <div
+          class="absolute w-5 h-5 bg-white rotate-45 left-1/2 -translate-x-1/2 -top-2"
+        ></div>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2">
+            <img
+              src="https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186122.jpg"
+              alt="profile image"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <h1 class="text-sm">
+                <span class="font-semibold">Cora Jenkins</span> followed you
+              </h1>
+              <h2 class="text-xs text-gray-400">2 hours ago</h2>
+            </div>
+          </li>
+          <li class="flex items-center gap-2">
+            <img
+              src="https://img.freepik.com/free-photo/portrait-smiley-woman_23-2148827181.jpg"
+              alt="profile image"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <h1 class="text-sm">
+                <span class="font-semibold">Emily Ross</span> added a comment to
+                your post
+              </h1>
+              <h2 class="text-xs text-gray-400">2 hours ago</h2>
+            </div>
+          </li>
+          <li class="flex items-center gap-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4tQZxUhHn1LKGjUS97NPSirT_m2_gEG_yB0TlPWfMMxM3MNeW0gBxUu1851enEY8SUA&usqp=CAU"
+              alt="profile image"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <h1 class="text-sm">
+                <span class="font-semibold">Ora Larson</span> liked your comment
+                your post
+              </h1>
+              <h2 class="text-xs text-gray-400">2 hours ago</h2>
+            </div>
+          </li>
+          <li class="flex items-center gap-2">
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-10 h-10 rounded-full object-cover"
+            />
+            <div class="space-y-1">
+              <h1 class="text-sm">
+                <span class="font-semibold">Jeannette Norris</span> followed you
+              </h1>
+              <h2 class="text-xs text-gray-400">2 hours ago</h2>
+            </div>
+          </li>
+        </ul>
+        <button
+          class="flex mx-auto px-4 py-2 rounded-full bg-[#edf3fc] font-semibold"
+        >
+          View all
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
