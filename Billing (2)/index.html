@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Billing</title>
+  </head>
+  <body
+    class="w-full min-h-screen bg-[#e7e8fc] flex md:items-center justify-center"
+  >
+    <div
+      class="w-11/12 max-w-3xl flex flex-col md:flex-row bg-[#faf9ff] shadow-lg rounded-lg relative before:content-[''] before:hidden before:md:block before:absolute before:-m-5 before:w-1/3 before:h-[110%] before:bg-[#ed4e39] before:-z-20 before:rounded-2xl before:shadow-xl mt-10 md:mt-0"
+    >
+      <div
+        class="flex-1 p-4 bg-[#f8f9fe] flex flex-col justify-between rounded-l-lg"
+      >
+        <div class="space-y-4">
+          <div class="flex items-center gap-2">
+            <img
+              src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+              alt="profile image"
+              class="w-12 h-12 object-cover rounded-xl"
+            />
+            <div>
+              <h1 class="text-xl font-semibold">Ildiko Gasper</h1>
+              <h2 class="text-xs text-gray-400">@igaspar</h2>
+            </div>
+          </div>
+          <ul class="space-y-4">
+            <li
+              class="text-gray-500 p-2 border-l-2 border-transparent hover:text-gray-600 hover:scale-105 duration-200 ease-in-out cursor-pointer"
+            >
+              <i class="fa-solid fa-table-columns"></i>
+              General
+            </li>
+            <li
+              class="text-gray-500 p-2 border-l-2 border-transparent hover:text-gray-600 hover:scale-105 duration-200 ease-in-out cursor-pointer"
+            >
+              <i class="fa-solid fa-lock"></i>
+              Password
+            </li>
+            <li
+              class="text-gray-500 p-2 border-l-2 border-transparent hover:text-gray-600 hover:scale-105 duration-200 ease-in-out cursor-pointer"
+            >
+              <i class="fa-solid fa-envelope"></i>
+              Invitations
+            </li>
+            <li class="text-gray-800 p-2 border-l-4 border-[#e94d3c]">
+              <i class="fa-solid fa-money-bill"></i>
+              Billing
+            </li>
+            <li
+              class="text-gray-500 p-2 border-l-2 border-transparent hover:text-gray-600 hover:scale-105 duration-200 ease-in-out cursor-pointer"
+            >
+              <i class="fa-solid fa-rocket"></i>
+              Apps
+            </li>
+          </ul>
+        </div>
+        <button class="text-gray-500 flex items-center gap-2">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>Log out
+        </button>
+      </div>
+      <div class="flex-[3] p-4 bg-white space-y-3">
+        <h1 class="text-3xl font-semibold">Billing</h1>
+        <div
+          class="flex flex-col md:flex-row justify-between items-start gap-2"
+        >
+          <div class="flex-[3] space-y-5">
+            <div>
+              <h2 class="text-sm font-semibold">Order history</h2>
+              <h3 class="text-xs text-gray-600">
+                Manage billing information and view receipts
+              </h3>
+            </div>
+            <table class="mt-2 w-full">
+              <tr>
+                <th class="text-start font-semibold text-xs text-gray-500">
+                  Date
+                </th>
+                <th
+                  class="text-start font-semibold text-xs text-gray-500 hidden md:block"
+                >
+                  Type
+                </th>
+                <th class="text-start font-semibold text-xs text-gray-500">
+                  Receipt
+                </th>
+              </tr>
+              <tr class="text-sm">
+                <td>Oct. 21, 2021</td>
+                <td class="hidden md:block">Pro Annual</td>
+                <td>
+                  <button
+                    class="border px-2 py-1 border-gray-200 rounded-md text-xs m-1"
+                  >
+                    Download
+                  </button>
+                </td>
+              </tr>
+              <tr class="text-sm">
+                <td>Aug. 21, 2021</td>
+                <td class="hidden md:block">Pro Portfolio</td>
+                <td>
+                  <button
+                    class="border px-2 py-1 border-gray-200 rounded-md text-xs m-1"
+                  >
+                    Download
+                  </button>
+                </td>
+              </tr>
+              <tr class="text-sm">
+                <td>July. 21, 2021</td>
+                <td class="hidden md:block">Sponsored post</td>
+                <td>
+                  <button
+                    class="border px-2 py-1 border-gray-200 rounded-md text-xs m-1"
+                  >
+                    Download
+                  </button>
+                </td>
+              </tr>
+              <tr class="text-sm">
+                <td>July. 21, 2021</td>
+                <td class="hidden md:block">Sponsored post</td>
+                <td>
+                  <button
+                    class="border px-2 py-1 border-gray-200 rounded-md text-xs m-1"
+                  >
+                    Download
+                  </button>
+                </td>
+              </tr>
+            </table>
+            <a href="#" class="text-xs underline text-[#ed4e39] block"
+              >Load more</a
+            >
+            <div>
+              <h2 class="text-sm font-semibold">Payment method</h2>
+              <h3 class="text-xs text-gray-400">
+                Manage billing information and view receipts
+              </h3>
+            </div>
+            <ul>
+              <li class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <i class="fa-brands fa-cc-visa text-3xl"></i>
+                  <p class="text-xs font-semibold">Visa ending in 2255</p>
+                </div>
+                <button
+                  class="text-xs border border-gray-200 px-2 py-1 rounded-lg"
+                >
+                  Remove
+                </button>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex-1 p-4 bg-[#ed4e39] rounded-lg shadow-xl text-white space-y-2"
+          >
+            <h3 class="text-xs">Your plan</h3>
+            <h1 class="text-xl font-semibold">Pro annual</h1>
+            <h3 class="text-xs">Renews on Nov, 2021</h3>
+            <button
+              class="text-xs border rounded-md border-gray-300 w-full p-2 text-nowrap"
+            >
+              Cancel subscription
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
