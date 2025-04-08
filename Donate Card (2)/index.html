@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Donate Card</title>
+  </head>
+
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-gradient-to-r from-[#b9cbee] to-[#b9cbee] via-[#dcd3ed]"
+  >
+    <div
+      class="w-11/12 max-w-lg bg-white rounded-lg shadow-lg flex flex-col sm:flex-row"
+    >
+      <div
+        class="flex-1 p-4 rounded-l-lg text-3xl flex justify-center items-center text-[#fe7191]"
+      >
+        <i class="fa-solid fa-ribbon"></i>
+      </div>
+      <div class="flex-[3] p-4 rounded-r-lg space-y-2">
+        <h1 class="text-xl font-light">Your gift changes lives</h1>
+        <h2 class="text-xs text-gray-500">
+          Pledge your support today so that we can help more women in 2019
+        </h2>
+        <div class="flex flex-col sm:flex-row gap-2 font-light tracking-wider">
+          <div
+            class="px-4 py-2 w-fit rounded-lg border border-transparent bg-gray-200 text-gray-700 has-checked:bg-white has-checked:text-gray-900 has-checked:border-blue-500 has-checked:shadow-xl transition-all duration-500 ease-in-out"
+          >
+            <input type="radio" name="amount" id="5" value="5" class="hidden" />
+            <label for="5">$5</label>
+          </div>
+          <div
+            class="px-4 py-2 w-fit rounded-lg border border-transparent bg-gray-200 text-gray-700 has-checked:bg-white has-checked:text-gray-900 has-checked:border-blue-500 has-checked:shadow-xl transition-all duration-500 ease-in-out"
+          >
+            <input
+              type="radio"
+              name="amount"
+              id="10"
+              value="10"
+              class="hidden"
+            />
+            <label for="10">$10</label>
+          </div>
+          <div
+            class="px-4 py-2 w-fit rounded-lg border border-transparent bg-gray-200 text-gray-700 has-checked:bg-white has-checked:text-gray-900 has-checked:border-blue-500 has-checked:shadow-xl transition-all duration-500 ease-in-out"
+          >
+            <input
+              type="radio"
+              name="amount"
+              id="15"
+              value="15"
+              class="hidden"
+            />
+            <label for="15">$15</label>
+          </div>
+          <div class="bg-gray-200 flex rounded-lg w-fit">
+            <p class="text-gray-700 p-2">$</p>
+            <input
+              type="text"
+              name="custom_amount"
+              id="custom_amount"
+              class="border border-gray-200 w-fit focus:outline-none p-2 bg-white rounded-r-lg text-sm"
+              size="7"
+              placeholder="Amount"
+            />
+          </div>
+        </div>
+        <button
+          class="bg-[#ec1c6d] uppercase px-4 py-2 rounded-md hover:shadow-xl transition-all duration-300 ease-in-out text-xs text-white tracking-wide"
+        >
+          Donate
+        </button>
+      </div>
+    </div>
+    <script>
+      const custom_amount = document.getElementById("custom_amount");
+
+      custom_amount.addEventListener("focus", () => {
+        const radio_buttons = document.querySelectorAll(
+          'input[type="radio"][name="amount"]'
+        );
+        radio_buttons.forEach((radio_button) => {
+          radio_button.checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
