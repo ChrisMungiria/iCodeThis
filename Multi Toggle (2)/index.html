@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Multi Toggle</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#23232c]"
+  >
+    <div
+      class="w-11/12 max-w-md p-4 bg-[#1c1c25] rounded-md shadow-md space-y-2"
+    >
+      <div class="flex items-center justify-end">
+        <div
+          class="w-10 h-10 rounded-full bg-[#191922] flex items-center justify-center text-gray-500"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <h1 class="text-center text-xl text-gray-500">Browse by interests</h1>
+      <p class="text-gray-400 text-sm text-center w-2/3 mx-auto">
+        Select some interest to help us personalise your interests on Edmondo
+      </p>
+      <div class="grid grid-cols-3 gap-5">
+        <label
+          for="math"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="math"
+            id="math"
+            class="hidden"
+            name="custom_select"
+          />
+          Math
+        </label>
+        <label
+          for="science"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="science"
+            id="science"
+            class="hidden"
+            name="custom_select"
+          />
+          Science
+        </label>
+        <label
+          for="english"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="english"
+            id="english"
+            class="hidden"
+            name="custom_select"
+          />
+          English
+        </label>
+        <label
+          for="world_languages"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="world_languages"
+            id="world_languages"
+            class="hidden"
+            name="custom_select"
+          />
+          World languages
+        </label>
+        <label
+          for="health_and_pe"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="health_and_pe"
+            id="health_and_pe"
+            class="hidden"
+            name="custom_select"
+          />
+          Health and PE
+        </label>
+        <label
+          for="special_education"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="special_education"
+            id="special_education"
+            class="hidden"
+            name="custom_select"
+          />
+          Special education
+        </label>
+        <label
+          for="development"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="development"
+            id="development"
+            class="hidden"
+            name="custom_select"
+          />
+          Development
+        </label>
+        <label
+          for="technology"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="technology"
+            id="technology"
+            class="hidden"
+            name="custom_select"
+          />
+          Technology
+        </label>
+        <label
+          for="social_studies"
+          class="w-full p-3 bg-[#17181f] border border-[#17181f] text-[#585a63] text-center has-checked:border-[#c74062] has-checked:text-[#c74062] has-checked:shadow-md has-checked:shadow-[#c74062]/20"
+        >
+          <input
+            type="radio"
+            name="social_studies"
+            id="social_studies"
+            class="hidden"
+            name="custom_select"
+          />
+          Social Studies
+        </label>
+      </div>
+      <div class="flex w-fit items-center gap-2 text-xs mx-auto">
+        <button
+          class="px-8 py-4 rounded-md border border-gray-900 text-gray-500"
+        >
+          Skip
+        </button>
+        <button class="px-8 py-4 rounded-md bg-[#c74062] text-white">
+          Save
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
