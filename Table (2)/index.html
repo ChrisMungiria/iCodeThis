@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      table {
+        border-collapse: separate;
+        border-spacing: 0 5px;
+      }
+    </style>
+    <title>Table</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f8f9fd]"
+  >
+    <div class="w-11/12 max-w-2xl bg-[#f1f3fd] p-4 md:p-8 space-y-2">
+      <div class="flex items-center justify-between">
+        <div class="text-xs space-x-1">
+          <span>Show</span>
+          <select
+            name="entries"
+            id="entries"
+            class="p-2 bg-white rounded-md border border-gray-200 focus:outline-none"
+          >
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+          </select>
+          <span>entries</span>
+        </div>
+        <div
+          class="p-2 bg-white flex items-center gap-2 border border-gray-200"
+        >
+          <i class="fa-solid fa-magnifying-glass text-gray-300"></i>
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Search"
+            class="focus:outline-none w-full placeholder:text-gray-300"
+          />
+        </div>
+      </div>
+      <table class="w-full">
+        <tr class="text-gray-500 w-full">
+          <th class="text-xs tracking-wider uppercase text-start p-2">
+            First name
+          </th>
+          <th class="text-xs tracking-wider uppercase text-start">Last name</th>
+          <th class="text-xs tracking-wider uppercase text-start">Emaiil</th>
+          <th class="text-xs tracking-wider uppercase text-start">
+            Created at
+          </th>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Manuel</td>
+          <td>Manuel</td>
+          <td>usiu@udka.net</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Daisy</td>
+          <td>Kelly</td>
+          <td>ho@kepuf.edu</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Shane</td>
+          <td>Underwood</td>
+          <td>ho@kepuf.edu</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Ray</td>
+          <td>Wise</td>
+          <td>ho@kepuf.edu</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Sue</td>
+          <td>Hammond</td>
+          <td>zosub@bakus.edu</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Banks</td>
+          <td>Roxie</td>
+          <td>mekruj@orewera.co.uk</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Alfred</td>
+          <td>Reese</td>
+          <td>upigohi@sop.edu</td>
+          <td>09-6-2020</td>
+        </tr>
+        <tr
+          class="bg-white w-full text-sm hover:shadow-md mt-2 text-gray-500 transition-all duration-150 ease-in-out"
+        >
+          <td class="p-2">Maurice</td>
+          <td>Lowe</td>
+          <td>hib@oksuod.gov</td>
+          <td>09-6-2020</td>
+        </tr>
+      </table>
+      <div class="flex items-center justify-end text-xs text-gray-500 gap-5">
+        <button class="bg-white rounded-md p-2 border border-gray-200">
+          <i class="fa-solid fa-chevron-left"></i>
+          Previous
+        </button>
+        <button class="bg-white rounded-md p-2 border border-gray-200">
+          Next <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const entries = document.getElementById("entries");
+
+      entries.addEventListener("change", () => {
+        const table = document.querySelector("table");
+        const rows = table.querySelectorAll("tr:not(:first-child)");
+
+        const selected_value = entries.value;
+
+        if (selected_value === "2") {
+          rows.forEach((row, index) => {
+            if (index >= 2) {
+              row.style.display = "none";
+            }
+          });
+        } else if (selected_value === "4") {
+          rows.forEach((row, index) => {
+            if (index >= 4) {
+              row.style.display = "none";
+            }
+          });
+        } else if (selected_value === "6") {
+          rows.forEach((row, index) => {
+            if (index >= 6) {
+              row.style.display = "none";
+            }
+          });
+        } else if (selected_value === "8") {
+          rows.forEach((row, index) => {
+            if (index >= 8) {
+              row.style.display = "none";
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
