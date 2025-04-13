@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Accordion</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#fefdf9]"
+  >
+    <div class="w-11/12 max-w-sm p-4 bg-white rounded-md shadow-xl">
+      <h1 class="text-lg font-semibold w-2/3">
+        Coronavirus - facts, advice and measures
+      </h1>
+      <ul class="space-y-2">
+        <li
+          class="border-l-4 border-[#f8c691] p-4 rounded-sm w-full bg-[#fff6ee] text-gray-600 cursor-pointer"
+        >
+          <div class="w-full flex items-center gap-2">
+            <i class="fa-solid fa-plus"></i>
+            <p class="text-sm">Facts and knowledge about COVID-19</p>
+          </div>
+          <div class="content space-y-2 py-4 text-xs hidden">
+            <p>Here are some facts about COVID-19 that you should know.</p>
+            <p>Fact 1</p>
+            <p>Fact 2</p>
+          </div>
+        </li>
+        <li
+          class="border-l-4 border-[#bab4f8] p-4 rounded-sm w-full bg-[#fafafe] text-gray-600 cursor-pointer"
+        >
+          <div class="w-full flex items-center gap-2">
+            <i class="fa-solid fa-xmark"></i>
+            <p class="text-sm">For the public</p>
+          </div>
+          <div class="content space-y-2 py-4 text-xs">
+            <p>Social distance, quarantine and isolation</p>
+            <p>Hand hygiene, cough etiquette, cleaning and laundry</p>
+            <p>When children have acute respiratory tract infections</p>
+            <p>Risk groups and their relatives</p>
+          </div>
+        </li>
+        <li
+          class="border-l-4 border-[#fbb4c0] p-4 rounded-sm w-full bg-[#fef1f3] text-gray-600 cursor-pointer"
+        >
+          <div class="w-full flex items-center gap-2">
+            <i class="fa-solid fa-plus"></i>
+            <p class="text-sm">Facts and knowledge about COVID-19</p>
+          </div>
+          <div class="content space-y-2 py-4 text-xs hidden">
+            <p>Here are some facts about COVID-19 that you should know.</p>
+            <p>Fact 1</p>
+            <p>Fact 2</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const list_items = document.querySelectorAll("li");
+
+      list_items.forEach((list_item) => {
+        list_item.addEventListener("click", () => {
+          const content = list_item.querySelector(".content");
+          const icon = list_item.querySelector("i");
+          if (content.style.display === "none") {
+            content.style.display = "block";
+            icon.classList.remove("fa-plus");
+            icon.classList.add("fa-xmark");
+          } else {
+            content.style.display = "none";
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-plus");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
