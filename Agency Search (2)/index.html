@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Agency Search</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#eef4f4]"
+  >
+    <div class="w-11/12 max-w-2xl p-4 bg-white rounded-md shadow-xl space-y-2">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-2">
+        <div>
+          <h1 class="text-2xl font-semibold">Explore agencies</h1>
+          <h2 class="text-sm text-gray-700">
+            Select a region and city to discover the best digital agencies
+          </h2>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <select
+            name="region"
+            id="region"
+            class="focus:outline-none p-2 border border-gray-300 rounded-md"
+          >
+            <option value="region" selected disabled>Region</option>
+            <option value="north_america">North America</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+            <option value="africa">Africa</option>
+            <option value="oceania">Oceania</option>
+          </select>
+          <select
+            name="city"
+            id="city"
+            class="focus:outline-none p-2 border border-gray-300 rounded-md"
+          >
+            <option value="city" selected disabled>City</option>
+          </select>
+          <button
+            class="px-8 py-2 rounded-md text-white shadow-xl bg-[#2ccf9a] shadow-green-300/50"
+          >
+            Find
+          </button>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-4 p-4 rounded-md bg-[#eef4f4]">
+        <div class="flex gap-2">
+          <i class="fa-solid fa-magnifying-glass text-[#2ccf9a] text-2xl"></i>
+
+          <div class="space-y-2">
+            <h2 class="font-semibold capitalize">
+              Get <span class="block">discovered</span>
+            </h2>
+            <h3 class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </h3>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <i class="fa-solid fa-file-lines text-[#2ccf9a] text-2xl"></i>
+          <div class="space-y-2">
+            <h2 class="font-semibold capitalize">
+              Publish <span class="block">content</span>
+            </h2>
+            <h3 class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </h3>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <i class="fa-solid fa-briefcase text-[#2ccf9a] text-2xl"></i>
+          <div class="space-y-2">
+            <h2 class="font-semibold capitalize">
+              Post <span class="block">jobs</span>
+            </h2>
+            <h3 class="text-xs">
+              Get listed in location based agency directories and attract
+              business opportunities
+            </h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const regions = ["north_america", "europe", "asia", "africa", "oceania"];
+      const cities = {
+        north_america: ["New York", "Los Angeles", "Chicago", "Toronto"],
+        europe: ["London", "Paris", "Berlin", "Moscow"],
+        asia: ["Tokyo", "Seoul", "Sydney", "Hong Kong"],
+        africa: ["Cairo", "Lagos", "Nairobi", "Johannesburg"],
+        oceania: ["Sydney", "Melbourne", "Brisbane", "Auckland"],
+      };
+
+      const regionSelect = document.getElementById("region");
+      const citySelect = document.getElementById("city");
+
+      regionSelect.addEventListener("change", () => {
+        const selectedRegion = regionSelect.value;
+        const cityOptions = cities[selectedRegion];
+        citySelect.innerHTML = `<option value="city" selected disabled>City</option>`;
+        cityOptions.forEach((city) => {
+          const option = document.createElement("option");
+          option.value = city;
+          option.text = city;
+          citySelect.add(option);
+        });
+      });
+    </script>
+  </body>
+</html>
