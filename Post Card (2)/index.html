@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Post Card</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#171828]"
+  >
+    <div
+      class="w-11/12 max-w-md p-4 bg-[#1f2138] rounded-md shadow-md flex gap-5"
+    >
+      <div class="w-20 h-20 bg-[#14192a] rounded-full p-2">
+        <img
+          src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+          alt="profile image"
+          class="w-full h-full object-cover rounded-full"
+        />
+      </div>
+      <div class="space-y-2 w-full">
+        <input
+          type="text"
+          name="post"
+          id="post"
+          placeholder="What's happening?"
+          class="focus:outline-[#2287db] border-b-2 border-[#14192a] pb-10 placeholder:text-gray-400 w-full"
+        />
+        <div class="flex items-center justify-between">
+          <ul class="flex space-x-4 text-gray-500">
+            <li><i class="fa-solid fa-image"></i></li>
+            <li>
+              <i class="fa-solid fa-video"></i>
+            </li>
+            <li>
+              <i class="fa-solid fa-face-smile"></i>
+            </li>
+          </ul>
+          <button
+            class="bg-[#2287db] px-6 py-2 rounded-full text-white text-xs"
+          >
+            Post
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
