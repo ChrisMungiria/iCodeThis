@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+    <title>Shopping Cart</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#1a193b]"
+  >
+    <div class="w-11/12 max-w-xl flex bg-[#2c2c4e]">
+      <div
+        class="flex-1 hidden md:block bg-[#ebecfb] p-4 rounded-l-lg space-y-4"
+      >
+        <img
+          src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQeh6DpYAE0Uhjs_ponEZzWA8Y8PP_YMcizCSuz4N-1WWPZlWm1"
+          alt="saas logo"
+          class="w-full h-32 object-cover object-center rounded-md shadow-md"
+        />
+        <div class="flex justify-between items-start gap-5">
+          <p class="capitalize text-xs">
+            The complete Saas and SCSS Course: from beginner to advanced
+          </p>
+          <p class="text-sm font-bold">$9.99</p>
+        </div>
+        <div class="w-full h-32 bg-white rounded-md animate-pulse"></div>
+        <div class="flex gap-5">
+          <div class="flex-[3] h-2 bg-white rounded-md animate-pulse"></div>
+          <div class="flex-1 h-2 bg-white rounded-md animate-pulse"></div>
+        </div>
+        <div class="w-1/3 h-2 bg-white rounded-md animate-pulse"></div>
+      </div>
+      <div class="flex-[2] p-4 text-white space-y-4">
+        <h1 class="text-lg font-semibold">Total $9.99</h1>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email adddress"
+          class="border-b border-gray-400 w-full p-2 placeholder:text-gray-400"
+        />
+        <input
+          type="text"
+          name="fullname"
+          id="fullname"
+          placeholder="full name"
+          class="border-b border-gray-400 w-full p-2 placeholder:text-gray-400"
+        />
+        <div class="flex border-b border-gray-400 p-2 items-center">
+          <input
+            type="number"
+            name="card_number"
+            id="card_number"
+            placeholder="card number"
+            class="w-full"
+          />
+          <i class="fa-solid fa-lock text-gray-400"></i>
+        </div>
+        <div class="grid grid-cols-3 gap-5">
+          <input
+            type="number"
+            name="mm_y"
+            id="mm_y"
+            placeholder="mm/y"
+            class="border-b border-gray-400 w-full p-2 placeholder:text-gray-400"
+          />
+          <input
+            type="number"
+            name="cvv"
+            id="cvv"
+            placeholder="cvv"
+            class="border-b border-gray-400 w-full p-2 placeholder:text-gray-400"
+          />
+          <div class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="save_card"
+              id="save_card"
+              class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 focus:ring-2"
+            />
+            <label for="save_card" class="text-xs">save card?</label>
+          </div>
+        </div>
+        <p class="text-xs text-center text-gray-400">
+          your card will be charged $9.99
+        </p>
+        <button class="w-full p-3 rounded-md bg-[#45b1fe] text-white uppercase">
+          Pay
+        </button>
+        <p class="text-xs text-center text-gray-200">or pay with</p>
+        <button
+          class="bg-white px-8 p-2 flex mx-auto text-gray-700 text-xs rounded-md"
+        >
+          Paypal
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
