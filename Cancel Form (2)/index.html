@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Cancel Form</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#fef5ed]"
+  >
+    <div class="w-11/12 max-w-xl p-4 space-y-4">
+      <h1 class="text-xl text-center text-[#a073ea] font-semibold">
+        Your account is closed
+      </h1>
+      <p class="text-center text-sm text-gray-400">
+        Could you spare a minute to tell us how we could improve?
+      </p>
+      <div class="w-full p-4 bg-white space-y-4">
+        <p class="text-sm text-gray-400">
+          How likely is that you would recommend us to your friends or
+          colleagues?
+        </p>
+        <div class="grid grid-cols-10 gap-2 text-sm">
+          <label
+            for="one"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="one"
+              value="one"
+              class="hidden"
+            />
+            <span>1</span>
+          </label>
+          <label
+            for="two"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="two"
+              value="two"
+              class="hidden"
+            />
+            <span>2</span>
+          </label>
+          <label
+            for="three"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="three"
+              value="three"
+              class="hidden"
+            />
+            <span>3</span>
+          </label>
+          <label
+            for="four"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="four"
+              value="four"
+              class="hidden"
+            />
+            <span>4</span>
+          </label>
+          <label
+            for="five"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="five"
+              value="five"
+              class="hidden"
+            />
+            <span>5</span>
+          </label>
+          <label
+            for="six"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="six"
+              value="six"
+              class="hidden"
+            />
+            <span>6</span>
+          </label>
+          <label
+            for="seven"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="seven"
+              value="seven"
+              class="hidden"
+            />
+            <span>7</span>
+          </label>
+          <label
+            for="eight"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="eight"
+              value="eight"
+              class="hidden"
+            />
+            <span>8</span>
+          </label>
+          <label
+            for="nine"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="nine"
+              value="nine"
+              class="hidden"
+            />
+            <span>9</span>
+          </label>
+          <label
+            for="ten"
+            class="w-7 h-7 flex items-center justify-center bg-gray-100 has-checked:text-white has-checked:bg-[#e98513] rounded-md"
+          >
+            <input
+              type="radio"
+              name="rating"
+              id="ten"
+              value="ten"
+              class="hidden"
+            />
+            <span>10</span>
+          </label>
+        </div>
+        <label for="comments" class="text-gray-400">How can we improve?</label>
+        <textarea
+          name="comments"
+          id="comments"
+          rows="5"
+          class="w-full border border-gray-400 rounded-md resize-none"
+        ></textarea>
+        <button class="w-full text-center text-[#e98513]">Submit</button>
+      </div>
+    </div>
+  </body>
+</html>
