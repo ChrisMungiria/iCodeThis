@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Email Settings</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#1e1e2d]"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 bg-[#242335] rounded-md shadow-2xl text-white space-y-4 relative after:absolute after:content-[''] after:inset-0 after:bg-[#191929] after:top-10 after:-z-10 after:w-[120%] after:-translate-x-1/2 after:left-1/2 after:h-[120%] after:rounded-xl"
+    >
+      <h1 class="text-xl">Get email updates when</h1>
+      <ul class="text-sm space-y-2">
+        <li class="flex items-center gap-2">
+          <input type="checkbox" name="owner" id="owner" class="hidden peer" />
+          <div
+            class="w-6 h-6 border border-gray-300 rounded peer-checked:bg-[#736bec] text-transparent peer-checked:text-white text-center peer-checked:border-transparent peer-focus:outline-1"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <label for="owner">You're the owner</label>
+        </li>
+        <li class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            name="assignee"
+            id="assignee"
+            class="hidden peer"
+          />
+          <div
+            class="w-6 h-6 border border-gray-300 rounded peer-checked:bg-[#736bec] text-transparent peer-checked:text-white text-center peer-checked:border-transparent peer-focus:outline-1"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <label for="assignee">You're the assignee</label>
+        </li>
+        <li class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            name="reporter"
+            id="reporter"
+            class="hidden peer"
+            checked
+          />
+          <div
+            class="w-6 h-6 border border-gray-300 rounded peer-checked:bg-[#736bec] text-transparent peer-checked:text-white text-center peer-checked:border-transparent peer-focus:outline-1"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <label for="reporter">You're the reporter</label>
+        </li>
+        <li class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            name="mentions"
+            id="mentions"
+            class="hidden peer"
+            checked
+          />
+          <div
+            class="w-6 h-6 border border-gray-300 rounded peer-checked:bg-[#736bec] text-transparent peer-checked:text-white text-center peer-checked:border-transparent peer-focus:outline-1"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <label for="mentions">Someone mentions you</label>
+        </li>
+        <li class="flex items-center gap-2">
+          <input
+            type="checkbox"
+            name="assigns"
+            id="assigns"
+            class="hidden peer"
+          />
+          <div
+            class="w-6 h-6 border border-gray-300 rounded peer-checked:bg-[#736bec] text-transparent peer-checked:text-white text-center peer-checked:border-transparent peer-focus:outline-1"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <label for="assigns">Someone is assigning you</label>
+        </li>
+      </ul>
+      <div class="w-full p-2 bg-[#1e1e2d] rounded-md">
+        <p class="text-xs text-gray-400">
+          You may also receive other email notifications your admin configured.
+          <span class="text-[#544e93] underline">Learn more</span>
+        </p>
+      </div>
+      <h2 class="text-lg font-semibold">Email format</h2>
+      <ul class="space-y-2">
+        <li class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="format"
+            id="html"
+            value="html"
+            class="hidden peer"
+          />
+          <div
+            class="w-6 h-6 border border-gray-600 rounded-full peer-checked:bg-[#706af2] p-1 group"
+          >
+            <div
+              class="w-full h-full bg-white rounded-full hidden group-peer-checked:block"
+            ></div>
+          </div>
+          <label for="html">HTML</label>
+        </li>
+        <li class="flex items-center gap-2">
+          <input
+            type="radio"
+            name="format"
+            id="text"
+            value="text"
+            class="hidden peer"
+          />
+          <div
+            class="w-6 h-6 border border-gray-600 rounded-full peer-checked:bg-[#706af2] p-1 group"
+          >
+            <div
+              class="w-full h-full bg-white rounded-full hidden group-peer-checked:block"
+            ></div>
+          </div>
+          <label for="text">Text</label>
+        </li>
+      </ul>
+      <button class="w-full p-3 rounded-md text-white bg-[#706af2]">
+        Save
+      </button>
+    </div>
+  </body>
+</html>
