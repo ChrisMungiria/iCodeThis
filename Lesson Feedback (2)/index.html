@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Lesson Feedback</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#ecebf3]"
+  >
+    <div
+      class="w-11/12 max-w-md py-10 p-5 bg-white rounded-md shadow-2xl space-y-4"
+    >
+      <h1 class="text-xl font-semibold text-center">Was this lesson useful?</h1>
+      <div class="grid grid-cols-3 gap-2 place-items-center">
+        <div
+          class="w-fit p-2 rounded-md bg-[#6659ff] h-fit text-white text-xs text-nowrap shadow-md"
+        >
+          <i class="fa-regular fa-face-smile"></i>
+          <span>Yes, it was great!</span>
+        </div>
+        <div
+          class="w-fit p-2 rounded-md bg-[#6659ff] h-fit text-white text-xs text-nowrap shadow-md"
+        >
+          <i class="fa-regular fa-face-meh-blank"></i>
+          <span>Sort of, thanks!</span>
+        </div>
+        <div
+          class="w-fit p-2 rounded-md bg-[#6659ff] h-fit text-white text-xs text-nowrap shadow-md"
+        >
+          <i class="fa-regular fa-face-sad-tear"></i>
+          <span>Not really</span>
+        </div>
+      </div>
+      <p class="text-center text-sm">
+        Got a suggestion? <span class="underline">Let us know</span>
+      </p>
+      <div class="grid grid-cols-2 gap-2">
+        <div class="border border-gray-200 p-2 rounded-md bg-gray-100">
+          <p class="font-semibold text-sm">Need more help</p>
+          <a href="#" class="text-xs text-[#8e83de]"
+            >Contact support <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+        <div class="border border-gray-200 p-2 rounded-md bg-gray-100">
+          <p class="font-semibold text-sm">
+            Want to give feedback on a feature?
+          </p>
+          <a href="#" class="text-xs text-[#8e83de]"
+            >Submit your feedback <i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
