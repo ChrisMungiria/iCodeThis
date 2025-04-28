@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Menu</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f3f9ff]"
+  >
+    <div
+      class="w-11/12 max-w-3xl p-2 rounded-md bg-white relative after:content-[''] after:absolute after:w-32 after:h-32 after:bg-[#80fff080] after:-z-10 after:left-1/2 after:top-1/2 after:-translate-y-1/2 after:rounded-full after:blur-xl"
+    >
+      <div
+        class="w-full h-full p-3 rounded-md bg-[#f8f9fe] flex flex-col md:flex-row items-center justify-between"
+      >
+        <ul
+          class="flex flex-wrap items-center space-x-3 uppercase text-sm font-semibold"
+        >
+          <li class="p-2 rounded-md hover:bg-[#eff1ff] cursor-pointer">
+            Framework
+          </li>
+          <li class="p-2 rounded-md hover:bg-[#eff1ff] cursor-pointer">
+            Demos
+          </li>
+          <li
+            class="p-2 rounded-md hover:bg-[#eff1ff] cursor-pointer relative group"
+          >
+            Resources
+            <div
+              class="absolute p-3 w-72 rounded-md bg-white shadow-xl group-hover:grid grid-cols-2 gap-2 hidden"
+            >
+              <div class="space-y-4">
+                <h2 class="text-sm font-bold uppercase">Top controls</h2>
+                <ul class="text-xs space-y-2">
+                  <li>Grid</li>
+                  <li>Chart</li>
+                  <li>Controls</li>
+                  <li>Financial chart</li>
+                </ul>
+              </div>
+              <div class="space-y-4">
+                <h2 class="text-sm font-bold uppercase">Top controls</h2>
+                <ul class="text-xs space-y-2">
+                  <li>API</li>
+                  <li>Blogs</li>
+                  <li>Knowledge base</li>
+                  <li>Videos</li>
+                  <li>Forums</li>
+                  <li>Licensing</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="p-2 rounded-md hover:bg-[#eff1ff] cursor-pointer">
+            Documentation
+          </li>
+        </ul>
+        <div
+          class="flex items-center space-x-3 uppercase text-sm font-semibold"
+        >
+          <button class="px-4 py-2 rounded-md text-slate-800 uppercase">
+            Log in
+          </button>
+          <button
+            class="px-4 py-2 rounded-md bg-slate-800 text-white uppercase"
+          >
+            Sign up
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
