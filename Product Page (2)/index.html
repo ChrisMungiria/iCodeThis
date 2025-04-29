@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <title>Product Page</title>
+  </head>
+  <body
+    class="w-screen h-screen flex flex-col items-center justify-center bg-slate-100 relative"
+  >
+    <p
+      class="absolute -top-1/5 right-1/4 text-blue-300 font-bold text-[70rem] z-10"
+    >
+      %
+    </p>
+    <!-- carousel -->
+    <div class="w-full z-20 p-4 overflow-x-scroll flex gap-5">
+      <div
+        class="w-11/12 max-w-xl p-4 bg-slate-100 shadow-md space-y-2 shrink-0"
+      >
+        <h1 class="text-blue-500 capitalize text-3xl font-semibold">
+          Bag <span class="block">Rotterdam blick</span>
+        </h1>
+        <p>
+          This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3
+          interior pockets. It's made of faux leather, has etched patterns and
+          is flourescent red. Wear it with jeans and a daiquiri.
+        </p>
+        <div class="flex">
+          <div class="flex-1">
+            <h1 class="text-center text-slate-300">
+              <span class="line-through">€99.95</span>
+              <span class="block text-3xl font-bold text-slate-800"
+                >€79.95</span
+              >
+            </h1>
+            <p class="uppercase tracking-wide">Color</p>
+            <!-- Colour selector -->
+            <div class="flex items-center gap-3">
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-yellow-500"
+                  id="yellow_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-rose-500"
+                  id="rose_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-800"
+                  id="slate_colour"
+                ></div>
+              </div>
+            </div>
+            <p class="uppercase tracking-wide">Size</p>
+            <div class="w-10 h-10 rounded-full border border-slate-800">
+              <p class="text-slate-800 font-bold text-3xl text-center">U</p>
+            </div>
+          </div>
+          <div class="flex-1 space-y-4">
+            <img
+              src="https://i.pinimg.com/736x/69/15/06/69150664736fa860b06238a12ee70609.jpg"
+              alt="bag"
+              class="w-full h-56 object-cover"
+            />
+            <button
+              class="bg-slate-800 text-white p-3 w-full flex items-center justify-center uppercase tracking-wider"
+            >
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 max-w-xl p-4 bg-slate-100 shadow-md space-y-2 shrink-0"
+      >
+        <h1 class="text-blue-500 capitalize text-3xl font-semibold">
+          Bag <span class="block">Rotterdam blick</span>
+        </h1>
+        <p>
+          This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3
+          interior pockets. It's made of faux leather, has etched patterns and
+          is flourescent red. Wear it with jeans and a daiquiri.
+        </p>
+        <div class="flex">
+          <div class="flex-1">
+            <h1 class="text-center text-slate-300">
+              <span class="line-through">€99.95</span>
+              <span class="block text-3xl font-bold text-slate-800"
+                >€79.95</span
+              >
+            </h1>
+            <p class="uppercase tracking-wide">Color</p>
+            <!-- Colour selector -->
+            <div class="flex items-center gap-3">
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-yellow-500"
+                  id="yellow_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-rose-500"
+                  id="rose_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-800"
+                  id="slate_colour"
+                ></div>
+              </div>
+            </div>
+            <p class="uppercase tracking-wide">Size</p>
+            <div class="w-10 h-10 rounded-full border border-slate-800">
+              <p class="text-slate-800 font-bold text-3xl text-center">U</p>
+            </div>
+          </div>
+          <div class="flex-1 space-y-4">
+            <img
+              src="https://i.pinimg.com/736x/69/15/06/69150664736fa860b06238a12ee70609.jpg"
+              alt="bag"
+              class="w-full h-56 object-cover"
+            />
+            <button
+              class="bg-slate-800 text-white p-3 w-full flex items-center justify-center uppercase tracking-wider"
+            >
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 max-w-xl p-4 bg-slate-100 shadow-md space-y-2 shrink-0"
+      >
+        <h1 class="text-blue-500 capitalize text-3xl font-semibold">
+          Bag <span class="block">Rotterdam blick</span>
+        </h1>
+        <p>
+          This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3
+          interior pockets. It's made of faux leather, has etched patterns and
+          is flourescent red. Wear it with jeans and a daiquiri.
+        </p>
+        <div class="flex">
+          <div class="flex-1">
+            <h1 class="text-center text-slate-300">
+              <span class="line-through">€99.95</span>
+              <span class="block text-3xl font-bold text-slate-800"
+                >€79.95</span
+              >
+            </h1>
+            <p class="uppercase tracking-wide">Color</p>
+            <!-- Colour selector -->
+            <div class="flex items-center gap-3">
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-yellow-500"
+                  id="yellow_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-rose-500"
+                  id="rose_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-800"
+                  id="slate_colour"
+                ></div>
+              </div>
+            </div>
+            <p class="uppercase tracking-wide">Size</p>
+            <div class="w-10 h-10 rounded-full border border-slate-800">
+              <p class="text-slate-800 font-bold text-3xl text-center">U</p>
+            </div>
+          </div>
+          <div class="flex-1 space-y-4">
+            <img
+              src="https://i.pinimg.com/736x/69/15/06/69150664736fa860b06238a12ee70609.jpg"
+              alt="bag"
+              class="w-full h-56 object-cover"
+            />
+            <button
+              class="bg-slate-800 text-white p-3 w-full flex items-center justify-center uppercase tracking-wider"
+            >
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 max-w-xl p-4 bg-slate-100 shadow-md space-y-2 shrink-0"
+      >
+        <h1 class="text-blue-500 capitalize text-3xl font-semibold">
+          Bag <span class="block">Rotterdam blick</span>
+        </h1>
+        <p>
+          This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3
+          interior pockets. It's made of faux leather, has etched patterns and
+          is flourescent red. Wear it with jeans and a daiquiri.
+        </p>
+        <div class="flex">
+          <div class="flex-1">
+            <h1 class="text-center text-slate-300">
+              <span class="line-through">€99.95</span>
+              <span class="block text-3xl font-bold text-slate-800"
+                >€79.95</span
+              >
+            </h1>
+            <p class="uppercase tracking-wide">Color</p>
+            <!-- Colour selector -->
+            <div class="flex items-center gap-3">
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-yellow-500"
+                  id="yellow_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-rose-500"
+                  id="rose_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-800"
+                  id="slate_colour"
+                ></div>
+              </div>
+            </div>
+            <p class="uppercase tracking-wide">Size</p>
+            <div class="w-10 h-10 rounded-full border border-slate-800">
+              <p class="text-slate-800 font-bold text-3xl text-center">U</p>
+            </div>
+          </div>
+          <div class="flex-1 space-y-4">
+            <img
+              src="https://i.pinimg.com/736x/69/15/06/69150664736fa860b06238a12ee70609.jpg"
+              alt="bag"
+              class="w-full h-56 object-cover"
+            />
+            <button
+              class="bg-slate-800 text-white p-3 w-full flex items-center justify-center uppercase tracking-wider"
+            >
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-11/12 max-w-xl p-4 bg-slate-100 shadow-md space-y-2 shrink-0"
+      >
+        <h1 class="text-blue-500 capitalize text-3xl font-semibold">
+          Bag <span class="block">Rotterdam blick</span>
+        </h1>
+        <p>
+          This trapezium bag measures 31 x 15 x 30 cm and has 2 exterior and 3
+          interior pockets. It's made of faux leather, has etched patterns and
+          is flourescent red. Wear it with jeans and a daiquiri.
+        </p>
+        <div class="flex">
+          <div class="flex-1">
+            <h1 class="text-center text-slate-300">
+              <span class="line-through">€99.95</span>
+              <span class="block text-3xl font-bold text-slate-800"
+                >€79.95</span
+              >
+            </h1>
+            <p class="uppercase tracking-wide">Color</p>
+            <!-- Colour selector -->
+            <div class="flex items-center gap-3">
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-yellow-500"
+                  id="yellow_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-rose-500"
+                  id="rose_colour"
+                ></div>
+              </div>
+              <div class="border-slate-800 rounded-full p-1">
+                <div
+                  class="w-10 h-10 rounded-full bg-slate-800"
+                  id="slate_colour"
+                ></div>
+              </div>
+            </div>
+            <p class="uppercase tracking-wide">Size</p>
+            <div class="w-10 h-10 rounded-full border border-slate-800">
+              <p class="text-slate-800 font-bold text-3xl text-center">U</p>
+            </div>
+          </div>
+          <div class="flex-1 space-y-4">
+            <img
+              src="https://i.pinimg.com/736x/69/15/06/69150664736fa860b06238a12ee70609.jpg"
+              alt="bag"
+              class="w-full h-56 object-cover"
+            />
+            <button
+              class="bg-slate-800 text-white p-3 w-full flex items-center justify-center uppercase tracking-wider"
+            >
+              Add to bag
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="w-11/12 max-w-2xl flex gap-4 items-center z-20">
+      <p class="uppercase text-slate-800">Sharing is loving</p>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-pinterest-p"></i>
+      <i class="fa-brands fa-facebook-f"></i>
+      <i class="fa-brands fa-tumblr"></i>
+    </footer>
+    <script>
+      const yellow_colour = document.getElementById("yellow_colour");
+      const rose_colour = document.getElementById("rose_colour");
+      const slate_colour = document.getElementById("slate_colour");
+
+      //   If the user clicks on any colour, remove 'border' class from all parent elements
+      yellow_colour.addEventListener("click", () => {
+        yellow_colour.parentElement.classList.add("border");
+        rose_colour.parentElement.classList.remove("border");
+        slate_colour.parentElement.classList.remove("border");
+      });
+
+      rose_colour.addEventListener("click", () => {
+        yellow_colour.parentElement.classList.remove("border");
+        rose_colour.parentElement.classList.add("border");
+        slate_colour.parentElement.classList.remove("border");
+      });
+
+      slate_colour.addEventListener("click", () => {
+        yellow_colour.parentElement.classList.remove("border");
+        rose_colour.parentElement.classList.remove("border");
+        slate_colour.parentElement.classList.add("border");
+      });
+    </script>
+  </body>
+</html>
