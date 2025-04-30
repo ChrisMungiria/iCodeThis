@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Rent a Car</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f5f3e6]"
+  >
+    <div
+      class="w-11/12 max-w-xl p-4 bg-white rounded-xl shadow-xl space-y-4 relative after:content-[''] after:absolute after:-z-10 after:-top-10 after:-left-10 after:w-1/2 after:h-1/2 after:bg-[#fcc863] after:rounded-xl before:content-[''] before:absolute before:w-1/2 before:h-1/2 before:bg-[#fb9a63] before:-z-10 before:-bottom-10 before:-right-10 before:rounded-xl"
+    >
+      <h1 class="font-semibold text-xl">Search for a rental car</h1>
+      <div>
+        <label class="block text-xs font-semibold" for="location"
+          >Pick up location</label
+        >
+        <input
+          type="text"
+          name="location"
+          id="location"
+          placeholder="City, airport, region, district..."
+          class="border w-full p-2 rounded-md border-gray-500 placeholder:text-gray-400"
+        />
+      </div>
+      <div>
+        <input
+          name="somewhere_else"
+          id="somewhere_else"
+          class="accent-[#fcc863]"
+          type="checkbox"
+          checked
+        />
+        <label class="font-semibold" for="somewhere_else"
+          >Deliver the car somewhere else</label
+        >
+      </div>
+      <div class="grid grid-cols-4 gap-1">
+        <label for="date_of_pickup" class="col-span-2 text-xs font-semibold"
+          >Date of pickup</label
+        >
+        <label for="date_of_delivery" class="col-span-2 text-xs font-semibold"
+          >Date of delivery</label
+        >
+        <input
+          type="date"
+          name="date_of_pickup"
+          id="date_of_pickup"
+          class="border col-span-2 p-2 rounded-md border-gray-400"
+        />
+        <input
+          type="date"
+          name="date_of_delivery"
+          id="date_of_delivery"
+          class="border col-span-2 p-2 rounded-md border-gray-400"
+        />
+        <select
+          name="time_1"
+          id="time_1"
+          class="w-full p-2 border border-gray-400"
+        >
+          <option value="00">00</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+        </select>
+        <select
+          name="time_1_min"
+          id="time_1_min"
+          class="w-full p-2 border border-gray-400"
+        >
+          <option value="00">00</option>
+          <option value="05">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select>
+        <select
+          name="time_2"
+          id="time_2"
+          class="w-full p-2 border border-gray-400"
+        >
+          <option value="00">00</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+          <option value="04">04</option>
+          <option value="05">05</option>
+          <option value="06">06</option>
+          <option value="07">07</option>
+          <option value="08">08</option>
+          <option value="09">09</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+        </select>
+        <select
+          name="time_2_min"
+          id="time_2_min"
+          class="w-full p-2 border border-gray-400"
+        >
+          <option value="00">00</option>
+          <option value="05">05</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+          <option value="35">35</option>
+          <option value="40">40</option>
+          <option value="45">45</option>
+          <option value="50">50</option>
+          <option value="55">55</option>
+        </select>
+      </div>
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          name="drivers_age"
+          id="drivers_age"
+          class="accent-slate-800"
+        />
+        <label for="drivers_age">The driver's age is between 30 and 65?</label>
+        <i class="fa-regular fa-circle-question"></i>
+      </div>
+      <ul class="space-y-2 text-sm">
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-check"></i>No credit card fees
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-check"></i>No change fees
+        </li>
+        <li class="flex items-center gap-2">
+          <i class="fa-solid fa-check"></i>Price match guarantee
+        </li>
+      </ul>
+      <button class="py-7 w-full text-white bg-[#fe6f4f] rounded-2xl">
+        Search
+      </button>
+    </div>
+  </body>
+</html>
