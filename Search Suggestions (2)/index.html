@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Search Suggestions</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f6f8fd]"
+  >
+    <div
+      class="w-11/12 max-w-md relative before:content-[''] before:absolute before:inset-0 before:bg-[#f2f4ff] before:-z-10 before:h-72 before:w-[120%] before:top-1/2 before:-translate-y-1/2 before:left-1/2 before:-translate-x-1/2 before:rounded-xl space-y-4"
+    >
+      <div class="w-full flex bg-white rounded-xl">
+        <div class="w-full p-2 flex gap-2">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="Apple"
+            class="w-full"
+          />
+          <select
+            name="language"
+            id="language"
+            class="border border-gray-200 bg-gray-100 h-fit my-auto rounded-md text-sm font-semibold text-gray-600 p-2"
+          >
+            <option value="english" class="uppercase">En</option>
+            <option value="spanish" class="uppercase">Es</option>
+            <option value="french" class="uppercase">Fr</option>
+            <option value="german" class="uppercase">De</option>
+          </select>
+        </div>
+        <button class="rounded-r-xl bg-[#252d54] p-4 text-xl text-gray-300">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+      <ul id="suggestions" class="w-full bg-white p-2 rounded-xl hidden">
+        <li class="w-full p-2 rounded-xl hover:bg-[#f6f8fd] flex gap-5">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR2XqLIvQjB9c3sRjlBQbRObxK5QIHPMl2gtWryLmAtVHdKqmaV"
+            alt="apple"
+            class="h-14 w-14 object-cover rounded-xl"
+          />
+          <div class="space-y-1 my-auto">
+            <h2 class="text-lg font-semibold">Apple</h2>
+            <h3 class="text-sm text-gray-400">Fruit and tree</h3>
+          </div>
+        </li>
+        <li class="w-full p-2 rounded-xl hover:bg-[#f6f8fd] flex gap-5">
+          <img
+            src="https://storage.googleapis.com/webdesignledger.pub.network/WDL/maxresdefault.jpg"
+            alt="apple inc logo"
+            class="h-14 w-14 object-cover rounded-xl"
+          />
+          <div class="space-y-1 my-auto">
+            <h2 class="text-lg font-semibold">Apple</h2>
+            <h3 class="text-sm text-gray-400">American multinational</h3>
+          </div>
+        </li>
+        <li class="w-full p-2 rounded-xl hover:bg-[#f6f8fd] flex gap-5">
+          <img
+            src="https://www.phoneplacekenya.com/wp-content/uploads/2023/11/Apple-TV-4K-3-Gen.jpg"
+            alt="apple tv"
+            class="h-14 w-14 object-cover rounded-xl"
+          />
+          <div class="space-y-1 my-auto">
+            <h2 class="text-lg font-semibold">Apple TV</h2>
+            <h3 class="text-sm text-gray-400">Home media receiver</h3>
+          </div>
+        </li>
+        <li class="w-full p-2 rounded-xl hover:bg-[#f6f8fd] flex gap-5">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk17e0EaBOni7mK7UZMs-BMrSHcywCwxLRwg&s"
+            alt="apple tv"
+            class="h-14 w-14 object-cover rounded-xl"
+          />
+          <div class="space-y-1 my-auto">
+            <h2 class="text-lg font-semibold">Apple Silicon</h2>
+            <h3 class="text-sm text-gray-400">Processors designed by Apple</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const search = document.getElementById("search");
+      const suggestions = document.getElementById("suggestions");
+
+      search.addEventListener("input", () => {
+        const inputValue = search.value.trim();
+        if (
+          inputValue.length > 1 &&
+          inputValue.toLowerCase().includes("apple")
+        ) {
+          suggestions.classList.remove("hidden");
+        } else {
+          suggestions.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
