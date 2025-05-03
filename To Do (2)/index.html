@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>To Do</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f0ece9]"
+  >
+    <div class="w-11/12 max-w-xs bg-white space-y-4">
+      <div
+        class="p-4 relative overflow-hidden z-10 grid grid-cols-3 text-white"
+      >
+        <div
+          class="absolute w-[500px] h-[500px] bg-[#a9c4e1] -top-[400px] left-1/2 -translate-x-1/2 rounded-full -z-10 shadow-lg"
+        ></div>
+        <i class="fa-solid fa-arrow-left"></i>
+        <h1 class="text-xl text-center font-semibold">
+          Thu, July 6, 2017 <span class="block text-sm">6 tasks</span>
+        </h1>
+      </div>
+      <ul class="p-4 space-y-2 text-sm">
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="test_use_cases"
+            id="test_use_cases"
+            class="hidden peer"
+            checked
+          />
+          <label for="test_use_cases" class="peer-checked:line-through"
+            >Test use cases for the new tool</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="send_out_emails"
+            id="send_out_emails"
+            class="hidden peer"
+            checked
+          />
+          <label for="send_out_emails" class="peer-checked:line-through"
+            >Send out emails</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="daily_ui_practice"
+            id="daily_ui_practice"
+            class="hidden peer"
+            checked
+          />
+          <label for="daily_ui_practice" class="peer-checked:line-through"
+            >Daily UI practice</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="driving_practice"
+            id="driving_practice"
+            class="hidden peer"
+          />
+          <label for="driving_practice" class="peer-checked:line-through"
+            >Driving practice</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="water_flowers"
+            id="water_flowers"
+            class="hidden peer"
+          />
+          <label for="water_flowers" class="peer-checked:line-through"
+            >Water flowers</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+        <li
+          class="has-checked:text-gray-400 has-checked:strikethrough flex items-center justify-between"
+        >
+          <input
+            type="checkbox"
+            name="upload_files"
+            id="upload_files"
+            class="hidden peer"
+          />
+          <label for="upload_files" class="peer-checked:line-through"
+            >Upload PSD files to Dropbox</label
+          >
+          <div
+            class="w-8 h-8 border border-gray-300 rounded-full flex items-center justify-center text-white peer-checked:text-green-500 peer-checked:border-green-500"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+        </li>
+      </ul>
+      <button
+        class="flex m-2 ml-auto w-12 h-12 bg-[#9bc3ee] items-center justify-center shadow-lg rounded-full text-white"
+      >
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </body>
+</html>
