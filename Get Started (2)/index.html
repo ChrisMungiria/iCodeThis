@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .progress {
+        width: 0%;
+        animation: anim-progress 2s linear forwards;
+      }
+
+      @keyframes anim-progress {
+        0% {
+          width: 0%;
+        }
+        100% {
+          width: 50%;
+        }
+      }
+    </style>
+    <title>Get Started</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#7991fd]"
+  >
+    <div
+      class="w-11/12 max-w-md p-4 bg-[#eceef9] shadow-xl space-y-3 text-slate-700"
+    >
+      <div class="w-full max-w-xs flex items-center gap-1 mx-auto text-xs">
+        <div
+          class="w-8 h-8 rounded-full bg-[#7991fd] flex items-center justify-center text-white"
+        >
+          <p>1</p>
+        </div>
+        <div class="h-1 bg-[#d7d9e6] flex-1">
+          <div class="progress h-full bg-[#7993fb]"></div>
+        </div>
+        <div
+          class="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center"
+        >
+          <p>2</p>
+        </div>
+        <div class="h-1 bg-[#d7d9e6] flex-1"></div>
+        <div
+          class="w-8 h-8 rounded-full bg-white shadow-md flex items-center justify-center"
+        >
+          <p>3</p>
+        </div>
+      </div>
+      <h1 class="text-xl capitalize font-semibold text-center">
+        Welcome data studio
+      </h1>
+      <p class="text-xs text-center max-w-xs mx-auto">
+        Turn your data into informative dashboards and reports that are easy to
+        read, easy to share and fully customizable. Data Studio allows you to
+        tell great data stories to support better business decisions
+      </p>
+      <button
+        class="w-full max-w-[200px] flex justify-center mx-auto text-white p-3 bg-[#7991fd] text-xs"
+      >
+        Get started
+      </button>
+    </div>
+  </body>
+</html>
