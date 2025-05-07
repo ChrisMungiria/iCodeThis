@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Help Center #1</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f7f8fc]"
+  >
+    <div class="w-11/12 max-w-xl space-y-2">
+      <h1 class="text-xl font-semibold text-center">How can we help you</h1>
+      <div
+        class="max-w-xs w-full shadow-md bg-white rounded-md mx-auto flex items-center"
+      >
+        <i
+          class="fa-solid fa-magnifying-glass text-xl text-gray-500 p-2 pr-0"
+        ></i>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Describe your issue"
+          class="flex-1 p-2 rounded-md"
+        />
+      </div>
+      <ul class="max-w-xs w-full mx-auto space-y-2">
+        <li class="text-sm font-light">
+          <div
+            class="flex items-center justify-between p-2 border-b border-gray-300"
+          >
+            <span>Popular articles</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <p class="p-2 hidden">
+            The popular articles section will show you the most popular
+            articles.
+          </p>
+        </li>
+        <li class="text-sm font-light">
+          <div
+            class="flex items-center justify-between p-2 border-b border-gray-300"
+          >
+            <span>Fix problems & request removals</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <p class="p-2 hidden">
+            The fix problems & request removals section will show you how to fix
+            problems and request removals.
+          </p>
+        </li>
+        <li class="text-sm font-light">
+          <div
+            class="flex items-center justify-between p-2 border-b border-gray-300"
+          >
+            <span>Browse the web</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <p class="p-2 hidden">
+            The browse the web section will show you how to browse the web and
+            use search engines.
+          </p>
+        </li>
+        <li class="text-sm font-light">
+          <div
+            class="flex items-center justify-between p-2 border-b border-gray-300"
+          >
+            <span>Search on your phone or tablet</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <p class="p-2 hidden">
+            The search on your phone or tablet section will show you how to
+            search on your phone or tablet.
+          </p>
+        </li>
+      </ul>
+      <div class="grid sm:grid-cols-3 gap-3 text-xs place-items-center">
+        <div class="rounded-md w-full bg-white shadow-md max-w-xs">
+          <img
+            src="https://images.unsplash.com/photo-1467712232042-97760e860370?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8fHw="
+            alt="mountains"
+            class="w-full h-20 object-cover rounded-t-md"
+          />
+          <p class="text-center font-light text-gray-600 p-2">
+            A friend indeed
+          </p>
+        </div>
+        <div class="rounded-md w-full bg-white shadow-md max-w-xs">
+          <img
+            src="https://lesjardinsjeanbrillon.ca/wp-content/uploads/2019/07/property-list-img-04.jpg"
+            alt="modern minimalist white house"
+            class="w-full h-20 object-cover rounded-t-md"
+          />
+          <p class="text-center font-light text-gray-600 p-2">
+            A friend indeed
+          </p>
+        </div>
+        <div class="rounded-md w-full bg-white shadow-md max-w-xs">
+          <img
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRKL_ScV46aJpFazqibVgutUvKgXDaWcDjnWQS3kFxQwkz-y5--"
+            alt="cactus plant"
+            class="w-full h-20 object-cover rounded-t-md"
+          />
+          <p class="text-center font-light text-gray-600 p-2">
+            Return of the Ridleys
+          </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      const list_items = document.querySelectorAll("ul li");
+
+      list_items.forEach((list_item, index) =>
+        list_item.addEventListener("click", () => {
+          const paragraph = list_item.querySelector("p");
+
+          if (paragraph.classList.contains("hidden")) {
+            paragraph.classList.remove("hidden");
+            list_item.querySelector("i").classList.remove("fa-chevron-down");
+            list_item.querySelector("i").classList.add("fa-chevron-up");
+          } else {
+            paragraph.classList.add("hidden");
+            list_item.querySelector("i").classList.remove("fa-chevron-up");
+            list_item.querySelector("i").classList.add("fa-chevron-down");
+          }
+        })
+      );
+    </script>
+  </body>
+</html>
