@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Accordion 3</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-[#fdf4f2] to-[#ecf3fe]"
+  >
+    <div class="w-11/12 max-w-md bg-white rounded-md shadow-lg">
+      <div class="p-4 border-b border-gray-200">
+        <h1 class="text-xl font-bold">Several windows stacked on each other</h1>
+        <h4 class="text-sm font-light">
+          The accordion is a graphical control element comprising a vertically
+          stacked list of items, such as labels or thumbnails
+        </h4>
+      </div>
+      <ul class="p-6 space-y-2">
+        <li class="has-checked:bg-[#f2f4ff] p-2 rounded-md">
+          <label class="peer group flex items-center gap-2">
+            <input type="checkbox" name="accordion[1]" class="hidden" />
+            <div
+              class="w-6 h-6 flex rounded-full items-center justify-center group-has-checked:hidden"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div
+              class="w-6 h-6 hidden rounded-full items-center justify-center group-has-checked:flex bg-white flex-shrink-0"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </div>
+            <span>Why this term</span>
+          </label>
+          <div class="hidden peer-has-checked:block py-4 text-sm text-gray-600">
+            <p>Here is the content of the first item</p>
+          </div>
+        </li>
+        <li class="has-checked:bg-[#f2f4ff] p-2 rounded-md">
+          <label class="peer group flex items-center gap-2">
+            <input type="checkbox" name="accordion[2]" class="hidden" />
+            <div
+              class="w-6 h-6 flex rounded-full items-center justify-center group-has-checked:hidden"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div
+              class="w-6 h-6 hidden rounded-full items-center justify-center group-has-checked:flex bg-white flex-shrink-0"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </div>
+            <span>When to use accordion components?</span>
+          </label>
+          <div class="hidden peer-has-checked:block py-4 text-sm text-gray-600">
+            <p>Here is the content of the second item</p>
+          </div>
+        </li>
+        <li class="has-checked:bg-[#f2f4ff] p-2 rounded-md">
+          <label class="peer group flex items-center gap-2">
+            <input type="checkbox" name="accordion[3]" class="hidden" checked />
+            <div
+              class="w-6 h-6 flex rounded-full items-center justify-center group-has-checked:hidden"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div
+              class="w-6 h-6 hidden rounded-full items-center justify-center group-has-checked:flex bg-white flex-shrink-0"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </div>
+            <span>How can it be defined?</span>
+          </label>
+          <div class="hidden peer-has-checked:flex py-4 text-sm text-gray-600">
+            <div class="w-10 h-10 flex-shrink-0"></div>
+            <div class="flex flex-col space-y-2">
+              <p>
+                Several windows are stacked on each other. All of them are
+                "shaded", so only their captions are visible. If one of them is
+                clicked, to make it active it is "unshaded" or "maximised".
+                Other windows in accordion are displaced around top or bottom
+                edge
+              </p>
+              <button
+                class="px-6 py-2 rounded-full text-white bg-[#6963fe] w-fit"
+              >
+                Learn more
+              </button>
+            </div>
+          </div>
+        </li>
+        <li class="has-checked:bg-[#f2f4ff] p-2 rounded-md">
+          <label class="peer group flex items-center gap-2">
+            <input type="checkbox" name="accordion[4]" class="hidden" />
+            <div
+              class="w-6 h-6 flex rounded-full items-center justify-center group-has-checked:hidden"
+            >
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div
+              class="w-6 h-6 hidden rounded-full items-center justify-center group-has-checked:flex bg-white flex-shrink-0"
+            >
+              <i class="fa-solid fa-minus"></i>
+            </div>
+            <span>When to use accordion components?</span>
+          </label>
+          <div class="hidden peer-has-checked:block py-4 text-sm text-gray-600">
+            <p>Here is the content of the fourth item</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
