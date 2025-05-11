@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .animate-up {
+        animation: anim-animate-up 1s ease-in-out forwards;
+      }
+      @keyframes anim-animate-up {
+        0% {
+          opacity: 0;
+          top: 0px;
+        }
+        100% {
+          opacity: 1;
+          top: -80px;
+        }
+      }
+    </style>
+    <title>Contact Card</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f3f5ff]"
+  >
+    <div class="w-11/12 max-w-lg bg-[#f7fbff] p-5 z-10 py-40 rounded-md">
+      <div
+        class="w-full max-w-xs mx-auto relative h-full bg-white rounded-md shadow-2xl p-4 text-slate-800 space-y-4"
+      >
+        <div
+          class="w-[120%] h-fit p-4 pb-10 rounded-md bg-gradient-to-br from-[#5da0fb] to-[#936de5] absolute -z-50 inset-0 left-1/2 -translate-x-1/2 -top-20 text-gray-100 animate-up"
+        >
+          <h1 class="text-center">Hi George</h1>
+          <p class="text-sm text-center w-3/4 mx-auto">
+            You can contact us whenever you need help or just curious about
+            something
+          </p>
+        </div>
+        <h1 class="text-center text-lg font-semibold">Start chatting</h1>
+        <img
+          src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+          alt="profile image"
+          class="w-14 h-14 rounded-full object-cover mx-auto"
+        />
+        <h2 class="text-center">Essie Walton</h2>
+        <div class="p-1 rounded-full w-fit flex items-center gap-2 mx-auto">
+          <div
+            class="w-4 h-4 bg-green-300/30 flex items-center justify-center rounded-full relative"
+          >
+            <div
+              class="w-2 h-2 bg-green-500 rounded-full animate-ping absolute"
+            ></div>
+            <div class="w-2 h-2 bg-green-500 rounded-full absolute"></div>
+          </div>
+          <span class="text-green-500 text-xs">Active</span>
+        </div>
+        <button
+          class="px-4 py-2 flex mx-auto rounded-md bg-gradient-to-r from-[#61a2fe] to-[#b099e7] text-white font-light"
+        >
+          Send a message
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
