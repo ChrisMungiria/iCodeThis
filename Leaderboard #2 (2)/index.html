@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Leaderboard #2</title>
+  </head>
+  <body
+    class="w-full min-h-screen bg-gray-100 flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-lg p-4 bg-white rounded-md shadow-xl space-y-2">
+      <h1 class="text-center text-xl font-bold">Leaderboard</h1>
+      <div
+        class="p-2 bg-gray-200 rounded-full flex items-center gap-2 w-fit mx-auto"
+      >
+        <label
+          for="30_days"
+          class="has-checked:bg-white has-checked:shadow-xl px-3 py-2 rounded-full transition-all duration-100 ease-in-out"
+        >
+          <input
+            type="radio"
+            name="time"
+            id="30_days"
+            class="hidden"
+            checked
+          />Last 30 days</label
+        >
+
+        <label
+          for="all_time"
+          class="has-checked:bg-white has-checked:shadow-xl px-3 py-2 rounded-full transition-all duration-100 ease-in-out"
+        >
+          <input type="radio" name="time" id="all_time" class="hidden" />All
+          time</label
+        >
+      </div>
+      <ul class="space-y-2">
+        <li class="flex items-center justify-between group">
+          <div class="flex items-center gap-2">
+            <div
+              class="border border-gray-200 rounded-full p-1 flex gap-3 items-center"
+            >
+              <h2 class="text-3xl font-bold ml-2">1</h2>
+              <img
+                src="https://img.freepik.com/free-photo/selfie-portrait-videocall_23-2149186122.jpg"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Cheryl Correa</h3>
+              <h4 class="text-xs text-gray-500">6.23M views</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <img
+              src="https://c02.purpledshub.com/uploads/sites/40/2023/08/JI230816Cosmos220-6d9254f-edited-scaled.jpg?w=1029&webp=1"
+              alt="flower image"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <img
+              src="https://www.lunafloral.my/cdn/shop/files/IMG_2779.jpg?v=1730041057"
+              alt="flower image"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-150"
+            />
+            <img
+              src="https://www.gardenia.net/wp-content/uploads/2023/05/types-of-flowers-780x520.webp"
+              alt="flower image"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-300"
+            />
+          </div>
+        </li>
+        <li class="flex items-center justify-between group">
+          <div class="flex items-center gap-2">
+            <div
+              class="border border-gray-200 rounded-full p-1 flex gap-3 items-center"
+            >
+              <h2 class="text-3xl font-bold ml-2">2</h2>
+              <img
+                src="https://img.freepik.com/free-photo/closeup-young-female-professional-making-eye-contact-against-colored-background_662251-651.jpg?semt=ais_hybrid&w=740"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Tamika Walker</h3>
+              <h4 class="text-xs text-gray-500">5.1M views</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1664640458531-3c7cca2a9323?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWJzdHJhY3R8ZW58MHx8MHx8fDA%3D"
+              alt="abstract photos"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0lL0PEMPy3_nbMwOdlCGAOk9Ee83xqJ1UwQ&s"
+              alt="abstract photos"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-150"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU7667L7Y69PKdov3ZrRfWTUxRQMMyLGbouw&s"
+              alt="abstract photos"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-300"
+            />
+          </div>
+        </li>
+        <li class="flex items-center justify-between group">
+          <div class="flex items-center gap-2">
+            <div
+              class="border border-gray-200 rounded-full p-1 flex gap-3 items-center"
+            >
+              <h2 class="text-3xl font-bold ml-2">3</h2>
+              <img
+                src="https://www.shutterstock.com/image-photo/head-shot-beautiful-young-indian-600nw-2592061439.jpg"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Judith Earnhardt</h3>
+              <h4 class="text-xs text-gray-500">4.78M views</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3eSk_MS08as2T-m3Ms8cH8l6D8dykz9hFbw&s"
+              alt="black and white rose"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjWqjR92aouzlbpCHguOE5B15V9-_7eTjpfQ&s"
+              alt="black and white elephant"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-150"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSARvNx_Hnu7ugrnKhwo6CK5ogZFuUkw5QyiQ&s"
+              alt="black and white cat"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-300"
+            />
+          </div>
+        </li>
+        <li class="flex items-center justify-between group">
+          <div class="flex items-center gap-2">
+            <div
+              class="border border-gray-200 rounded-full p-1 flex gap-3 items-center"
+            >
+              <h2 class="text-3xl font-bold ml-2">4</h2>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnoN0bogYDQyjwsurRLVNwf28dVuA3F2CIAw&s"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Edward Pickett</h3>
+              <h4 class="text-xs text-gray-500">4.23M views</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEDHqM5_e37eNzCxj3pgiQDuIkTpxVXKHBFQ&s"
+              alt="apples"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvbPoA6AXjIT8YEeyFxMcHaEQQVqYahyt7N5N8RcE39D0dW3efjycI3V3564BYcVLPePE&usqp=CAU"
+              alt="red umbrellas"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-150"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4eKC_yAq9jvt3B5Co3-zB44on7pFVB7QZwwG-sDVZPVw1RZweUdQs99YwyJkea2GOr0&usqp=CAU"
+              alt="red plants"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-300"
+            />
+          </div>
+        </li>
+        <li class="flex items-center justify-between group">
+          <div class="flex items-center gap-2">
+            <div
+              class="border border-gray-200 rounded-full p-1 flex gap-3 items-center"
+            >
+              <h2 class="text-3xl font-bold ml-2">5</h2>
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj1iCxjpZBsFytXevqbH51MEH9gDgHeoMIQ38WQrI7EwABAGZj33YaGrdFgspOQyQurPg&usqp=CAU"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h3 class="text-xl font-bold">Shawn Hanna</h3>
+              <h4 class="text-xs text-gray-500">4.19M views</h4>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <img
+              src="https://www.shutterstock.com/image-photo/beautiful-abstract-green-feathers-on-600nw-1913234434.jpg"
+              alt="grass"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out"
+            />
+            <img
+              src="https://thumbs.dreamstime.com/b/green-summer-park-sun-shining-trees-leaves-nature-theme-58266231.jpg"
+              alt="forest"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-150"
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZIDDw65NnyTirwelkgzNar8piGCUIk4VlOw&s"
+              alt="trees"
+              class="w-12 h-12 rounded-md object-cover group-hover:scale-110 transition-all duration-150 ease-in-out delay-300"
+            />
+          </div>
+        </li>
+      </ul>
+      <button class="px-6 py-3 flex mx-auto capitalize text-sm rounded-md bg-slate-800 text-white shadow-xl shadow-slate-500/20">View everyone</butto>
+    </div>
+  </body>
+</html>
