@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Report</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#14132d]"
+  >
+    <div class="w-11/12 max-w-xl bg-[#1b1939]">
+      <div class="w-full flex items-center justify-end">
+        <div
+          class="w-10 h-10 flex items-center justify-center text-gray-100 bg-[#221d48]"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="p-4 text-gray-100 space-y-4">
+        <div>
+          <h1 class="text-xl">What's happening?</h1>
+          <h2 class="text-sm font-light">Check all that apply.</h2>
+        </div>
+        <ul class="space-y-2">
+          <li class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="video_problem"
+              id="video_problem"
+              class="w-7 h-7 accent-blue-500"
+            />
+            <label for="video_problem">
+              <p>Video problem</p>
+              <p class="text-xs">
+                Blurry, cuts out, or looks strange in some way.
+              </p>
+            </label>
+          </li>
+          <li class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="sound_problem"
+              id="sound_problem"
+              class="w-7 h-7 accent-blue-500"
+            />
+            <label for="sound_problem">
+              <p>Sound Problem</p>
+              <p class="text-xs">
+                Hard to hear, not matched with video, or missing in some parts.
+              </p>
+            </label>
+          </li>
+          <li class="flex items-center gap-2">
+            <input
+              type="checkbox"
+              name="subtitles_or_caption"
+              id="subtitles_or_caption"
+              class="w-7 h-7 accent-blue-500"
+            />
+            <label for="subtitles_or_caption">
+              <p>Subtitles or caption Problem</p>
+              <p class="text-xs">
+                Missing, hard to read, not matched with sound, misspellings, or
+                poor translations.
+              </p>
+            </label>
+          </li>
+        </ul>
+        <label class="text-sm" for="other"> It's something else </label>
+        <textarea
+          name="other"
+          id="other"
+          class="w-full bg-[#161433] resize-none rounded-md"
+          rows="5"
+        ></textarea>
+        <button
+          class="px-8 py-3 rounded-md text-[#1c183a] bg-[#fd974d] text-xs font-bold"
+        >
+          Submit report
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
