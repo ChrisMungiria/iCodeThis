@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Share Link</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#1b1d36]"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 bg-[#242547] rounded-md shadow-xl text-white space-y-2"
+    >
+      <h1 class="text-xl font-bold">Follow us!</h1>
+      <ul class="space-y-2 grid grid-cols-4 w-fit gap-2">
+        <li>
+          <label
+            for="instagram"
+            class="w-10 h-10 flex items-center justify-center rounded-md bg-[#2f325a] has-checked:bg-[#ea4c87]"
+            ><i class="fa-brands fa-instagram"></i>
+            <input
+              type="radio"
+              name="social_media"
+              id="instagram"
+              class="hidden"
+            />
+          </label>
+        </li>
+        <li>
+          <label
+            for="facebook"
+            class="w-10 h-10 flex items-center justify-center rounded-md bg-[#2f325a] has-checked:bg-[#ea4c87]"
+            ><i class="fa-brands fa-facebook-f"></i>
+            <input
+              type="radio"
+              name="social_media"
+              id="facebook"
+              class="hidden"
+            />
+          </label>
+        </li>
+        <li>
+          <label
+            for="dribbble"
+            class="w-10 h-10 flex items-center justify-center rounded-md bg-[#2f325a] has-checked:bg-[#ea4c87]"
+            ><i class="fa-brands fa-dribbble"></i>
+            <input
+              type="radio"
+              name="social_media"
+              id="dribbble"
+              class="hidden"
+              checked
+            />
+          </label>
+        </li>
+        <li>
+          <label
+            for="behance"
+            class="w-10 h-10 flex items-center justify-center rounded-md bg-[#2f325a] has-checked:bg-[#ea4c87]"
+            ><i class="fa-brands fa-behance"></i>
+            <input
+              type="radio"
+              name="social_media"
+              id="behance"
+              class="hidden"
+            />
+          </label>
+        </li>
+      </ul>
+      <p class="text-xs">Or share this page</p>
+      <div
+        class="p-2 rounded-md bg-[#1b1d36] flex items-center justify-between"
+      >
+        <a href="https://dribbble.com" class="text-xs text-gray-400" id="link"
+          >https://dribbble.com</a
+        >
+        <button id="copy" class="text-[#4d4d87] text-[10px]">
+          Copy to clipboard
+        </button>
+      </div>
+    </div>
+    <script>
+      // Get the selected radio button
+      const radioButtons = document.querySelectorAll(
+        'input[name="social_media"]'
+      );
+      const link = document.getElementById("link");
+
+      radioButtons.forEach((radioButton) => {
+        radioButton.addEventListener("change", (e) => {
+          const selectedSocialMedia = e.target.id;
+
+          if (selectedSocialMedia === "instagram") {
+            link.href = "https://instagram.com";
+            link.textContent = "https://instagram.com";
+          } else if (selectedSocialMedia === "dribbble") {
+            link.href = "https://dribbble.com";
+            link.textContent = "https://dribbble.com";
+          } else if (selectedSocialMedia === "facebook") {
+            link.href = "https://facebook.com";
+            link.textContent = "https://facebook.com";
+          } else if (selectedSocialMedia === "behance") {
+            link.href = "https://behance.com";
+            link.textContent = "https://behance.com";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
