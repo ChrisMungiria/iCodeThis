@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .content {
+        animation: slide-in 0.5s ease-in-out;
+        animation-fill-mode: forwards;
+      }
+      @keyframes slide-in {
+        0% {
+          transform: translateY(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    </style>
+    <title>Cookie Popup</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f8f8f8]"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 bg-white space-y-2 shadow-md shadow-yellow-200/30 rounded-md content"
+    >
+      <div class="flex items-center justify-end text-gray-500">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <img
+        src="https://png.pngtree.com/png-clipart/20240911/original/pngtree-deliciously-homemade-chocolate-chip-cookies-with-a-perfect-crunch-png-image_15989514.png"
+        alt="cookies"
+        class="w-16 h-16 mx-auto object-cover"
+      />
+      <p class="text-sm text-center">
+        Out website uses cookies to ensure you get the best experience while
+        you're here
+      </p>
+      <button
+        class="w-full p-3 rounded-md bg-[#a3c13e] text-white shadow-md shadow-gray-300"
+      >
+        Okay
+      </button>
+      <button
+        class="p-3 text-center w-full uppercase font-semibold text-gray-600"
+      >
+        Learn more
+      </button>
+    </div>
+  </body>
+</html>
