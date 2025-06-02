@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Sign In</title>
+  </head>
+  <body
+    class="w-full flex items-center justify-center min-h-screen bg-gradient-to-br from-[#9dc3fe] to-[#5d80d4]"
+  >
+    <div class="w-11/12 max-w-xl p-4 bg-white rounded-md shadow-md space-y-4">
+      <h1 class="text-center text-xl capitalize">Sign in to your account</h1>
+      <div class="w-full max-w-xs mx-auto">
+        <label for="username_or_email" class="text-xs font-bold"
+          >Username or email</label
+        >
+        <input
+          type="text"
+          name="username_or_email"
+          id="username_or_email"
+          placeholder="myemail@address.com"
+          class="w-full border border-gray-200 p-2 rounded-md"
+        />
+      </div>
+      <div class="w-full max-w-xs mx-auto">
+        <label for="password" class="text-xs font-bold">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          class="w-full border border-gray-200 p-2 rounded-md"
+        />
+      </div>
+      <div class="flex items-center justify-between w-full max-w-xs mx-auto">
+        <div class="text-sm flex items-center gap-2">
+          <input type="checkbox" name="remember_me" id="remember_me" />
+          <label for="remember_me">Remember me</label>
+        </div>
+        <a class="text-blue-500 text-xs" href="#">Forgot password?</a>
+      </div>
+      <button
+        class="w-full max-w-xs p-2 rounded-md capitalize text-white flex items-center justify-center mx-auto bg-[#d0d4dc] hover:bg-[#799fe7] hover:shadow-md transition-all duration-150 ease-in-out"
+      >
+        Sign in
+      </button>
+      <p class="text-[#d0d4dc] text-sm text-center">
+        Don't have an account? <a href="#" class="text-blue-500">Sign up</a>
+      </p>
+    </div>
+  </body>
+</html>
