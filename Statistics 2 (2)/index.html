@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Statistics 2</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#fdfdfd]"
+  >
+    <div
+      class="w-11/12 max-w-3xl p-4 bg-[#f7f7f7] flex gap-5 flex-col md:flex-row"
+    >
+      <div class="flex-[2] p-4 bg-white shadow-xl">
+        <h1 class="font-bold capitalize">Projects by type</h1>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div class="gap-2">
+            <div
+              class="w-16 h-16 rounded-full p-1"
+              style="
+                background-image: conic-gradient(
+                  #d71e2e 0deg,
+                  #d71e2e 67.6deg,
+                  #f2f2f2 67.6deg
+                );
+              "
+            >
+              <div
+                class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold"
+              >
+                <p class="text-sm text-center">26%</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center capitalize">
+              Software development
+            </p>
+          </div>
+          <div class="gap-2">
+            <div
+              class="w-16 h-16 rounded-full p-1"
+              style="
+                background-image: conic-gradient(
+                  #d71e2e 0deg,
+                  #d71e2e 226.8deg,
+                  #f2f2f2 226.8deg
+                );
+              "
+            >
+              <div
+                class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold"
+              >
+                <p class="text-sm text-center">63%</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center capitalize">
+              Marketing
+            </p>
+          </div>
+          <div class="gap-2">
+            <div
+              class="w-16 h-16 rounded-full p-1"
+              style="
+                background-image: conic-gradient(
+                  #d71e2e 0deg,
+                  #d71e2e 28.8deg,
+                  #f2f2f2 28.8deg
+                );
+              "
+            >
+              <div
+                class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold"
+              >
+                <p class="text-sm text-center">8%</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center capitalize">Sales</p>
+          </div>
+          <div class="gap-2">
+            <div
+              class="w-16 h-16 rounded-full p-1"
+              style="
+                background-image: conic-gradient(
+                  #d71e2e 0deg,
+                  #d71e2e 10.8deg,
+                  #f2f2f2 10.8deg
+                );
+              "
+            >
+              <div
+                class="w-full h-full rounded-full bg-white flex items-center justify-center font-bold"
+              >
+                <p class="text-sm text-center">3%</p>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 text-center capitalize">Business</p>
+          </div>
+        </div>
+        <div class="flex items-center justify-between flex-col md:flex-row">
+          <h2 class="text-lg font-semibold">Revenue</h2>
+          <div class="grid grid-cols-2 gap-2">
+            <h2 class="text-xs text-gray-400">
+              Current week
+              <span class="block font-bold text-sm text-gray-800"
+                >€25,008.20</span
+              >
+            </h2>
+            <h2 class="text-xs text-gray-400">
+              Previous week
+              <span class="block font-bold text-sm">€25,008.20</span>
+            </h2>
+          </div>
+        </div>
+        <div>
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+      <div class="flex-1 bg-white shadow-xl p-4 space-y-2">
+        <h2 class="text-lg font-semibold capitalize">Project by managers</h2>
+        <p class="text-xs">
+          As a business owner or manager, the decision to opt for offshore
+          software development can
+        </p>
+        <ul class="space-y-2 text-xs">
+          <li>
+            <p>Jessi Olohan</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[43%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>43%</p>
+            </div>
+          </li>
+          <li>
+            <p>Marci Vlasov</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[24%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>24%</p>
+            </div>
+          </li>
+          <li>
+            <p>Robbyn Robergon</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[31%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>31%</p>
+            </div>
+          </li>
+          <li>
+            <p>Lucia O'Lyhane</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[12%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>12%</p>
+            </div>
+          </li>
+          <li>
+            <p>Ellwin Couttes</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[6%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>6%</p>
+            </div>
+          </li>
+          <li>
+            <p>Caroline Caldwell</p>
+            <div class="flex items-center gap-2">
+              <div class="w-full h-2 bg-gray-200 rounded-full">
+                <div class="h-full w-[1%] bg-slate-800 rounded-full"></div>
+              </div>
+              <p>1%</p>
+            </div>
+          </li>
+        </ul>
+        <button class="p-3 text-white bg-[#e10110] w-full text-xs rounded-md">
+          View all
+        </button>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("chart");
+
+      const data = {
+        labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+        datasets: [
+          {
+            label: "Current Week",
+            data: [25000, 35000, 15000, 32000, 2500, 20000, 32000],
+            borderColor: "#000000",
+            tension: 0.4,
+            pointRadius: 0,
+          },
+          {
+            label: "Previous Week",
+            data: [8000, 12000, 10000, 20000, 32000, 35000, 20000],
+            borderColor: "#acacac",
+            tension: 0.4,
+            pointRadius: 0,
+            borderDash: [2, 2],
+            borderDashOffset: 4,
+          },
+        ],
+      };
+
+      new Chart(ctx, {
+        type: "line",
+        data,
+        options: {
+          maintainAspectRatio: false,
+          scales: {
+            y: {
+              max: 40000,
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
