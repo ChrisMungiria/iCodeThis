@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Subscription Popup</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#1f2a46] relative"
+  >
+    <div class="absolute w-96 h-96 rounded-full top-0 left-0">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#242E4D"
+          d="M42.8,-32.6C56.8,-16.6,70.3,1.2,67.3,15.7C64.3,30.2,44.7,41.2,24.8,50.2C5,59.2,-15.1,66.2,-33.9,60.8C-52.6,55.5,-69.9,37.7,-73,18.3C-76.1,-1.1,-65,-22,-50.5,-38.1C-35.9,-54.2,-18,-65.4,-1.8,-64C14.4,-62.6,28.9,-48.5,42.8,-32.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </div>
+    <div class="absolute w-96 h-96 rounded-full bottom-0 right-0 rotate-45">
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="#242E4D"
+          d="M42.8,-32.6C56.8,-16.6,70.3,1.2,67.3,15.7C64.3,30.2,44.7,41.2,24.8,50.2C5,59.2,-15.1,66.2,-33.9,60.8C-52.6,55.5,-69.9,37.7,-73,18.3C-76.1,-1.1,-65,-22,-50.5,-38.1C-35.9,-54.2,-18,-65.4,-1.8,-64C14.4,-62.6,28.9,-48.5,42.8,-32.6Z"
+          transform="translate(100 100)"
+        />
+      </svg>
+    </div>
+    <div
+      class="w-11/12 max-w-xs min-h-32 bg-[#242e4d] rounded-md shadow-xl p-2 relative overflow-hidden"
+    >
+      <div class="absolute -top-8 -left-8">
+        <div class="absolute top-0 left-0 w-20 h-20 z-30">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#9CD9EA"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="absolute top-0 left-0 w-24 h-24 z-20">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#97A9FB"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="absolute top-0 left-0 w-28 h-28">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#927EFA"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="absolute w-20 h-20 bottom-0 right-0">
+        <div class="absolute top-0 left-0 w-20 h-20 z-30">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#9CD9EA"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="absolute top-0 left-0 w-24 h-24 z-20">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#97A9FB"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+        <div class="absolute top-0 left-0 w-28 h-28">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="#927EFA"
+              d="M52.2,-57.7C68.2,-48.8,82.2,-32.9,82.4,-16.7C82.7,-0.5,69.3,15.9,57.7,30.7C46,45.5,36.1,58.7,21.6,67.4C7.2,76.1,-11.8,80.3,-26.5,74.3C-41.3,68.3,-51.7,52.1,-56.7,36.3C-61.6,20.4,-61,4.9,-60.1,-12.5C-59.3,-29.8,-58.3,-49,-48.2,-59C-38.2,-69,-19.1,-69.7,-0.5,-69.2C18.1,-68.6,36.2,-66.7,52.2,-57.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="flex items-center justify-end text-gray-500">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="w-full py-20 space-y-4">
+        <h1 class="font-bold text-gray-400 text-center">
+          Syncing your contacts is the fastest way to grow your network
+        </h1>
+        <p class="text-center text-xs text-gray-500">
+          We'll periodically import and store your contacts to suggest
+          connections and show you relevant updates. You control who you connect
+          to, and you can manage your contacts anytime
+        </p>
+        <div class="flex">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            class="p-2 w-full border border-gray-400 rounded-md border-r-0 text-sm placeholder:text-gray-400"
+          />
+          <button
+            class="bg-blue-500 rounded-md rounded-l-none text-white p-3 -ml-1"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
