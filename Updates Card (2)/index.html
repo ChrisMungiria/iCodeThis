@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .animate-star {
+        animation: star_animation 1s ease-in-out forwards;
+      }
+      .big-star {
+        animation: big_star_animation 1s ease-in-out forwards;
+      }
+
+      @keyframes big_star_animation {
+        0% {
+          transform: scale(1);
+        }
+        70% {
+          transform: scale(2.2);
+        }
+        100% {
+          transform: scale(1.7);
+        }
+      }
+
+      @keyframes star_animation {
+        0% {
+          transform: scale(1);
+        }
+        70% {
+          transform: scale(2);
+        }
+        100% {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+    <title>Updates Card</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#1b1c1e]"
+  >
+    <div class="w-11/12 max-w-xs p-2 rounded-md bg-[#161819] text-white">
+      <div class="w-full h-full p-2 rounded-md bg-[#222327] space-y-2">
+        <div
+          class="w-20 h-20 rounded-full bg-[#1b1c21] flex mx-auto items-center justify-center"
+        >
+          <div class="text-[#fbbc3c] flex items-center gap-1">
+            <i class="fa-solid fa-bolt animate-star"></i>
+            <i class="fa-solid fa-bolt-lightning big-star"></i>
+            <i class="fa-solid fa-bolt animate-star"></i>
+          </div>
+        </div>
+        <h1 class="text-xl text-center">View the latest updates</h1>
+        <p class="text-center text-xs w-3/4 mx-auto">
+          You'll be switched back home after you've been away for a while.
+        </p>
+        <button
+          class="text-gray-300 bg-[#161819] px-8 py-3 rounded-md flex items-center gap-2 mx-auto text-xs"
+        >
+          <i class="fa-solid fa-gear"></i>
+          <span>View preferences</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
