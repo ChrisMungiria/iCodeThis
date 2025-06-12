@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .animate-up {
+        animation: animation-animate-up 0.6s ease-in-out forwards;
+      }
+
+      @keyframes animation-animate-up {
+        0% {
+          transform: scale(0);
+        }
+        60% {
+          transform: scale(1.5);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <title>Share Link 2</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#eff3f7]"
+  >
+    <div
+      class="w-11/12 max-w-sm bg-white rounded-md shadow-md p-4 space-y-2 relative"
+    >
+      <div
+        class="absolute w-96 h-96 bg-[#9578ef] top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10 rounded-full animate-up"
+      ></div>
+      <div class="flex items-center justify-end text-gray-300">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 class="text-xl font-bold">Share something awesome</h1>
+      <p class="text-xs">
+        New and awesome design content will be added to our website, and may
+        even end up in our weekly newsletter.
+      </p>
+      <div class="flex gap-2">
+        <input
+          type="text"
+          name="link"
+          id="link"
+          placeholder="E.g https://"
+          class="p-2 border border-gray-200 rounded-md text-xs w-full"
+        />
+        <button class="px-4 py-2 rounded-md bg-[#9578ef] text-xs text-white">
+          Share
+        </button>
+      </div>
+      <div class="w-full p-2 bg-[#f8f9fd] rounded-md space-y-2">
+        <h2 class="text-gray-400 font-semibold">Sharing guidelines</h2>
+        <p class="text-xs text-gray-400">
+          We accept quality design/visual projects, animations, 3D, UI/UX
+          prototypes, or any other visual design project.
+          <span class="text-[#9578ef] hover:underline">Read more</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
