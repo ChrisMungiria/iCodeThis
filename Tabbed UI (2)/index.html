@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <!-- Change code below this line -->
+  <body class="bg-[#ececf8] flex justify-center items-center min-h-screen">
+    <div
+      class="w-11/12 max-w-xs p-2 bg-[#f8f7fc] rounded-md shadow-md space-y-2"
+    >
+      <div class="grid grid-cols-3 gap-2 text-xs">
+        <button
+          id="details"
+          class="text-center shadow-md shadow-slate-300/80 rounded-md p-2"
+        >
+          Details
+        </button>
+        <button id="tutorials" class="text-center rounded-md p-2">
+          Tutorials
+        </button>
+        <button id="code_snippets" class="text-center rounded-md p-2">
+          Code snippets
+        </button>
+      </div>
+      <div class="space-y-2" id="details_content">
+        <h1 class="text-xl font-semibold">Colour palette</h1>
+        <h2 class="text-sm">Click on the colour to copy the code</h2>
+        <div class="grid grid-cols-2 gap-2 mt-4 mx-auto w-fit">
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#bac5e1] rounded-full"></div>
+            <p class="uppercase">#bac5e1</p>
+          </div>
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#e8f1fe] rounded-full"></div>
+            <p class="uppercase">#e8f1fe</p>
+          </div>
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#f2f4f3] rounded-full"></div>
+            <p class="uppercase">#f2f4f3</p>
+          </div>
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#9096a9] rounded-full"></div>
+            <p class="uppercase">#9096a9</p>
+          </div>
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#5482f6] rounded-full"></div>
+            <p class="uppercase">#5482f6</p>
+          </div>
+          <div
+            class="border border-gray-200 bg-white flex p-1 rounded-full items-center w-fit gap-2"
+          >
+            <div class="w-5 h-5 bg-[#222f4c] rounded-full"></div>
+            <p class="uppercase">#222f4c</p>
+          </div>
+        </div>
+        <h1 class="text-xl font-semibold">Fonts</h1>
+        <h2 class="text-sm">Muli regular</h2>
+        <h2 class="text-sm">Muli bold</h2>
+      </div>
+      <div class="hidden space-y-2" id="tutorials_content">
+        <h1 class="text-xl font-semibold">Tutorials</h1>
+        <h2 class="text-sm">Learn how to build this component</h2>
+        <h3 class="text-xs text-gray-400">HTML/CSS</h3>
+        <div class="w-full p-2 bg-white border border-gray-200 rounded-md">
+          <div class="flex items-center justify-between">
+            <p>Andrew Gabriel</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <p class="text-xs text-gray-500">
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs
+          </p>
+        </div>
+        <div class="w-full p-2 bg-white border border-gray-200 rounded-md">
+          <div class="flex items-center justify-between">
+            <p>Shanghai Raj</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <p class="text-xs text-gray-500">
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs
+          </p>
+        </div>
+        <h3 class="text-xs text-gray-400 uppercase">React Native</h3>
+        <div class="w-full p-2 bg-white border border-gray-200 rounded-md">
+          <div class="flex items-center justify-between">
+            <p>Jason Brown</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <p class="text-xs text-gray-500">
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs
+          </p>
+        </div>
+        <p class="text-xs text-center text-gray-400">
+          Did you make a tutorial with this component?
+          <span class="text-[#dea8c5] underline">Send your link</span> and we'll
+          post it here
+        </p>
+      </div>
+      <div class="hidden space-y-2" id="code_snippets_content">
+        <h1 class="text-xl font-semibold">Code snippets</h1>
+        <h2 class="text-sm">Inspect the solutions others implemented</h2>
+        <div class="w-full p-2 bg-white border border-gray-200 rounded-md">
+          <div class="flex items-center justify-between">
+            <p>Stefan Galescu</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <p class="text-xs text-gray-500">
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs
+          </p>
+        </div>
+        <div class="w-full p-2 bg-white border border-gray-200 rounded-md">
+          <div class="flex items-center justify-between">
+            <p>fredric</p>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <p class="text-xs text-gray-500">
+            https://www.youtube.com/watch?v=dQw4w9WgXcQ&pp=ygUJcmljayByb2xs
+          </p>
+        </div>
+        <p class="text-xs text-center text-gray-400">
+          Did you make a tutorial with this component?
+          <span class="text-[#dea8c5] underline">Send your link</span> and we'll
+          post it here
+        </p>
+      </div>
+    </div>
+    <script>
+      const details_button = document.getElementById("details");
+      const details_content = document.getElementById("details_content");
+      const tutorials_button = document.getElementById("tutorials");
+      const tutorials_content = document.getElementById("tutorials_content");
+      const code_snippets_button = document.getElementById("code_snippets");
+      const code_snippets_content = document.getElementById(
+        "code_snippets_content"
+      );
+
+      details_button.addEventListener("click", () => {
+        details_content.classList.remove("hidden");
+        tutorials_content.classList.add("hidden");
+        code_snippets_content.classList.add("hidden");
+
+        // shadow-md shadow-slate-300/80
+        details_button.classList.add("shadow-md");
+        details_button.classList.add("shadow-slate-300/80");
+        tutorials_button.classList.remove("shadow-md");
+        tutorials_button.classList.remove("shadow-slate-300/80");
+        code_snippets_button.classList.remove("shadow-md");
+        code_snippets_button.classList.remove("shadow-slate-300/80");
+      });
+
+      tutorials_button.addEventListener("click", () => {
+        tutorials_content.classList.remove("hidden");
+        details_content.classList.add("hidden");
+        code_snippets_content.classList.add("hidden");
+
+        // shadow-md shadow-slate-300/80
+        details_button.classList.remove("shadow-md");
+        details_button.classList.remove("shadow-slate-300/80");
+        tutorials_button.classList.add("shadow-md");
+        tutorials_button.classList.add("shadow-slate-300/80");
+        code_snippets_button.classList.remove("shadow-md");
+        code_snippets_button.classList.remove("shadow-slate-300/80");
+      });
+
+      code_snippets_button.addEventListener("click", () => {
+        code_snippets_content.classList.remove("hidden");
+        tutorials_content.classList.add("hidden");
+        details_content.classList.add("hidden");
+
+        // shadow-md shadow-slate-300/80
+        details_button.classList.remove("shadow-md");
+        details_button.classList.remove("shadow-slate-300/80");
+        tutorials_button.classList.remove("shadow-md");
+        tutorials_button.classList.remove("shadow-slate-300/80");
+        code_snippets_button.classList.add("shadow-md");
+        code_snippets_button.classList.add("shadow-slate-300/80");
+      });
+    </script>
+  </body>
+  <!-- Change code above this line -->
+</html>
