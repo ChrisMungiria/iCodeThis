@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Feedback Widgets</title>
+  </head>
+  <body
+    class="w-full min-h-screen bg-[#f8f9fd] flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-sm space-y-2">
+      <div class="w-full p-2 bg-white shadow-md rounded-md space-y-2">
+        <div class="flex items-center justify-end text-gray-400">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <h2 class="text-xl font-semibold text-center">
+          How likely are you to answer this question?
+        </h2>
+        <div class="space-y-2 group">
+          <div class="grid grid-cols-3 gap-2 w-fit place-items-center mx-auto">
+            <label
+              class="text-4xl border border-gray-200 hover:shadow-md transition-all duration-150 ease-in-out p-2 rounded-md has-checked:border-purple-500"
+            >
+              <i class="fa-regular fa-face-sad-tear"></i>
+              <input
+                type="radio"
+                class="hidden"
+                id="low"
+                name="rating"
+                value="low"
+              />
+            </label>
+            <label
+              class="text-4xl border border-gray-200 hover:shadow-md transition-all duration-150 ease-in-out p-2 rounded-md has-checked:border-purple-500"
+            >
+              <i class="fa-regular fa-face-meh"></i>
+              <input
+                type="radio"
+                class="hidden"
+                id="medium"
+                name="rating"
+                value="medium"
+              />
+            </label>
+            <label
+              class="text-4xl border border-gray-200 hover:shadow-md transition-all duration-150 ease-in-out p-2 rounded-md has-checked:border-purple-500"
+            >
+              <i class="fa-regular fa-smile-beam"></i>
+              <input
+                type="radio"
+                class="hidden"
+                id="high"
+                name="rating"
+                value="high"
+              />
+            </label>
+          </div>
+          <div class="text-sm hidden group-has-checked:block">
+            <label for="feedback" class="font-semibold"
+              >Tell us how we can improve</label
+            >
+            <textarea
+              name="feedback"
+              id="feedback"
+              rows="4"
+              placeholder="Write your message here"
+              class="border border-gray-200 rounded-md w-full p-2 resize-none"
+            ></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="p-2 text-gray-400">Skip</button>
+          <button
+            class="p-2 px-4 bg-blue-500 text-white rounded-md hover:shadow-md transition-all duration-150 ease-in-out"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+      <div class="w-full p-2 bg-white shadow-md rounded-md space-y-2">
+        <div class="flex items-center justify-end text-gray-400">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <h2 class="text-xl font-semibold text-center">
+          How likely are you to answer this question?
+        </h2>
+        <div class="space-y-2 group">
+          <div class="grid grid-cols-10 gap-2">
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>0</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="0"
+                value="0"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>1</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="1"
+                value="1"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>2</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="2"
+                value="2"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>3</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="3"
+                value="3"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>4</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="4"
+                value="4"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>5</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="5"
+                value="5"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>6</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="6"
+                value="6"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>7</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="7"
+                value="7"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>8</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="8"
+                value="8"
+                class="hidden"
+              />
+            </label>
+            <label
+              class="w-6 h-6 border border-gray-200 rounded-sm flex items-center justify-center has-checked:bg-[#1b2b61] has-checked:text-white hover:shadow-md transition-all duration-150 ease-in-out"
+            >
+              <span>9</span>
+              <input
+                type="radio"
+                name="rating_numnber"
+                id="9"
+                value="9"
+                class="hidden"
+              />
+            </label>
+          </div>
+          <div class="text-sm hidden group-has-checked:block">
+            <label for="feedback" class="font-semibold"
+              >Tell us how we can improve</label
+            >
+            <textarea
+              name="feedback"
+              id="feedback"
+              rows="4"
+              placeholder="Write your message here"
+              class="border border-gray-200 rounded-md w-full p-2 resize-none"
+            ></textarea>
+          </div>
+        </div>
+        <div class="flex items-center justify-between">
+          <button class="p-2 text-gray-400">Skip</button>
+          <button
+            class="p-2 px-4 bg-blue-500 text-white rounded-md hover:shadow-md transition-all duration-150 ease-in-out"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
