@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Footer UI</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#edeef5]"
+  >
+    <div class="w-11/12 max-w-4xl p-4 bg-white shadow-xl rounded-md space-y-2">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+        <div class="space-y-2">
+          <h2 class="font-semibold text-xl">Gallery</h2>
+          <ul class="text-xs">
+            <li>Community</li>
+            <li>Trending</li>
+            <li>Picks</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h2 class="font-semibold text-xl">Marketplace</h2>
+          <ul class="text-xs">
+            <li>Trending</li>
+            <li>Best selling</li>
+            <li>Latest</li>
+          </ul>
+        </div>
+        <div class="space-y-2">
+          <h2 class="font-semibold text-xl">Magazine</h2>
+          <ul class="text-xs">
+            <li>Art Skills</li>
+            <li>Career</li>
+            <li>Inspiration</li>
+            <li>News</li>
+          </ul>
+        </div>
+        <div class="space-y-2 col-span-2 md:col-span-1">
+          <h2 class="font-semibold text-xl">Newsletter</h2>
+          <p class="text-xs">
+            Subscribe to our newsletter to get your weekly dose of news,
+            updates, tips and special offers
+          </p>
+          <div
+            class="w-full p-2 border border-gray-200 rounded-md flex items-center gap-2"
+          >
+            <i class="fa-solid fa-envelope text-blue-400"></i>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email address"
+              class="w-full text-xs"
+            />
+          </div>
+          <button
+            class="p-3 w-full text-white bg-gradient-to-r from-[#89cafe] to-[#6688f4] rounded-md text-xs"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+      <hr class="border-gray-400" />
+      <div
+        class="flex items-center justify-between text-gray-400 capitalize text-xs"
+      >
+        <p>Privacy policy. Terms and conditions</p>
+        <p>Dribble. Behance. Instagram</p>
+      </div>
+    </div>
+  </body>
+</html>
