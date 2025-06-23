@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Subscribe Modal</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#efeff6]"
+  >
+    <div
+      class="w-11/12 max-w-2xl p-4 bg-white shadow-xl flex relative after:content-['x'] after:absolute after:w-10 after:h-10 after:bg-white after:-right-5 after:-top-5 after:rounded-full after:flex after:items-center after:justify-center after:shadow-lg before:absolute before:w-[400px] before:h-[400px] md:before:w-[700px] md:before:h-[700px] before:rounded-full before:bg-gradient-to-r before:from-[#ff9acb] before:to-[#fed775] before:-z-10 before:top-1/2 before:-translate-y-1/2 before:right-1/2 before:translate-x-1/2"
+    >
+      <div class="flex-1 hidden md:block">
+        <img
+          src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQzDLIjfrkUrcywmg4PoFrq_wY7J61wnbj1fgI-CcZYcQ64-Oim"
+          alt="jellyfish"
+          class="flex-1 h-full w-full"
+        />
+      </div>
+      <div class="flex-1 p-4 space-y-2">
+        <h1 class="text-2xl font-semibold">
+          Ideas and UI components in your inbox
+        </h1>
+        <h2 class="text-xl">
+          Sign up to receive ideas, free components and free resources plus 15%
+          on all of our pro UI kits
+        </h2>
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Email address"
+          class="w-full border border-gray-200 rounded-md p-2"
+        />
+        <button
+          class="p-2 bg-gradient-to-r from-[#8bcbff] to-[#6688f9] w-full text-white rounded-md"
+        >
+          Subscribe
+        </button>
+        <p class="text-center text-gray-500">No spams included</p>
+      </div>
+    </div>
+  </body>
+</html>
