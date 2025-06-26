@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>New Message</title>
+  </head>
+  <body
+    class="min-h-screen w-full flex items-center justify-center bg-[#f4f6fa]"
+  >
+    <div class="w-11/12 max-w-xs p-4 rounded-md shadow-md bg-white space-y-2">
+      <div class="flex items-center justify-between">
+        <h2 class="font-semibold text-lg">New message</h2>
+        <i class="fa-solid fa-xmark text-2xl"></i>
+      </div>
+      <div class="p-2 border border-gray-200 rounded-md bg-[#f4f6fa]">
+        <i class="fa-solid fa-magnifying-glass text-[#a6acb7]"></i>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Type to search"
+          class="placeholder:text-[#a6acb7]"
+        />
+      </div>
+      <h3 class="text-xs uppercase font-bold">Recent conversations</h3>
+      <ul class="space-y-2">
+        <li
+          class="w-full p-2 rounded-md hover:bg-gray-100 transition-all duration-150 ease-in-out"
+        >
+          <label class="flex items-center justify-between group">
+            <div class="flex items-center gap-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYeoJEB7QhNrDC34QBW60qXczjK27o31kTnw&s"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h2 class="font-semibold">David Jacobsen</h2>
+                <p class="text-xs text-gray-600">@dav_id</p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 border border-gray-200 flex items-center justify-center rounded-full group-has-checked:bg-[#377fe6] text-white"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100"
+              ></i>
+            </div>
+            <input type="checkbox" class="hidden" />
+          </label>
+        </li>
+        <li
+          class="w-full p-2 rounded-md hover:bg-gray-100 transition-all duration-150 ease-in-out"
+        >
+          <label class="flex items-center justify-between group">
+            <div class="flex items-center gap-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnoN0bogYDQyjwsurRLVNwf28dVuA3F2CIAw&s"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h2 class="font-semibold">Christy Riccio</h2>
+                <p class="text-xs text-gray-600">@christy-ric</p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 border border-gray-200 flex items-center justify-center rounded-full group-has-checked:bg-[#377fe6] text-white"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100"
+              ></i>
+            </div>
+            <input type="checkbox" class="hidden" />
+          </label>
+        </li>
+        <li
+          class="w-full p-2 rounded-md hover:bg-gray-100 transition-all duration-150 ease-in-out"
+        >
+          <label class="flex items-center justify-between group">
+            <div class="flex items-center gap-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj1iCxjpZBsFytXevqbH51MEH9gDgHeoMIQ38WQrI7EwABAGZj33YaGrdFgspOQyQurPg&usqp=CAU"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h2 class="font-semibold">James Lowther</h2>
+                <p class="text-xs text-gray-600">@james_lowther</p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 border border-gray-200 flex items-center justify-center rounded-full group-has-checked:bg-[#377fe6] text-white"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100"
+              ></i>
+            </div>
+            <input type="checkbox" class="hidden" />
+          </label>
+        </li>
+        <li
+          class="w-full p-2 rounded-md hover:bg-gray-100 transition-all duration-150 ease-in-out"
+        >
+          <label class="flex items-center justify-between group">
+            <div class="flex items-center gap-2">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVxfSF3Z5i2S_CFGVpi6NkicLceIQxRWJVjyPEqzoIjsbiPd_-bIvUEfBueXMiplS0GHw&usqp=CAU"
+                alt="profile image"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div>
+                <h2 class="font-semibold">Danica Dogget</h2>
+                <p class="text-xs text-gray-600">@dani-dani-d</p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 border border-gray-200 flex items-center justify-center rounded-full group-has-checked:bg-[#377fe6] text-white"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100"
+              ></i>
+            </div>
+            <input type="checkbox" class="hidden" />
+          </label>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
