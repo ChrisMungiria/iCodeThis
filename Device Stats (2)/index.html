@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Device Stats</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#1f2432]"
+  >
+    <div class="w-11/12 max-w-xs bg-[#191e2c] p-2">
+      <div
+        class="w-full h-full p-2 border border-gray-500 space-y-2 text-gray-400"
+      >
+        <p class="text-center text-sm">Last 7 days</p>
+        <div class="flex justify-center">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div
+          class="w-32 h-32 rounded-full mx-auto p-3"
+          style="
+            background-image: conic-gradient(
+              #5d4ee3 0deg,
+              #5d4ee3 113.76deg,
+              #15abaf 113.76deg,
+              #15abaf 182.16deg,
+              #2680e9 182.16deg
+            );
+          "
+        >
+          <div
+            class="w-full h-full rounded-full flex items-center justify-center bg-[#191e2c]"
+          >
+            <p class="text-xs text-center w-3/4">Sessions by device</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-3 gap-5">
+          <div class="w-full">
+            <div class="flex items-center gap-2 text-gray-400">
+              <div
+                class="w-3 h-3 bg-[#2680eb] rounded-full flex-shrink-0"
+              ></div>
+              <p>Desktop</p>
+            </div>
+            <p class="text-lg font-semibold text-center text-gray-100">49.4%</p>
+          </div>
+          <div class="w-full">
+            <div class="flex items-center gap-2 text-gray-400">
+              <div
+                class="w-3 h-3 bg-[#5e51e3] rounded-full flex-shrink-0"
+              ></div>
+              <p>Mobile</p>
+            </div>
+            <p class="text-lg font-semibold text-center text-gray-100">31.6%</p>
+          </div>
+          <div class="w-full">
+            <div class="flex items-center gap-2 text-gray-400">
+              <div
+                class="w-3 h-3 bg-[#1aadb0] rounded-full flex-shrink-0"
+              ></div>
+              <p>Tablet</p>
+            </div>
+            <p class="text-lg font-semibold text-center text-gray-100">31.6%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
