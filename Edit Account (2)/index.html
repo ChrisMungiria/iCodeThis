@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Edit Account</title>
+  </head>
+  <body
+    class="min-h-screen w-full bg-[#252746] flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xs bg-[#303057]">
+      <div
+        class="w-full bg-[#2a2b4e] p-3 flex items-center justify-between text-gray-100"
+      >
+        <h1 class="text-xl capitalize">Edit your account</h1>
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="p-3 space-y-2">
+        <label for="name" class="tracking-wider uppercase text-gray-300 text-sm"
+          >Name</label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Jason Atkins"
+          class="w-full border border-gray-500 p-2 placeholder:text-gray-500"
+        />
+        <label
+          for="email"
+          class="tracking-wider uppercase text-gray-300 text-sm"
+          >Email</label
+        >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="jasonatkin@mail.com"
+          class="w-full border border-gray-500 p-2 placeholder:text-gray-500"
+        />
+        <label
+          for="month"
+          class="tracking-wider uppercase text-gray-300 text-sm"
+          >Date of birth</label
+        >
+        <div class="grid grid-cols-3 gap-3">
+          <input
+            type="number"
+            name="month"
+            id="month"
+            placeholder="Month"
+            class="w-full border border-gray-500 p-2 placeholder:text-gray-500"
+          />
+          <input
+            type="number"
+            name="date"
+            id="date"
+            placeholder="Date"
+            class="w-full border border-gray-500 p-2 placeholder:text-gray-500"
+          />
+          <input
+            type="number"
+            name="year"
+            id="year"
+            placeholder="Year"
+            class="w-full border border-gray-500 p-2 placeholder:text-gray-500"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full bg-[#2a2b4e] p-3 flex items-center justify-around text-gray-100 text-sm"
+      >
+        <button class="px-8 py-2 bg-[#34355c] text-gray-100 rounded-md">
+          Cancel
+        </button>
+        <button class="px-8 py-2 bg-[#f27363] text-gray-100 rounded-md">
+          Save
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
