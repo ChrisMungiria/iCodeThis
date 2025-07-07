@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Translator App</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#12162b]"
+  >
+    <div
+      id="step1"
+      class="w-11/12 max-w-xs p-4 bg-[#1a1c37] shadow-md rounded-md text-center text-white space-y-4"
+    >
+      <p>Drag and drop your JSON file</p>
+      <p>Or</p>
+      <label for="file" class="px-8 py-2 rounded-md bg-[#0088ff] text-white"
+        >Select files to upload</label
+      >
+      <input type="file" name="file" id="file" class="hidden sr-only" />
+    </div>
+    <div
+      id="step2"
+      class="hidden w-11/12 max-w-xs p-4 bg-[#1a1c37] shadow-md rounded-md text-center text-white space-y-4"
+    >
+      <button
+        onclick="showStep('step1','step2')"
+        class="flex items-center justify-start"
+      >
+        <i class="fa-solid fa-arrow-left text-slate-400"></i>
+      </button>
+      <div
+        class="w-12 h-12 bg-[#35385c] flex items-center justify-center rounded-full text-green-300 mx-auto"
+      >
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h1 class="text-xl text-center font-semibold">Valid JSON file</h1>
+      <p class="text-xs text-slate-400">
+        Your source language will be detected automatically
+      </p>
+      <label
+        for="language"
+        class="text-xs text-start flex mr-auto text-slate-400"
+        >Select your target language</label
+      >
+      <div class="flex items-center gap-2">
+        <select
+          name="language"
+          id="language"
+          class="border border-slate-400 p-2 flex-1 text-slate-400 rounded-md"
+        >
+          <option value="" disabled selected>Select language</option>
+          <option value="english">English</option>
+          <option value="french">French</option>
+          <option value="german">German</option>
+          <option value="spanish">Spanish</option>
+          <option value="italian">Italian</option>
+        </select>
+        <button
+          onclick="showStep('step2','step3'); updateProgressBar(10)"
+          class="px-8 py-2 rounded-md bg-[#0088ff] text-white flex mx-auto"
+        >
+          Translate
+        </button>
+      </div>
+    </div>
+    <div
+      id="step3"
+      class="hidden w-11/12 max-w-xs p-4 bg-[#1a1c37] shadow-md rounded-md text-center text-white space-y-4"
+    >
+      <button
+        onclick="showStep('step2','step3')"
+        class="flex items-center justify-start"
+      >
+        <i class="fa-solid fa-arrow-left text-slate-400"></i>
+      </button>
+      <h2 class="text-lg font-semibold">Translation in progress...</h2>
+      <p class="text-sm text-slate-400">
+        Please wait while your file is being translated
+      </p>
+      <div id="progress-bar" class="w-20 h-20 flex mx-auto rounded-full p-2">
+        <!-- Round progress bar -->
+        <div
+          class="w-full h-full bg-[#1a1c37] flex items-center justify-center rounded-full"
+        >
+          <p class="text-center text-sm">0%</p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="step4"
+      class="hidden w-11/12 max-w-xs p-4 bg-[#1a1c37] shadow-md rounded-md text-center text-white space-y-4"
+    >
+      <button
+        onclick="showStep('step2','step3')"
+        class="flex items-center justify-start"
+      >
+        <i class="fa-solid fa-arrow-left text-slate-400"></i>
+      </button>
+      <div
+        class="w-12 h-12 bg-[#35385c] flex items-center justify-center rounded-full text-green-300 mx-auto"
+      >
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <h1 class="text-xl text-center font-semibold">Translation successful</h1>
+      <p id="selected-language-text">
+        Your file has been translated successfully
+      </p>
+      <button
+        class="px-8 py-2 bg-[#96cb5e] text-white rounded-md"
+        onclick="showStep('step4', 'step1')"
+      >
+        Save file
+      </button>
+    </div>
+    <div
+      id="error"
+      class="hidden w-11/12 max-w-xs p-4 bg-[#1a1c37] shadow-md rounded-md text-center text-white space-y-4"
+    >
+      <button
+        onclick="showStep('error','step1')"
+        class="flex items-center justify-start"
+      >
+        <i class="fa-solid fa-arrow-left text-slate-400"></i>
+      </button>
+      <div
+        class="w-12 h-12 bg-[#35385c] flex items-center justify-center rounded-full text-red-300 mx-auto"
+      >
+        <i class="fa-solid fa-circle-exclamation"></i>
+      </div>
+      <h1 class="text-xl text-center font-semibold">
+        Invalid JSON file provided
+      </h1>
+      <p class="text-xs text-slate-400">
+        Check whether the file provided was a JSON file format or explain why a
+        file can be wrong
+      </p>
+      <button
+        onclick="window.location.reload()"
+        class="px-8 py-2 rounded-md bg-[#0088ff] text-white flex mx-auto"
+      >
+        Try again
+      </button>
+    </div>
+    <script>
+      const file = document.getElementById("file");
+      const progressBar = document.getElementById("progress-bar");
+
+      file.addEventListener("change", (e) => {
+        // if there is a file selected and it is of type JSON
+        if (
+          e.target.files[0] &&
+          e.target.files[0].type === "application/json"
+        ) {
+          // hide step one and show step 2
+          document.getElementById("step1").classList.add("hidden");
+          document.getElementById("step2").classList.remove("hidden");
+        } else {
+          // hide step one and show error
+          document.getElementById("step1").style.display = "none";
+          document.getElementById("error").classList.remove("hidden");
+        }
+      });
+
+      function showStep(current, next) {
+        // hide the current step and show step 1
+        document.getElementById(current).classList.add("hidden");
+        document.getElementById(next).classList.remove("hidden");
+        console.log("hiding: ", current);
+        console.log("Showing: ", next);
+      }
+
+      function updateProgressBar(percent) {
+        setTimeout(() => {
+          // every second update the progress bar by 10%
+          // use conic gradient to create a smooth animation
+          progressBar.style.background = `conic-gradient(from 0deg at 50% 50%, #0088ff 0deg, #0088ff ${percent}%, #35385c ${percent}%, #35385c 100%)`;
+          // update the text inside the progress bar
+          progressBar.querySelector("p").textContent = `${percent}%`;
+          // if the progress bar is not at 100%, call the function again
+          if (percent < 100) {
+            updateProgressBar(percent + 10);
+          } else {
+            // if the progress bar is at 100%, show the result page
+            showStep("step3", "step4");
+          }
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
