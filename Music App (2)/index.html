@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      *::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      * {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+    </style>
+    <title>Music App</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#14161f]"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 bg-[#1a1f29] text-[#9fbadb] space-y-2 relative"
+    >
+      <h1 class="text-xl font-semibold">Browse</h1>
+      <ul
+        class="flex items-center space-x-5 overflow-scroll capitalize border-b-2 border-slate-700"
+      >
+        <li class="font-bold underline flex-shrink-0">New music</li>
+        <li class="flex-shrink-0">Playlists</li>
+        <li class="flex-shrink-0">Top charts</li>
+        <li class="flex-shrink-0">Genres</li>
+      </ul>
+      <div class="flex items-center justify-between">
+        <h2 class="font-semibold">Queen</h2>
+        <p
+          class="text-xs px-2 py-1 rounded-full border border-orange-400 w-fit uppercase font-light"
+        >
+          New album
+        </p>
+      </div>
+      <h1 class="text-xl">Nicki Minaj</h1>
+      <img
+        src="https://i.ytimg.com/vi/4yLbduwOXrI/hqdefault.jpg"
+        alt="album art"
+        class="w-full h-32 rounded-md shadow-md object-cover"
+      />
+      <h2 class="text-xl font-semibold capitalize">Hot songs</h2>
+      <ul class="space-y-2">
+        <li
+          class="flex items-center justify-between border-b border-slate-600 py-2"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="https://thefader-res.cloudinary.com/private_images/h_100,w_100,c_fill,g_face,f_auto,q_auto:eco/drake-views-from-the-6-cover-story-interview-1_icujys/drake-views-from-the-6-cover-story-interview-1_icujys.jpg"
+              alt="profile image"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h2 class="capitalize">God's plan</h2>
+              <h3 class="text-xs font-light">Drake</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-plus text-orange-500"></i>
+        </li>
+        <li
+          class="flex items-center justify-between border-b border-slate-600 py-2"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="https://cdn.britannica.com/85/229185-050-3CC1C44E/Cardi-B-2019.jpg"
+              alt="profile image"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h2 class="capitalize">I like it</h2>
+              <h3 class="text-xs font-light">Cardi B</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-plus text-orange-500"></i>
+        </li>
+        <li
+          class="flex items-center justify-between border-b border-slate-600 py-2"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="https://lh3.googleusercontent.com/C6IoiiTjyek9dK6L_uR-0Y86ttl_s1YsDraYRxt_Fi8LHLFEy4DnxbzhEtK-Y-h1Dg1Nihbxj2iamYFknA"
+              alt="profile image"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h2 class="capitalize">In the morning</h2>
+              <h3 class="text-xs font-light">Zhu</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-plus text-orange-500"></i>
+        </li>
+        <li
+          class="flex items-center justify-between border-b border-slate-600 py-2"
+        >
+          <div class="flex items-center gap-2">
+            <img
+              src="https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/F15D/production/_119498716_anne-marie_01-061f1.jpg"
+              alt="profile image"
+              class="w-12 h-12 rounded-full object-cover"
+            />
+            <div>
+              <h2 class="capitalize">Friends</h2>
+              <h3 class="text-xs font-light">Anne Marie</h3>
+            </div>
+          </div>
+          <i class="fa-solid fa-plus text-orange-500"></i>
+        </li>
+      </ul>
+      <div
+        class="absolute left-0 bottom-0 w-full p-4 bg-[#131822] flex items-center justify-between"
+      >
+        <div class="flex gap-2">
+          <img
+            src="https://lh3.googleusercontent.com/C6IoiiTjyek9dK6L_uR-0Y86ttl_s1YsDraYRxt_Fi8LHLFEy4DnxbzhEtK-Y-h1Dg1Nihbxj2iamYFknA"
+            alt="profile image"
+            class="w-12 h-12 rounded-full object-cover"
+          />
+          <div>
+            <h2 class="capitalize text-lg">In the morning</h2>
+            <h3 class="text-xs text-slate-400 font-light">ZHU</h3>
+          </div>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-play"></i>
+          <i class="fa-solid fa-pause"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
