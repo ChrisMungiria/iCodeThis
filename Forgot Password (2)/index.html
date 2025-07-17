@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Forgot Password</title>
+  </head>
+  <body
+    class="w-full min-h-screen bg-gray-100 flex items-center justify-center"
+  >
+    <div class="w-11/12 max-w-xl p-4 bg-white shadow-xl space-y-4">
+      <p class="w-full text-end text-sm text-gray-600">
+        You don't have an account
+        <span class="capitalize underline text-blue-500">sign up</span>
+      </p>
+      <h1 class="text-2xl text-center tracking-wide capitalize">
+        Did you forget your password?
+      </h1>
+      <p class="max-w-xs mx-auto text-center text-xs text-gray-400">
+        Enter your email address you're using for your account below and we will
+        send you a password reset link.
+      </p>
+      <div class="max-w-md mx-auto flex flex-col space-y-2">
+        <label for="email" class="font-semibold text-sm">Email address</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="myemail@address.com"
+          class="border border-gray-200 p-2 rounded-md"
+        />
+        <button class="w-full p-3 rounded-md text-white bg-[#242e4d]">
+          Request reset link
+        </button>
+      </div>
+      <p class="text-center text-gray-600 underline">
+        <a href="#">Back to sign in</a>
+      </p>
+    </div>
+  </body>
+</html>
