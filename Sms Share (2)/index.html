@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>SMS Share</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f3f3f3]"
+  >
+    <div class="w-11/12 max-w-md p-4 bg-white shadow-md rounded-md space-y-4">
+      <div class="flex items-center justify-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h2 class="text-lg font-semibold">Send install link to mobile device</h2>
+      <p class="text-gray-600 text-xs">
+        Send via SMS or visit the private URL on the mobile device to install
+        this app directly to the device.
+      </p>
+      <div class="flex w-full bg-[#f1f1f1] rounded-l-lg">
+        <select name="country" id="country" class="px-4">
+          <option value="kenya">🇰🇪</option>
+          <option value="usa">🇺🇸</option>
+          <option value="uk">🇬🇧</option>
+          <option value="australia">🇦🇺</option>
+        </select>
+        <input
+          type="number"
+          name="phone"
+          id="phone"
+          class="flex-1"
+          placeholder="Enter mobile number"
+        />
+        <button class="p-3 rounded-r-lg bg-blue-500 text-white">Send</button>
+      </div>
+      <h3 class="text-xs font-semibold uppercase">Share link</h3>
+      <div class="flex items-center justify-between">
+        <p class="text-sm text-gray-700">http://www.staggeringbeauty.com/</p>
+        <button class="text-blue-500">Copy</button>
+      </div>
+    </div>
+  </body>
+</html>
