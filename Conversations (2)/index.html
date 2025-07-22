@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Conversations</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-gray-200"
+  >
+    <div class="w-11/12 max-w-3xl flex gap-2 max-h-96">
+      <div class="flex-1 hidden md:flex flex-col gap-5 overflow-y-scroll">
+        <div class="w-full p-2 bg-white space-y-2 rounded-md">
+          <div class="flex justify-center">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-full h-56 rounded-lg object-cover"
+          />
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 bg-green-500 rounded-full relative">
+              <div
+                class="absolute inset-0 bg-green-500 rounded-full animate-ping"
+              ></div>
+            </div>
+            <h2>Estelle Warner</h2>
+          </div>
+          <p class="text-sm text-gray-700 text-center">Art director</p>
+          <button
+            class="w-full p-3 rounded-full text-blue-500 border border-blue-500"
+          >
+            Close
+          </button>
+        </div>
+        <div class="w-full p-2 bg-white space-y-2 rounded-md">
+          <div class="flex justify-center">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAckztPOUw3p1EHmIlHKeaThEmWHkov9tfUhtfowkyn9fw-kRK1b4cqxNeYdbYU3Gp-oc&usqp=CAU"
+            alt="profile image"
+            class="w-full h-56 rounded-lg object-cover"
+          />
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 bg-green-500 rounded-full relative">
+              <div
+                class="absolute inset-0 bg-green-500 rounded-full animate-ping"
+              ></div>
+            </div>
+            <h2>Estelle Warner</h2>
+          </div>
+          <p class="text-sm text-gray-700 text-center">Art director</p>
+          <button
+            class="w-full p-3 rounded-full text-blue-500 border border-blue-500"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+      <div
+        class="flex-[2] flex flex-col space-y-2 rounded-md p-3 bg-white relative"
+      >
+        <div class="w-full flex items-center justify-between">
+          <h2 class="font-semibold">Estelle Warner</h2>
+          <div
+            class="p-3 rounded-md bg-gray-200 flex items-center justify-center text-white"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div
+          id="chat-section"
+          class="flex-1 space-y-2 text-sm text-white max-h-56 overflow-y-scroll"
+        >
+          <p class="bg-blue-500 p-2 ml-auto w-fit rounded-md">Hey!</p>
+          <p class="bg-blue-500 p-2 ml-auto w-fit rounded-md">
+            Okay, let me know!
+          </p>
+          <p class="p-2 bg-pink-500 rounded-full text-xs w-fit mx-auto">
+            2 new messages
+          </p>
+          <p class="bg-gray-300 text-gray-800 p-2 mr-auto w-fit rounded-md">
+            Hey!
+          </p>
+          <p class="bg-gray-300 text-gray-800 p-2 mr-auto w-fit rounded-md">
+            Ready in 5?
+          </p>
+        </div>
+        <div class="absolute w-full p-2 bottom-0 left-0 rounded-b-md bg-white">
+          <input
+            type="text"
+            name="message"
+            id="message"
+            placeholder="Type your message here"
+            class="w-full p-2"
+          />
+          <div class="w-full flex items-center justify-between">
+            <ul class="flex items-center gap-2 text-gray-300 p-2">
+              <li><i class="fa-solid fa-image"></i></li>
+              <li><i class="fa-solid fa-camera"></i></li>
+              <li><i class="fa-solid fa-microphone"></i></li>
+            </ul>
+            <button
+              id="send"
+              class="px-4 py-2 bg-blue-500 shadow-blue-300/30 rounded-full text-white"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const chat_section = document.getElementById("chat-section");
+      const message_input = document.getElementById("message");
+      const send_button = document.getElementById("send");
+
+      send_button.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const message = message_input.value.trim();
+
+        if (message) {
+          const message_element = document.createElement("p");
+          message_element.classList.add(
+            "bg-blue-500",
+            "p-2",
+            "ml-auto",
+            "w-fit",
+            "rounded-md"
+          );
+          message_element.textContent = message;
+          chat_section.appendChild(message_element);
+          message_input.value = "";
+        }
+      });
+    </script>
+  </body>
+</html>
