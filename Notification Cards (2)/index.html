@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Notification Cards</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#faf4ff]"
+  >
+    <div class="w-11/12 max-w-sm space-y-2">
+      <div
+        class="w-full p-2 bg-white rounded-md shadow-md pb-10 overflow-hidden relative after:content-[''] after:absolute after:w-24 after:h-full after:top-0 after:z-0 after:-left-12 after:bg-[#e8f3f2] after:rounded-full"
+      >
+        <div class="flex justify-end">
+          <div
+            class="w-10 h-10 bg-[#f7f7fb] rounded-md flex items-center justify-center"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 relative z-10">
+          <div
+            class="w-10 h-10 rounded-md flex items-center justify-center text-white bg-[#a4cf67]"
+          >
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-semibold">Thank you for subscribing!</h2>
+            <p class="text-xs">
+              You will receive an email to confirm your subscription
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full p-2 bg-white rounded-md shadow-md pb-10 overflow-hidden relative after:content-[''] after:absolute after:w-24 after:h-full after:top-0 after:z-0 after:-left-12 after:bg-[#fdedf7] after:rounded-full"
+      >
+        <div class="flex justify-end">
+          <div
+            class="w-10 h-10 bg-[#f7f7fb] rounded-md flex items-center justify-center"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 relative z-10">
+          <div
+            class="w-10 h-10 rounded-md flex items-center justify-center text-white bg-[#e14e4b]"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-semibold">Oops! An error occurred</h2>
+            <p class="text-xs">
+              Apologies for the inconvenience. Please try again.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
