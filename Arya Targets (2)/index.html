@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Arya Targets</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f8fafb] to-[#c8d6e4]"
+  >
+    <div
+      id="password_step"
+      class="w-11/12 max-w-xs p-4 bg-white shadow-md rounded-md space-y-4"
+    >
+      <div class="flex justify-end">
+        <div class="flex items-center gap-2 text-xs uppercase tracking-wide">
+          <p>Change account</p>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </div>
+      <img
+        src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+        alt="profile image"
+        class="w-20 h-20 object-cover rounded-full mx-auto shadow-xl"
+      />
+      <h1 class="text-xl text-center">
+        Welcome back, <span class="block font-semibold">Arya</span>
+      </h1>
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Enter your password"
+        class="border border-gray-200 rounded-md p-2 w-full"
+      />
+      <p id="password_error" class="hidden text-red-500 text-xs">
+        Wrong credentials
+      </p>
+      <button
+        id="login_button"
+        class="w-full p-3 bg-slate-800 rounded-md text-white uppercase tracking-wide text-xs"
+      >
+        Log in
+      </button>
+      <p class="text-center w-full text-xs">
+        <a href="#" class="text-blue-500 underline">Unable to log in?</a>
+      </p>
+    </div>
+    <div
+      id="targets_step"
+      class="w-11/12 max-w-xs bg-[#f3f5f6] shadow-md rounded-md space-y-4 hidden"
+    >
+      <div
+        class="w-full p-3 rounded-t-md bg-white flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <img
+            src="https://www.unsw.edu.au/content/dam/images/medicine-health/population-health/headshots/2022-07-med-pop-health/2022-08-tewodros-profile.cropimg.width=335.crop=square.jpg"
+            alt="profile image"
+            class="w-10 h-10 object-cover rounded-full mx-auto shadow-xl"
+          />
+          <p>Arya</p>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="p-3 space-y-4 min-h-72">
+        <div
+          id="targets"
+          class="w-full bg-white p-3 rounded-md shadow-xl flex items-center justify-between"
+        >
+          <p>Targets</p>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full p-1"
+            style="
+              background-image: conic-gradient(
+                #718ddd 0deg,
+                #718ddd 200deg,
+                lightgray 200deg
+              );
+            "
+          >
+            <div
+              class="w-full h-full rounded-full bg-white flex items-center justify-center"
+            >
+              <p>4</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-blue-500">+ Add new list</p>
+      </div>
+    </div>
+    <div
+      id="targets_list"
+      class="w-11/12 max-w-xs bg-[#f3f5f6] shadow-md rounded-md space-y-4 hidden"
+    >
+      <div class="flex items-center justify-between p-3">
+        <div class="flex items-center">
+          <i class="fa-solid fa-arrow-left"></i>
+          <p>Targets</p>
+        </div>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <ul class="p-3 space-y-2 font-semibold">
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Cersei Lannister</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >The mountain</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Beric Dondarrion</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Thoros of Myr</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Ilyn Payne</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >The hound</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Welder Frey</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input checked type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+        <li>
+          <label
+            class="bg-white shadow-xl rounded-md flex items-center justify-between p-2 group has-checked:bg-transparent has-checked:shadow-none"
+          >
+            <span
+              class="group-has-checked:line-through group-has-checked:text-gray-500"
+              >Meryn Trent</span
+            >
+            <div
+              class="w-8 h-8 rounded-full border border-gray-400 group-has-checked:border-0 flex items-center justify-center"
+            >
+              <i
+                class="fa-solid fa-check opacity-0 group-has-checked:opacity-100 text-green-500"
+              ></i>
+            </div>
+            <input checked type="checkbox" class="sr-only peer" />
+          </label>
+        </li>
+      </ul>
+
+      <button class="w-full bg-slate-800 text-white rounded-b-md p-3">
+        + Add new
+      </button>
+    </div>
+    <script>
+      const login_button = document.getElementById("login_button");
+      const password = document.getElementById("password");
+      const password_step = document.getElementById("password_step");
+      const password_error = document.getElementById("password_error");
+      const targets_step = document.getElementById("targets_step");
+
+      login_button.addEventListener("click", () => {
+        if (password.value === "password") {
+          password_step.classList.add("hidden");
+          targets_step.classList.remove("hidden");
+        } else {
+          password_error.classList.remove("hidden");
+        }
+      });
+
+      const targets = document.getElementById("targets");
+      const targets_list = document.getElementById("targets_list");
+
+      targets.addEventListener("click", () => {
+        targets_step.classList.add("hidden");
+        targets_list.classList.remove("hidden");
+      });
+    </script>
+  </body>
+</html>
