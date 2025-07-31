@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+    <title>Credit Card</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f4f5fc]"
+  >
+    <div class="w-11/12 max-w-xl bg-[#fbfdfe] shadow-xl flex rounded-md">
+      <div class="flex-1 p-4 hidden md:block">
+        <img
+          src="https://uploads.divjoy.com/undraw-beer_celebration_cefj.svg"
+          alt="two cups"
+        />
+      </div>
+      <div class="flex-[2] p-4 space-y-4">
+        <h3 class="text-xs text-gray-400">4/4</h3>
+        <h1 class="text-2xl font-semibold">Last step!</h1>
+        <h2>Enter your payment information below</h2>
+        <div class="grid grid-cols-2 gap-2">
+          <label
+            for="credit-card"
+            class="w-full p-3 border border-gray-200 rounded-md has-checked:border-blue-500 has-checked:shadow-xl has-checked:text-blue-500 transition-all duration-150 ease-in-out"
+          >
+            <i class="fa-regular fa-credit-card"></i>
+            <span>Credit card</span>
+            <input
+              type="radio"
+              name="payment-method"
+              id="credit-card"
+              value="credit-card"
+              class="sr-only"
+            />
+          </label>
+          <label
+            for="paypal"
+            class="w-full p-3 border border-gray-200 rounded-md has-checked:border-blue-500 has-checked:shadow-xl has-checked:text-blue-500 transition-all duration-150 ease-in-out"
+          >
+            <i class="fa-brands fa-paypal"></i>
+            <span>Paypal</span>
+            <input
+              type="radio"
+              name="payment-method"
+              id="paypal"
+              value="paypal"
+              class="sr-only"
+            />
+          </label>
+        </div>
+        <div class="space-y-2 flex flex-col">
+          <label for="card-number" class="text-sm text-gray-400"
+            >Card number</label
+          >
+          <input
+            type="number"
+            name="card-number"
+            id="card-number"
+            placeholder="1234 5678 9012 3456"
+            class="p-2 border border-gray-400 rounded-md"
+          />
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="space-y-2 flex flex-col">
+            <label for="expiration-date" class="text-sm text-gray-400"
+              >Expiration date</label
+            >
+            <select
+              name="expiration-date-month"
+              id="expiration-date-month"
+              class="p-2 border border-gray-400 rounded-md"
+            >
+              <option value="" disabled selected class="text-gray-400">
+                Month
+              </option>
+              <option value="january">January</option>
+              <option value="february">February</option>
+              <option value="march">March</option>
+              <option value="april">April</option>
+              <option value="may">May</option>
+              <option value="june">June</option>
+              <option value="july">July</option>
+              <option value="august">August</option>
+              <option value="september">September</option>
+              <option value="october">October</option>
+              <option value="november">November</option>
+              <option value="december">December</option>
+            </select>
+          </div>
+          <div class="flex flex-col justify-end">
+            <label for="day" class="sr-only">Day</label>
+            <select
+              name="expiration-date-day"
+              id="expiration-date-day"
+              class="p-2 border border-gray-400 rounded-md"
+            >
+              <option value="" disabled selected class="text-gray-400">
+                Day
+              </option>
+            </select>
+          </div>
+          <div class="space-y-2 flex flex-col">
+            <label for="cvc" class="text-sm text-gray-400 uppercase">cvc</label>
+            <input
+              type="number"
+              name="cvc"
+              id="cvc"
+              placeholder="123"
+              class="p-2 border border-gray-400 rounded-md"
+            />
+          </div>
+        </div>
+        <p class="text-xs">
+          By creating an account, you agree to Study.com's
+          <span class="font-semibold capitalize">terms of use</span> and
+          <span class="font-semibold capitalize">privacy policy</span>
+        </p>
+        <button
+          class="px-8 py-3 rounded-md text-white bg-[#054b8d] capitalize text-xs"
+        >
+          Join now
+        </button>
+      </div>
+    </div>
+    <script>
+      const expirationDateMonth = document.getElementById(
+        "expiration-date-month"
+      );
+      const expirationDateDay = document.getElementById("expiration-date-day");
+
+      function setDays(days) {
+        for (let i = 0; i < days; i++) {
+          const option = document.createElement("option");
+          option.value = i + 1;
+          option.textContent = i + 1;
+          expirationDateDay.appendChild(option);
+        }
+      }
+
+      expirationDateMonth.addEventListener("change", function () {
+        // Add the number of days in the selected month to the day select
+        switch (expirationDateMonth.value) {
+          case "january":
+            var days = 31;
+            setDays(days);
+            break;
+          case "february":
+            var days = 28;
+            setDays(days);
+            break;
+          case "march":
+            var days = 31;
+            setDays(days);
+            break;
+          case "april":
+            var days = 30;
+            setDays(days);
+            break;
+          case "may":
+            var days = 31;
+            setDays(days);
+            break;
+          case "june":
+            var days = 30;
+            setDays(days);
+            break;
+          case "july":
+            var days = 31;
+            setDays(days);
+            break;
+          case "august":
+            var days = 31;
+            setDays(days);
+            break;
+          case "september":
+            var days = 30;
+            setDays(days);
+            break;
+          case "october":
+            var days = 31;
+            setDays(days);
+            break;
+          case "november":
+            var days = 30;
+            setDays(days);
+            break;
+          case "december":
+            var days = 31;
+            setDays(days);
+            break;
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>
