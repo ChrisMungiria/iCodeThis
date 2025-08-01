@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Flight Booking</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f5f5f5]"
+  >
+    <div class="w-11/12 max-w-xl p-3 bg-white rounded-md space-y-4">
+      <ul
+        class="flex items-center gap-2 text-sm uppercase tracking-wide font-semibold"
+      >
+        <li class="border-b border-purple-500">Flights</li>
+        <li>Hotels</li>
+        <li>Cars</li>
+      </ul>
+      <div
+        class="p-2 border border-gray-200 rounded-md bg-[#fcfcfc] flex gap-5"
+      >
+        <i class="fa-solid fa-up-down text-3xl"></i>
+        <div class="flex-1 space-y-4">
+          <div class="space-y-2">
+            <label for="origin">Origin</label>
+            <input
+              type="text"
+              name="origin"
+              id="origin"
+              placeholder="Bucharest | OTP"
+              class="w-full border-b border-gray-500"
+            />
+          </div>
+          <div class="space-y-2">
+            <label for="destination">Destination</label>
+            <input
+              type="text"
+              name="destination"
+              id="destination"
+              placeholder="Tenerife (Canary Islands) | TFS"
+              class="w-full border-b border-gray-500"
+            />
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="space-y-2">
+              <label for="departure">Departure</label>
+              <input
+                type="text"
+                name="departure"
+                id="departure"
+                placeholder="03-26-2018"
+                class="w-full border-b border-gray-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="arrival">Arrival</label>
+              <input
+                type="text"
+                name="arrival"
+                id="arrival"
+                placeholder="03-26-2018"
+                class="w-full border-b border-gray-500"
+              />
+            </div>
+            <div class="space-y-2">
+              <label for="passengers">Passengers</label>
+              <input
+                type="text"
+                name="passengers"
+                id="passengers"
+                placeholder="2"
+                class="w-full border-b border-gray-500"
+              />
+            </div>
+          </div>
+          <button
+            class="bg-[#8d92d5] text-center rounded-md text-white w-full p-3"
+          >
+            Search
+          </button>
+          <p class="capitalize">Flexible on dates?</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
