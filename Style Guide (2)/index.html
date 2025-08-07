@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Style Guide</title>
+  </head>
+  <body class="min-h-screen w-full flex items-center justify-center">
+    <div class="w-11/12 max-w-4xl grid md:grid-cols-2">
+      <div class="border-l border-gray-200">
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            buttons
+          </span>
+          <div class="grid grid-cols-2 gap-5">
+            <div class="w-full space-y-2">
+              <p class="text-gray-400 italic text-center">Default</p>
+              <button class="w-full p-3 rounded-md text-white bg-[#242e4b]">
+                Primary button
+              </button>
+              <button class="w-full p-3 rounded-md text-gray-800 bg-[#e9eaec]">
+                Secondary button
+              </button>
+            </div>
+            <div class="w-full space-y-2">
+              <p class="text-gray-400 italic text-center">Hovered</p>
+              <button class="w-full p-3 rounded-md text-white bg-[#242e4b]">
+                Primary button
+              </button>
+              <button class="w-full p-3 rounded-md text-gray-800 bg-[#e9eaec]">
+                Secondary button
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            inputs
+          </span>
+          <div>
+            <label for="fullname" class="font-semibold text-sm">Fullname</label>
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                placeholder="ex. Lida Owen"
+                class="w-full border border-gray-200 p-2 rounded-md"
+              />
+              <p class="text-gray-400 italic text-center">Default</p>
+            </div>
+          </div>
+          <div>
+            <label for="your_name" class="font-semibold text-sm"
+              >Your name</label
+            >
+            <div class="flex items-center gap-2">
+              <input
+                type="text"
+                name="your_name"
+                id="your_name"
+                placeholder="ex. Lida Owen"
+                class="w-full border border-gray-200 p-2 rounded-md"
+              />
+              <p class="text-gray-400 italic text-center">Filled</p>
+            </div>
+          </div>
+          <div>
+            <label for="password" class="font-semibold text-sm">Password</label>
+            <div class="flex items-center gap-2">
+              <div>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="5+ characters"
+                  class="w-full border border-gray-200 p-2 rounded-md"
+                />
+                <span class="block text-xs text-orange-500"
+                  >Your password must be at least
+                  <span class="font-semibold">6 characters</span> long</span
+                >
+              </div>
+              <p class="text-gray-400 italic text-center">
+                Focused with error message
+              </p>
+            </div>
+          </div>
+          <div>
+            <label for="email" class="font-semibold text-sm"
+              >Emal address</label
+            >
+            <div class="flex items-center gap-2">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="myemail@address.com"
+                class="w-full border border-gray-200 p-2 rounded-md"
+              />
+              <p class="text-gray-400 italic text-center">Inactive</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            cards
+          </span>
+          <div class="grid grid-cols-2 gap-2">
+            <div>
+              <p class="text-gray-400 italic text-center text-xs">
+                Default card background
+              </p>
+              <div class="w-full h-20 rounded-md border border-gray-200"></div>
+            </div>
+            <div>
+              <p class="text-gray-400 italic text-center text-xs">
+                Hovered card background
+              </p>
+              <div
+                class="w-full h-20 rounded-md shadow-lg border border-gray-200"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border-l border-gray-200">
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            Colours
+          </span>
+          <div class="grid grid-cols-6 gap-2">
+            <div
+              class="w-16 h-16 bg-[#242E4C] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#242E4C</p>
+            </div>
+            <div
+              class="w-16 h-16 bg-[#738BFD] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#738BFD</p>
+            </div>
+            <div
+              class="w-16 h-16 bg-[#F55623] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#F55623</p>
+            </div>
+            <div
+              class="w-16 h-16 bg-[#767E96] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#767E96</p>
+            </div>
+            <div
+              class="w-16 h-16 bg-[#E9EAED] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#E9EAED</p>
+            </div>
+            <div
+              class="w-16 h-16 bg-[#F3F4F6] flex items-center justify-center text-white"
+            >
+              <p class="text-xs">#F3F4F6</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            Colours
+          </span>
+          <h1 class="text-2xl font-bold">Page title | 28px Bold #1E1A50</h1>
+          <h2 class="text-xl font-semibold">Secondary title #1E1A50</h2>
+          <h3 class="text-lg font-semibold">
+            Tertiary title | 14px Bold #1E1A50
+          </h3>
+          <a href="#" class="text-sm text-[#738BFD]"
+            >Link | Montserrat 14px Medium #738BFD</a
+          >
+          <p class="text-sm text-[#767E96]">Input Placeholder | 14px #767E96</p>
+          <p class="text-xs text-[#1A2950]">
+            Basic paragraph | 12px Medium #1A2950
+          </p>
+          <p class="text-xs text-[#767E96]">
+            Board Summary Label | 12px Medium #767E96
+          </p>
+          <p class="text-xs text-[#F55623]">
+            Alert message | 12px Medium #F55623
+          </p>
+        </div>
+        <div class="relative py-10 px-4">
+          <span
+            class="absolute bg-[#e9eaec] rounded-r-xl text-xs top-0 left-0 px-4 py-2 uppercase text-gray-700"
+          >
+            Icons
+          </span>
+          <div class="grid grid-cols-9 gap-2">
+            <i class="fa-solid fa-chevron-down"></i>
+            <i class="fa-solid fa-calendar-days"></i>
+            <i class="fa-solid fa-eraser"></i>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+            <i class="fa-solid fa-pen"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-square"></i>
+            <i class="fa-solid fa-plus"></i>
+            <i class="fa-solid fa-user text-gray-500"></i>
+            <i class="fa-solid fa-images text-gray-500"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
