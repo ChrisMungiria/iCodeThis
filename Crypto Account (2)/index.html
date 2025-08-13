@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Crypto Account</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f6f8fc]"
+  >
+    <div class="w-11/12 max-w-3xl bg-white shadow-md rounded-md">
+      <div class="p-3 border-b border-gray-200 text-gray-500">
+        <h1 class="text-xl uppercase tracking-wide">Your accounts</h1>
+      </div>
+      <div class="flex">
+        <div class="flex-1 hidden md:block border-r border-gray-200">
+          <ul>
+            <li
+              class="p-2 flex items-center gap-2 hover:bg-[#e7e6fb] group transition-all duration-150 ease-in-out"
+            >
+              <img
+                src="https://play-lh.googleusercontent.com/biG-IvsaiHihsAo8ZQa7cqNPAKq8cTu6vdCRKEhvO4ZcCUOrsN4LBG-Vni9IiXvltw=w240-h480-rw"
+                alt="usd account logo"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="text-xs">
+                <p class="font-semibold">USD wallet</p>
+                <p>$254.00</p>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-download"></i><span>Deposit</span>
+                  </button>
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-upload"></i><span>Withdraw</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li
+              class="p-2 flex items-center gap-2 hover:bg-[#e7e6fb] group transition-all duration-150 ease-in-out"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png"
+                alt="btc account logo"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="text-xs">
+                <p class="font-semibold">BTC wallet</p>
+                <p>0.0000 BTC = <span class="text-gray-400">$0.00</span></p>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 text-gray-400 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Send</span>
+                  </button>
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Receive</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li
+              class="p-2 flex items-center gap-2 hover:bg-[#e7e6fb] group transition-all duration-150 ease-in-out"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGtan2UThWM9UVsGp5IiqAzsLAhN1jkQ08jA&s"
+                alt="bch account logo"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="text-xs">
+                <p class="font-semibold">BCH wallet</p>
+                <p>0.0000 BCH = <span class="text-gray-400">$0.00</span></p>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 text-gray-400 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Send</span>
+                  </button>
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Receive</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li
+              class="p-2 flex items-center gap-2 hover:bg-[#e7e6fb] group transition-all duration-150 ease-in-out"
+            >
+              <img
+                src="https://www.citypng.com/public/uploads/preview/ethereum-eth-round-logo-icon-png-701751694969815akblwl2552.png"
+                alt="eth logo"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="text-xs">
+                <p class="font-semibold">ETH wallet</p>
+                <p>0.0236 ETH = <span class="text-gray-400">$12.63</span></p>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-regular fa-paper-plane"></i><span>Send</span>
+                  </button>
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Receive</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li
+              class="p-2 flex items-center gap-2 hover:bg-[#e7e6fb] group transition-all duration-150 ease-in-out"
+            >
+              <img
+                src="https://zengo.com/wp-content/uploads/litecoin-1.png"
+                alt="eth logo"
+                class="w-12 h-12 rounded-full object-cover"
+              />
+              <div class="text-xs">
+                <p class="font-semibold">LTC wallet</p>
+                <p>0.0000 LTC = <span class="text-gray-400">$0.00</span></p>
+                <div class="flex items-center gap-2">
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 text-gray-400 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Send</span>
+                  </button>
+                  <button
+                    class="px-2 py-1 rounded-full bg-gray-200 group-hover:bg-white transition-all duration-150 ease-in-out"
+                  >
+                    <i class="fa-solid fa-qrcode"></i>
+                    <span>Receive</span>
+                  </button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="flex-[2] p-2">
+          <h2 class="text-lg capitalize text-gray-400">Transactions</h2>
+          <ul class="">
+            <li
+              class="flex items-center justify-between border-b border-gray-300 p-2"
+            >
+              <div class="flex items-center gap-2">
+                <h2 class="w-fit text-xs text-center text-gray-400">
+                  Jun <span class="block">12</span>
+                </h2>
+                <div
+                  class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-blue-500"
+                >
+                  <i class="fa-solid fa-left-long text-xs"></i>
+                </div>
+                <div class="space-y-1">
+                  <h2 class="font-semibold text-sm">Bought Etherum</h2>
+                  <h3 class="text-gray-500 text-xs">Using USD wallet</h3>
+                </div>
+              </div>
+              <p class="text-sm text-end text-gray-700">
+                -$6.83
+                <span class="block text-xs text-gray-300">-$6.83</span>
+              </p>
+            </li>
+            <li
+              class="flex items-center justify-between border-b border-gray-300 p-2"
+            >
+              <div class="flex items-center gap-2">
+                <h2 class="w-fit text-xs text-center text-gray-400">
+                  Jun <span class="block">9</span>
+                </h2>
+                <div
+                  class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-yellow-500"
+                >
+                  <i class="fa-solid fa-right-long text-xs"></i>
+                </div>
+                <div class="space-y-1">
+                  <h2 class="font-semibold text-sm">Sold Bitcoin</h2>
+                  <h3 class="text-gray-500 text-xs">Using USD wallet</h3>
+                </div>
+              </div>
+              <p class="text-sm text-end text-gray-700">
+                -$6.83
+                <span class="block text-xs text-gray-300">-$6.83</span>
+              </p>
+            </li>
+            <li
+              class="flex items-center justify-between border-b border-gray-300 p-2"
+            >
+              <div class="flex items-center gap-2">
+                <h2 class="w-fit text-xs text-center text-gray-400">
+                  Jun <span class="block">7</span>
+                </h2>
+                <div
+                  class="w-8 h-8 border border-gray-200 rounded-full flex items-center justify-center text-blue-500"
+                >
+                  <i class="fa-solid fa-left-long text-xs"></i>
+                </div>
+                <div class="space-y-1">
+                  <h2 class="font-semibold text-sm">Bought Etherum</h2>
+                  <h3 class="text-gray-500 text-xs">Using USD wallet</h3>
+                </div>
+              </div>
+              <p class="text-sm text-end text-gray-700">
+                -$6.83
+                <span class="block text-xs text-gray-300">-$6.83</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
