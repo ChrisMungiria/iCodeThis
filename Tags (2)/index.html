@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Tags</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#fdfcff]"
+  >
+    <div class="w-11/12 max-w-xl space-y-4">
+      <form id="form">
+        <label for="tags" class="text-sm font-semibold">Tags</label>
+        <input
+          type="text"
+          name="tags"
+          id="tags"
+          placeholder="Add tags separated by comma"
+          class="w-full p-2 bg-white rounded-md border border-gray-200"
+        />
+      </form>
+      <div
+        id="tags_list"
+        class="text-xs flex flex-wrap items-center gap-2"
+      ></div>
+      <p class="text-xs font-semibold">
+        For example:
+        <span class="text-[#5c55ab]"
+          >fitness app, dashboard navigation, webshop, landing page</span
+        >
+      </p>
+      <label for="category" class="text-sm font-semibold">Category</label>
+      <select
+        name="category"
+        id="category"
+        class="block w-full p-2 bg-white rounded-md border border-gray-200"
+      >
+        <option value="web">Web</option>
+        <option value="mobile">Mobile</option>
+        <option value="ui_kit">UI kit</option>
+        <option value="coded">Coded</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <script>
+      const form = document.getElementById("form");
+      const input = document.getElementById("tags");
+      const tags_list = document.getElementById("tags_list");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (input.value === "") return;
+
+        const tags = input.value.split(",").map((tag) => tag.trim());
+        tags.forEach((tag, index) => {
+          const element = document.createElement("span");
+          element.classList.add(
+            "p-2",
+            "rounded-md",
+            "bg-[#1f2142]",
+            "text-white"
+          );
+          element.textContent = tag;
+
+          const close_button = document.createElement("i");
+          close_button.classList.add("fa-solid", "fa-xmark");
+          element.appendChild(close_button);
+
+          tags_list.appendChild(element);
+        });
+      });
+    </script>
+  </body>
+</html>
