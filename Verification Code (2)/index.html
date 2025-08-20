@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+    <title>Verification Code</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#e5e9fb] space-y-2"
+  >
+    <div
+      class="w-11/12 max-w-xs p-4 shadow-md bg-[#f4f8ff] rounded-md space-y-2"
+      id="verification-code"
+    >
+      <div class="flex items-center justify-end">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <h1 class="text-xl text-center font-semibold">Verification code</h1>
+      <p class="text-gray-600 text-center text-sm">
+        Enter this verification code on your other device to sign in
+      </p>
+      <div
+        class="grid grid-cols-4 place-items-center font-semibold w-3/4 mx-auto bg-white p-2 rounded-md text-3xl"
+      >
+        <p>5</p>
+        <p>8</p>
+        <p>3</p>
+        <p>1</p>
+      </div>
+      <button id="close" class="text-xl text-blue-500 flex mx-auto uppercase">
+        Close
+      </button>
+    </div>
+    <div
+      class="w-11/12 max-w-xs p-4 shadow-md bg-gradient-to-br from-[#31406d] to-[#181d3e] text-gray-300 rounded-md space-y-2 hidden"
+      id="verification-code-input"
+    >
+      <div class="flex items-center justify-start">
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <h1 class="text-xl text-start font-semibold">Confirmation</h1>
+      <p class="text-sm text-gray-400">
+        Please enter the code we sent to the number ********78
+      </p>
+      <div class="grid grid-cols-4 gap-5">
+        <input
+          type="number"
+          name="num-1"
+          id="num-1"
+          placeholder="-"
+          class="bg-[#030c32] p-2 rounded-md text-center"
+        />
+        <input
+          type="number"
+          name="num-2"
+          id="num-2"
+          placeholder="-"
+          class="bg-[#030c32] p-2 rounded-md text-center"
+        />
+        <input
+          type="number"
+          name="num-3"
+          id="num-3"
+          placeholder="-"
+          class="bg-[#030c32] p-2 rounded-md text-center"
+        />
+        <input
+          type="number"
+          name="num-4"
+          id="num-4"
+          placeholder="-"
+          class="bg-[#030c32] p-2 rounded-md text-center"
+        />
+      </div>
+      <button id="resend-code" class="text-sm text-blue-500 uppercase">
+        Resend code
+      </button>
+      <button
+        class="w-full p-3 rounded-md bg-gradient-to-r from-[#8da1ff] to-[#a270fc]"
+      >
+        Confirm
+      </button>
+    </div>
+
+    <script>
+      const close = document.getElementById("close");
+      const verificationCode = document.getElementById("verification-code");
+      const verificationCodeInput = document.getElementById(
+        "verification-code-input"
+      );
+
+      close.addEventListener("click", () => {
+        verificationCode.classList.add("hidden");
+        verificationCodeInput.classList.remove("hidden");
+      });
+
+      const number_inputs = ["num-1", "num-2", "num-3", "num-4"];
+
+      number_inputs.map((number_input, index) => {
+        const input = document.getElementById(number_input);
+
+        input.addEventListener("input", (e) => {
+          let value = e.target.value;
+
+          // Keep the last value of the digit entered
+          if (value.length > 1) {
+            e.target.value = value.slice(-1);
+          }
+
+          // move focus to the next input
+          if (e.target.value && index < number_inputs.length - 1) {
+            document.getElementById(number_inputs[index + 1]).focus();
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && !e.target.value && index > 0) {
+            document.getElementById(number_inputs[index - 1]).focus();
+          }
+        });
+      });
+
+      const resend_code = document.getElementById("resend-code");
+
+      resend_code.addEventListener("click", () => {
+        verificationCode.classList.remove("hidden");
+        verificationCodeInput.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>
