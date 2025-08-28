@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Members Share</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#242641]"
+  >
+    <div
+      class="w-11/12 max-w-md p-4 rounded-md shadow-xl bg-[#303151] text-white space-y-4"
+    >
+      <div class="flex items-center justify-between">
+        <div
+          class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-slate-800"
+        >
+          <i class="fa-solid fa-rotate-left"></i>
+        </div>
+        <p class="text-sm">
+          <span>Settings</span>
+          <i class="fa-solid fa-gear"></i>
+        </p>
+      </div>
+      <h1 class="text-2xl capitalize max-w-[200px]">
+        Share with people and groups
+      </h1>
+      <div
+        class="border border-slate-400 p-2 bg-[#292b48] rounded-full flex items-center gap-2"
+      >
+        <div class="p-1 bg-[#41436b] rounded-full flex items-center gap-2">
+          <img
+            src="https://elireview.com/wp-content/uploads/2016/12/reed-profile-square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <p class="text-sm pr-2">Emma James</p>
+        </div>
+        <div class="p-1 bg-[#41436b] rounded-full flex items-center gap-2">
+          <img
+            src="https://media.creativemornings.com/uploads/user/avatar/49419/Bechtel_Profile_Square.jpg"
+            alt="profile image"
+            class="w-10 h-10 rounded-full object-cover"
+          />
+          <p class="text-sm pr-2">Jim Fanges</p>
+        </div>
+      </div>
+      <label class="flex items-center gap-2 group">
+        <div
+          class="w-6 h-6 flex items-center justify-center border border-slate-400 bg-[#292b47] rounded-md"
+        >
+          <i
+            class="fa-solid fa-check text-xs opacity-0 group-has-checked:opacity-100"
+          ></i>
+        </div>
+        <span>Notify people</span>
+        <input type="checkbox" class="sr-only" />
+      </label>
+      <div class="flex items-center justify-between">
+        <button class="text-[#494d94]">Send feedback</button>
+
+        <div class="grid grid-cols-2 gap-2">
+          <button class="px-4 py-2 rounded-md bg-[#292b48] text-white">
+            Cancel
+          </button>
+          <button class="px-4 py-2 rounded-md bg-[#717ffe] text-white">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
