@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Accordion 4</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[#f7f8fc]"
+  >
+    <div class="w-11/12 max-w-xl p-4 bg-white shadow-2xl rounded-xl space-y-4">
+      <h1 class="text-3xl font-semibold capitalize">The accordion</h1>
+      <p class="text-sm">
+        The accordion is a graphical control element comprising of vertically
+        stacked list of items such as labels or thumbnails. Each item can be
+        "expanded" or "collapsed" to reveal the content associated with that
+        item.
+      </p>
+      <ul class="space-y-2">
+        <li class="border-b py-2 border-slate-300">
+          <label for="when" class="group space-y-2">
+            <input type="radio" name="accordion" id="when" class="sr-only" />
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 hidden group-has-checked:flex items-center justify-center bg-slate-800 text-white rounded-full"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div
+                class="w-8 h-8 flex group-has-checked:hidden items-center justify-center bg-slate-800 text-white rounded-full"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <span class="font-semibold">When and how it should be used?</span>
+            </div>
+            <p class="px-10 hidden text-sm group-has-checked:block">
+              An accordion should be used when...
+            </p>
+          </label>
+        </li>
+        <li class="border-b py-2 border-slate-300">
+          <label for="what" class="group space-y-2">
+            <input type="radio" name="accordion" id="what" class="sr-only" />
+            <div class="flex items-center gap-2">
+              <div
+                class="w-8 h-8 hidden group-has-checked:flex items-center justify-center bg-slate-800 text-white rounded-full"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </div>
+              <div
+                class="w-8 h-8 flex group-has-checked:hidden items-center justify-center bg-slate-800 text-white rounded-full"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <span class="font-semibold">What's an accordion?</span>
+            </div>
+            <p class="hidden text-sm group-has-checked:block px-10">
+              <span>Show/Hide operation</span>
+              <span class="text-xs block"
+                >An accordion always contains the category title, an expanded
+                and a collapsed state, an icon indicating expansion and the
+                spacing between them</span
+              >
+            </p>
+            <p class="hidden text-sm group-has-checked:block px-10">
+              <span>Tabbed interface</span>
+              <span class="text-xs block"
+                >A list of items where exactly one item is expanded into an
+                item</span
+              >
+            </p>
+            <button
+              class="px-3 py-1 text-xs bg-slate-200 rounded-full hidden group-has-checked:block mx-10"
+            >
+              Read more
+            </button>
+          </label>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
