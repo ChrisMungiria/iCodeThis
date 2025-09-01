@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Book Card</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-[url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/13/d2/c5/photo0jpg.jpg?w=900&h=500&s=1')] bg-no-repeat bg-cover bg-center bg-fixed relative after:absolute after:inset-0 after:bg-slate-800/50 after:backdrop-blur-lg"
+  >
+    <div class="w-11/12 max-w-xl p-4 bg-slate-800/50 relative z-50 text-white">
+      <div class="flex items-center justify-end">
+        <ul class="flex items-center gap-2">
+          <li>
+            <i class="fa-solid fa-share-nodes"></i>
+          </li>
+          <li>
+            <i class="fa-solid fa-xmark"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="grid grid-cols-3 space-y-4">
+        <div class="space-y-2">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg"
+            alt="Dune"
+            class="w-full h-64 object-cover object-center"
+          />
+          <ul
+            class="w-full flex items-center justify-around gap-2 text-yellow-500"
+          >
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star"></i></li>
+            <li><i class="fa-solid fa-star-half"></i></li>
+          </ul>
+        </div>
+        <div class="col-span-2 space-y-2 ml-4">
+          <h1 class="text-7xl text-yellow-500 font-semibold">Dune</h1>
+          <h2 class="text-2xl">
+            Novel by <span class="font-semibold">Frank Herbet</span>
+          </h2>
+          <p class="text-sm">
+            Set in the far future amidst a sprawling feudal interstellar empire
+            where planetary dynasties are controlled by noble houses that owe an
+            allegiance to the imperial House Corrino, Dune tells the story of
+            young Paul Atreides (the heir to the Duke Leto Atreides and heir to
+            the House of Atreides) as he and his family accept control of the
+            desert planet Arrakis...
+          </p>
+          <button
+            class="px-4 py-2 border border-yellow-500 rounded-full text-xs text-yellow-500 uppercase hover:bg-yellow-500 hover:text-white transition-all duration-150 ease-in-out"
+          >
+            Continue reading
+          </button>
+        </div>
+        <div class="text-xs">
+          <p
+            class="p-2 border-r-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Originally published
+          </p>
+          <p
+            class="p-2 border-r-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Author
+          </p>
+          <p
+            class="p-2 border-r-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Followed by
+          </p>
+          <p
+            class="p-2 border-r-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Page counts
+          </p>
+          <p
+            class="p-2 border-r-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Adaptations
+          </p>
+          <p
+            class="p-2 border-b-2 border-gray-400 text-yellow-500 font-semibold"
+          >
+            Characters
+          </p>
+        </div>
+        <div class="col-span-2 text-xs">
+          <p class="p-2 border-b-2 border-gray-400 font-semibold">1965</p>
+          <p class="p-2 border-b-2 border-gray-400 font-semibold">
+            Frank Herbert
+          </p>
+          <p class="p-2 border-b-2 border-gray-400 font-semibold">
+            Dune Messiah
+          </p>
+          <p class="p-2 border-b-2 border-gray-400 font-semibold">412</p>
+          <p class="p-2 border-b-2 border-gray-400 font-semibold">
+            Dune (1984), Frank Herbet's Dune (2000)
+          </p>
+          <p class="p-2 border-l-2 border-gray-400 font-semibold">
+            Paul Atreides, Vladimir Harkonnen, Chani, Leto Atreides I, Lady
+            Jessica, Princess Irulan, Alia Atreides, Duncan Idaho, Feyd-Rautha,
+            Thufir Hawat, Gurney Halleck, Shaddam IV Liet-Kynes, Piter De Vries,
+            Gaius Helen Mohiam, Glossu Rabban Hasimir Fenring
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
