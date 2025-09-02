@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Calendar 3</title>
+  </head>
+  <body
+    class="w-full min-h-screen flex items-center justify-center bg-gray-200"
+  >
+    <div class="w-11/12 max-w-2xl grid grid-cols-2 p-2">
+      <div class="bg-[#374040] p-4 h-fit">
+        <div class="grid grid-cols-3 w-full place-items-center">
+          <p class="text-sm text-gray-300">2015</p>
+          <p class="text-white text-lg">Feb. 2016</p>
+          <p class="text-sm text-gray-300">2017</p>
+        </div>
+        <div class="grid grid-cols-7 w-full" id="days"></div>
+        <div class="grid grid-cols-7 w-full gap-1" id="dates"></div>
+      </div>
+      <div class="bg-[#eb7362]">
+        <h2
+          class="p-4 text-center bg-[#febd7c] text-slate-800 font-semibold uppercase"
+        >
+          Events of the month
+        </h2>
+        <ul class="p-4">
+          <li
+            class="flex items-center justify-between border-b border-slate-800 py-2"
+          >
+            <div class="flex">
+              <i class="fa-solid fa-utensils text-3xl text-[#febd7c]"></i>
+              <div>
+                <h2 class="text-[#febd7c] uppercase font-semibold">
+                  Dinner with dad
+                </h2>
+                <h3 class="text-xs text-slate-700">Wed 3 20:00</h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-slate-800">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </li>
+          <li
+            class="flex items-center justify-between border-b border-slate-800 py-2"
+          >
+            <div class="flex">
+              <i class="fa-solid fa-cart-shopping text-3xl text-[#febd7c]"></i>
+              <div>
+                <h2 class="text-[#febd7c] uppercase font-semibold">
+                  Pay phone bills
+                </h2>
+                <h3 class="text-xs text-slate-700">Sat 13 12:00</h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-slate-800">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </li>
+          <li
+            class="flex items-center justify-between border-b border-slate-800 py-2"
+          >
+            <div class="flex">
+              <i class="fa-regular fa-heart text-3xl text-[#febd7c]"></i>
+              <div>
+                <h2 class="text-[#febd7c] uppercase font-semibold">
+                  Special day
+                </h2>
+                <h3 class="text-xs text-slate-700">Sun 14 16:00</h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-slate-800">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </li>
+          <li
+            class="flex items-center justify-between border-b border-slate-800 py-2"
+          >
+            <div class="flex">
+              <i class="fa-regular fa-chart-bar text-3xl text-[#febd7c]"></i>
+              <div>
+                <h2 class="text-[#febd7c] uppercase font-semibold">
+                  Meeting with John
+                </h2>
+                <h3 class="text-xs text-slate-700">Thur 25 10:00</h3>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 text-slate-800">
+              <i class="fa-solid fa-pen"></i>
+              <i class="fa-solid fa-trash-can"></i>
+            </div>
+          </li>
+        </ul>
+        <button
+          class="px-4 py-2 bg-slate-800 text-white text-sm flex mx-auto my-4"
+        >
+          + Add event
+        </button>
+      </div>
+    </div>
+    <script>
+      const daysContainer = document.getElementById("days");
+      const datesContainer = document.getElementById("dates");
+
+      const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+
+      // Dates should run from 31, 1-29, 1-5
+      const dates = [];
+
+      for (let i = 0; i < 35; i++) {
+        if (i == 0) {
+          dates.push(31);
+          continue;
+        }
+        if (i > 29) {
+          dates.push(i - 29);
+          continue;
+        }
+        dates.push(i);
+      }
+
+      days.forEach((day, index) => {
+        const dayElement = document.createElement("p");
+
+        dayElement.classList.add(
+          "text-xs",
+          "text-[#96998d]",
+          "uppercase",
+          "text-center"
+        );
+
+        dayElement.textContent = day;
+
+        daysContainer.appendChild(dayElement);
+      });
+
+      dates.forEach((date, index) => {
+        const dateElement = document.createElement("p");
+
+        dateElement.classList.add("text-center", "size-6");
+
+        if (date === 3 || date === 13 || date === 14 || date === 25) {
+          dateElement.classList.add(
+            "rounded-full",
+            "bg-[#ffbe7c]",
+            "text-slate-800"
+          );
+        } else if (date === 11) {
+          dateElement.classList.add(
+            "rounded-full",
+            "bg-[#bfda3f]",
+            "text-slate-800"
+          );
+        } else {
+          dateElement.classList.add("text-white");
+        }
+
+        dateElement.textContent = date;
+
+        datesContainer.appendChild(dateElement);
+      });
+    </script>
+  </body>
+</html>
