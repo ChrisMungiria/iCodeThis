@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Ecommerce Landing</title>
+  </head>
+  <body class="w-full min-h-screen bg-gray-100">
+    <div class="max-w-6xl p-4 mx-auto">
+      <h2 class="text-xl text-gray-600 font-semibold uppercase">Logo</h2>
+      <nav class="flex items-center justify-between text-sm">
+        <ul class="flex items-center gap-2">
+          <li class="uppercase">New</li>
+          <li class="uppercase">Gift guide</li>
+          <li
+            class="uppercase relative text-[#dd5e8b] after:absolute after:w-3 after:h-1 after:bg-[#dd5e8b] after:left-1/2 after:-translate-x-1/2"
+          >
+            Promo
+          </li>
+          <li class="uppercase">Trends</li>
+          <li class="uppercase">Social</li>
+        </ul>
+        <ul class="flex items-center gap-2">
+          <li>Log in</li>
+          <li>
+            <button class="px-4 py-2 rounded-full bg-[#dd5e8b] text-white">
+              Sign up
+            </button>
+          </li>
+          <li class="relative">
+            <span
+              class="absolute bg-white p-px rounded-full text-red-500 text-[10px] -top-2 right-0"
+              >2</span
+            >
+            <i class="fa-solid fa-cart-shopping"></i>
+          </li>
+        </ul>
+      </nav>
+      <div class="p-2 bg-white flex items-center justify-between">
+        <ul class="flex items-center gap-2 text-xs text-gray-400">
+          <li>Home ></li>
+          <li>Categories ></li>
+          <li>Outwear</li>
+        </ul>
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="grid grid-cols-3 gap-2 py-5">
+        <div>
+          <h2 class="text-[#da5b88] uppercase">Categories</h2>
+          <ul class="text-xs">
+            <li class="flex items-center gap-2 text-sm -ml-6">
+              <i class="fa-solid fa-chevron-down text-[#da5b88]"></i>
+              <span>Woman</span>
+            </li>
+            <li>Outwear</li>
+            <li>Bombers</li>
+            <li>Blazers</li>
+            <li>Dresses</li>
+            <li>Jumpsuits</li>
+            <li>Tops</li>
+            <li>Trousers</li>
+            <li>Jeans</li>
+            <li>Shorts</li>
+            <li>Skirts</li>
+            <li class="flex items-center gap-2 text-sm -ml-6">
+              <i class="fa-solid fa-chevron-right text-[#da5b88]"></i>
+              <span>Man kids</span>
+            </li>
+            <li class="flex items-center gap-2 text-sm -ml-6">
+              <i class="fa-solid fa-chevron-right text-[#da5b88]"></i>
+              <span>Accessories</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-span-2 space-y-4 relative">
+          <div class="absolute inset-0 p-4 text-white space-y-2">
+            <h2 class="text-xl font-semibold capitalize">
+              New winter collection
+            </h2>
+            <button
+              class="px-4 py-2 bg-white rounded-full text-sm uppercase text-[#da5b88]"
+            >
+              View collection
+            </button>
+          </div>
+          <img
+            src="https://i.pinimg.com/736x/92/35/74/92357454694ee3e11b9ed352c6653d63.jpg"
+            alt="winter background image"
+            class="w-full h-56 object-cover object-top"
+          />
+          <div class="grid grid-cols-3 gap-2">
+            <div class="min-h-44 bg-white relative group">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTa-NESQY9Au1CA1_NfV98Yw6rjYOo6HPSJeEJ_DItyc__99GR"
+                alt="sweater"
+                class="w-auto h-32 mx-auto object-cover object-center"
+              />
+              <p class="text-center">
+                $20.00
+                <span class="block text-sm">A sweater</span>
+              </p>
+              <button
+                class="absolute opacity-0 -bottom-5 left-0 w-full p-5 bg-[#da5b88] text-white group-hover:opacity-100 group-hover:bottom-0 transition-all duration-150 ease-in-out"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="min-h-44 bg-white relative group">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTa-NESQY9Au1CA1_NfV98Yw6rjYOo6HPSJeEJ_DItyc__99GR"
+                alt="sweater"
+                class="w-auto h-32 mx-auto object-cover object-center"
+              />
+              <p class="text-center">
+                $20.00
+                <span class="block text-sm">A sweater</span>
+              </p>
+              <button
+                class="absolute opacity-0 -bottom-5 left-0 w-full p-5 bg-[#da5b88] text-white group-hover:opacity-100 group-hover:bottom-0 transition-all duration-150 ease-in-out"
+              >
+                Add to cart
+              </button>
+            </div>
+            <div class="min-h-44 bg-white relative group">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTa-NESQY9Au1CA1_NfV98Yw6rjYOo6HPSJeEJ_DItyc__99GR"
+                alt="sweater"
+                class="w-auto h-32 mx-auto object-cover object-center"
+              />
+              <p class="text-center">
+                $20.00
+                <span class="block text-sm">A sweater</span>
+              </p>
+              <button
+                class="absolute opacity-0 -bottom-5 left-0 w-full p-5 bg-[#da5b88] text-white group-hover:opacity-100 group-hover:bottom-0 transition-all duration-150 ease-in-out"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
