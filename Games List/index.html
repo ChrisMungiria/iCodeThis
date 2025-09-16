@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Games List</title>
+  </head>
+  <body class="w-full min-h-screen flex">
+    <div class="w-11/12 max-w-3xl m-auto">
+      <nav
+        class="p-2 border-b border-slate-200 flex items-center justify-between"
+      >
+        <ul class="flex items-center gap-2 text-gray-400 text-sm">
+          <li
+            class="hover:text-blue-400 transition-all duration-150 ease-in-out cursor-pointer relative after:absolute after:w-full after:h-px after:bg-blue-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          >
+            Home
+          </li>
+          <li
+            class="hover:text-blue-400 transition-all duration-150 ease-in-out cursor-pointer relative after:absolute after:w-full after:h-px after:bg-blue-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          >
+            Apps
+          </li>
+          <li
+            class="hover:text-blue-400 transition-all duration-150 ease-in-out cursor-pointer relative after:absolute after:w-full after:h-px after:bg-blue-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          >
+            Games
+          </li>
+          <li
+            class="hover:text-blue-400 transition-all duration-150 ease-in-out cursor-pointer relative after:absolute after:w-full after:h-px after:bg-blue-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          >
+            Music
+          </li>
+          <li
+            class="hover:text-blue-400 transition-all duration-150 ease-in-out cursor-pointer relative after:absolute after:w-full after:h-px after:bg-blue-400 after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:opacity-0 hover:after:opacity-100"
+          >
+            Movies&TV
+          </li>
+        </ul>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+          <input type="text" name="search" id="search" placeholder="Search" />
+        </div>
+      </nav>
+      <div class="">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl capitalize">New games</h2>
+          <p class="text-sm text-blue-500">Load more</p>
+        </div>
+        <div class="grid md:grid-cols-3">
+          <div>
+            <img
+              src="https://i.ytimg.com/vi/R0U-7UUpT60/hqdefault.jpg"
+              alt="need for speed no limits"
+            />
+            <div class="flex items-center justify-between">
+              <h2 class="text-sm capitalize px-2">Need for speed no limits</h2>
+              <ul class="text-xs flex text-yellow-500">
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star-half-stroke"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://i.ytimg.com/vi/jnmJtih2qus/sddefault.jpg"
+              alt="need for speed no limits"
+            />
+            <div class="flex items-center justify-between">
+              <h2 class="text-sm capitalize px-2">June's journey</h2>
+              <ul class="text-xs flex text-yellow-500">
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star"></i></li>
+                <li><i class="fa-solid fa-star-half-stroke"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
