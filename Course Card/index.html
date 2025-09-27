@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Course Card</title>
+  </head>
+  <body class="w-full min-h-screen flex items-center justify-center">
+    <div class="w-11/12 max-w-xs shadow-xl">
+      <div
+        class="w-full min-h-56 bg-[url(https://culture-fle.de/wp-content/uploads/2019/11/compr%C3%A9hension-%C3%A9crite.jpg)] bg-no-repeat bg-center bg-cover relative"
+      >
+        <div
+          style="
+            background: conic-gradient(
+              #2b94c3 0deg,
+              #2b94c3 160deg,
+              #d6edf6 160deg
+            );
+          "
+          class="absolute w-20 h-20 rounded-full -bottom-10 right-0 p-1"
+        >
+          <div
+            class="w-full h-full bg-white rounded-full flex items-center justify-center"
+          >
+            <p class="text-sm font-semibold text-center text-[#2b94c3]">
+              45% <span class="text-xs block font-light uppercase">booked</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white text-sm space-y-4">
+        <h1 class="text-lg font-semibold text-[#2b94c3] uppercase p-2">
+          Building a successful <span class="block">e-business</span>
+        </h1>
+        <p class="p-2">
+          Learn how using a computer and internet technology can facilitate a
+          business and facilitate a business to successfully build an online
+          e-business
+        </p>
+        <p class="text-center text-[#2b94c3] uppercase">Time remaining</p>
+        <div
+          class="grid grid-cols-4 gap-2 w-fit mx-auto place-items-center text-xs"
+        >
+          <p class="text-center text-base">
+            <span class="border border-[#2b94c3] font-semibold p-2" id="days"
+              >2</span
+            >
+            <span class="capitalize block text-xs p-2">days</span>
+          </p>
+          <p class="text-center text-base">
+            <span class="border border-[#2b94c3] font-semibold p-2" id="hours"
+              >14</span
+            >
+            <span class="capitalize block text-xs p-2">hours</span>
+          </p>
+          <p class="text-center text-base">
+            <span class="border border-[#2b94c3] font-semibold p-2" id="minutes"
+              >53</span
+            >
+            <span class="capitalize block text-xs p-2">minutes</span>
+          </p>
+          <p class="text-center text-base">
+            <span class="border border-[#2b94c3] font-semibold p-2" id="seconds"
+              >26</span
+            >
+            <span class="capitalize block text-xs p-2">seconds</span>
+          </p>
+        </div>
+        <button
+          id="sign-up-btn"
+          style="clip-path: polygon(0 0%, 100% 15%, 100% 100%, 0 100%)"
+          class="p-4 bg-[#2b94c3] text-white w-full uppercase text-xl font-semibold"
+        >
+          Take course
+        </button>
+      </div>
+    </div>
+    <script>
+      const days = document.getElementById("days");
+      const hours = document.getElementById("hours");
+      const minutes = document.getElementById("minutes");
+      const seconds = document.getElementById("seconds");
+
+      let countDownDate = new Date("Sep 30, 2025 12:00:00").getTime();
+
+      // Update the count down every 1 second
+      const x = setInterval(() => {
+        // Get today's date and time
+        const now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        const distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        const daysLeft = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hoursLeft = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutesLeft = Math.floor(
+          (distance % (1000 * 60 * 60)) / (1000 * 60)
+        );
+        const secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the HTML
+        days.innerHTML = daysLeft;
+        hours.innerHTML = hoursLeft;
+        minutes.innerHTML = minutesLeft;
+        seconds.innerHTML = secondsLeft;
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+          clearInterval(x);
+          days.innerHTML = "-";
+          hours.innerHTML = "-";
+          minutes.innerHTML = "-";
+          seconds.innerHTML = "-";
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>
